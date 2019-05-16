@@ -17,7 +17,7 @@ import WebhookDefinition from './WebhookDefinition';
 /**
  * The WebhookDefinitionResponse model module.
  * @module Model/WebhookDefinitionResponse
- * @version 1.0.0
+ * @version 1.1.0
  */
 class WebhookDefinitionResponse {
     /**

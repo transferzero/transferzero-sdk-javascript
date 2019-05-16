@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The PayoutMethodDetailsMobile model module.
  * @module Model/PayoutMethodDetailsMobile
- * @version 1.0.0
+ * @version 1.1.0
  */
 class PayoutMethodDetailsMobile {
     /**

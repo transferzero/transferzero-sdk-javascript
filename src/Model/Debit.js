@@ -17,7 +17,7 @@ import ValidationErrorDescription from './ValidationErrorDescription';
 /**
  * The Debit model module.
  * @module Model/Debit
- * @version 1.0.0
+ * @version 1.1.0
  */
 class Debit {
     /**
