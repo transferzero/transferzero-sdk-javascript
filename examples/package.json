@@ -1,0 +1,21 @@
+{
+  "name": "examples",
+  "version": "1.0.0",
+  "description": "",
+  "main": "examples.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "transferzero-sdk": "^1.0.0"
+  },
+  "devDependencies": {
+    "install-local": "^1.0.0"
+  },
+  "localDependencies": {
+    "transferzero-sdk-local": ".."
+  }
+}

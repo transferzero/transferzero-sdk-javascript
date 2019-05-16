@@ -1,0 +1,44 @@
+{
+  "name": "transferzero-sdk",
+  "version": "1.0.0",
+  "description": "Client library for TransferZero API",
+  "license": "MIT",
+  "author": {
+    "name": "TransferZero",
+    "email": "engineers@transferzero.com"
+  },
+  "repository": {
+    "url": "https://github.com/transferzero/transferzero-sdk-javascript"
+  },
+  "bugs": {
+    "url": "https://github.com/transferzero/transferzero-sdk-javascript/issues"
+  },
+  "keywords": [
+    "transferzero"
+  ],
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "babel src -d dist --source-maps",
+    "prepack": "npm run build",
+    "test": "mocha --compilers js:babel-core/register --recursive"
+  },
+  "browser": {
+    "fs": false
+  },
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "superagent": "3.7.0",
+    "uuid": "^3.3.2"
+  },
+  "devDependencies": {
+    "babel-core": "6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "expect.js": "~0.3.1",
+    "mocha": "^5.2.0",
+    "sinon": "1.17.3"
+  },
+  "files": [
+    "dist"
+  ]
+}
