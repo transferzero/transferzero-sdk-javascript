@@ -76,6 +76,9 @@ class Recipient {
             if (data.hasOwnProperty('editable')) {
                 obj['editable'] = ApiClient.convertToType(data['editable'], 'Boolean');
             }
+            if (data.hasOwnProperty('retriable')) {
+                obj['retriable'] = ApiClient.convertToType(data['retriable'], 'Boolean');
+            }
             if (data.hasOwnProperty('input_usd_amount')) {
                 obj['input_usd_amount'] = ApiClient.convertToType(data['input_usd_amount'], 'Number');
             }
@@ -159,6 +162,12 @@ Recipient.prototype['created_at'] = undefined;
  * @member {Boolean} editable
  */
 Recipient.prototype['editable'] = undefined;
+
+/**
+ * Shows whether the transaction made to the recipient can be retried or not
+ * @member {Boolean} retriable
+ */
+Recipient.prototype['retriable'] = undefined;
 
 /**
  * Shows how much this payment is worth in USD

@@ -24,13 +24,12 @@ class Debit {
      * Constructs a new <code>Debit</code>.
      * Debits are used to fund transactions from your internal TransferZero balance.
      * @alias module:Model/Debit
-     * @param currency {String} The currency of the amount in 3-character alpha ISO 4217 currency format
      * @param toType {String} Describes what the debit is funding
      * @param toId {String} The ID of the resource the debit is funding
      */
-    constructor(currency, toType, toId) { 
+    constructor(toType, toId) { 
         
-        Debit.initialize(this, currency, toType, toId);
+        Debit.initialize(this, toType, toId);
     }
 
     /**
@@ -38,8 +37,7 @@ class Debit {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, currency, toType, toId) { 
-        obj['currency'] = currency;
+    static initialize(obj, toType, toId) { 
         obj['to_type'] = toType;
         obj['to_id'] = toId;
     }
@@ -93,13 +91,13 @@ class Debit {
 }
 
 /**
- * The amount to be debited from your account.  The “amount” parameter is optional - - if included, it must equal the amount required to fund the transaction. - if omitted, it will default to the amount required to fund the transaction. 
+ * The amount to be debited from your account.  The \"amount\" parameter is optional - - if included, it must equal the amount required to fund the transaction. - if omitted, it will default to the amount required to fund the transaction. 
  * @member {Number} amount
  */
 Debit.prototype['amount'] = undefined;
 
 /**
- * The currency of the amount in 3-character alpha ISO 4217 currency format
+ * The currency of the amount in 3-character alpha ISO 4217 currency format.  The \"currency\" parameter is optional - if omitted, it will default to the payin currency of the transaction. - it can be added in as an additional check to ensure that the expected currency is used. (an error will be given back if it does not match up with the payin currency of the transaction) 
  * @member {String} currency
  */
 Debit.prototype['currency'] = undefined;

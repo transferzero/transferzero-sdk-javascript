@@ -12,7 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
-import Document from './Document';
+import DocumentWebhookAllOf from './DocumentWebhookAllOf';
 import Webhook from './Webhook';
 
 /**
@@ -26,12 +26,13 @@ class DocumentWebhook {
      * @alias module:Model/DocumentWebhook
      * @extends module:Model/Webhook
      * @implements module:Model/Webhook
+     * @implements module:Model/DocumentWebhookAllOf
      * @param webhook {} The ID of the webhook that was used to send out this callback
      * @param event {} The event that triggered this webhook
-     * @param _object {} 
+     * @param _object {} The returned object
      */
     constructor(webhook, event, _object) { 
-        Webhook.initialize(this, webhook, event, _object);
+        Webhook.initialize(this, webhook, event, _object);DocumentWebhookAllOf.initialize(this);
         DocumentWebhook.initialize(this, webhook, event, _object);
     }
 
@@ -55,21 +56,14 @@ class DocumentWebhook {
             obj = obj || new DocumentWebhook();
             Webhook.constructFromObject(data, obj);
             Webhook.constructFromObject(data, obj);
+            DocumentWebhookAllOf.constructFromObject(data, obj);
 
-            if (data.hasOwnProperty('object')) {
-                obj['object'] = Document.constructFromObject(data['object']);
-            }
         }
         return obj;
     }
 
 
 }
-
-/**
- * @member {module:Model/Document} object
- */
-DocumentWebhook.prototype['object'] = undefined;
 
 
 // Implement Webhook interface:
@@ -88,6 +82,11 @@ Webhook.prototype['event'] = undefined;
  * @member {Object} object
  */
 Webhook.prototype['object'] = undefined;
+// Implement DocumentWebhookAllOf interface:
+/**
+ * @member {module:Model/Document} object
+ */
+DocumentWebhookAllOf.prototype['object'] = undefined;
 
 
 
