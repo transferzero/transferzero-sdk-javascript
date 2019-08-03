@@ -82,15 +82,19 @@ export default class CurrencyInfoApi {
     /**
      * Getting a list of possible input currencies
      * Fetches a list of currencies available to use as the input currency in other API requests. Usually the 3-character alpha ISO 4217 currency code (eg. USD) is used as the identifier. Use this endpoint to determine the current exchange rate from a specific input currency to any output currency that&#39;s available. 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.senderId Allows the scoping of the results by &#x60;sender_id&#x60; (optional).  Example: &#x60;/v1/info/currencies/in?sender_id&#x3D;26ec8517-2f0d-48c0-b74f-0bccb9ab3a87&#x60;
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:Model/CurrencyExchangeListResponse} and HTTP response
      */
-    infoCurrenciesInWithHttpInfo() {
+    infoCurrenciesInWithHttpInfo(opts) {
+      opts = opts || {};
       let postBody = null;
 
 
       let pathParams = {
       };
       let queryParams = {
+        'sender_id': opts['senderId']
       };
       let headerParams = {
       };
@@ -112,10 +116,12 @@ export default class CurrencyInfoApi {
     /**
      * Getting a list of possible input currencies
      * Fetches a list of currencies available to use as the input currency in other API requests. Usually the 3-character alpha ISO 4217 currency code (eg. USD) is used as the identifier. Use this endpoint to determine the current exchange rate from a specific input currency to any output currency that&#39;s available. 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.senderId Allows the scoping of the results by &#x60;sender_id&#x60; (optional).  Example: &#x60;/v1/info/currencies/in?sender_id&#x3D;26ec8517-2f0d-48c0-b74f-0bccb9ab3a87&#x60;
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:Model/CurrencyExchangeListResponse}
      */
-    infoCurrenciesIn() {
-      return this.infoCurrenciesInWithHttpInfo()
+    infoCurrenciesIn(opts) {
+      return this.infoCurrenciesInWithHttpInfo(opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -125,15 +131,19 @@ export default class CurrencyInfoApi {
     /**
      * Getting a list of possible output currencies
      * Fetches a list of currencies available to use as the output currency and their exchange rates against the available input currencies. Usually the 3-character alpha ISO 4217 currency code (eg. USD) is used as the identifier. 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.senderId Allows the scoping of the results by &#x60;sender_id&#x60; (optional).  Example: &#x60;/v1/info/currencies/out?sender_id&#x3D;26ec8517-2f0d-48c0-b74f-0bccb9ab3a87&#x60;
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:Model/CurrencyExchangeListResponse} and HTTP response
      */
-    infoCurrenciesOutWithHttpInfo() {
+    infoCurrenciesOutWithHttpInfo(opts) {
+      opts = opts || {};
       let postBody = null;
 
 
       let pathParams = {
       };
       let queryParams = {
+        'sender_id': opts['senderId']
       };
       let headerParams = {
       };
@@ -155,10 +165,12 @@ export default class CurrencyInfoApi {
     /**
      * Getting a list of possible output currencies
      * Fetches a list of currencies available to use as the output currency and their exchange rates against the available input currencies. Usually the 3-character alpha ISO 4217 currency code (eg. USD) is used as the identifier. 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.senderId Allows the scoping of the results by &#x60;sender_id&#x60; (optional).  Example: &#x60;/v1/info/currencies/out?sender_id&#x3D;26ec8517-2f0d-48c0-b74f-0bccb9ab3a87&#x60;
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:Model/CurrencyExchangeListResponse}
      */
-    infoCurrenciesOut() {
-      return this.infoCurrenciesOutWithHttpInfo()
+    infoCurrenciesOut(opts) {
+      return this.infoCurrenciesOutWithHttpInfo(opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

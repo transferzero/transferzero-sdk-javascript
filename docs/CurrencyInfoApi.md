@@ -78,7 +78,7 @@ apiClient.basePath = 'https://api-sandbox.transferzero.com/v1';
 
 <a name="infoCurrenciesIn"></a>
 # **infoCurrenciesIn**
-> CurrencyExchangeListResponse infoCurrenciesIn()
+> CurrencyExchangeListResponse infoCurrenciesIn(opts)
 
 Getting a list of possible input currencies
 
@@ -95,7 +95,11 @@ apiClient.apiSecret = '<secret>';
 apiClient.basePath = 'https://api-sandbox.transferzero.com/v1';
 
 let apiInstance = new CurrencyInfoApi(apiClient);
-apiInstance.infoCurrenciesIn().then((data) => {
+
+let opts = { 
+  'senderId': null // String | Allows the scoping of the results by `sender_id` (optional).  Example: `/v1/info/currencies/in?sender_id=26ec8517-2f0d-48c0-b74f-0bccb9ab3a87`
+};
+apiInstance.infoCurrenciesIn(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   if (error.isValidationError) {
@@ -111,7 +115,10 @@ apiInstance.infoCurrenciesIn().then((data) => {
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **senderId** | [**String**](.md)| Allows the scoping of the results by &#x60;sender_id&#x60; (optional).  Example: &#x60;/v1/info/currencies/in?sender_id&#x3D;26ec8517-2f0d-48c0-b74f-0bccb9ab3a87&#x60; | [optional] 
 
 ### Return type
 
@@ -145,7 +152,7 @@ apiClient.basePath = 'https://api-sandbox.transferzero.com/v1';
 
 <a name="infoCurrenciesOut"></a>
 # **infoCurrenciesOut**
-> CurrencyExchangeListResponse infoCurrenciesOut()
+> CurrencyExchangeListResponse infoCurrenciesOut(opts)
 
 Getting a list of possible output currencies
 
@@ -162,7 +169,11 @@ apiClient.apiSecret = '<secret>';
 apiClient.basePath = 'https://api-sandbox.transferzero.com/v1';
 
 let apiInstance = new CurrencyInfoApi(apiClient);
-apiInstance.infoCurrenciesOut().then((data) => {
+
+let opts = { 
+  'senderId': null // String | Allows the scoping of the results by `sender_id` (optional).  Example: `/v1/info/currencies/out?sender_id=26ec8517-2f0d-48c0-b74f-0bccb9ab3a87`
+};
+apiInstance.infoCurrenciesOut(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   if (error.isValidationError) {
@@ -178,7 +189,10 @@ apiInstance.infoCurrenciesOut().then((data) => {
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **senderId** | [**String**](.md)| Allows the scoping of the results by &#x60;sender_id&#x60; (optional).  Example: &#x60;/v1/info/currencies/out?sender_id&#x3D;26ec8517-2f0d-48c0-b74f-0bccb9ab3a87&#x60; | [optional] 
 
 ### Return type
 
