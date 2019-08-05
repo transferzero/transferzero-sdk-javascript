@@ -13,12 +13,13 @@
 
 import ApiClient from '../ApiClient';
 import Currency from './Currency';
+import CurrencyExchangeAllOf from './CurrencyExchangeAllOf';
 import CurrencyOpposite from './CurrencyOpposite';
 
 /**
  * The CurrencyExchange model module.
  * @module Model/CurrencyExchange
- * @version 1.1.0
+ * @version 1.2.0
  */
 class CurrencyExchange {
     /**
@@ -26,9 +27,10 @@ class CurrencyExchange {
      * @alias module:Model/CurrencyExchange
      * @extends module:Model/Currency
      * @implements module:Model/Currency
+     * @implements module:Model/CurrencyExchangeAllOf
      */
     constructor() { 
-        Currency.initialize(this);
+        Currency.initialize(this);CurrencyExchangeAllOf.initialize(this);
         CurrencyExchange.initialize(this);
     }
 
@@ -52,22 +54,14 @@ class CurrencyExchange {
             obj = obj || new CurrencyExchange();
             Currency.constructFromObject(data, obj);
             Currency.constructFromObject(data, obj);
+            CurrencyExchangeAllOf.constructFromObject(data, obj);
 
-            if (data.hasOwnProperty('opposites')) {
-                obj['opposites'] = ApiClient.convertToType(data['opposites'], [CurrencyOpposite]);
-            }
         }
         return obj;
     }
 
 
 }
-
-/**
- * Lists the currencies where you can exchange from this one
- * @member {Array.<module:Model/CurrencyOpposite>} opposites
- */
-CurrencyExchange.prototype['opposites'] = undefined;
 
 
 // Implement Currency interface:
@@ -121,6 +115,12 @@ Currency.prototype['margin'] = undefined;
  * @member {String} usd_equivalent
  */
 Currency.prototype['usd_equivalent'] = undefined;
+// Implement CurrencyExchangeAllOf interface:
+/**
+ * Lists the currencies where you can exchange from this one
+ * @member {Array.<module:Model/CurrencyOpposite>} opposites
+ */
+CurrencyExchangeAllOf.prototype['opposites'] = undefined;
 
 
 

@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The CurrencyOppositeAllOf model module.
  * @module Model/CurrencyOppositeAllOf
- * @version 1.1.0
+ * @version 1.2.0
  */
 class CurrencyOppositeAllOf {
     /**
@@ -50,6 +50,9 @@ class CurrencyOppositeAllOf {
             if (data.hasOwnProperty('rate')) {
                 obj['rate'] = ApiClient.convertToType(data['rate'], 'Number');
             }
+            if (data.hasOwnProperty('mtm_rate')) {
+                obj['mtm_rate'] = ApiClient.convertToType(data['mtm_rate'], 'Number');
+            }
         }
         return obj;
     }
@@ -62,6 +65,12 @@ class CurrencyOppositeAllOf {
  * @member {Number} rate
  */
 CurrencyOppositeAllOf.prototype['rate'] = undefined;
+
+/**
+ * Mark to market rate of this particular currency against the base one with the margin factored in
+ * @member {Number} mtm_rate
+ */
+CurrencyOppositeAllOf.prototype['mtm_rate'] = undefined;
 
 
 
