@@ -24,7 +24,7 @@ import ValidationErrorDescription from './ValidationErrorDescription';
 class Sender {
     /**
      * Constructs a new <code>Sender</code>.
-     * This contains the details of the sender. The first time a specific sender is used the full details should be provided. Once a sender is created and is used, the next time you MUST only send the ID of the sender. This is so we can match the same sender across multiple transactions for KYC and audit purposes.  Personal Sender Example: &#x60;&#x60;&#x60;json {   \&quot;country\&quot;: \&quot;UG\&quot;,   \&quot;phone_country\&quot;: \&quot;UG\&quot;,   \&quot;phone_number\&quot;: \&quot;752403639\&quot;,   \&quot;email\&quot;: \&quot;example@home.org\&quot;,   \&quot;first_name\&quot;: \&quot;Johnny\&quot;,   \&quot;last_name\&quot;: \&quot;English\&quot;,   \&quot;city\&quot;: \&quot;Kampala\&quot;,   \&quot;street\&quot;: \&quot;Unknown 17-3\&quot;,   \&quot;address_description\&quot;: \&quot;Description of address\&quot;,   \&quot;postal_code\&quot;: \&quot;798983\&quot;,   \&quot;birth_date\&quot;: \&quot;1900-12-31\&quot;,   \&quot;documents\&quot;: [ ],   \&quot;ip\&quot;: \&quot;127.0.0.1\&quot;,   \&quot;external_id\&quot;: \&quot;806ec63a-a5a7-43cc-9d75-1ee74fbcc026\&quot;,   \&quot;metadata\&quot;: { } } &#x60;&#x60;&#x60;  Business Sender Example:  &#x60;&#x60;&#x60;json {   \&quot;type\&quot;: \&quot;business\&quot;,   \&quot;country\&quot;: \&quot;UG\&quot;,   \&quot;phone_country\&quot;: \&quot;UG\&quot;,   \&quot;phone_number\&quot;: \&quot;752403639\&quot;,   \&quot;email\&quot;: \&quot;example@home.org\&quot;,   \&quot;name\&quot;: \&quot;MyCompany\&quot;,   \&quot;city\&quot;: \&quot;Kampala\&quot;,   \&quot;street\&quot;: \&quot;Unknown 17-3\&quot;,   \&quot;postal_code\&quot;: \&quot;798983\&quot;,   \&quot;address_description\&quot;: \&quot;Description of address\&quot;,   \&quot;documents\&quot;: [ ],   \&quot;ip\&quot;: \&quot;127.0.0.1\&quot;,   \&quot;external_id\&quot;: \&quot;806ec63a-a5a7-43cc-9d75-1ee74fbcc026\&quot;,   \&quot;metadata\&quot;: { } } &#x60;&#x60;&#x60;  [Sender in the API documentation](https://github.com/transferzero/api-documentation/blob/master/transaction-flow.md#sender)
+     * This contains the details of the sender. The first time a specific sender is used the full details should be provided. Once a sender is created and is used, the next time you MUST only send the ID of the sender. This is so we can match the same sender across multiple transactions for KYC and audit purposes.  Personal Sender Example: &#x60;&#x60;&#x60;json {   \&quot;country\&quot;: \&quot;UG\&quot;,   \&quot;phone_country\&quot;: \&quot;UG\&quot;,   \&quot;phone_number\&quot;: \&quot;752403639\&quot;,   \&quot;email\&quot;: \&quot;example@home.org\&quot;,   \&quot;first_name\&quot;: \&quot;Johnny\&quot;,   \&quot;last_name\&quot;: \&quot;English\&quot;,   \&quot;city\&quot;: \&quot;Kampala\&quot;,   \&quot;street\&quot;: \&quot;Unknown 17-3\&quot;,   \&quot;address_description\&quot;: \&quot;Description of address\&quot;,   \&quot;postal_code\&quot;: \&quot;798983\&quot;,   \&quot;birth_date\&quot;: \&quot;1900-12-31\&quot;,   \&quot;documents\&quot;: [ ],   \&quot;ip\&quot;: \&quot;127.0.0.1\&quot;,   \&quot;identification_number\&quot;: \&quot;AB123456\&quot;,   \&quot;identification_type\&quot;: \&quot;ID\&quot;,   \&quot;external_id\&quot;: \&quot;806ec63a-a5a7-43cc-9d75-1ee74fbcc026\&quot;,   \&quot;metadata\&quot;: { } } &#x60;&#x60;&#x60;  Business Sender Example:  &#x60;&#x60;&#x60;json {   \&quot;type\&quot;: \&quot;business\&quot;,   \&quot;country\&quot;: \&quot;UG\&quot;,   \&quot;phone_country\&quot;: \&quot;UG\&quot;,   \&quot;phone_number\&quot;: \&quot;752403639\&quot;,   \&quot;email\&quot;: \&quot;example@home.org\&quot;,   \&quot;name\&quot;: \&quot;MyCompany\&quot;,   \&quot;city\&quot;: \&quot;Kampala\&quot;,   \&quot;street\&quot;: \&quot;Unknown 17-3\&quot;,   \&quot;postal_code\&quot;: \&quot;798983\&quot;,   \&quot;address_description\&quot;: \&quot;Description of address\&quot;,   \&quot;documents\&quot;: [ ],   \&quot;ip\&quot;: \&quot;127.0.0.1\&quot;,   \&quot;identification_number\&quot;: \&quot;AB123456\&quot;,   \&quot;identification_type\&quot;: \&quot;ID\&quot;,   \&quot;external_id\&quot;: \&quot;806ec63a-a5a7-43cc-9d75-1ee74fbcc026\&quot;,   \&quot;metadata\&quot;: { } } &#x60;&#x60;&#x60;  [Sender in the API documentation](https://github.com/transferzero/api-documentation/blob/master/transaction-flow.md#sender)
      * @alias module:Model/Sender
      * @param country {String} Country of sender in 2-character alpha ISO 3166-2 country format
      * @param phoneCountry {String} Phone country of sender in 2-character alpha ISO 3166-2 country format
@@ -126,6 +126,12 @@ class Sender {
             }
             if (data.hasOwnProperty('ip')) {
                 obj['ip'] = ApiClient.convertToType(data['ip'], 'String');
+            }
+            if (data.hasOwnProperty('identification_number')) {
+                obj['identification_number'] = ApiClient.convertToType(data['identification_number'], 'String');
+            }
+            if (data.hasOwnProperty('identification_type')) {
+                obj['identification_type'] = ApiClient.convertToType(data['identification_type'], 'String');
             }
             if (data.hasOwnProperty('documents')) {
                 obj['documents'] = ApiClient.convertToType(data['documents'], [Document]);
@@ -273,6 +279,18 @@ Sender.prototype['birth_date'] = undefined;
 Sender.prototype['ip'] = undefined;
 
 /**
+ * Identification number of document used
+ * @member {String} identification_number
+ */
+Sender.prototype['identification_number'] = undefined;
+
+/**
+ * Document to be identified. The identification type can be one of the following:  - `DL`: Driving License - `PP`: International Passport - `ID`: National ID - `OT`: Other
+ * @member {module:Model/Sender.IdentificationTypeEnum} identification_type
+ */
+Sender.prototype['identification_type'] = undefined;
+
+/**
  * Needed for KYC checks. Required to approve the sender unless KYC is waived for your account. Please send us an empty list of documents: `\"documents\": [ ]` in the request if KYC has been waived.  If the documents already exist, please send the Document ID eg. ```JSON \"documents\": [   {     \"id\": \"b6648ba3-1c7b-4f59-8580-684899c84a07\"   } ] ```
  * @member {Array.<module:Model/Document>} documents
  */
@@ -328,6 +346,39 @@ Sender['TypeEnum'] = {
      * @const
      */
     "business": "business"
+};
+
+
+/**
+ * Allowed values for the <code>identification_type</code> property.
+ * @enum {String}
+ * @readonly
+ */
+Sender['IdentificationTypeEnum'] = {
+
+    /**
+     * value: "DL"
+     * @const
+     */
+    "DL": "DL",
+
+    /**
+     * value: "PP"
+     * @const
+     */
+    "PP": "PP",
+
+    /**
+     * value: "ID"
+     * @const
+     */
+    "ID": "ID",
+
+    /**
+     * value: "OT"
+     * @const
+     */
+    "OT": "OT"
 };
 
 
