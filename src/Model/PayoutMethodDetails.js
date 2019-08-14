@@ -19,6 +19,7 @@ import PayoutMethodDetailsIBAN from './PayoutMethodDetailsIBAN';
 import PayoutMethodDetailsMADCash from './PayoutMethodDetailsMADCash';
 import PayoutMethodDetailsMobile from './PayoutMethodDetailsMobile';
 import PayoutMethodDetailsNGNBank from './PayoutMethodDetailsNGNBank';
+import PayoutMethodDetailsXOFBank from './PayoutMethodDetailsXOFBank';
 import PayoutMethodDetailsXOFMobile from './PayoutMethodDetailsXOFMobile';
 import PayoutMethodGenderEnum from './PayoutMethodGenderEnum';
 import PayoutMethodIdentityCardTypeEnum from './PayoutMethodIdentityCardTypeEnum';
@@ -36,6 +37,7 @@ class PayoutMethodDetails {
      * @implements module:Model/PayoutMethodDetailsNGNBank
      * @implements module:Model/PayoutMethodDetailsMobile
      * @implements module:Model/PayoutMethodDetailsXOFMobile
+     * @implements module:Model/PayoutMethodDetailsXOFBank
      * @implements module:Model/PayoutMethodDetailsGHSBank
      * @implements module:Model/PayoutMethodDetailsIBAN
      * @implements module:Model/PayoutMethodDetailsMADCash
@@ -48,6 +50,7 @@ class PayoutMethodDetails {
      * @param phoneNumber {} 
      * @param mobileProvider {} 
      * @param bankName {} 
+     * @param bankCountry {} 
      * @param iban {} 
      * @param senderIdentityCardType {} 
      * @param senderIdentityCardId {} 
@@ -55,9 +58,9 @@ class PayoutMethodDetails {
      * @param senderCountryOfBirth {} 
      * @param senderGender {} 
      */
-    constructor(firstName, lastName, bankCode, bankAccount, bankAccountType, phoneNumber, mobileProvider, bankName, iban, senderIdentityCardType, senderIdentityCardId, senderCityOfBirth, senderCountryOfBirth, senderGender) { 
-        PayoutMethodDetailsNGNBank.initialize(this, firstName, lastName, bankCode, bankAccount, bankAccountType);PayoutMethodDetailsMobile.initialize(this, firstName, lastName, phoneNumber);PayoutMethodDetailsXOFMobile.initialize(this, firstName, lastName, phoneNumber, mobileProvider);PayoutMethodDetailsGHSBank.initialize(this, firstName, lastName, bankCode, bankAccount);PayoutMethodDetailsIBAN.initialize(this, firstName, lastName, bankName, iban);PayoutMethodDetailsMADCash.initialize(this, firstName, lastName, phoneNumber, senderIdentityCardType, senderIdentityCardId, senderCityOfBirth, senderCountryOfBirth, senderGender);PayoutMethodDetailsBalance.initialize(this);
-        PayoutMethodDetails.initialize(this, firstName, lastName, bankCode, bankAccount, bankAccountType, phoneNumber, mobileProvider, bankName, iban, senderIdentityCardType, senderIdentityCardId, senderCityOfBirth, senderCountryOfBirth, senderGender);
+    constructor(firstName, lastName, bankCode, bankAccount, bankAccountType, phoneNumber, mobileProvider, bankName, bankCountry, iban, senderIdentityCardType, senderIdentityCardId, senderCityOfBirth, senderCountryOfBirth, senderGender) { 
+        PayoutMethodDetailsNGNBank.initialize(this, firstName, lastName, bankCode, bankAccount, bankAccountType);PayoutMethodDetailsMobile.initialize(this, firstName, lastName, phoneNumber);PayoutMethodDetailsXOFMobile.initialize(this, firstName, lastName, phoneNumber, mobileProvider);PayoutMethodDetailsXOFBank.initialize(this, firstName, lastName, bankAccount, bankName, bankCountry);PayoutMethodDetailsGHSBank.initialize(this, firstName, lastName, bankCode, bankAccount);PayoutMethodDetailsIBAN.initialize(this, firstName, lastName, bankName, iban);PayoutMethodDetailsMADCash.initialize(this, firstName, lastName, phoneNumber, senderIdentityCardType, senderIdentityCardId, senderCityOfBirth, senderCountryOfBirth, senderGender);PayoutMethodDetailsBalance.initialize(this);
+        PayoutMethodDetails.initialize(this, firstName, lastName, bankCode, bankAccount, bankAccountType, phoneNumber, mobileProvider, bankName, bankCountry, iban, senderIdentityCardType, senderIdentityCardId, senderCityOfBirth, senderCountryOfBirth, senderGender);
     }
 
     /**
@@ -65,7 +68,7 @@ class PayoutMethodDetails {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, firstName, lastName, bankCode, bankAccount, bankAccountType, phoneNumber, mobileProvider, bankName, iban, senderIdentityCardType, senderIdentityCardId, senderCityOfBirth, senderCountryOfBirth, senderGender) { 
+    static initialize(obj, firstName, lastName, bankCode, bankAccount, bankAccountType, phoneNumber, mobileProvider, bankName, bankCountry, iban, senderIdentityCardType, senderIdentityCardId, senderCityOfBirth, senderCountryOfBirth, senderGender) { 
     }
 
     /**
@@ -81,6 +84,7 @@ class PayoutMethodDetails {
             PayoutMethodDetailsNGNBank.constructFromObject(data, obj);
             PayoutMethodDetailsMobile.constructFromObject(data, obj);
             PayoutMethodDetailsXOFMobile.constructFromObject(data, obj);
+            PayoutMethodDetailsXOFBank.constructFromObject(data, obj);
             PayoutMethodDetailsGHSBank.constructFromObject(data, obj);
             PayoutMethodDetailsIBAN.constructFromObject(data, obj);
             PayoutMethodDetailsMADCash.constructFromObject(data, obj);
@@ -145,6 +149,27 @@ PayoutMethodDetailsXOFMobile.prototype['phone_number'] = undefined;
  * @member {module:Model/PayoutMethodMobileProviderEnum} mobile_provider
  */
 PayoutMethodDetailsXOFMobile.prototype['mobile_provider'] = undefined;
+// Implement PayoutMethodDetailsXOFBank interface:
+/**
+ * @member {String} first_name
+ */
+PayoutMethodDetailsXOFBank.prototype['first_name'] = undefined;
+/**
+ * @member {String} last_name
+ */
+PayoutMethodDetailsXOFBank.prototype['last_name'] = undefined;
+/**
+ * @member {String} bank_account
+ */
+PayoutMethodDetailsXOFBank.prototype['bank_account'] = undefined;
+/**
+ * @member {String} bank_name
+ */
+PayoutMethodDetailsXOFBank.prototype['bank_name'] = undefined;
+/**
+ * @member {String} bank_country
+ */
+PayoutMethodDetailsXOFBank.prototype['bank_country'] = undefined;
 // Implement PayoutMethodDetailsGHSBank interface:
 /**
  * @member {String} first_name
