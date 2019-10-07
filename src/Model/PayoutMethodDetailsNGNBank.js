@@ -28,11 +28,10 @@ class PayoutMethodDetailsNGNBank {
      * @param lastName {String} 
      * @param bankCode {String} 
      * @param bankAccount {String} 
-     * @param bankAccountType {module:Model/PayoutMethodBankAccountTypeEnum} 
      */
-    constructor(firstName, lastName, bankCode, bankAccount, bankAccountType) { 
+    constructor(firstName, lastName, bankCode, bankAccount) { 
         
-        PayoutMethodDetailsNGNBank.initialize(this, firstName, lastName, bankCode, bankAccount, bankAccountType);
+        PayoutMethodDetailsNGNBank.initialize(this, firstName, lastName, bankCode, bankAccount);
     }
 
     /**
@@ -40,12 +39,11 @@ class PayoutMethodDetailsNGNBank {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, firstName, lastName, bankCode, bankAccount, bankAccountType) { 
+    static initialize(obj, firstName, lastName, bankCode, bankAccount) { 
         obj['first_name'] = firstName;
         obj['last_name'] = lastName;
         obj['bank_code'] = bankCode;
         obj['bank_account'] = bankAccount;
-        obj['bank_account_type'] = bankAccountType;
     }
 
     /**

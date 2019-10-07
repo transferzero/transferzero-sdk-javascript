@@ -46,7 +46,6 @@ class PayoutMethodDetails {
      * @param lastName {} 
      * @param bankCode {} 
      * @param bankAccount {} 
-     * @param bankAccountType {} 
      * @param phoneNumber {} 
      * @param mobileProvider {} 
      * @param bankName {} 
@@ -58,9 +57,9 @@ class PayoutMethodDetails {
      * @param senderCountryOfBirth {} 
      * @param senderGender {} 
      */
-    constructor(firstName, lastName, bankCode, bankAccount, bankAccountType, phoneNumber, mobileProvider, bankName, bankCountry, iban, senderIdentityCardType, senderIdentityCardId, senderCityOfBirth, senderCountryOfBirth, senderGender) { 
-        PayoutMethodDetailsNGNBank.initialize(this, firstName, lastName, bankCode, bankAccount, bankAccountType);PayoutMethodDetailsMobile.initialize(this, firstName, lastName, phoneNumber);PayoutMethodDetailsXOFMobile.initialize(this, firstName, lastName, phoneNumber, mobileProvider);PayoutMethodDetailsXOFBank.initialize(this, firstName, lastName, bankAccount, bankName, bankCountry);PayoutMethodDetailsGHSBank.initialize(this, firstName, lastName, bankCode, bankAccount);PayoutMethodDetailsIBAN.initialize(this, firstName, lastName, bankName, iban);PayoutMethodDetailsMADCash.initialize(this, firstName, lastName, phoneNumber, senderIdentityCardType, senderIdentityCardId, senderCityOfBirth, senderCountryOfBirth, senderGender);PayoutMethodDetailsBalance.initialize(this);
-        PayoutMethodDetails.initialize(this, firstName, lastName, bankCode, bankAccount, bankAccountType, phoneNumber, mobileProvider, bankName, bankCountry, iban, senderIdentityCardType, senderIdentityCardId, senderCityOfBirth, senderCountryOfBirth, senderGender);
+    constructor(firstName, lastName, bankCode, bankAccount, phoneNumber, mobileProvider, bankName, bankCountry, iban, senderIdentityCardType, senderIdentityCardId, senderCityOfBirth, senderCountryOfBirth, senderGender) { 
+        PayoutMethodDetailsNGNBank.initialize(this, firstName, lastName, bankCode, bankAccount);PayoutMethodDetailsMobile.initialize(this, firstName, lastName, phoneNumber);PayoutMethodDetailsXOFMobile.initialize(this, firstName, lastName, phoneNumber, mobileProvider);PayoutMethodDetailsXOFBank.initialize(this, firstName, lastName, bankAccount, bankName, bankCountry);PayoutMethodDetailsGHSBank.initialize(this, firstName, lastName, bankCode, bankAccount);PayoutMethodDetailsIBAN.initialize(this, firstName, lastName, bankName, iban);PayoutMethodDetailsMADCash.initialize(this, firstName, lastName, phoneNumber, senderIdentityCardType, senderIdentityCardId, senderCityOfBirth, senderCountryOfBirth, senderGender);PayoutMethodDetailsBalance.initialize(this);
+        PayoutMethodDetails.initialize(this, firstName, lastName, bankCode, bankAccount, phoneNumber, mobileProvider, bankName, bankCountry, iban, senderIdentityCardType, senderIdentityCardId, senderCityOfBirth, senderCountryOfBirth, senderGender);
     }
 
     /**
@@ -68,7 +67,7 @@ class PayoutMethodDetails {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, firstName, lastName, bankCode, bankAccount, bankAccountType, phoneNumber, mobileProvider, bankName, bankCountry, iban, senderIdentityCardType, senderIdentityCardId, senderCityOfBirth, senderCountryOfBirth, senderGender) { 
+    static initialize(obj, firstName, lastName, bankCode, bankAccount, phoneNumber, mobileProvider, bankName, bankCountry, iban, senderIdentityCardType, senderIdentityCardId, senderCityOfBirth, senderCountryOfBirth, senderGender) { 
     }
 
     /**

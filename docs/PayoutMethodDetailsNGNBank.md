@@ -7,6 +7,6 @@ Name | Type | Description | Notes
 **lastName** | **String** |  | 
 **bankCode** | **String** |  | 
 **bankAccount** | **String** |  | 
-**bankAccountType** | [**PayoutMethodBankAccountTypeEnum**](PayoutMethodBankAccountTypeEnum.md) |  | 
+**bankAccountType** | [**PayoutMethodBankAccountTypeEnum**](PayoutMethodBankAccountTypeEnum.md) |  | [optional] 
 
 
