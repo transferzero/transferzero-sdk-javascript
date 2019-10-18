@@ -21,17 +21,17 @@ import ApiClient from '../ApiClient';
 class PayoutMethodDetailsXOFBank {
     /**
      * Constructs a new <code>PayoutMethodDetailsXOFBank</code>.
-     * &#x60;&#x60;&#x60;JSON \&quot;details\&quot;: {   \&quot;first_name\&quot;: \&quot;First\&quot;,   \&quot;last_name\&quot;: \&quot;Last\&quot;,   \&quot;bank_account\&quot;: \&quot;0987654321\&quot;,   \&quot;bank_name\&quot;: \&quot;BRM\&quot;,   \&quot;bank_country\&quot;: \&quot;SN\&quot; # ISO country code for Senegal } &#x60;&#x60;&#x60; *** Currently in Beta phase ***
+     * &#x60;&#x60;&#x60;JSON \&quot;details\&quot;: {   \&quot;first_name\&quot;: \&quot;First\&quot;,   \&quot;last_name\&quot;: \&quot;Last\&quot;,   \&quot;iban\&quot;: \&quot;SN08SN0000000000000000000000\&quot;,   \&quot;bank_name\&quot;: \&quot;BRM\&quot;,   \&quot;bank_country\&quot;: \&quot;SN\&quot; # ISO country code for Senegal } &#x60;&#x60;&#x60; *** Currently in Beta phase ***
      * @alias module:Model/PayoutMethodDetailsXOFBank
      * @param firstName {String} 
      * @param lastName {String} 
-     * @param bankAccount {String} 
+     * @param iban {String} 
      * @param bankName {String} 
      * @param bankCountry {String} 
      */
-    constructor(firstName, lastName, bankAccount, bankName, bankCountry) { 
+    constructor(firstName, lastName, iban, bankName, bankCountry) { 
         
-        PayoutMethodDetailsXOFBank.initialize(this, firstName, lastName, bankAccount, bankName, bankCountry);
+        PayoutMethodDetailsXOFBank.initialize(this, firstName, lastName, iban, bankName, bankCountry);
     }
 
     /**
@@ -39,10 +39,10 @@ class PayoutMethodDetailsXOFBank {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, firstName, lastName, bankAccount, bankName, bankCountry) { 
+    static initialize(obj, firstName, lastName, iban, bankName, bankCountry) { 
         obj['first_name'] = firstName;
         obj['last_name'] = lastName;
-        obj['bank_account'] = bankAccount;
+        obj['iban'] = iban;
         obj['bank_name'] = bankName;
         obj['bank_country'] = bankCountry;
     }
@@ -64,8 +64,8 @@ class PayoutMethodDetailsXOFBank {
             if (data.hasOwnProperty('last_name')) {
                 obj['last_name'] = ApiClient.convertToType(data['last_name'], 'String');
             }
-            if (data.hasOwnProperty('bank_account')) {
-                obj['bank_account'] = ApiClient.convertToType(data['bank_account'], 'String');
+            if (data.hasOwnProperty('iban')) {
+                obj['iban'] = ApiClient.convertToType(data['iban'], 'String');
             }
             if (data.hasOwnProperty('bank_name')) {
                 obj['bank_name'] = ApiClient.convertToType(data['bank_name'], 'String');
@@ -91,9 +91,9 @@ PayoutMethodDetailsXOFBank.prototype['first_name'] = undefined;
 PayoutMethodDetailsXOFBank.prototype['last_name'] = undefined;
 
 /**
- * @member {String} bank_account
+ * @member {String} iban
  */
-PayoutMethodDetailsXOFBank.prototype['bank_account'] = undefined;
+PayoutMethodDetailsXOFBank.prototype['iban'] = undefined;
 
 /**
  * @member {String} bank_name

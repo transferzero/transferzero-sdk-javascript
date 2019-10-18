@@ -5,7 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **firstName** | **String** |  | 
 **lastName** | **String** |  | 
-**bankAccount** | **String** |  | 
+**iban** | **String** |  | 
 **bankName** | **String** |  | 
 **bankCountry** | **String** |  | 
 
