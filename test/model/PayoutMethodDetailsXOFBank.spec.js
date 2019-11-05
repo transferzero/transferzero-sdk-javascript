@@ -66,8 +66,8 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property bankAccount (base name: "bank_account")', function() {
-      // uncomment below and update the code to test the property bankAccount
+    it('should have the property iban (base name: "iban")', function() {
+      // uncomment below and update the code to test the property iban
       //var instane = new TransferzeroSdk.PayoutMethodDetailsXOFBank();
       //expect(instance).to.be();
     });
