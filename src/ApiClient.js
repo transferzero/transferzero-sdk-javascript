@@ -317,7 +317,7 @@ export default class ApiClient {
         const hash = crypto.createHash('sha512').update(bodyJson);
         var query = ''
 
-        if (Object.keys(request.qs).length !== 0) {
+        if (request.qs && Object.keys(request.qs).length !== 0) {
           query = '?' + querystring.stringify(request.qs)
         }
 
