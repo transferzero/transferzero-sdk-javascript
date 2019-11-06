@@ -174,6 +174,18 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property identificationNumber (base name: "identification_number")', function() {
+      // uncomment below and update the code to test the property identificationNumber
+      //var instane = new TransferzeroSdk.Sender();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property identificationType (base name: "identification_type")', function() {
+      // uncomment below and update the code to test the property identificationType
+      //var instane = new TransferzeroSdk.Sender();
+      //expect(instance).to.be();
+    });
+
     it('should have the property documents (base name: "documents")', function() {
       // uncomment below and update the code to test the property documents
       //var instane = new TransferzeroSdk.Sender();

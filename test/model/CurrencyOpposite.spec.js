@@ -60,6 +60,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property mtmRate (base name: "mtm_rate")', function() {
+      // uncomment below and update the code to test the property mtmRate
+      //var instane = new TransferzeroSdk.CurrencyOpposite();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

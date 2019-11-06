@@ -90,6 +90,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property retriable (base name: "retriable")', function() {
+      // uncomment below and update the code to test the property retriable
+      //var instane = new TransferzeroSdk.Recipient();
+      //expect(instance).to.be();
+    });
+
     it('should have the property inputUsdAmount (base name: "input_usd_amount")', function() {
       // uncomment below and update the code to test the property inputUsdAmount
       //var instane = new TransferzeroSdk.Recipient();

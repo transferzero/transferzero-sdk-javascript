@@ -36,7 +36,7 @@ class ApiError {
 
 /**
 * @module ApiClient
-* @version 1.3.0
+* @version 1.3.1
 */
 
 /**
@@ -317,7 +317,7 @@ export default class ApiClient {
         const hash = crypto.createHash('sha512').update(bodyJson);
         var query = ''
 
-        if (Object.keys(request.qs).length !== 0) {
+        if (request.qs && Object.keys(request.qs).length !== 0) {
           query = '?' + querystring.stringify(request.qs)
         }
 
@@ -461,7 +461,7 @@ export default class ApiClient {
       // set header parameters
       request.set(this.defaultHeaders).set(this.normalizeParams(headerParams));
 
-      request.set("User-Agent","TransferZero-SDK/JavaScript/1.3.0");
+      request.set("User-Agent","TransferZero-SDK/JavaScript/1.3.1");
 
       // set requestAgent if it is set by user
       if (this.requestAgent) {

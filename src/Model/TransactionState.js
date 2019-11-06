@@ -83,13 +83,6 @@ export default class TransactionState {
 
     
         /**
-         * value: "processing"
-         * @const
-         */
-        "processing" = "processing";
-
-    
-        /**
          * value: "exception"
          * @const
          */

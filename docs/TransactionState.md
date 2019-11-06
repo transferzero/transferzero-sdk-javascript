@@ -21,8 +21,6 @@
 
 * `refunded` (value: `"refunded"`)
 
-* `processing` (value: `"processing"`)
-
 * `exception` (value: `"exception"`)
 
 
