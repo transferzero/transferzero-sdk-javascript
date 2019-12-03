@@ -5,6 +5,7 @@ All URIs are relative to *https://api-sandbox.transferzero.com/v1*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**calculateTransactions**](TransactionsApi.md#calculateTransactions) | **POST** /transactions/calculate | Calculates transaction amounts for a transaction payload
+[**createAndFundTransaction**](TransactionsApi.md#createAndFundTransaction) | **POST** /transactions/create_and_fund | Creates a new transaction and funds it from account balance
 [**getTransaction**](TransactionsApi.md#getTransaction) | **GET** /transactions/{Transaction ID} | Fetch a single transaction
 [**getTransactions**](TransactionsApi.md#getTransactions) | **GET** /transactions | Get a list of transactions
 [**payinTransaction**](TransactionsApi.md#payinTransaction) | **POST** /transactions/{Transaction ID}/payin | Creates a fake payin for transaction
@@ -42,6 +43,77 @@ apiInstance.calculateTransactions(transactionRequest).then((data) => {
     console.error("WARN: Validation error occurred when calling the endpoint");
   } else {
     console.error("Exception when calling TransactionsApi#calculateTransactions");
+    throw error;
+  }
+});
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **transactionRequest** | [**TransactionRequest**](TransactionRequest.md)|  | 
+
+### Return type
+
+[**TransactionResponse**](TransactionResponse.md)
+
+### Authorization
+
+You can set the API Key and Secret by passing a config object when creating an ApiClient:
+
+```js
+const apiClient = new ApiClient({
+  apiKey: '<key>',
+  apiSecret: '<secret>',
+  basePath: 'https://api-sandbox.transferzero.com/v1'
+});
+```
+
+Or by setting the properties on an ApiClient instance:
+
+```js
+const apiClient = new ApiClient();
+apiClient.apiKey = '<key>';
+apiClient.apiSecret = '<secret>';
+apiClient.basePath = 'https://api-sandbox.transferzero.com/v1';
+```
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="createAndFundTransaction"></a>
+# **createAndFundTransaction**
+> TransactionResponse createAndFundTransaction(transactionRequest)
+
+Creates a new transaction and funds it from account balance
+
+This endpoint creates a transaction and funds it from an account balance. You must ensure that you have established an account with us in the pay-in currency of the transactions you wish to create, and that this account is sufficently funded, before calling this endpoint.  Note that the &lt;pre&gt;external_id&lt;/pre&gt; field is required for requests to this endpoint.
+
+### Example
+```javascript
+import { TransactionsApi } from 'transferzero-sdk';
+
+// Configure API key authorization
+const apiClient = new ApiClient();
+apiClient.apiKey = '<key>';
+apiClient.apiSecret = '<secret>';
+apiClient.basePath = 'https://api-sandbox.transferzero.com/v1';
+
+let apiInstance = new TransactionsApi(apiClient);
+
+apiInstance.createAndFundTransaction(transactionRequest).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  if (error.isValidationError) {
+    let result = error.getResponseObject();
+    console.log(result);
+    console.error("WARN: Validation error occurred when calling the endpoint");
+  } else {
+    console.error("Exception when calling TransactionsApi#createAndFundTransaction");
     throw error;
   }
 });

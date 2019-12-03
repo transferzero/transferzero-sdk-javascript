@@ -90,6 +90,56 @@ export default class TransactionsApi {
 
 
     /**
+     * Creates a new transaction and funds it from account balance
+     * This endpoint creates a transaction and funds it from an account balance. You must ensure that you have established an account with us in the pay-in currency of the transactions you wish to create, and that this account is sufficently funded, before calling this endpoint.  Note that the &lt;pre&gt;external_id&lt;/pre&gt; field is required for requests to this endpoint.
+     * @param {module:Model/TransactionRequest} transactionRequest 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:Model/TransactionResponse} and HTTP response
+     */
+    createAndFundTransactionWithHttpInfo(transactionRequest) {
+      let postBody = transactionRequest;
+
+      // verify the required parameter 'transactionRequest' is set
+      if (transactionRequest === undefined || transactionRequest === null) {
+        throw new Error("Missing the required parameter 'transactionRequest' when calling createAndFundTransaction");
+      }
+
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['AuthorizationKey', 'AuthorizationNonce', 'AuthorizationSecret', 'AuthorizationSignature'];
+      let contentTypes = ['application/json'];
+      let accepts = ['application/json'];
+      let returnType = TransactionResponse;
+
+      return this.apiClient.callApi(
+        '/transactions/create_and_fund', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * Creates a new transaction and funds it from account balance
+     * This endpoint creates a transaction and funds it from an account balance. You must ensure that you have established an account with us in the pay-in currency of the transactions you wish to create, and that this account is sufficently funded, before calling this endpoint.  Note that the &lt;pre&gt;external_id&lt;/pre&gt; field is required for requests to this endpoint.
+     * @param {module:Model/TransactionRequest} transactionRequest 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:Model/TransactionResponse}
+     */
+    createAndFundTransaction(transactionRequest) {
+      return this.createAndFundTransactionWithHttpInfo(transactionRequest)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
      * Fetch a single transaction
      * Finds and returns a Transaction created by the requesting API key, using the provided Transaction ID.
      * @param {String} transactionID ID of the transaction.  Example: &#x60;/v1/transactions/bf9ff782-e182-45ac-abea-5bce83ad6670&#x60;

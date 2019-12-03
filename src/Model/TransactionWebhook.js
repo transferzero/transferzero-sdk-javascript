@@ -12,7 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
-import Transaction from './Transaction';
+import TransactionWebhookAllOf from './TransactionWebhookAllOf';
 import Webhook from './Webhook';
 
 /**
@@ -26,12 +26,13 @@ class TransactionWebhook {
      * @alias module:Model/TransactionWebhook
      * @extends module:Model/Webhook
      * @implements module:Model/Webhook
+     * @implements module:Model/TransactionWebhookAllOf
      * @param webhook {} The ID of the webhook that was used to send out this callback
      * @param event {} The event that triggered this webhook
-     * @param _object {} 
+     * @param _object {} The returned object
      */
     constructor(webhook, event, _object) { 
-        Webhook.initialize(this, webhook, event, _object);
+        Webhook.initialize(this, webhook, event, _object);TransactionWebhookAllOf.initialize(this);
         TransactionWebhook.initialize(this, webhook, event, _object);
     }
 
@@ -55,21 +56,14 @@ class TransactionWebhook {
             obj = obj || new TransactionWebhook();
             Webhook.constructFromObject(data, obj);
             Webhook.constructFromObject(data, obj);
+            TransactionWebhookAllOf.constructFromObject(data, obj);
 
-            if (data.hasOwnProperty('object')) {
-                obj['object'] = Transaction.constructFromObject(data['object']);
-            }
         }
         return obj;
     }
 
 
 }
-
-/**
- * @member {module:Model/Transaction} object
- */
-TransactionWebhook.prototype['object'] = undefined;
 
 
 // Implement Webhook interface:
@@ -88,6 +82,11 @@ Webhook.prototype['event'] = undefined;
  * @member {Object} object
  */
 Webhook.prototype['object'] = undefined;
+// Implement TransactionWebhookAllOf interface:
+/**
+ * @member {module:Model/Transaction} object
+ */
+TransactionWebhookAllOf.prototype['object'] = undefined;
 
 
 

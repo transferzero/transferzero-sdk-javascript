@@ -120,6 +120,7 @@ Class | Method | HTTP request | Description
 *TransferzeroSdk.SendersApi* | [**patchSender**](docs/SendersApi.md#patchSender) | **PATCH** /senders/{Sender ID} | Updating a sender
 *TransferzeroSdk.SendersApi* | [**postSenders**](docs/SendersApi.md#postSenders) | **POST** /senders | Creating a sender
 *TransferzeroSdk.TransactionsApi* | [**calculateTransactions**](docs/TransactionsApi.md#calculateTransactions) | **POST** /transactions/calculate | Calculates transaction amounts for a transaction payload
+*TransferzeroSdk.TransactionsApi* | [**createAndFundTransaction**](docs/TransactionsApi.md#createAndFundTransaction) | **POST** /transactions/create_and_fund | Creates a new transaction and funds it from account balance
 *TransferzeroSdk.TransactionsApi* | [**getTransaction**](docs/TransactionsApi.md#getTransaction) | **GET** /transactions/{Transaction ID} | Fetch a single transaction
 *TransferzeroSdk.TransactionsApi* | [**getTransactions**](docs/TransactionsApi.md#getTransactions) | **GET** /transactions | Get a list of transactions
 *TransferzeroSdk.TransactionsApi* | [**payinTransaction**](docs/TransactionsApi.md#payinTransaction) | **POST** /transactions/{Transaction ID}/payin | Creates a fake payin for transaction
@@ -148,9 +149,11 @@ Class | Method | HTTP request | Description
  - [TransferzeroSdk.ApiLogResponse](docs/ApiLogResponse.md)
  - [TransferzeroSdk.Currency](docs/Currency.md)
  - [TransferzeroSdk.CurrencyExchange](docs/CurrencyExchange.md)
+ - [TransferzeroSdk.CurrencyExchangeAllOf](docs/CurrencyExchangeAllOf.md)
  - [TransferzeroSdk.CurrencyExchangeListResponse](docs/CurrencyExchangeListResponse.md)
  - [TransferzeroSdk.CurrencyListResponse](docs/CurrencyListResponse.md)
  - [TransferzeroSdk.CurrencyOpposite](docs/CurrencyOpposite.md)
+ - [TransferzeroSdk.CurrencyOppositeAllOf](docs/CurrencyOppositeAllOf.md)
  - [TransferzeroSdk.Debit](docs/Debit.md)
  - [TransferzeroSdk.DebitListRequest](docs/DebitListRequest.md)
  - [TransferzeroSdk.DebitListResponse](docs/DebitListResponse.md)
@@ -162,6 +165,7 @@ Class | Method | HTTP request | Description
  - [TransferzeroSdk.DocumentRequest](docs/DocumentRequest.md)
  - [TransferzeroSdk.DocumentResponse](docs/DocumentResponse.md)
  - [TransferzeroSdk.DocumentWebhook](docs/DocumentWebhook.md)
+ - [TransferzeroSdk.DocumentWebhookAllOf](docs/DocumentWebhookAllOf.md)
  - [TransferzeroSdk.ErrorStatus](docs/ErrorStatus.md)
  - [TransferzeroSdk.FieldDescription](docs/FieldDescription.md)
  - [TransferzeroSdk.FieldSelectValidation](docs/FieldSelectValidation.md)
@@ -194,12 +198,14 @@ Class | Method | HTTP request | Description
  - [TransferzeroSdk.PayoutMethodRequest](docs/PayoutMethodRequest.md)
  - [TransferzeroSdk.PayoutMethodResponse](docs/PayoutMethodResponse.md)
  - [TransferzeroSdk.PayoutMethodWebhook](docs/PayoutMethodWebhook.md)
+ - [TransferzeroSdk.PayoutMethodWebhookAllOf](docs/PayoutMethodWebhookAllOf.md)
  - [TransferzeroSdk.Recipient](docs/Recipient.md)
  - [TransferzeroSdk.RecipientListResponse](docs/RecipientListResponse.md)
  - [TransferzeroSdk.RecipientRequest](docs/RecipientRequest.md)
  - [TransferzeroSdk.RecipientResponse](docs/RecipientResponse.md)
  - [TransferzeroSdk.RecipientState](docs/RecipientState.md)
  - [TransferzeroSdk.RecipientWebhook](docs/RecipientWebhook.md)
+ - [TransferzeroSdk.RecipientWebhookAllOf](docs/RecipientWebhookAllOf.md)
  - [TransferzeroSdk.Sender](docs/Sender.md)
  - [TransferzeroSdk.SenderListResponse](docs/SenderListResponse.md)
  - [TransferzeroSdk.SenderRequest](docs/SenderRequest.md)
@@ -208,6 +214,7 @@ Class | Method | HTTP request | Description
  - [TransferzeroSdk.SenderResponseMeta](docs/SenderResponseMeta.md)
  - [TransferzeroSdk.SenderState](docs/SenderState.md)
  - [TransferzeroSdk.SenderWebhook](docs/SenderWebhook.md)
+ - [TransferzeroSdk.SenderWebhookAllOf](docs/SenderWebhookAllOf.md)
  - [TransferzeroSdk.Transaction](docs/Transaction.md)
  - [TransferzeroSdk.TransactionListResponse](docs/TransactionListResponse.md)
  - [TransferzeroSdk.TransactionRequest](docs/TransactionRequest.md)
@@ -217,6 +224,7 @@ Class | Method | HTTP request | Description
  - [TransferzeroSdk.TransactionState](docs/TransactionState.md)
  - [TransferzeroSdk.TransactionTraits](docs/TransactionTraits.md)
  - [TransferzeroSdk.TransactionWebhook](docs/TransactionWebhook.md)
+ - [TransferzeroSdk.TransactionWebhookAllOf](docs/TransactionWebhookAllOf.md)
  - [TransferzeroSdk.ValidationErrorDescription](docs/ValidationErrorDescription.md)
  - [TransferzeroSdk.Webhook](docs/Webhook.md)
  - [TransferzeroSdk.WebhookDefinition](docs/WebhookDefinition.md)

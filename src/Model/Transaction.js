@@ -191,7 +191,7 @@ Transaction.prototype['created_at'] = undefined;
 Transaction.prototype['expires_at'] = undefined;
 
 /**
- * Optional ID that is supplied by partner linking it to the partner's own Sender ID. Note: if present we will validate whether the sent ID is a duplicate in our system or not.
+ * Optional ID that is supplied by partner linking it to the partner's own Transaction ID. Note: if present we will validate whether the sent ID is a duplicate in our system or not.
  * @member {String} external_id
  */
 Transaction.prototype['external_id'] = undefined;
