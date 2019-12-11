@@ -3,11 +3,12 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**bankAccount** | **String** | Account Number to query | 
-**bankCode** | **String** | Bank Code to query - same codes are used as for creating the transactions | 
-**country** | **String** | Country of account in 2-character alpha ISO 3166-2 country format (only NG is currently supported) | 
+**bankAccount** | **String** | Account Number to query | [optional] 
+**bankCode** | **String** | Bank Code to query - same codes are used as for creating the transactions | [optional] 
+**phoneNumber** | **String** | Phone number to query | [optional] 
+**country** | **String** | Country of account in 2-character alpha ISO 3166-2 country format | 
 **currency** | **String** | The currency the bank account is in | 
-**method** | **String** | The method of the payment. Currently only bank is supported | 
+**method** | **String** | The method of the payment. Currently bank and mobile are supported | 
 
 
 <a name="CountryEnum"></a>
@@ -37,6 +38,8 @@ Name | Type | Description | Notes
 
 
 * `bank` (value: `"bank"`)
+
+* `mobile` (value: `"mobile"`)
 
 
 

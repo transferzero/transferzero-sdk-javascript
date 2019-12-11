@@ -22,15 +22,13 @@ class AccountValidationRequest {
     /**
      * Constructs a new <code>AccountValidationRequest</code>.
      * @alias module:Model/AccountValidationRequest
-     * @param bankAccount {String} Account Number to query
-     * @param bankCode {String} Bank Code to query - same codes are used as for creating the transactions
-     * @param country {module:Model/AccountValidationRequest.CountryEnum} Country of account in 2-character alpha ISO 3166-2 country format (only NG is currently supported)
+     * @param country {module:Model/AccountValidationRequest.CountryEnum} Country of account in 2-character alpha ISO 3166-2 country format
      * @param currency {module:Model/AccountValidationRequest.CurrencyEnum} The currency the bank account is in
-     * @param method {module:Model/AccountValidationRequest.MethodEnum} The method of the payment. Currently only bank is supported
+     * @param method {module:Model/AccountValidationRequest.MethodEnum} The method of the payment. Currently bank and mobile are supported
      */
-    constructor(bankAccount, bankCode, country, currency, method) { 
+    constructor(country, currency, method) { 
         
-        AccountValidationRequest.initialize(this, bankAccount, bankCode, country, currency, method);
+        AccountValidationRequest.initialize(this, country, currency, method);
     }
 
     /**
@@ -38,9 +36,7 @@ class AccountValidationRequest {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, bankAccount, bankCode, country, currency, method) { 
-        obj['bank_account'] = bankAccount;
-        obj['bank_code'] = bankCode;
+    static initialize(obj, country, currency, method) { 
         obj['country'] = country;
         obj['currency'] = currency;
         obj['method'] = method;
@@ -62,6 +58,9 @@ class AccountValidationRequest {
             }
             if (data.hasOwnProperty('bank_code')) {
                 obj['bank_code'] = ApiClient.convertToType(data['bank_code'], 'String');
+            }
+            if (data.hasOwnProperty('phone_number')) {
+                obj['phone_number'] = ApiClient.convertToType(data['phone_number'], 'String');
             }
             if (data.hasOwnProperty('country')) {
                 obj['country'] = ApiClient.convertToType(data['country'], 'String');
@@ -92,7 +91,13 @@ AccountValidationRequest.prototype['bank_account'] = undefined;
 AccountValidationRequest.prototype['bank_code'] = undefined;
 
 /**
- * Country of account in 2-character alpha ISO 3166-2 country format (only NG is currently supported)
+ * Phone number to query
+ * @member {String} phone_number
+ */
+AccountValidationRequest.prototype['phone_number'] = undefined;
+
+/**
+ * Country of account in 2-character alpha ISO 3166-2 country format
  * @member {module:Model/AccountValidationRequest.CountryEnum} country
  */
 AccountValidationRequest.prototype['country'] = undefined;
@@ -104,7 +109,7 @@ AccountValidationRequest.prototype['country'] = undefined;
 AccountValidationRequest.prototype['currency'] = undefined;
 
 /**
- * The method of the payment. Currently only bank is supported
+ * The method of the payment. Currently bank and mobile are supported
  * @member {module:Model/AccountValidationRequest.MethodEnum} method
  */
 AccountValidationRequest.prototype['method'] = undefined;
@@ -166,7 +171,13 @@ AccountValidationRequest['MethodEnum'] = {
      * value: "bank"
      * @const
      */
-    "bank": "bank"
+    "bank": "bank",
+
+    /**
+     * value: "mobile"
+     * @const
+     */
+    "mobile": "mobile"
 };
 
 

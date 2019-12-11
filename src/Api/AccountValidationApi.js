@@ -37,8 +37,8 @@ export default class AccountValidationApi {
 
 
     /**
-     * Validates the existence of a bank account
-     * Validates the existence of a bank account and returns the associated customer name
+     * Validates the existence of a bank account or a mobile phone number
+     * Validates the existence of a bank account or mobile phone number and returns the associated customer name
      * @param {module:Model/AccountValidationRequest} accountValidationRequest 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:Model/AccountValidationResponse} and HTTP response
      */
@@ -73,8 +73,8 @@ export default class AccountValidationApi {
     }
 
     /**
-     * Validates the existence of a bank account
-     * Validates the existence of a bank account and returns the associated customer name
+     * Validates the existence of a bank account or a mobile phone number
+     * Validates the existence of a bank account or mobile phone number and returns the associated customer name
      * @param {module:Model/AccountValidationRequest} accountValidationRequest 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:Model/AccountValidationResponse}
      */
