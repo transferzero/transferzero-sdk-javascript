@@ -52,6 +52,9 @@ class Document {
         if (data) {
             obj = obj || new Document();
 
+            if (data.hasOwnProperty('sender_id')) {
+                obj['sender_id'] = ApiClient.convertToType(data['sender_id'], 'String');
+            }
             if (data.hasOwnProperty('upload')) {
                 obj['upload'] = ApiClient.convertToType(data['upload'], 'String');
             }
@@ -73,6 +76,9 @@ class Document {
             if (data.hasOwnProperty('side')) {
                 obj['side'] = ApiClient.convertToType(data['side'], 'String');
             }
+            if (data.hasOwnProperty('document_type')) {
+                obj['document_type'] = ApiClient.convertToType(data['document_type'], 'String');
+            }
             if (data.hasOwnProperty('issuing_country')) {
                 obj['issuing_country'] = ApiClient.convertToType(data['issuing_country'], 'String');
             }
@@ -88,6 +94,11 @@ class Document {
 
 
 }
+
+/**
+ * @member {String} sender_id
+ */
+Document.prototype['sender_id'] = undefined;
 
 /**
  * Base64 encoded data uri of an image/pdf file or a fully qualified url
@@ -128,6 +139,12 @@ Document.prototype['category'] = undefined;
  * @member {module:Model/Document.SideEnum} side
  */
 Document.prototype['side'] = undefined;
+
+/**
+ * This is a brief description of the document type
+ * @member {String} document_type
+ */
+Document.prototype['document_type'] = undefined;
 
 /**
  * Issuing country of ID in 2-character alpha ISO 3166-2 country format
