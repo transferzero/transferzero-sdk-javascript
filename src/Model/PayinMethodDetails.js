@@ -27,12 +27,11 @@ class PayinMethodDetails {
      * @alias module:Model/PayinMethodDetails
      * @implements module:Model/PayinMethodDetailsNGNBank
      * @implements module:Model/PayinMethodDetailsMobile
-     * @param redirectUrl {} This is where the user should be redirected back when the payment has been finished
      * @param phoneNumber {} The phone number where the funds should be collected from
      */
-    constructor(redirectUrl, phoneNumber) { 
-        PayinMethodDetailsNGNBank.initialize(this, redirectUrl);PayinMethodDetailsMobile.initialize(this, phoneNumber);
-        PayinMethodDetails.initialize(this, redirectUrl, phoneNumber);
+    constructor(phoneNumber) { 
+        PayinMethodDetailsNGNBank.initialize(this);PayinMethodDetailsMobile.initialize(this, phoneNumber);
+        PayinMethodDetails.initialize(this, phoneNumber);
     }
 
     /**
@@ -40,7 +39,7 @@ class PayinMethodDetails {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, redirectUrl, phoneNumber) { 
+    static initialize(obj, phoneNumber) { 
     }
 
     /**
@@ -65,6 +64,11 @@ class PayinMethodDetails {
 
 
 // Implement PayinMethodDetailsNGNBank interface:
+/**
+ * The payment method which the user will use to make the payments. Options are `bank`, `card` or you can leave empty to support both.
+ * @member {String} payment_method
+ */
+PayinMethodDetailsNGNBank.prototype['payment_method'] = undefined;
 /**
  * This is where the user should be redirected back when the payment has been finished
  * @member {String} redirect_url

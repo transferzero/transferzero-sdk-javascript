@@ -61,6 +61,13 @@ export default class SenderState {
         "disabled" = "disabled";
 
     
+        /**
+         * value: "incomplete"
+         * @const
+         */
+        "incomplete" = "incomplete";
+
+    
 
     /**
     * Returns a <code>SenderState</code> enum value from a Javascript object name.

@@ -15,4 +15,6 @@
 
 * `disabled` (value: `"disabled"`)
 
+* `incomplete` (value: `"incomplete"`)
+
 

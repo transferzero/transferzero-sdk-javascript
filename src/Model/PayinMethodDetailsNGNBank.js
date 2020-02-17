@@ -23,11 +23,10 @@ class PayinMethodDetailsNGNBank {
      * Constructs a new <code>PayinMethodDetailsNGNBank</code>.
      * &#x60;&#x60;&#x60;JSON   \&quot;details\&quot;: {     \&quot;redirect_url\&quot;: \&quot;http://redirect.back.to\&quot;   } &#x60;&#x60;&#x60;
      * @alias module:Model/PayinMethodDetailsNGNBank
-     * @param redirectUrl {String} This is where the user should be redirected back when the payment has been finished
      */
-    constructor(redirectUrl) { 
+    constructor() { 
         
-        PayinMethodDetailsNGNBank.initialize(this, redirectUrl);
+        PayinMethodDetailsNGNBank.initialize(this);
     }
 
     /**
@@ -35,8 +34,7 @@ class PayinMethodDetailsNGNBank {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, redirectUrl) { 
-        obj['redirect_url'] = redirectUrl;
+    static initialize(obj) { 
     }
 
     /**
@@ -50,6 +48,9 @@ class PayinMethodDetailsNGNBank {
         if (data) {
             obj = obj || new PayinMethodDetailsNGNBank();
 
+            if (data.hasOwnProperty('payment_method')) {
+                obj['payment_method'] = ApiClient.convertToType(data['payment_method'], 'String');
+            }
             if (data.hasOwnProperty('redirect_url')) {
                 obj['redirect_url'] = ApiClient.convertToType(data['redirect_url'], 'String');
             }
@@ -59,6 +60,12 @@ class PayinMethodDetailsNGNBank {
 
 
 }
+
+/**
+ * The payment method which the user will use to make the payments. Options are `bank`, `card` or you can leave empty to support both.
+ * @member {String} payment_method
+ */
+PayinMethodDetailsNGNBank.prototype['payment_method'] = undefined;
 
 /**
  * This is where the user should be redirected back when the payment has been finished
