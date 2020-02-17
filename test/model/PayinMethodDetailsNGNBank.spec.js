@@ -54,6 +54,12 @@
       //expect(instance).to.be.a(TransferzeroSdk.PayinMethodDetailsNGNBank);
     });
 
+    it('should have the property paymentMethod (base name: "payment_method")', function() {
+      // uncomment below and update the code to test the property paymentMethod
+      //var instane = new TransferzeroSdk.PayinMethodDetailsNGNBank();
+      //expect(instance).to.be();
+    });
+
     it('should have the property redirectUrl (base name: "redirect_url")', function() {
       // uncomment below and update the code to test the property redirectUrl
       //var instane = new TransferzeroSdk.PayinMethodDetailsNGNBank();

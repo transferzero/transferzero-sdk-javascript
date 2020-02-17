@@ -54,6 +54,12 @@
       //expect(instance).to.be.a(TransferzeroSdk.Document);
     });
 
+    it('should have the property senderId (base name: "sender_id")', function() {
+      // uncomment below and update the code to test the property senderId
+      //var instane = new TransferzeroSdk.Document();
+      //expect(instance).to.be();
+    });
+
     it('should have the property upload (base name: "upload")', function() {
       // uncomment below and update the code to test the property upload
       //var instane = new TransferzeroSdk.Document();
@@ -92,6 +98,12 @@
 
     it('should have the property side (base name: "side")', function() {
       // uncomment below and update the code to test the property side
+      //var instane = new TransferzeroSdk.Document();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property documentType (base name: "document_type")', function() {
+      // uncomment below and update the code to test the property documentType
       //var instane = new TransferzeroSdk.Document();
       //expect(instance).to.be();
     });

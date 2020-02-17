@@ -1,6 +1,6 @@
 import TransferZeroSdk from 'transferzero-sdk';
 
-// Please see our documentation at https://github.com/transferzero/api-documentation
+// Please see our documentation at https://docs.transferzero.com
 // and the API specification at http://api.transferzero.com/documentation/
 // for more information.
 
@@ -22,7 +22,7 @@ const apiClient = new TransferZeroSdk.ApiClient({
 // getTransactionsByExternalId(apiClient);
 
 async function accountValidationExample(apiClient) {
-  // See https://github.com/transferzero/api-documentation/blob/master/additional-features.md#bank-account-name-enquiry
+  // See https://docs.transferzero.com/docs/additional-features/#bank-account-name-enquiry
   // for more information on how this feature can be used
 
   const request = new TransferZeroSdk.AccountValidationRequest();
@@ -48,7 +48,7 @@ async function accountValidationExample(apiClient) {
 }
 
 async function createSenderExample(apiClient) {
-  // For more details on senders please check https://github.com/transferzero/api-documentation/blob/master/transaction-flow.md#sender
+  // For more details on senders please check https://docs.transferzero.com/docs/transaction-flow/#sender
 
   const api = new TransferZeroSdk.SendersApi(apiClient);
   const sender = new TransferZeroSdk.Sender();
@@ -87,7 +87,7 @@ async function createSenderExample(apiClient) {
 }
 
 async function updateSenderExample(apiClient) {
-  // For more details on senders please check https://github.com/transferzero/api-documentation/blob/master/transaction-flow.md#sender
+  // For more details on senders please check https://docs.transferzero.com/docs/transaction-flow/#sender
 
   const api = new TransferZeroSdk.SendersApi(apiClient);
   const sender = new TransferZeroSdk.Sender();
@@ -115,17 +115,17 @@ async function updateSenderExample(apiClient) {
 }
 
 async function createTransactionExample(apiClient) {
-  // Please check our documentation at https://github.com/transferzero/api-documentation/blob/master/transaction-flow.md
+  // Please check our documentation at https://docs.transferzero.com/docs/transaction-flow/
   // for details on how transactions work.
   const api = new TransferZeroSdk.TransactionsApi(apiClient);
   const transaction = new TransferZeroSdk.Transaction();
 
   // When adding a sender to transaction, please use either an id or external_id. Providing both will result in a validation error.
-  // Please see our documentation at https://github.com/transferzero/api-documentation/blob/master/transaction-flow.md#sender
+  // Please see our documentation at https://docs.transferzero.com/docs/transaction-flow/#sender
   const sender = new TransferZeroSdk.Sender();
   sender.id = '58754ae1-d2e4-440c-9a81-d290ece2de0d';
 
-  // You can find the various payout options at https://github.com/transferzero/api-documentation/blob/master/transaction-flow.md#payout-details
+  // You can find the various payout options at https://docs.transferzero.com/docs/transaction-flow/#payout-details
   const ngnBankDetails = new TransferZeroSdk.PayoutMethodDetails();
   ngnBankDetails.bank_account = '123456789';
   ngnBankDetails.bank_account_type = '20';
@@ -137,20 +137,20 @@ async function createTransactionExample(apiClient) {
   payoutMethod.type = 'NGN::Bank';
   payoutMethod.details = ngnBankDetails;
 
-  // Please see https://github.com/transferzero/api-documentation/blob/master/transaction-flow.md#requested-amount-and-currency
+  // Please see https://docs.transferzero.com/docs/transaction-flow/#requested-amount-and-currency
   // on what the request amount and currencies do
   const recipient = new TransferZeroSdk.Recipient();
   recipient.requested_amount = 10000;
   recipient.requested_currency = 'NGN';
   recipient.payout_method = payoutMethod;
 
-  // Similarly you can check https://github.com/transferzero/api-documentation/blob/master/transaction-flow.md#requested-amount-and-currency
+  // Similarly you can check https://docs.transferzero.com/docs/transaction-flow/#requested-amount-and-currency
   // on details about the input currency parameter
   transaction.input_currency = 'GHS';
   transaction.sender = sender;
   transaction.recipients = [recipient];
 
-  // Find more details on external IDs at https://github.com/transferzero/api-documentation/blob/master/transaction-flow.md#external-id
+  // Find more details on external IDs at https://docs.transferzero.com/docs/transaction-flow/#external-id
   transaction.external_id = 'EXTRAN-5555';
 
   try {
@@ -173,7 +173,7 @@ async function createTransactionExample(apiClient) {
 async function createAndFundTransactionExample(apiClient) {
   const transactionId = await createTransactionExample(apiClient);
   if (transactionId != null) {
-    // Please see https://github.com/transferzero/api-documentation/blob/master/transaction-flow.md#funding-transactions
+    // Please see https://docs.transferzero.com/docs/transaction-flow/#funding-transactions
     // on details about funding transactions
     const debit = new TransferZeroSdk.Debit();
     debit.currency = 'GHS';
@@ -204,7 +204,7 @@ async function createAndFundTransactionExample(apiClient) {
 }
 
 async function getTransactionErrorMessageExample(apiClient) {
-  // Please see https://github.com/transferzero/api-documentation/blob/master/transaction-flow.md#receiving-error-messages
+  // Please see https://docs.transferzero.com/docs/transaction-flow/#receiving-error-messages
   // on details about error messages
   const transactionId = 'f94a3af4-0637-4498-9184-7733bf0b8af7';
   const api = new TransferZeroSdk.TransactionsApi(apiClient);
@@ -217,7 +217,7 @@ async function getTransactionErrorMessageExample(apiClient) {
 }
 
 async function webhookParseExample(apiClient) {
-  // Please see https://github.com/transferzero/api-documentation#webhooks
+  // Please see https://docs.transferzero.com#webhooks
   // for more details about how webhooks / callbacks work from our system
   const webhookHeader = {
     "Authorization-Nonce": "authorization-nonce",
@@ -446,7 +446,7 @@ async function getAccountsExample(apiClient) {
 }
 
 async function getSendersByExternalId(apiClient) {
-  // Find more details on external IDs at https://github.com/transferzero/api-documentation/blob/master/transaction-flow.md#external-id
+  // Find more details on external IDs at https://docs.transferzero.com/docs/transaction-flow/#external-id
 
   const api = new TransferZeroSdk.SendersApi(apiClient, {});
   opts = { externalId: 'EXTSEN-5555' };
@@ -460,7 +460,7 @@ async function getSendersByExternalId(apiClient) {
 }
 
 async function getTransactionsByExternalId(apiClient) {
-  // Please see https://github.com/transferzero/api-documentation/blob/master/transaction-flow.md#external-id
+  // Please see https://docs.transferzero.com/docs/transaction-flow/#external-id
   // for more details on external IDs
 
   const api = new TransferZeroSdk.TransactionsApi(apiClient, {});

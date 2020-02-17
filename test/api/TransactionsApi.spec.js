@@ -58,6 +58,16 @@
         done();
       });
     });
+    describe('createAndFundTransaction', function() {
+      it('should call createAndFundTransaction successfully', function(done) {
+        //uncomment below and update the code to test createAndFundTransaction
+        //instance.createAndFundTransaction(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('getTransaction', function() {
       it('should call getTransaction successfully', function(done) {
         //uncomment below and update the code to test getTransaction
