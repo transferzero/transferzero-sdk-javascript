@@ -72,6 +72,7 @@ import PayoutMethodMobileProviderEnum from './Model/PayoutMethodMobileProviderEn
 import PayoutMethodRequest from './Model/PayoutMethodRequest';
 import PayoutMethodResponse from './Model/PayoutMethodResponse';
 import PayoutMethodWebhook from './Model/PayoutMethodWebhook';
+import PoliticallyExposedPerson from './Model/PoliticallyExposedPerson';
 import Recipient from './Model/Recipient';
 import RecipientListResponse from './Model/RecipientListResponse';
 import RecipientRequest from './Model/RecipientRequest';
@@ -516,6 +517,12 @@ export default {
     PayoutMethodWebhook,
 
     /**
+     * The PoliticallyExposedPerson model constructor.
+     * @property {module:Model/PoliticallyExposedPerson}
+     */
+    PoliticallyExposedPerson,
+
+    /**
      * The Recipient model constructor.
      * @property {module:Model/Recipient}
      */
@@ -871,6 +878,7 @@ export {
     PayoutMethodRequest,
     PayoutMethodResponse,
     PayoutMethodWebhook,
+    PoliticallyExposedPerson,
     Recipient,
     RecipientListResponse,
     RecipientRequest,

@@ -196,6 +196,7 @@ Class | Method | HTTP request | Description
  - [TransferzeroSdk.PayoutMethodRequest](docs/PayoutMethodRequest.md)
  - [TransferzeroSdk.PayoutMethodResponse](docs/PayoutMethodResponse.md)
  - [TransferzeroSdk.PayoutMethodWebhook](docs/PayoutMethodWebhook.md)
+ - [TransferzeroSdk.PoliticallyExposedPerson](docs/PoliticallyExposedPerson.md)
  - [TransferzeroSdk.Recipient](docs/Recipient.md)
  - [TransferzeroSdk.RecipientListResponse](docs/RecipientListResponse.md)
  - [TransferzeroSdk.RecipientRequest](docs/RecipientRequest.md)
