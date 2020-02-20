@@ -3,6 +3,8 @@
 ## Enum
 
 
+* `incomplete` (value: `"incomplete"`)
+
 * `initial` (value: `"initial"`)
 
 * `verified` (value: `"verified"`)
@@ -14,7 +16,5 @@
 * `rejected` (value: `"rejected"`)
 
 * `disabled` (value: `"disabled"`)
-
-* `incomplete` (value: `"incomplete"`)
 
 

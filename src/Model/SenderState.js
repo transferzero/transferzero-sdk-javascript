@@ -20,6 +20,13 @@ import ApiClient from '../ApiClient';
 export default class SenderState {
     
         /**
+         * value: "incomplete"
+         * @const
+         */
+        "incomplete" = "incomplete";
+
+    
+        /**
          * value: "initial"
          * @const
          */
@@ -59,13 +66,6 @@ export default class SenderState {
          * @const
          */
         "disabled" = "disabled";
-
-    
-        /**
-         * value: "incomplete"
-         * @const
-         */
-        "incomplete" = "incomplete";
 
     
 
