@@ -38,72 +38,12 @@ export default class DocumentsApi {
 
 
     /**
-     * Deleting a document
-     * Deletes a single document by the Document ID
-     * @param {String} documentID ID of the document to delete.  Example: &#x60;/v1/document/bf9ff782-e182-45ac-abea-5bce83ad6670&#x60;
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.senderId Allows filtering results by &#x60;sender_id&#x60;.  Example: &#x60;/v1/transactions?sender_id&#x3D;b41d3cb7-6c54-4245-85fc-8e30690eb0f7&#x60;
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:Model/DocumentResponse} and HTTP response
-     */
-    deleteDocumentWithHttpInfo(documentID, opts) {
-      opts = opts || {};
-      let postBody = null;
-
-      // verify the required parameter 'documentID' is set
-      if (documentID === undefined || documentID === null) {
-        throw new Error("Missing the required parameter 'documentID' when calling deleteDocument");
-      }
-
-
-      let pathParams = {
-        'Document ID': documentID
-      };
-      let queryParams = {
-        'sender_id': opts['senderId']
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = ['AuthorizationKey', 'AuthorizationNonce', 'AuthorizationSecret', 'AuthorizationSignature'];
-      let contentTypes = [];
-      let accepts = ['application/json'];
-      let returnType = DocumentResponse;
-
-      return this.apiClient.callApi(
-        '/documents/{Document ID}', 'DELETE',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType
-      );
-    }
-
-    /**
-     * Deleting a document
-     * Deletes a single document by the Document ID
-     * @param {String} documentID ID of the document to delete.  Example: &#x60;/v1/document/bf9ff782-e182-45ac-abea-5bce83ad6670&#x60;
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.senderId Allows filtering results by &#x60;sender_id&#x60;.  Example: &#x60;/v1/transactions?sender_id&#x3D;b41d3cb7-6c54-4245-85fc-8e30690eb0f7&#x60;
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:Model/DocumentResponse}
-     */
-    deleteDocument(documentID, opts) {
-      return this.deleteDocumentWithHttpInfo(documentID, opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
-
-    /**
      * Fetching a document
      * Returns a single document by the Documents ID
      * @param {String} documentID ID of the document to get.  Example: &#x60;/v1/documents/bf9ff782-e182-45ac-abea-5bce83ad6670&#x60;
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.senderId Allows filtering results by &#x60;sender_id&#x60;.  Example: &#x60;/v1/transactions?sender_id&#x3D;b41d3cb7-6c54-4245-85fc-8e30690eb0f7&#x60;
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:Model/DocumentResponse} and HTTP response
      */
-    getDocumentWithHttpInfo(documentID, opts) {
-      opts = opts || {};
+    getDocumentWithHttpInfo(documentID) {
       let postBody = null;
 
       // verify the required parameter 'documentID' is set
@@ -116,7 +56,6 @@ export default class DocumentsApi {
         'Document ID': documentID
       };
       let queryParams = {
-        'sender_id': opts['senderId']
       };
       let headerParams = {
       };
@@ -139,12 +78,10 @@ export default class DocumentsApi {
      * Fetching a document
      * Returns a single document by the Documents ID
      * @param {String} documentID ID of the document to get.  Example: &#x60;/v1/documents/bf9ff782-e182-45ac-abea-5bce83ad6670&#x60;
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.senderId Allows filtering results by &#x60;sender_id&#x60;.  Example: &#x60;/v1/transactions?sender_id&#x3D;b41d3cb7-6c54-4245-85fc-8e30690eb0f7&#x60;
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:Model/DocumentResponse}
      */
-    getDocument(documentID, opts) {
-      return this.getDocumentWithHttpInfo(documentID, opts)
+    getDocument(documentID) {
+      return this.getDocumentWithHttpInfo(documentID)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -157,7 +94,6 @@ export default class DocumentsApi {
      * @param {Object} opts Optional parameters
      * @param {Number} opts.page The page number to request (defaults to 1)
      * @param {Number} opts.per The number of results to load per page (defaults to 10)
-     * @param {String} opts.senderId Allows filtering results by &#x60;sender_id&#x60;.  Example: &#x60;/v1/transactions?sender_id&#x3D;b41d3cb7-6c54-4245-85fc-8e30690eb0f7&#x60;
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:Model/DocumentListResponse} and HTTP response
      */
     getDocumentsWithHttpInfo(opts) {
@@ -169,8 +105,7 @@ export default class DocumentsApi {
       };
       let queryParams = {
         'page': opts['page'],
-        'per': opts['per'],
-        'sender_id': opts['senderId']
+        'per': opts['per']
       };
       let headerParams = {
       };
@@ -195,7 +130,6 @@ export default class DocumentsApi {
      * @param {Object} opts Optional parameters
      * @param {Number} opts.page The page number to request (defaults to 1)
      * @param {Number} opts.per The number of results to load per page (defaults to 10)
-     * @param {String} opts.senderId Allows filtering results by &#x60;sender_id&#x60;.  Example: &#x60;/v1/transactions?sender_id&#x3D;b41d3cb7-6c54-4245-85fc-8e30690eb0f7&#x60;
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:Model/DocumentListResponse}
      */
     getDocuments(opts) {
