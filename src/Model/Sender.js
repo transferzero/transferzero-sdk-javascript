@@ -173,6 +173,12 @@ class Sender {
             if (data.hasOwnProperty('trading_address')) {
                 obj['trading_address'] = ApiClient.convertToType(data['trading_address'], 'String');
             }
+            if (data.hasOwnProperty('number_monthly_transactions')) {
+                obj['number_monthly_transactions'] = ApiClient.convertToType(data['number_monthly_transactions'], 'String');
+            }
+            if (data.hasOwnProperty('amount_monthly_transactions')) {
+                obj['amount_monthly_transactions'] = ApiClient.convertToType(data['amount_monthly_transactions'], 'String');
+            }
             if (data.hasOwnProperty('documents')) {
                 obj['documents'] = ApiClient.convertToType(data['documents'], [Document]);
             }
@@ -405,6 +411,18 @@ Sender.prototype['trading_country'] = undefined;
  * @member {String} trading_address
  */
 Sender.prototype['trading_address'] = undefined;
+
+/**
+ * The estimated number of monthly transactions (used only with a Business sender)
+ * @member {String} number_monthly_transactions
+ */
+Sender.prototype['number_monthly_transactions'] = undefined;
+
+/**
+ * The estimated amount for all transactions each month in USD (used only with a Business sender)
+ * @member {String} amount_monthly_transactions
+ */
+Sender.prototype['amount_monthly_transactions'] = undefined;
 
 /**
  * Needed for KYC checks. Required to approve the sender unless KYC is waived for your account. Please send us an empty list of documents: `\"documents\": [ ]` in the request if KYC has been waived.  If the documents already exist, please send the Document ID eg. ```JSON \"documents\": [   {     \"id\": \"b6648ba3-1c7b-4f59-8580-684899c84a07\"   } ] ```

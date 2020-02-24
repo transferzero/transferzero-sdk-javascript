@@ -82,9 +82,6 @@ class Document {
             if (data.hasOwnProperty('id')) {
                 obj['id'] = ApiClient.convertToType(data['id'], 'String');
             }
-            if (data.hasOwnProperty('state')) {
-                obj['state'] = ApiClient.convertToType(data['state'], 'String');
-            }
             if (data.hasOwnProperty('errors')) {
                 obj['errors'] = ApiClient.convertToType(data['errors'], {'String': [ValidationErrorDescription]});
             }
@@ -151,12 +148,6 @@ Document.prototype['issuing_country'] = undefined;
  * @member {String} id
  */
 Document.prototype['id'] = undefined;
-
-/**
- * The state of the document. Can be one of the following:  - `initial`: When a document is created and has not been through any checks (the default state) - `verified`: A document has passed compliance checks - `rejected`: The document has failed compliance checks
- * @member {String} state
- */
-Document.prototype['state'] = undefined;
 
 /**
  * The fields that have some problems and don't pass validation
