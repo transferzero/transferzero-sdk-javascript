@@ -48,6 +48,7 @@ import Pagination from './Model/Pagination';
 import PaginationMeta from './Model/PaginationMeta';
 import PayinMethod from './Model/PayinMethod';
 import PayinMethodDetails from './Model/PayinMethodDetails';
+import PayinMethodDetailsBTC from './Model/PayinMethodDetailsBTC';
 import PayinMethodDetailsMobile from './Model/PayinMethodDetailsMobile';
 import PayinMethodDetailsNGNBank from './Model/PayinMethodDetailsNGNBank';
 import PayinMethodRequest from './Model/PayinMethodRequest';
@@ -57,6 +58,7 @@ import PaymentMethodOpposite from './Model/PaymentMethodOpposite';
 import PayoutMethod from './Model/PayoutMethod';
 import PayoutMethodBankAccountTypeEnum from './Model/PayoutMethodBankAccountTypeEnum';
 import PayoutMethodDetails from './Model/PayoutMethodDetails';
+import PayoutMethodDetailsBTC from './Model/PayoutMethodDetailsBTC';
 import PayoutMethodDetailsBalance from './Model/PayoutMethodDetailsBalance';
 import PayoutMethodDetailsGHSBank from './Model/PayoutMethodDetailsGHSBank';
 import PayoutMethodDetailsIBAN from './Model/PayoutMethodDetailsIBAN';
@@ -373,6 +375,12 @@ export default {
     PayinMethodDetails,
 
     /**
+     * The PayinMethodDetailsBTC model constructor.
+     * @property {module:Model/PayinMethodDetailsBTC}
+     */
+    PayinMethodDetailsBTC,
+
+    /**
      * The PayinMethodDetailsMobile model constructor.
      * @property {module:Model/PayinMethodDetailsMobile}
      */
@@ -425,6 +433,12 @@ export default {
      * @property {module:Model/PayoutMethodDetails}
      */
     PayoutMethodDetails,
+
+    /**
+     * The PayoutMethodDetailsBTC model constructor.
+     * @property {module:Model/PayoutMethodDetailsBTC}
+     */
+    PayoutMethodDetailsBTC,
 
     /**
      * The PayoutMethodDetailsBalance model constructor.
@@ -854,6 +868,7 @@ export {
     PaginationMeta,
     PayinMethod,
     PayinMethodDetails,
+    PayinMethodDetailsBTC,
     PayinMethodDetailsMobile,
     PayinMethodDetailsNGNBank,
     PayinMethodRequest,
@@ -863,6 +878,7 @@ export {
     PayoutMethod,
     PayoutMethodBankAccountTypeEnum,
     PayoutMethodDetails,
+    PayoutMethodDetailsBTC,
     PayoutMethodDetailsBalance,
     PayoutMethodDetailsGHSBank,
     PayoutMethodDetailsIBAN,

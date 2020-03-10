@@ -12,6 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
+import PayinMethodDetailsBTC from './PayinMethodDetailsBTC';
 import PayinMethodDetailsMobile from './PayinMethodDetailsMobile';
 import PayinMethodDetailsNGNBank from './PayinMethodDetailsNGNBank';
 
@@ -27,10 +28,11 @@ class PayinMethodDetails {
      * @alias module:Model/PayinMethodDetails
      * @implements module:Model/PayinMethodDetailsNGNBank
      * @implements module:Model/PayinMethodDetailsMobile
+     * @implements module:Model/PayinMethodDetailsBTC
      * @param phoneNumber {} The phone number where the funds should be collected from
      */
     constructor(phoneNumber) { 
-        PayinMethodDetailsNGNBank.initialize(this);PayinMethodDetailsMobile.initialize(this, phoneNumber);
+        PayinMethodDetailsNGNBank.initialize(this);PayinMethodDetailsMobile.initialize(this, phoneNumber);PayinMethodDetailsBTC.initialize(this);
         PayinMethodDetails.initialize(this, phoneNumber);
     }
 
@@ -54,6 +56,7 @@ class PayinMethodDetails {
             obj = obj || new PayinMethodDetails();
             PayinMethodDetailsNGNBank.constructFromObject(data, obj);
             PayinMethodDetailsMobile.constructFromObject(data, obj);
+            PayinMethodDetailsBTC.constructFromObject(data, obj);
 
         }
         return obj;
@@ -85,6 +88,12 @@ PayinMethodDetailsMobile.prototype['phone_number'] = undefined;
  * @member {Boolean} send_instructions
  */
 PayinMethodDetailsMobile.prototype['send_instructions'] = undefined;
+// Implement PayinMethodDetailsBTC interface:
+/**
+ * Please make sure the refund_address is a valid BTC address belonging to the sender, as that is going to be used in case the transaction has to be refunded.
+ * @member {String} refund_address
+ */
+PayinMethodDetailsBTC.prototype['refund_address'] = undefined;
 
 
 
