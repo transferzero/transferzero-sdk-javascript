@@ -55,6 +55,9 @@ class Document {
             if (data.hasOwnProperty('upload')) {
                 obj['upload'] = ApiClient.convertToType(data['upload'], 'String');
             }
+            if (data.hasOwnProperty('url')) {
+                obj['url'] = ApiClient.convertToType(data['url'], 'String');
+            }
             if (data.hasOwnProperty('upload_file_name')) {
                 obj['upload_file_name'] = ApiClient.convertToType(data['upload_file_name'], 'String');
             }
@@ -97,6 +100,12 @@ class Document {
  * @member {String} upload
  */
 Document.prototype['upload'] = undefined;
+
+/**
+ * URL of the document location
+ * @member {String} url
+ */
+Document.prototype['url'] = undefined;
 
 /**
  * Name of the upload
