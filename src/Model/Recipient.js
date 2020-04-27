@@ -176,7 +176,7 @@ Recipient.prototype['retriable'] = undefined;
 Recipient.prototype['input_usd_amount'] = undefined;
 
 /**
- * Shows whether the payment can be cancelled using the DELETE /v1/recipients/{id} endpoint or not. The payment can not be cancelled if the payout is pending.
+ * If true it shows that the payment can be cancelled immediately using the DELETE /v1/recipients/{id} endpoint. If false you can still try to cancel it, however it will only gets cancelled once we have confirmation from our partner that the payment has failed.
  * @member {Boolean} may_cancel
  */
 Recipient.prototype['may_cancel'] = undefined;
