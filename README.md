@@ -183,6 +183,7 @@ Class | Method | HTTP request | Description
  - [TransferzeroSdk.PayoutMethodDetails](docs/PayoutMethodDetails.md)
  - [TransferzeroSdk.PayoutMethodDetailsBTC](docs/PayoutMethodDetailsBTC.md)
  - [TransferzeroSdk.PayoutMethodDetailsBalance](docs/PayoutMethodDetailsBalance.md)
+ - [TransferzeroSdk.PayoutMethodDetailsGBPBank](docs/PayoutMethodDetailsGBPBank.md)
  - [TransferzeroSdk.PayoutMethodDetailsGHSBank](docs/PayoutMethodDetailsGHSBank.md)
  - [TransferzeroSdk.PayoutMethodDetailsIBAN](docs/PayoutMethodDetailsIBAN.md)
  - [TransferzeroSdk.PayoutMethodDetailsMADCash](docs/PayoutMethodDetailsMADCash.md)

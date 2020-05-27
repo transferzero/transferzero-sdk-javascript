@@ -60,6 +60,7 @@ import PayoutMethodBankAccountTypeEnum from './Model/PayoutMethodBankAccountType
 import PayoutMethodDetails from './Model/PayoutMethodDetails';
 import PayoutMethodDetailsBTC from './Model/PayoutMethodDetailsBTC';
 import PayoutMethodDetailsBalance from './Model/PayoutMethodDetailsBalance';
+import PayoutMethodDetailsGBPBank from './Model/PayoutMethodDetailsGBPBank';
 import PayoutMethodDetailsGHSBank from './Model/PayoutMethodDetailsGHSBank';
 import PayoutMethodDetailsIBAN from './Model/PayoutMethodDetailsIBAN';
 import PayoutMethodDetailsMADCash from './Model/PayoutMethodDetailsMADCash';
@@ -445,6 +446,12 @@ export default {
      * @property {module:Model/PayoutMethodDetailsBalance}
      */
     PayoutMethodDetailsBalance,
+
+    /**
+     * The PayoutMethodDetailsGBPBank model constructor.
+     * @property {module:Model/PayoutMethodDetailsGBPBank}
+     */
+    PayoutMethodDetailsGBPBank,
 
     /**
      * The PayoutMethodDetailsGHSBank model constructor.
@@ -880,6 +887,7 @@ export {
     PayoutMethodDetails,
     PayoutMethodDetailsBTC,
     PayoutMethodDetailsBalance,
+    PayoutMethodDetailsGBPBank,
     PayoutMethodDetailsGHSBank,
     PayoutMethodDetailsIBAN,
     PayoutMethodDetailsMADCash,

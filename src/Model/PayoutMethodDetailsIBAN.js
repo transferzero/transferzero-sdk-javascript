@@ -25,12 +25,11 @@ class PayoutMethodDetailsIBAN {
      * @alias module:Model/PayoutMethodDetailsIBAN
      * @param firstName {String} 
      * @param lastName {String} 
-     * @param bankName {String} 
      * @param iban {String} 
      */
-    constructor(firstName, lastName, bankName, iban) { 
+    constructor(firstName, lastName, iban) { 
         
-        PayoutMethodDetailsIBAN.initialize(this, firstName, lastName, bankName, iban);
+        PayoutMethodDetailsIBAN.initialize(this, firstName, lastName, iban);
     }
 
     /**
@@ -38,10 +37,9 @@ class PayoutMethodDetailsIBAN {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, firstName, lastName, bankName, iban) { 
+    static initialize(obj, firstName, lastName, iban) { 
         obj['first_name'] = firstName;
         obj['last_name'] = lastName;
-        obj['bank_name'] = bankName;
         obj['iban'] = iban;
     }
 
