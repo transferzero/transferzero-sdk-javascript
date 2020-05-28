@@ -19,7 +19,7 @@ import ValidationErrorDescription from './ValidationErrorDescription';
 /**
  * The PayoutMethod model module.
  * @module Model/PayoutMethod
- * @version 1.6.0
+ * @version 1.7.0
  */
 class PayoutMethod {
     /**
