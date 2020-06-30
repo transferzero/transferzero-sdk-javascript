@@ -146,6 +146,9 @@ class Sender {
             if (data.hasOwnProperty('source_of_funds')) {
                 obj['source_of_funds'] = ApiClient.convertToType(data['source_of_funds'], 'String');
             }
+            if (data.hasOwnProperty('custom_source_of_funds')) {
+                obj['custom_source_of_funds'] = ApiClient.convertToType(data['custom_source_of_funds'], 'String');
+            }
             if (data.hasOwnProperty('core_business_activities')) {
                 obj['core_business_activities'] = ApiClient.convertToType(data['core_business_activities'], 'String');
             }
@@ -369,6 +372,12 @@ Sender.prototype['nature_of_business'] = undefined;
  * @member {String} source_of_funds
  */
 Sender.prototype['source_of_funds'] = undefined;
+
+/**
+ * Custom source of funds
+ * @member {String} custom_source_of_funds
+ */
+Sender.prototype['custom_source_of_funds'] = undefined;
 
 /**
  * The core activities (used only with a Business sender)
