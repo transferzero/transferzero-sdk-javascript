@@ -149,8 +149,8 @@ class Sender {
             if (data.hasOwnProperty('custom_source_of_funds')) {
                 obj['custom_source_of_funds'] = ApiClient.convertToType(data['custom_source_of_funds'], 'String');
             }
-            if (data.hasOwnProperty('core_business_activities')) {
-                obj['core_business_activities'] = ApiClient.convertToType(data['core_business_activities'], 'String');
+            if (data.hasOwnProperty('core_business_activity')) {
+                obj['core_business_activity'] = ApiClient.convertToType(data['core_business_activity'], 'String');
             }
             if (data.hasOwnProperty('purpose_of_opening_account')) {
                 obj['purpose_of_opening_account'] = ApiClient.convertToType(data['purpose_of_opening_account'], 'String');
@@ -380,10 +380,10 @@ Sender.prototype['source_of_funds'] = undefined;
 Sender.prototype['custom_source_of_funds'] = undefined;
 
 /**
- * The core activities (used only with a Business sender)
- * @member {String} core_business_activities
+ * The core activity (used only with a Business sender)
+ * @member {String} core_business_activity
  */
-Sender.prototype['core_business_activities'] = undefined;
+Sender.prototype['core_business_activity'] = undefined;
 
 /**
  * The purpose for opening their account (used only with a Business sender)
