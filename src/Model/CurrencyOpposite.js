@@ -58,6 +58,9 @@ class CurrencyOpposite {
             if (data.hasOwnProperty('mtm_rate')) {
                 obj['mtm_rate'] = ApiClient.convertToType(data['mtm_rate'], 'Number');
             }
+            if (data.hasOwnProperty('margin')) {
+                obj['margin'] = ApiClient.convertToType(data['margin'], 'String');
+            }
         }
         return obj;
     }
@@ -76,6 +79,12 @@ CurrencyOpposite.prototype['rate'] = undefined;
  * @member {Number} mtm_rate
  */
 CurrencyOpposite.prototype['mtm_rate'] = undefined;
+
+/**
+ * The margin set for transactions of this particular currency with the base one
+ * @member {String} margin
+ */
+CurrencyOpposite.prototype['margin'] = undefined;
 
 
 // Implement Currency interface:
@@ -119,11 +128,6 @@ Currency.prototype['min'] = undefined;
  * @member {String} max
  */
 Currency.prototype['max'] = undefined;
-/**
- * The margin set for transactions in this currency
- * @member {String} margin
- */
-Currency.prototype['margin'] = undefined;
 /**
  * The equivalent of the currency to 1 USD
  * @member {String} usd_equivalent

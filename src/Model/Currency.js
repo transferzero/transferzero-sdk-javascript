@@ -71,9 +71,6 @@ class Currency {
             if (data.hasOwnProperty('max')) {
                 obj['max'] = ApiClient.convertToType(data['max'], 'String');
             }
-            if (data.hasOwnProperty('margin')) {
-                obj['margin'] = ApiClient.convertToType(data['margin'], 'String');
-            }
             if (data.hasOwnProperty('usd_equivalent')) {
                 obj['usd_equivalent'] = ApiClient.convertToType(data['usd_equivalent'], 'String');
             }
@@ -131,12 +128,6 @@ Currency.prototype['min'] = undefined;
  * @member {String} max
  */
 Currency.prototype['max'] = undefined;
-
-/**
- * The margin set for transactions in this currency
- * @member {String} margin
- */
-Currency.prototype['margin'] = undefined;
 
 /**
  * The equivalent of the currency to 1 USD
