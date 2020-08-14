@@ -112,11 +112,6 @@ Currency.prototype['min'] = undefined;
  */
 Currency.prototype['max'] = undefined;
 /**
- * The margin set for transactions in this currency
- * @member {String} margin
- */
-Currency.prototype['margin'] = undefined;
-/**
  * The equivalent of the currency to 1 USD
  * @member {String} usd_equivalent
  */
