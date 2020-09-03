@@ -23,6 +23,7 @@ import PayoutMethodDetailsMobile from './PayoutMethodDetailsMobile';
 import PayoutMethodDetailsNGNBank from './PayoutMethodDetailsNGNBank';
 import PayoutMethodDetailsXOFBank from './PayoutMethodDetailsXOFBank';
 import PayoutMethodDetailsXOFMobile from './PayoutMethodDetailsXOFMobile';
+import PayoutMethodDetailsZARBank from './PayoutMethodDetailsZARBank';
 import PayoutMethodGenderEnum from './PayoutMethodGenderEnum';
 import PayoutMethodIdentityCardTypeEnum from './PayoutMethodIdentityCardTypeEnum';
 import PayoutMethodMobileProviderEnum from './PayoutMethodMobileProviderEnum';
@@ -46,6 +47,7 @@ class PayoutMethodDetails {
      * @implements module:Model/PayoutMethodDetailsMADCash
      * @implements module:Model/PayoutMethodDetailsBalance
      * @implements module:Model/PayoutMethodDetailsBTC
+     * @implements module:Model/PayoutMethodDetailsZARBank
      * @param firstName {} 
      * @param lastName {} 
      * @param bankCode {} 
@@ -62,10 +64,13 @@ class PayoutMethodDetails {
      * @param senderGender {} 
      * @param name {} 
      * @param address {} 
+     * @param street {} 
+     * @param postalCode {} 
+     * @param city {} 
      */
-    constructor(firstName, lastName, bankCode, bankAccount, phoneNumber, mobileProvider, iban, bankName, bankCountry, senderIdentityCardType, senderIdentityCardId, senderCityOfBirth, senderCountryOfBirth, senderGender, name, address) { 
-        PayoutMethodDetailsNGNBank.initialize(this, firstName, lastName, bankCode, bankAccount);PayoutMethodDetailsMobile.initialize(this, firstName, lastName, phoneNumber);PayoutMethodDetailsXOFMobile.initialize(this, firstName, lastName, phoneNumber, mobileProvider);PayoutMethodDetailsXOFBank.initialize(this, firstName, lastName, iban, bankName, bankCountry);PayoutMethodDetailsGHSBank.initialize(this, firstName, lastName, bankCode, bankAccount);PayoutMethodDetailsGBPBank.initialize(this, firstName, lastName);PayoutMethodDetailsIBAN.initialize(this, firstName, lastName, iban);PayoutMethodDetailsMADCash.initialize(this, firstName, lastName, phoneNumber, senderIdentityCardType, senderIdentityCardId, senderCityOfBirth, senderCountryOfBirth, senderGender);PayoutMethodDetailsBalance.initialize(this);PayoutMethodDetailsBTC.initialize(this, firstName, lastName, name, address);
-        PayoutMethodDetails.initialize(this, firstName, lastName, bankCode, bankAccount, phoneNumber, mobileProvider, iban, bankName, bankCountry, senderIdentityCardType, senderIdentityCardId, senderCityOfBirth, senderCountryOfBirth, senderGender, name, address);
+    constructor(firstName, lastName, bankCode, bankAccount, phoneNumber, mobileProvider, iban, bankName, bankCountry, senderIdentityCardType, senderIdentityCardId, senderCityOfBirth, senderCountryOfBirth, senderGender, name, address, street, postalCode, city) { 
+        PayoutMethodDetailsNGNBank.initialize(this, firstName, lastName, bankCode, bankAccount);PayoutMethodDetailsMobile.initialize(this, firstName, lastName, phoneNumber);PayoutMethodDetailsXOFMobile.initialize(this, firstName, lastName, phoneNumber, mobileProvider);PayoutMethodDetailsXOFBank.initialize(this, firstName, lastName, iban, bankName, bankCountry);PayoutMethodDetailsGHSBank.initialize(this, firstName, lastName, bankCode, bankAccount);PayoutMethodDetailsGBPBank.initialize(this, firstName, lastName);PayoutMethodDetailsIBAN.initialize(this, firstName, lastName, iban);PayoutMethodDetailsMADCash.initialize(this, firstName, lastName, phoneNumber, senderIdentityCardType, senderIdentityCardId, senderCityOfBirth, senderCountryOfBirth, senderGender);PayoutMethodDetailsBalance.initialize(this);PayoutMethodDetailsBTC.initialize(this, firstName, lastName, name, address);PayoutMethodDetailsZARBank.initialize(this, firstName, lastName, street, postalCode, city, bankCode, bankAccount, phoneNumber);
+        PayoutMethodDetails.initialize(this, firstName, lastName, bankCode, bankAccount, phoneNumber, mobileProvider, iban, bankName, bankCountry, senderIdentityCardType, senderIdentityCardId, senderCityOfBirth, senderCountryOfBirth, senderGender, name, address, street, postalCode, city);
     }
 
     /**
@@ -73,7 +78,7 @@ class PayoutMethodDetails {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, firstName, lastName, bankCode, bankAccount, phoneNumber, mobileProvider, iban, bankName, bankCountry, senderIdentityCardType, senderIdentityCardId, senderCityOfBirth, senderCountryOfBirth, senderGender, name, address) { 
+    static initialize(obj, firstName, lastName, bankCode, bankAccount, phoneNumber, mobileProvider, iban, bankName, bankCountry, senderIdentityCardType, senderIdentityCardId, senderCityOfBirth, senderCountryOfBirth, senderGender, name, address, street, postalCode, city) { 
     }
 
     /**
@@ -96,6 +101,7 @@ class PayoutMethodDetails {
             PayoutMethodDetailsMADCash.constructFromObject(data, obj);
             PayoutMethodDetailsBalance.constructFromObject(data, obj);
             PayoutMethodDetailsBTC.constructFromObject(data, obj);
+            PayoutMethodDetailsZARBank.constructFromObject(data, obj);
 
         }
         return obj;
@@ -311,6 +317,43 @@ PayoutMethodDetailsBTC.prototype['name'] = undefined;
  * @member {String} address
  */
 PayoutMethodDetailsBTC.prototype['address'] = undefined;
+// Implement PayoutMethodDetailsZARBank interface:
+/**
+ * @member {String} first_name
+ */
+PayoutMethodDetailsZARBank.prototype['first_name'] = undefined;
+/**
+ * @member {String} last_name
+ */
+PayoutMethodDetailsZARBank.prototype['last_name'] = undefined;
+/**
+ * @member {String} street
+ */
+PayoutMethodDetailsZARBank.prototype['street'] = undefined;
+/**
+ * @member {String} postal_code
+ */
+PayoutMethodDetailsZARBank.prototype['postal_code'] = undefined;
+/**
+ * @member {String} city
+ */
+PayoutMethodDetailsZARBank.prototype['city'] = undefined;
+/**
+ * @member {String} bank_code
+ */
+PayoutMethodDetailsZARBank.prototype['bank_code'] = undefined;
+/**
+ * @member {String} bank_account
+ */
+PayoutMethodDetailsZARBank.prototype['bank_account'] = undefined;
+/**
+ * @member {String} phone_number
+ */
+PayoutMethodDetailsZARBank.prototype['phone_number'] = undefined;
+/**
+ * @member {String} transfer_reason_code
+ */
+PayoutMethodDetailsZARBank.prototype['transfer_reason_code'] = undefined;
 
 
 

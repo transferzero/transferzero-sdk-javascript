@@ -191,6 +191,7 @@ Class | Method | HTTP request | Description
  - [TransferzeroSdk.PayoutMethodDetailsNGNBank](docs/PayoutMethodDetailsNGNBank.md)
  - [TransferzeroSdk.PayoutMethodDetailsXOFBank](docs/PayoutMethodDetailsXOFBank.md)
  - [TransferzeroSdk.PayoutMethodDetailsXOFMobile](docs/PayoutMethodDetailsXOFMobile.md)
+ - [TransferzeroSdk.PayoutMethodDetailsZARBank](docs/PayoutMethodDetailsZARBank.md)
  - [TransferzeroSdk.PayoutMethodGenderEnum](docs/PayoutMethodGenderEnum.md)
  - [TransferzeroSdk.PayoutMethodIdentityCardTypeEnum](docs/PayoutMethodIdentityCardTypeEnum.md)
  - [TransferzeroSdk.PayoutMethodListResponse](docs/PayoutMethodListResponse.md)
