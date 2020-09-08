@@ -339,6 +339,10 @@ PayoutMethodDetailsZARBank.prototype['postal_code'] = undefined;
  */
 PayoutMethodDetailsZARBank.prototype['city'] = undefined;
 /**
+ * @member {String} email
+ */
+PayoutMethodDetailsZARBank.prototype['email'] = undefined;
+/**
  * @member {String} bank_code
  */
 PayoutMethodDetailsZARBank.prototype['bank_code'] = undefined;

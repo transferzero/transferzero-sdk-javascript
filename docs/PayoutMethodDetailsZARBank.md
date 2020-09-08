@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **street** | **String** |  | 
 **postalCode** | **String** |  | 
 **city** | **String** |  | 
+**email** | **String** |  | [optional] 
 **bankCode** | **String** |  | 
 **bankAccount** | **String** |  | 
 **phoneNumber** | **String** |  | 
