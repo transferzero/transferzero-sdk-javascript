@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The PayoutMethodDetailsXOFBank model module.
  * @module Model/PayoutMethodDetailsXOFBank
- * @version 1.7.0
+ * @version 1.8.0
  */
 class PayoutMethodDetailsXOFBank {
     /**
