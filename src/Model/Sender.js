@@ -25,9 +25,9 @@ import ValidationErrorDescription from './ValidationErrorDescription';
 class Sender {
     /**
      * Constructs a new <code>Sender</code>.
-     * This contains the details of the sender. The first time a specific sender is used the full details should be provided. Once a sender is created and is used, the next time you MUST only send the ID of the sender. This is so we can match the same sender across multiple transactions for KYC and audit purposes.  Personal Sender Example: &#x60;&#x60;&#x60;json {   \&quot;country\&quot;: \&quot;UG\&quot;,   \&quot;phone_country\&quot;: \&quot;UG\&quot;,   \&quot;phone_number\&quot;: \&quot;752403639\&quot;,   \&quot;email\&quot;: \&quot;example@home.org\&quot;,   \&quot;first_name\&quot;: \&quot;Johnny\&quot;,   \&quot;last_name\&quot;: \&quot;English\&quot;,   \&quot;city\&quot;: \&quot;Kampala\&quot;,   \&quot;street\&quot;: \&quot;Unknown 17-3\&quot;,   \&quot;address_description\&quot;: \&quot;Description of address\&quot;,   \&quot;postal_code\&quot;: \&quot;798983\&quot;,   \&quot;birth_date\&quot;: \&quot;1900-12-31\&quot;,   \&quot;city_of_birth\&quot;: \&quot;London\&quot;,   \&quot;country_of_birth\&quot;: \&quot;GB\&quot;,   \&quot;gender\&quot;: \&quot;M\&quot;,   \&quot;documents\&quot;: [ ],   \&quot;politically_exposed_people\&quot;: [ ],   \&quot;ip\&quot;: \&quot;127.0.0.1\&quot;,   \&quot;identification_number\&quot;: \&quot;AB123456\&quot;,   \&quot;identification_type\&quot;: \&quot;ID\&quot;,   \&quot;external_id\&quot;: \&quot;806ec63a-a5a7-43cc-9d75-1ee74fbcc026\&quot;,   \&quot;created_at\&quot;: \&quot;2018-06-09 15:13:40 UTC\&quot;,   \&quot;metadata\&quot;: { } } &#x60;&#x60;&#x60;  Business Sender Example:  &#x60;&#x60;&#x60;json {   \&quot;type\&quot;: \&quot;business\&quot;,   \&quot;country\&quot;: \&quot;UG\&quot;,   \&quot;phone_country\&quot;: \&quot;UG\&quot;,   \&quot;phone_number\&quot;: \&quot;752403639\&quot;,   \&quot;email\&quot;: \&quot;example@home.org\&quot;,   \&quot;name\&quot;: \&quot;MyCompany\&quot;,   \&quot;city\&quot;: \&quot;Kampala\&quot;,   \&quot;street\&quot;: \&quot;Unknown 17-3\&quot;,   \&quot;postal_code\&quot;: \&quot;798983\&quot;,   \&quot;address_description\&quot;: \&quot;Description of address\&quot;,   \&quot;documents\&quot;: [ ],   \&quot;politically_exposed_people\&quot;: [ ],   \&quot;ip\&quot;: \&quot;127.0.0.1\&quot;,   \&quot;identification_number\&quot;: \&quot;AB123456\&quot;,   \&quot;identification_type\&quot;: \&quot;ID\&quot;,   \&quot;external_id\&quot;: \&quot;806ec63a-a5a7-43cc-9d75-1ee74fbcc026\&quot;,   \&quot;metadata\&quot;: { } } &#x60;&#x60;&#x60;  [Sender in the API documentation](https://docs.transferzero.com/docs/transaction-flow/#sender)
+     * This contains the details of the sender. The first time a specific sender is used the full details should be provided. Once a sender is created and is used, the next time you MUST only send the ID of the sender. This is so we can match the same sender across multiple transactions for KYC and audit purposes.  Personal Sender Example: &#x60;&#x60;&#x60;json {   // name   \&quot;first_name\&quot;: \&quot;Jane\&quot;,   \&quot;last_name\&quot;: \&quot;Doe\&quot;,    // address   \&quot;country\&quot;: \&quot;US\&quot;,   \&quot;city\&quot;: \&quot;New York\&quot;,   \&quot;street\&quot;: \&quot;20 W 34th St\&quot;,   \&quot;postal_code\&quot;: \&quot;10001\&quot;,   \&quot;address_description\&quot;: \&quot;\&quot;,    // DOB   \&quot;birth_date\&quot;: \&quot;1974-12-24\&quot;,    // Contact Details; You can usually use your company&#39;s contact details here   \&quot;phone_country\&quot;: \&quot;US\&quot;,   \&quot;phone_number\&quot;: \&quot;5555551234\&quot;,   \&quot;email\&quot;: \&quot;info@transferzero.com\&quot;,    // ID of the sender in your system   \&quot;external_id\&quot;: \&quot;Sender:US:234523\&quot;,    // these fields are mandatory, but you can usually leave them with the following default values:   \&quot;documents\&quot;: [ ],   \&quot;ip\&quot;: \&quot;127.0.0.1\&quot;,   \&quot;metadata\&quot;: {} } &#x60;&#x60;&#x60;  Business Sender Example:  &#x60;&#x60;&#x60;json {   \&quot;type\&quot;: \&quot;business\&quot;,   \&quot;name\&quot;: \&quot;Company name\&quot;,    // Country of Incorporation   \&quot;country\&quot;: \&quot;US\&quot;,    // Trading address of the company   \&quot;trading_country\&quot;: \&quot;US\&quot;,   \&quot;city\&quot;: \&quot;New York\&quot;,   \&quot;street\&quot;: \&quot;20 W 34th St\&quot;,   \&quot;postal_code\&quot;: \&quot;10001\&quot;,   \&quot;address_description\&quot;: \&quot;\&quot;,    // Company Details   \&quot;legal_entity_type\&quot;: \&quot;privately_owned_company\&quot;,   \&quot;registration_date\&quot;: \&quot;2012-01-25\&quot;,   \&quot;registration_number\&quot;: \&quot;VAT1234567\&quot;,   \&quot;nature_of_business\&quot;: \&quot;retail_trade\&quot;,    // Contact Details   \&quot;phone_country\&quot;: \&quot;US\&quot;,   \&quot;phone_number\&quot;: \&quot;5555551234\&quot;,   \&quot;email\&quot;: \&quot;example@home.org\&quot;,    // ID of the sender in your system   \&quot;external_id\&quot;: \&quot;Sender:Business:US:234523\&quot;,    // these fields are mandatory, but you can usually leave them with the following default values:   \&quot;documents\&quot;: [ ],   \&quot;ip\&quot;: \&quot;127.0.0.1\&quot;,   \&quot;metadata\&quot;: {} } &#x60;&#x60;&#x60;  [Sender in the API documentation](https://docs.transferzero.com/docs/transaction-flow/#sender)
      * @alias module:Model/Sender
-     * @param country {String} Country of sender in 2-character alpha ISO 3166-2 country format
+     * @param country {String} Country of sender in 2-character alpha ISO 3166-2 country format. This is the residential country for personal senders and the country of incorporation for business senders.
      * @param street {String} Sender's street
      * @param postalCode {String} Zip code of sender
      * @param city {String} Sender's city
@@ -135,7 +135,7 @@ class Sender {
                 obj['legal_entity_type'] = ApiClient.convertToType(data['legal_entity_type'], 'String');
             }
             if (data.hasOwnProperty('registration_date')) {
-                obj['registration_date'] = ApiClient.convertToType(data['registration_date'], 'String');
+                obj['registration_date'] = ApiClient.convertToType(data['registration_date'], 'Date');
             }
             if (data.hasOwnProperty('registration_number')) {
                 obj['registration_number'] = ApiClient.convertToType(data['registration_number'], 'String');
@@ -236,7 +236,7 @@ Sender.prototype['type'] = undefined;
 Sender.prototype['state'] = undefined;
 
 /**
- * Country of sender in 2-character alpha ISO 3166-2 country format
+ * Country of sender in 2-character alpha ISO 3166-2 country format. This is the residential country for personal senders and the country of incorporation for business senders.
  * @member {String} country
  */
 Sender.prototype['country'] = undefined;
@@ -344,14 +344,14 @@ Sender.prototype['occupation'] = undefined;
 Sender.prototype['nationality'] = undefined;
 
 /**
- * Legal entity type (used only with a Business sender)
+ * Legal entity type (used only with a Business sender)  Available values:   - sole_proprietorship: Sole Proprietorship   - partnership: Partnership   - privately_owned_company: Privately Owned Company (Limited Company)   - publicly_owned_company: Publicly Listed Company (PLC)   - government_owned_entity: Government Owned Entity Trusts   - trust: Foundations & Similar Entities   - ngo: Non-Government Organisations / Charities inc Religious bodies and place of worship   - club_and_society: Clubs and Societies   - go: GO (Majority Owned Subsidiary of State-Owned Company)   - financial_institution: Financial Institution  Please note not all values are acceptable for some our corridors. Please reach out to our sales teams for more information.  Note that if you select `financial_institution` then the fields `vat_registration_number`, `financial_regulator` and `regulatory_licence_number` will be mandatory as well.
  * @member {module:Model/Sender.LegalEntityTypeEnum} legal_entity_type
  */
 Sender.prototype['legal_entity_type'] = undefined;
 
 /**
  * The registration date (used only with a Business sender)
- * @member {String} registration_date
+ * @member {Date} registration_date
  */
 Sender.prototype['registration_date'] = undefined;
 
@@ -362,8 +362,8 @@ Sender.prototype['registration_date'] = undefined;
 Sender.prototype['registration_number'] = undefined;
 
 /**
- * Nature of business options (used only with a Business sender)
- * @member {String} nature_of_business
+ * Nature of business options (used only with a Business sender)  Available values:   - personal: Personal   - agriculture_and_hunting: Agriculture and Hunting   - forestry: Forestry   - fishing: Fishing   - agricultural_by_products: Agricultural By-Products   - coal_mining: Coal Mining   - oil_mining: Oil Mining   - iron_ore_mining: Iron Ore Mining   - other_metal_and_diamond_mining: Other Metal and Diamond Mining   - other_mineral_mining: Other Mineral Mining   - manufacturing_of_food_drink_tobacco: Manufacture of Food/Drink/Tobacco   - manufacturing_of_textiles_leather_fur_furniture: Manufacture of Textiles/Leather/Fur/Furniture   - manufacture_of_wooden_products_furniture: Manufacture of Wooden Products/Furniture   - manufacture_of_paper_pulp_allied_products: Manufacture of Paper/Pulp/Allied Products   - manufacture_of_chemicals_medical_petroleum_rubber_plastic_products: Manufacture Of Chemicals Medical Petroleum Rubber Plastic Products   - manufacture_of_pottery_china_glass_stone: Manufacture Of Pottery China Glass Stone   - manufacture_of_iron_steel_non_ferrous_metals_basic_industries: Manufacture Of Iron Steel Non-Ferrous Metals Basic Industries   - manufacture_of_metal_products_electrical_and_scientific_engineering: Manufacture Of Metal Products Electrical And Scientific Engineering   - manufacture_of_jewelry_musical_instruments_toys: Manufacture Of Jewelry Musical Instruments Toys   - electricity_gas_and_water: Electricity, Gas And Water   - construction: Construction   - wholesale_trade: Wholesale Trade   - retail_trade: Retail Trade   - catering_incl_hotels: Catering Incl. Hotels   - transport_storage: Transport Storage   - communications: Communications   - finance_and_holding_companies: Finance And Holding Companies   - insurance: Insurance   - business_services: Business Services   - real_estate_development_investment: Real Estate Development Investment   - central_state_governments: Central State Governments   - community_services_defence_police_prisons_etc: Community Services Defence Police Prisons Etc   - social_services_education_health_care: Social Services Education Health Care   - personal_services_leisure_services: Personal Services - Leisure Services   - personal_services_domestic_laundry_repairs: Personal Services - Domestic Laundry Repairs   - personal_services_embassies_international_organisations: Personal Services - Embassies
+ * @member {module:Model/Sender.NatureOfBusinessEnum} nature_of_business
  */
 Sender.prototype['nature_of_business'] = undefined;
 
@@ -635,6 +635,231 @@ Sender['LegalEntityTypeEnum'] = {
      * @const
      */
     "financial_institution": "financial_institution"
+};
+
+
+/**
+ * Allowed values for the <code>nature_of_business</code> property.
+ * @enum {String}
+ * @readonly
+ */
+Sender['NatureOfBusinessEnum'] = {
+
+    /**
+     * value: "personal"
+     * @const
+     */
+    "personal": "personal",
+
+    /**
+     * value: "agriculture_and_hunting"
+     * @const
+     */
+    "agriculture_and_hunting": "agriculture_and_hunting",
+
+    /**
+     * value: "forestry"
+     * @const
+     */
+    "forestry": "forestry",
+
+    /**
+     * value: "fishing"
+     * @const
+     */
+    "fishing": "fishing",
+
+    /**
+     * value: "agricultural_by_products"
+     * @const
+     */
+    "agricultural_by_products": "agricultural_by_products",
+
+    /**
+     * value: "coal_mining"
+     * @const
+     */
+    "coal_mining": "coal_mining",
+
+    /**
+     * value: "oil_mining"
+     * @const
+     */
+    "oil_mining": "oil_mining",
+
+    /**
+     * value: "iron_ore_mining"
+     * @const
+     */
+    "iron_ore_mining": "iron_ore_mining",
+
+    /**
+     * value: "other_metal_and_diamond_mining"
+     * @const
+     */
+    "other_metal_and_diamond_mining": "other_metal_and_diamond_mining",
+
+    /**
+     * value: "other_mineral_mining"
+     * @const
+     */
+    "other_mineral_mining": "other_mineral_mining",
+
+    /**
+     * value: "manufacturing_of_food_drink_tobacco"
+     * @const
+     */
+    "manufacturing_of_food_drink_tobacco": "manufacturing_of_food_drink_tobacco",
+
+    /**
+     * value: "manufacturing_of_textiles_leather_fur_furniture"
+     * @const
+     */
+    "manufacturing_of_textiles_leather_fur_furniture": "manufacturing_of_textiles_leather_fur_furniture",
+
+    /**
+     * value: "manufacture_of_wooden_products_furniture"
+     * @const
+     */
+    "manufacture_of_wooden_products_furniture": "manufacture_of_wooden_products_furniture",
+
+    /**
+     * value: "manufacture_of_paper_pulp_allied_products"
+     * @const
+     */
+    "manufacture_of_paper_pulp_allied_products": "manufacture_of_paper_pulp_allied_products",
+
+    /**
+     * value: "manufacture_of_chemicals_medical_petroleum_rubber_plastic_products"
+     * @const
+     */
+    "manufacture_of_chemicals_medical_petroleum_rubber_plastic_products": "manufacture_of_chemicals_medical_petroleum_rubber_plastic_products",
+
+    /**
+     * value: "manufacture_of_pottery_china_glass_stone"
+     * @const
+     */
+    "manufacture_of_pottery_china_glass_stone": "manufacture_of_pottery_china_glass_stone",
+
+    /**
+     * value: "manufacture_of_iron_steel_non_ferrous_metals_basic_industries"
+     * @const
+     */
+    "manufacture_of_iron_steel_non_ferrous_metals_basic_industries": "manufacture_of_iron_steel_non_ferrous_metals_basic_industries",
+
+    /**
+     * value: "manufacture_of_metal_products_electrical_and_scientific_engineering"
+     * @const
+     */
+    "manufacture_of_metal_products_electrical_and_scientific_engineering": "manufacture_of_metal_products_electrical_and_scientific_engineering",
+
+    /**
+     * value: "manufacture_of_jewelry_musical_instruments_toys"
+     * @const
+     */
+    "manufacture_of_jewelry_musical_instruments_toys": "manufacture_of_jewelry_musical_instruments_toys",
+
+    /**
+     * value: "electricity_gas_and_water"
+     * @const
+     */
+    "electricity_gas_and_water": "electricity_gas_and_water",
+
+    /**
+     * value: "construction"
+     * @const
+     */
+    "construction": "construction",
+
+    /**
+     * value: "wholesale_trade"
+     * @const
+     */
+    "wholesale_trade": "wholesale_trade",
+
+    /**
+     * value: "retail_trade"
+     * @const
+     */
+    "retail_trade": "retail_trade",
+
+    /**
+     * value: "catering_incl_hotels"
+     * @const
+     */
+    "catering_incl_hotels": "catering_incl_hotels",
+
+    /**
+     * value: "transport_storage"
+     * @const
+     */
+    "transport_storage": "transport_storage",
+
+    /**
+     * value: "communications"
+     * @const
+     */
+    "communications": "communications",
+
+    /**
+     * value: "finance_and_holding_companies"
+     * @const
+     */
+    "finance_and_holding_companies": "finance_and_holding_companies",
+
+    /**
+     * value: "insurance"
+     * @const
+     */
+    "insurance": "insurance",
+
+    /**
+     * value: "business_services"
+     * @const
+     */
+    "business_services": "business_services",
+
+    /**
+     * value: "real_estate_development_investment"
+     * @const
+     */
+    "real_estate_development_investment": "real_estate_development_investment",
+
+    /**
+     * value: "central_state_governments"
+     * @const
+     */
+    "central_state_governments": "central_state_governments",
+
+    /**
+     * value: "community_services_defence_police_prisons_etc"
+     * @const
+     */
+    "community_services_defence_police_prisons_etc": "community_services_defence_police_prisons_etc",
+
+    /**
+     * value: "social_services_education_health_care"
+     * @const
+     */
+    "social_services_education_health_care": "social_services_education_health_care",
+
+    /**
+     * value: "personal_services_leisure_services"
+     * @const
+     */
+    "personal_services_leisure_services": "personal_services_leisure_services",
+
+    /**
+     * value: "personal_services_domestic_laundry_repairs"
+     * @const
+     */
+    "personal_services_domestic_laundry_repairs": "personal_services_domestic_laundry_repairs",
+
+    /**
+     * value: "personal_services_embassies_international_organisations"
+     * @const
+     */
+    "personal_services_embassies_international_organisations": "personal_services_embassies_international_organisations"
 };
 
 

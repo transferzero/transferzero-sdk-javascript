@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 **id** | **String** |  | [optional] 
 **type** | **String** | Type of sender to create - either person or business (defaults to person)  | [optional] 
 **state** | [**SenderState**](SenderState.md) |  | [optional] 
-**country** | **String** | Country of sender in 2-character alpha ISO 3166-2 country format | 
+**country** | **String** | Country of sender in 2-character alpha ISO 3166-2 country format. This is the residential country for personal senders and the country of incorporation for business senders. | 
 **street** | **String** | Sender&#39;s street | 
 **postalCode** | **String** | Zip code of sender | 
 **city** | **String** | Sender&#39;s city | 
@@ -24,10 +24,10 @@ Name | Type | Description | Notes
 **birthDate** | **Date** | Date of birth of sender (used only with a Personal sender) | [optional] 
 **occupation** | **String** | Occupation of sender (used only with a Personal sender) | [optional] 
 **nationality** | **String** | The nationality of the sender (used only with a Personal sender) | [optional] 
-**legalEntityType** | **String** | Legal entity type (used only with a Business sender) | [optional] 
-**registrationDate** | **String** | The registration date (used only with a Business sender) | [optional] 
+**legalEntityType** | **String** | Legal entity type (used only with a Business sender)  Available values:   - sole_proprietorship: Sole Proprietorship   - partnership: Partnership   - privately_owned_company: Privately Owned Company (Limited Company)   - publicly_owned_company: Publicly Listed Company (PLC)   - government_owned_entity: Government Owned Entity Trusts   - trust: Foundations &amp; Similar Entities   - ngo: Non-Government Organisations / Charities inc Religious bodies and place of worship   - club_and_society: Clubs and Societies   - go: GO (Majority Owned Subsidiary of State-Owned Company)   - financial_institution: Financial Institution  Please note not all values are acceptable for some our corridors. Please reach out to our sales teams for more information.  Note that if you select &#x60;financial_institution&#x60; then the fields &#x60;vat_registration_number&#x60;, &#x60;financial_regulator&#x60; and &#x60;regulatory_licence_number&#x60; will be mandatory as well. | [optional] 
+**registrationDate** | **Date** | The registration date (used only with a Business sender) | [optional] 
 **registrationNumber** | **String** | The registration number (used only with a Business sender) | [optional] 
-**natureOfBusiness** | **String** | Nature of business options (used only with a Business sender) | [optional] 
+**natureOfBusiness** | **String** | Nature of business options (used only with a Business sender)  Available values:   - personal: Personal   - agriculture_and_hunting: Agriculture and Hunting   - forestry: Forestry   - fishing: Fishing   - agricultural_by_products: Agricultural By-Products   - coal_mining: Coal Mining   - oil_mining: Oil Mining   - iron_ore_mining: Iron Ore Mining   - other_metal_and_diamond_mining: Other Metal and Diamond Mining   - other_mineral_mining: Other Mineral Mining   - manufacturing_of_food_drink_tobacco: Manufacture of Food/Drink/Tobacco   - manufacturing_of_textiles_leather_fur_furniture: Manufacture of Textiles/Leather/Fur/Furniture   - manufacture_of_wooden_products_furniture: Manufacture of Wooden Products/Furniture   - manufacture_of_paper_pulp_allied_products: Manufacture of Paper/Pulp/Allied Products   - manufacture_of_chemicals_medical_petroleum_rubber_plastic_products: Manufacture Of Chemicals Medical Petroleum Rubber Plastic Products   - manufacture_of_pottery_china_glass_stone: Manufacture Of Pottery China Glass Stone   - manufacture_of_iron_steel_non_ferrous_metals_basic_industries: Manufacture Of Iron Steel Non-Ferrous Metals Basic Industries   - manufacture_of_metal_products_electrical_and_scientific_engineering: Manufacture Of Metal Products Electrical And Scientific Engineering   - manufacture_of_jewelry_musical_instruments_toys: Manufacture Of Jewelry Musical Instruments Toys   - electricity_gas_and_water: Electricity, Gas And Water   - construction: Construction   - wholesale_trade: Wholesale Trade   - retail_trade: Retail Trade   - catering_incl_hotels: Catering Incl. Hotels   - transport_storage: Transport Storage   - communications: Communications   - finance_and_holding_companies: Finance And Holding Companies   - insurance: Insurance   - business_services: Business Services   - real_estate_development_investment: Real Estate Development Investment   - central_state_governments: Central State Governments   - community_services_defence_police_prisons_etc: Community Services Defence Police Prisons Etc   - social_services_education_health_care: Social Services Education Health Care   - personal_services_leisure_services: Personal Services - Leisure Services   - personal_services_domestic_laundry_repairs: Personal Services - Domestic Laundry Repairs   - personal_services_embassies_international_organisations: Personal Services - Embassies | [optional] 
 **sourceOfFunds** | **String** | The source of funds | [optional] 
 **customSourceOfFunds** | **String** | Custom source of funds | [optional] 
 **coreBusinessActivity** | **String** | The core activity (used only with a Business sender) | [optional] 
@@ -104,6 +104,85 @@ Name | Type | Description | Notes
 * `other` (value: `"other"`)
 
 * `financial_institution` (value: `"financial_institution"`)
+
+
+
+
+<a name="NatureOfBusinessEnum"></a>
+## Enum: NatureOfBusinessEnum
+
+
+* `personal` (value: `"personal"`)
+
+* `agriculture_and_hunting` (value: `"agriculture_and_hunting"`)
+
+* `forestry` (value: `"forestry"`)
+
+* `fishing` (value: `"fishing"`)
+
+* `agricultural_by_products` (value: `"agricultural_by_products"`)
+
+* `coal_mining` (value: `"coal_mining"`)
+
+* `oil_mining` (value: `"oil_mining"`)
+
+* `iron_ore_mining` (value: `"iron_ore_mining"`)
+
+* `other_metal_and_diamond_mining` (value: `"other_metal_and_diamond_mining"`)
+
+* `other_mineral_mining` (value: `"other_mineral_mining"`)
+
+* `manufacturing_of_food_drink_tobacco` (value: `"manufacturing_of_food_drink_tobacco"`)
+
+* `manufacturing_of_textiles_leather_fur_furniture` (value: `"manufacturing_of_textiles_leather_fur_furniture"`)
+
+* `manufacture_of_wooden_products_furniture` (value: `"manufacture_of_wooden_products_furniture"`)
+
+* `manufacture_of_paper_pulp_allied_products` (value: `"manufacture_of_paper_pulp_allied_products"`)
+
+* `manufacture_of_chemicals_medical_petroleum_rubber_plastic_products` (value: `"manufacture_of_chemicals_medical_petroleum_rubber_plastic_products"`)
+
+* `manufacture_of_pottery_china_glass_stone` (value: `"manufacture_of_pottery_china_glass_stone"`)
+
+* `manufacture_of_iron_steel_non_ferrous_metals_basic_industries` (value: `"manufacture_of_iron_steel_non_ferrous_metals_basic_industries"`)
+
+* `manufacture_of_metal_products_electrical_and_scientific_engineering` (value: `"manufacture_of_metal_products_electrical_and_scientific_engineering"`)
+
+* `manufacture_of_jewelry_musical_instruments_toys` (value: `"manufacture_of_jewelry_musical_instruments_toys"`)
+
+* `electricity_gas_and_water` (value: `"electricity_gas_and_water"`)
+
+* `construction` (value: `"construction"`)
+
+* `wholesale_trade` (value: `"wholesale_trade"`)
+
+* `retail_trade` (value: `"retail_trade"`)
+
+* `catering_incl_hotels` (value: `"catering_incl_hotels"`)
+
+* `transport_storage` (value: `"transport_storage"`)
+
+* `communications` (value: `"communications"`)
+
+* `finance_and_holding_companies` (value: `"finance_and_holding_companies"`)
+
+* `insurance` (value: `"insurance"`)
+
+* `business_services` (value: `"business_services"`)
+
+* `real_estate_development_investment` (value: `"real_estate_development_investment"`)
+
+* `central_state_governments` (value: `"central_state_governments"`)
+
+* `community_services_defence_police_prisons_etc` (value: `"community_services_defence_police_prisons_etc"`)
+
+* `social_services_education_health_care` (value: `"social_services_education_health_care"`)
+
+* `personal_services_leisure_services` (value: `"personal_services_leisure_services"`)
+
+* `personal_services_domestic_laundry_repairs` (value: `"personal_services_domestic_laundry_repairs"`)
+
+* `personal_services_embassies_international_organisations` (value: `"personal_services_embassies_international_organisations"`)
 
 
 
