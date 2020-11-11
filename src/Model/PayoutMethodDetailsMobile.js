@@ -12,11 +12,12 @@
  */
 
 import ApiClient from '../ApiClient';
+import PayoutMethodMobileProviderEnum from './PayoutMethodMobileProviderEnum';
 
 /**
  * The PayoutMethodDetailsMobile model module.
  * @module Model/PayoutMethodDetailsMobile
- * @version 1.8.0
+ * @version 1.9.0
  */
 class PayoutMethodDetailsMobile {
     /**
@@ -63,6 +64,9 @@ class PayoutMethodDetailsMobile {
             if (data.hasOwnProperty('phone_number')) {
                 obj['phone_number'] = ApiClient.convertToType(data['phone_number'], 'String');
             }
+            if (data.hasOwnProperty('mobile_provider')) {
+                obj['mobile_provider'] = PayoutMethodMobileProviderEnum.constructFromObject(data['mobile_provider']);
+            }
         }
         return obj;
     }
@@ -84,6 +88,11 @@ PayoutMethodDetailsMobile.prototype['last_name'] = undefined;
  * @member {String} phone_number
  */
 PayoutMethodDetailsMobile.prototype['phone_number'] = undefined;
+
+/**
+ * @member {module:Model/PayoutMethodMobileProviderEnum} mobile_provider
+ */
+PayoutMethodDetailsMobile.prototype['mobile_provider'] = undefined;
 
 
 

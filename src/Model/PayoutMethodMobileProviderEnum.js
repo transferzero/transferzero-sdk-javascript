@@ -33,6 +33,27 @@ export default class PayoutMethodMobileProviderEnum {
         "tigo" = "tigo";
 
     
+        /**
+         * value: "mtn"
+         * @const
+         */
+        "mtn" = "mtn";
+
+    
+        /**
+         * value: "airtel"
+         * @const
+         */
+        "airtel" = "airtel";
+
+    
+        /**
+         * value: "vodafone"
+         * @const
+         */
+        "vodafone" = "vodafone";
+
+    
 
     /**
     * Returns a <code>PayoutMethodMobileProviderEnum</code> enum value from a Javascript object name.

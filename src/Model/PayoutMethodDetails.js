@@ -31,7 +31,7 @@ import PayoutMethodMobileProviderEnum from './PayoutMethodMobileProviderEnum';
 /**
  * The PayoutMethodDetails model module.
  * @module Model/PayoutMethodDetails
- * @version 1.8.0
+ * @version 1.9.0
  */
 class PayoutMethodDetails {
     /**
@@ -145,6 +145,10 @@ PayoutMethodDetailsMobile.prototype['last_name'] = undefined;
  * @member {String} phone_number
  */
 PayoutMethodDetailsMobile.prototype['phone_number'] = undefined;
+/**
+ * @member {module:Model/PayoutMethodMobileProviderEnum} mobile_provider
+ */
+PayoutMethodDetailsMobile.prototype['mobile_provider'] = undefined;
 // Implement PayoutMethodDetailsXOFMobile interface:
 /**
  * @member {String} first_name
