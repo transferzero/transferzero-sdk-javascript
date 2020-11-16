@@ -110,6 +110,9 @@ class Sender {
             if (data.hasOwnProperty('identification_type')) {
                 obj['identification_type'] = ApiClient.convertToType(data['identification_type'], 'String');
             }
+            if (data.hasOwnProperty('lang')) {
+                obj['lang'] = ApiClient.convertToType(data['lang'], 'String');
+            }
             if (data.hasOwnProperty('name')) {
                 obj['name'] = ApiClient.convertToType(data['name'], 'String');
             }
@@ -300,6 +303,12 @@ Sender.prototype['identification_number'] = undefined;
  * @member {module:Model/Sender.IdentificationTypeEnum} identification_type
  */
 Sender.prototype['identification_type'] = undefined;
+
+/**
+ * Determines language of the served content. Defaults to English
+ * @member {String} lang
+ */
+Sender.prototype['lang'] = undefined;
 
 /**
  * Name of sender (used only with a Business sender)
