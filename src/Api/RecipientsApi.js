@@ -13,6 +13,7 @@
 
 
 import ApiClient from "../ApiClient";
+import ProofOfPaymentListResponse from '../Model/ProofOfPaymentListResponse';
 import RecipientListResponse from '../Model/RecipientListResponse';
 import RecipientRequest from '../Model/RecipientRequest';
 import RecipientResponse from '../Model/RecipientResponse';
@@ -210,6 +211,57 @@ export default class RecipientsApi {
      */
     patchRecipient(recipientID, recipientRequest) {
       return this.patchRecipientWithHttpInfo(recipientID, recipientRequest)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
+     * Returns list of proof of payments
+     * Returns a list of uploaded proof of payment files for a transaction recipient
+     * @param {String} recipientID ID of the recipient for whom the proof of payments will be returned.  Example: &#x60;/v1/recipients/9d4d7b73-a94c-4979-ab57-09074fd55d33/proof_of_payments&#x60;
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:Model/ProofOfPaymentListResponse} and HTTP response
+     */
+    proofOfPaymentsWithHttpInfo(recipientID) {
+      let postBody = null;
+
+      // verify the required parameter 'recipientID' is set
+      if (recipientID === undefined || recipientID === null) {
+        throw new Error("Missing the required parameter 'recipientID' when calling proofOfPayments");
+      }
+
+
+      let pathParams = {
+        'Recipient ID': recipientID
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['AuthorizationKey', 'AuthorizationNonce', 'AuthorizationSecret', 'AuthorizationSignature'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = ProofOfPaymentListResponse;
+
+      return this.apiClient.callApi(
+        '/recipients/{Recipient ID}/proof_of_payments', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * Returns list of proof of payments
+     * Returns a list of uploaded proof of payment files for a transaction recipient
+     * @param {String} recipientID ID of the recipient for whom the proof of payments will be returned.  Example: &#x60;/v1/recipients/9d4d7b73-a94c-4979-ab57-09074fd55d33/proof_of_payments&#x60;
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:Model/ProofOfPaymentListResponse}
+     */
+    proofOfPayments(recipientID) {
+      return this.proofOfPaymentsWithHttpInfo(recipientID)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

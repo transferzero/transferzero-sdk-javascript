@@ -7,6 +7,7 @@ Method | HTTP request | Description
 [**deleteRecipient**](RecipientsApi.md#deleteRecipient) | **DELETE** /recipients/{Recipient ID} | Cancelling a recipient
 [**getRecipients**](RecipientsApi.md#getRecipients) | **GET** /recipients | Getting a list of recipients with filtering
 [**patchRecipient**](RecipientsApi.md#patchRecipient) | **PATCH** /recipients/{Recipient ID} | Updating a recipient
+[**proofOfPayments**](RecipientsApi.md#proofOfPayments) | **GET** /recipients/{Recipient ID}/proof_of_payments | Returns list of proof of payments
 
 
 <a name="deleteRecipient"></a>
@@ -238,5 +239,76 @@ apiClient.basePath = 'https://api-sandbox.transferzero.com/v1';
 ### HTTP request headers
 
  - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="proofOfPayments"></a>
+# **proofOfPayments**
+> ProofOfPaymentListResponse proofOfPayments(recipientID)
+
+Returns list of proof of payments
+
+Returns a list of uploaded proof of payment files for a transaction recipient
+
+### Example
+```javascript
+import { RecipientsApi } from 'transferzero-sdk';
+
+// Configure API key authorization
+const apiClient = new ApiClient();
+apiClient.apiKey = '<key>';
+apiClient.apiSecret = '<secret>';
+apiClient.basePath = 'https://api-sandbox.transferzero.com/v1';
+
+let apiInstance = new RecipientsApi(apiClient);
+
+apiInstance.proofOfPayments(recipientID).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  if (error.isValidationError) {
+    let result = error.getResponseObject();
+    console.log(result);
+    console.error("WARN: Validation error occurred when calling the endpoint");
+  } else {
+    console.error("Exception when calling RecipientsApi#proofOfPayments");
+    throw error;
+  }
+});
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **recipientID** | [**String**](.md)| ID of the recipient for whom the proof of payments will be returned.  Example: &#x60;/v1/recipients/9d4d7b73-a94c-4979-ab57-09074fd55d33/proof_of_payments&#x60; | 
+
+### Return type
+
+[**ProofOfPaymentListResponse**](ProofOfPaymentListResponse.md)
+
+### Authorization
+
+You can set the API Key and Secret by passing a config object when creating an ApiClient:
+
+```js
+const apiClient = new ApiClient({
+  apiKey: '<key>',
+  apiSecret: '<secret>',
+  basePath: 'https://api-sandbox.transferzero.com/v1'
+});
+```
+
+Or by setting the properties on an ApiClient instance:
+
+```js
+const apiClient = new ApiClient();
+apiClient.apiKey = '<key>';
+apiClient.apiSecret = '<secret>';
+apiClient.basePath = 'https://api-sandbox.transferzero.com/v1';
+```
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 

@@ -114,6 +114,7 @@ Class | Method | HTTP request | Description
 *TransferzeroSdk.RecipientsApi* | [**deleteRecipient**](docs/RecipientsApi.md#deleteRecipient) | **DELETE** /recipients/{Recipient ID} | Cancelling a recipient
 *TransferzeroSdk.RecipientsApi* | [**getRecipients**](docs/RecipientsApi.md#getRecipients) | **GET** /recipients | Getting a list of recipients with filtering
 *TransferzeroSdk.RecipientsApi* | [**patchRecipient**](docs/RecipientsApi.md#patchRecipient) | **PATCH** /recipients/{Recipient ID} | Updating a recipient
+*TransferzeroSdk.RecipientsApi* | [**proofOfPayments**](docs/RecipientsApi.md#proofOfPayments) | **GET** /recipients/{Recipient ID}/proof_of_payments | Returns list of proof of payments
 *TransferzeroSdk.SendersApi* | [**deleteSender**](docs/SendersApi.md#deleteSender) | **DELETE** /senders/{Sender ID} | Deleting a sender
 *TransferzeroSdk.SendersApi* | [**getSender**](docs/SendersApi.md#getSender) | **GET** /senders/{Sender ID} | Fetching a sender
 *TransferzeroSdk.SendersApi* | [**getSenders**](docs/SendersApi.md#getSenders) | **GET** /senders | Listing senders
@@ -200,6 +201,8 @@ Class | Method | HTTP request | Description
  - [TransferzeroSdk.PayoutMethodResponse](docs/PayoutMethodResponse.md)
  - [TransferzeroSdk.PayoutMethodWebhook](docs/PayoutMethodWebhook.md)
  - [TransferzeroSdk.PoliticallyExposedPerson](docs/PoliticallyExposedPerson.md)
+ - [TransferzeroSdk.ProofOfPayment](docs/ProofOfPayment.md)
+ - [TransferzeroSdk.ProofOfPaymentListResponse](docs/ProofOfPaymentListResponse.md)
  - [TransferzeroSdk.Recipient](docs/Recipient.md)
  - [TransferzeroSdk.RecipientListResponse](docs/RecipientListResponse.md)
  - [TransferzeroSdk.RecipientRequest](docs/RecipientRequest.md)

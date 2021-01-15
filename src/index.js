@@ -77,6 +77,8 @@ import PayoutMethodRequest from './Model/PayoutMethodRequest';
 import PayoutMethodResponse from './Model/PayoutMethodResponse';
 import PayoutMethodWebhook from './Model/PayoutMethodWebhook';
 import PoliticallyExposedPerson from './Model/PoliticallyExposedPerson';
+import ProofOfPayment from './Model/ProofOfPayment';
+import ProofOfPaymentListResponse from './Model/ProofOfPaymentListResponse';
 import Recipient from './Model/Recipient';
 import RecipientListResponse from './Model/RecipientListResponse';
 import RecipientRequest from './Model/RecipientRequest';
@@ -551,6 +553,18 @@ export default {
     PoliticallyExposedPerson,
 
     /**
+     * The ProofOfPayment model constructor.
+     * @property {module:Model/ProofOfPayment}
+     */
+    ProofOfPayment,
+
+    /**
+     * The ProofOfPaymentListResponse model constructor.
+     * @property {module:Model/ProofOfPaymentListResponse}
+     */
+    ProofOfPaymentListResponse,
+
+    /**
      * The Recipient model constructor.
      * @property {module:Model/Recipient}
      */
@@ -911,6 +925,8 @@ export {
     PayoutMethodResponse,
     PayoutMethodWebhook,
     PoliticallyExposedPerson,
+    ProofOfPayment,
+    ProofOfPaymentListResponse,
     Recipient,
     RecipientListResponse,
     RecipientRequest,
