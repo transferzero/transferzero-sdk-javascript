@@ -86,6 +86,7 @@ import RecipientListResponse from './Model/RecipientListResponse';
 import RecipientRequest from './Model/RecipientRequest';
 import RecipientResponse from './Model/RecipientResponse';
 import RecipientState from './Model/RecipientState';
+import RecipientStateReasonDetails from './Model/RecipientStateReasonDetails';
 import RecipientWebhook from './Model/RecipientWebhook';
 import Sender from './Model/Sender';
 import SenderListResponse from './Model/SenderListResponse';
@@ -609,6 +610,12 @@ export default {
     RecipientState,
 
     /**
+     * The RecipientStateReasonDetails model constructor.
+     * @property {module:Model/RecipientStateReasonDetails}
+     */
+    RecipientStateReasonDetails,
+
+    /**
      * The RecipientWebhook model constructor.
      * @property {module:Model/RecipientWebhook}
      */
@@ -948,6 +955,7 @@ export {
     RecipientRequest,
     RecipientResponse,
     RecipientState,
+    RecipientStateReasonDetails,
     RecipientWebhook,
     Sender,
     SenderListResponse,

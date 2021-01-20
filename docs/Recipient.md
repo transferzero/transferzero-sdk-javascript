@@ -13,6 +13,7 @@ Name | Type | Description | Notes
 **inputUsdAmount** | **Number** | Shows how much this payment is worth in USD | [optional] 
 **mayCancel** | **Boolean** | If true it shows that the payment can be cancelled immediately using the DELETE /v1/recipients/{id} endpoint. If false you can still try to cancel it, however it will only gets cancelled once we have confirmation from our partner that the payment has failed. | [optional] 
 **stateReason** | **String** | In case the payment is unsuccessful it holds the error message associated with the last unsuccessful payout. | [optional] 
+**stateReasonDetails** | [**RecipientStateReasonDetails**](RecipientStateReasonDetails.md) |  | [optional] 
 **state** | [**RecipientState**](RecipientState.md) |  | [optional] 
 **transactionId** | **String** | The ID of the transaction that is related to this recipient | [optional] 
 **transactionState** | [**TransactionState**](TransactionState.md) |  | [optional] 

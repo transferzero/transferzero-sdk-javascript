@@ -210,6 +210,7 @@ Class | Method | HTTP request | Description
  - [TransferzeroSdk.RecipientRequest](docs/RecipientRequest.md)
  - [TransferzeroSdk.RecipientResponse](docs/RecipientResponse.md)
  - [TransferzeroSdk.RecipientState](docs/RecipientState.md)
+ - [TransferzeroSdk.RecipientStateReasonDetails](docs/RecipientStateReasonDetails.md)
  - [TransferzeroSdk.RecipientWebhook](docs/RecipientWebhook.md)
  - [TransferzeroSdk.Sender](docs/Sender.md)
  - [TransferzeroSdk.SenderListResponse](docs/SenderListResponse.md)

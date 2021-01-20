@@ -14,6 +14,7 @@
 import ApiClient from '../ApiClient';
 import PayoutMethod from './PayoutMethod';
 import RecipientState from './RecipientState';
+import RecipientStateReasonDetails from './RecipientStateReasonDetails';
 import TransactionState from './TransactionState';
 import ValidationErrorDescription from './ValidationErrorDescription';
 
@@ -87,6 +88,9 @@ class Recipient {
             }
             if (data.hasOwnProperty('state_reason')) {
                 obj['state_reason'] = ApiClient.convertToType(data['state_reason'], 'String');
+            }
+            if (data.hasOwnProperty('state_reason_details')) {
+                obj['state_reason_details'] = RecipientStateReasonDetails.constructFromObject(data['state_reason_details']);
             }
             if (data.hasOwnProperty('state')) {
                 obj['state'] = RecipientState.constructFromObject(data['state']);
@@ -186,6 +190,11 @@ Recipient.prototype['may_cancel'] = undefined;
  * @member {String} state_reason
  */
 Recipient.prototype['state_reason'] = undefined;
+
+/**
+ * @member {module:Model/RecipientStateReasonDetails} state_reason_details
+ */
+Recipient.prototype['state_reason_details'] = undefined;
 
 /**
  * @member {module:Model/RecipientState} state
