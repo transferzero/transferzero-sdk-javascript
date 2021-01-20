@@ -57,6 +57,7 @@ import PaymentMethodListResponse from './Model/PaymentMethodListResponse';
 import PaymentMethodOpposite from './Model/PaymentMethodOpposite';
 import PayoutMethod from './Model/PayoutMethod';
 import PayoutMethodBankAccountTypeEnum from './Model/PayoutMethodBankAccountTypeEnum';
+import PayoutMethodCashProviderEnum from './Model/PayoutMethodCashProviderEnum';
 import PayoutMethodDetails from './Model/PayoutMethodDetails';
 import PayoutMethodDetailsBTC from './Model/PayoutMethodDetailsBTC';
 import PayoutMethodDetailsBalance from './Model/PayoutMethodDetailsBalance';
@@ -67,6 +68,7 @@ import PayoutMethodDetailsMADCash from './Model/PayoutMethodDetailsMADCash';
 import PayoutMethodDetailsMobile from './Model/PayoutMethodDetailsMobile';
 import PayoutMethodDetailsNGNBank from './Model/PayoutMethodDetailsNGNBank';
 import PayoutMethodDetailsXOFBank from './Model/PayoutMethodDetailsXOFBank';
+import PayoutMethodDetailsXOFCash from './Model/PayoutMethodDetailsXOFCash';
 import PayoutMethodDetailsXOFMobile from './Model/PayoutMethodDetailsXOFMobile';
 import PayoutMethodDetailsZARBank from './Model/PayoutMethodDetailsZARBank';
 import PayoutMethodGenderEnum from './Model/PayoutMethodGenderEnum';
@@ -433,6 +435,12 @@ export default {
     PayoutMethodBankAccountTypeEnum,
 
     /**
+     * The PayoutMethodCashProviderEnum model constructor.
+     * @property {module:Model/PayoutMethodCashProviderEnum}
+     */
+    PayoutMethodCashProviderEnum,
+
+    /**
      * The PayoutMethodDetails model constructor.
      * @property {module:Model/PayoutMethodDetails}
      */
@@ -491,6 +499,12 @@ export default {
      * @property {module:Model/PayoutMethodDetailsXOFBank}
      */
     PayoutMethodDetailsXOFBank,
+
+    /**
+     * The PayoutMethodDetailsXOFCash model constructor.
+     * @property {module:Model/PayoutMethodDetailsXOFCash}
+     */
+    PayoutMethodDetailsXOFCash,
 
     /**
      * The PayoutMethodDetailsXOFMobile model constructor.
@@ -905,6 +919,7 @@ export {
     PaymentMethodOpposite,
     PayoutMethod,
     PayoutMethodBankAccountTypeEnum,
+    PayoutMethodCashProviderEnum,
     PayoutMethodDetails,
     PayoutMethodDetailsBTC,
     PayoutMethodDetailsBalance,
@@ -915,6 +930,7 @@ export {
     PayoutMethodDetailsMobile,
     PayoutMethodDetailsNGNBank,
     PayoutMethodDetailsXOFBank,
+    PayoutMethodDetailsXOFCash,
     PayoutMethodDetailsXOFMobile,
     PayoutMethodDetailsZARBank,
     PayoutMethodGenderEnum,
