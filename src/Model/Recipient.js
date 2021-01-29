@@ -98,6 +98,9 @@ class Recipient {
             if (data.hasOwnProperty('transaction_id')) {
                 obj['transaction_id'] = ApiClient.convertToType(data['transaction_id'], 'String');
             }
+            if (data.hasOwnProperty('transaction_external_id')) {
+                obj['transaction_external_id'] = ApiClient.convertToType(data['transaction_external_id'], 'String');
+            }
             if (data.hasOwnProperty('transaction_state')) {
                 obj['transaction_state'] = TransactionState.constructFromObject(data['transaction_state']);
             }
@@ -206,6 +209,12 @@ Recipient.prototype['state'] = undefined;
  * @member {String} transaction_id
  */
 Recipient.prototype['transaction_id'] = undefined;
+
+/**
+ * Optional ID that is supplied by partner linking it to the partner's own Transaction ID.
+ * @member {String} transaction_external_id
+ */
+Recipient.prototype['transaction_external_id'] = undefined;
 
 /**
  * @member {module:Model/TransactionState} transaction_state
