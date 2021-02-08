@@ -85,6 +85,12 @@ class Document {
             if (data.hasOwnProperty('id')) {
                 obj['id'] = ApiClient.convertToType(data['id'], 'String');
             }
+            if (data.hasOwnProperty('document_id')) {
+                obj['document_id'] = ApiClient.convertToType(data['document_id'], 'String');
+            }
+            if (data.hasOwnProperty('expiry_date')) {
+                obj['expiry_date'] = ApiClient.convertToType(data['expiry_date'], 'Date');
+            }
             if (data.hasOwnProperty('errors')) {
                 obj['errors'] = ApiClient.convertToType(data['errors'], {'String': [ValidationErrorDescription]});
             }
@@ -157,6 +163,18 @@ Document.prototype['issuing_country'] = undefined;
  * @member {String} id
  */
 Document.prototype['id'] = undefined;
+
+/**
+ * Document ID issued by government
+ * @member {String} document_id
+ */
+Document.prototype['document_id'] = undefined;
+
+/**
+ * Document expiry date issued by government
+ * @member {Date} expiry_date
+ */
+Document.prototype['expiry_date'] = undefined;
 
 /**
  * The fields that have some problems and don't pass validation

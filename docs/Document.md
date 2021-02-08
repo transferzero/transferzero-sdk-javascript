@@ -14,6 +14,8 @@ Name | Type | Description | Notes
 **documentType** | **String** | This is a brief description of the document type | [optional] 
 **issuingCountry** | **String** | Issuing country of ID in 2-character alpha ISO 3166-2 country format | [optional] 
 **id** | **String** |  | [optional] 
+**documentId** | **String** | Document ID issued by government | [optional] 
+**expiryDate** | **Date** | Document expiry date issued by government | [optional] 
 **errors** | **{String: [ValidationErrorDescription]}** | The fields that have some problems and don&#39;t pass validation | [optional] 
 
 
