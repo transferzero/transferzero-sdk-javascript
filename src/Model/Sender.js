@@ -299,7 +299,7 @@ Sender.prototype['address_description'] = undefined;
 Sender.prototype['identification_number'] = undefined;
 
 /**
- * Document to be identified. The identification type can be one of the following:  - `DL`: Driving License - `PP`: International Passport - `ID`: National ID - `OT`: Other
+ * Document to be identified. The identification type can be one of the following:  - `DL`: Driving License - `PP`: International Passport - `ID`: National ID - `OT`: Other  Please note for Wizall `XOF::Cash` transactions the valid options are: - `ID`: National ID - `PP`: Passport
  * @member {module:Model/Sender.IdentificationTypeEnum} identification_type
  */
 Sender.prototype['identification_type'] = undefined;

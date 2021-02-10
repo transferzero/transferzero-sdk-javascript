@@ -201,14 +201,6 @@ PayoutMethodDetailsXOFCash.prototype['first_name'] = undefined;
  */
 PayoutMethodDetailsXOFCash.prototype['last_name'] = undefined;
 /**
- * @member {String} identity_card_id
- */
-PayoutMethodDetailsXOFCash.prototype['identity_card_id'] = undefined;
-/**
- * @member {module:Model/PayoutMethodIdentityCardTypeEnum} identity_card_type
- */
-PayoutMethodDetailsXOFCash.prototype['identity_card_type'] = undefined;
-/**
  * @member {String} phone_number
  */
 PayoutMethodDetailsXOFCash.prototype['phone_number'] = undefined;
