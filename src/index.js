@@ -134,7 +134,7 @@ import WebhooksApi from './Api/WebhooksApi';
 
 
 /**
-* Client library for TransferZero API.<br>
+* Client library for TransferZero API..<br>
 * The <code>index</code> module provides access to constructors for all the classes which comprise the public API.
 * <p>
 * An AMD (recommended!) or CommonJS application will generally do something equivalent to the following:
@@ -162,7 +162,7 @@ import WebhooksApi from './Api/WebhooksApi';
 * </pre>
 * </p>
 * @module index
-* @version 1.10.0
+* @version 1.11.0
 */
 export default {
     /**
