@@ -12,6 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
+import PayoutMethodMobileProviderEnum from './PayoutMethodMobileProviderEnum';
 
 /**
  * The AccountValidationRequest model module.
@@ -62,6 +63,9 @@ class AccountValidationRequest {
             if (data.hasOwnProperty('phone_number')) {
                 obj['phone_number'] = ApiClient.convertToType(data['phone_number'], 'String');
             }
+            if (data.hasOwnProperty('mobile_provider')) {
+                obj['mobile_provider'] = PayoutMethodMobileProviderEnum.constructFromObject(data['mobile_provider']);
+            }
             if (data.hasOwnProperty('country')) {
                 obj['country'] = ApiClient.convertToType(data['country'], 'String');
             }
@@ -95,6 +99,11 @@ AccountValidationRequest.prototype['bank_code'] = undefined;
  * @member {String} phone_number
  */
 AccountValidationRequest.prototype['phone_number'] = undefined;
+
+/**
+ * @member {module:Model/PayoutMethodMobileProviderEnum} mobile_provider
+ */
+AccountValidationRequest.prototype['mobile_provider'] = undefined;
 
 /**
  * Country of account in 2-character alpha ISO 3166-2 country format
