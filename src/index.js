@@ -58,7 +58,6 @@ import PaymentMethodOpposite from './Model/PaymentMethodOpposite';
 import PayoutMethod from './Model/PayoutMethod';
 import PayoutMethodBankAccountTypeEnum from './Model/PayoutMethodBankAccountTypeEnum';
 import PayoutMethodCashProviderEnum from './Model/PayoutMethodCashProviderEnum';
-import PayoutMethodCountryEnum from './Model/PayoutMethodCountryEnum';
 import PayoutMethodDetails from './Model/PayoutMethodDetails';
 import PayoutMethodDetailsBTC from './Model/PayoutMethodDetailsBTC';
 import PayoutMethodDetailsBalance from './Model/PayoutMethodDetailsBalance';
@@ -163,7 +162,7 @@ import WebhooksApi from './Api/WebhooksApi';
 * </pre>
 * </p>
 * @module index
-* @version 1.12.0
+* @version 1.12.1
 */
 export default {
     /**
@@ -441,12 +440,6 @@ export default {
      * @property {module:Model/PayoutMethodCashProviderEnum}
      */
     PayoutMethodCashProviderEnum,
-
-    /**
-     * The PayoutMethodCountryEnum model constructor.
-     * @property {module:Model/PayoutMethodCountryEnum}
-     */
-    PayoutMethodCountryEnum,
 
     /**
      * The PayoutMethodDetails model constructor.
@@ -934,7 +927,6 @@ export {
     PayoutMethod,
     PayoutMethodBankAccountTypeEnum,
     PayoutMethodCashProviderEnum,
-    PayoutMethodCountryEnum,
     PayoutMethodDetails,
     PayoutMethodDetailsBTC,
     PayoutMethodDetailsBalance,

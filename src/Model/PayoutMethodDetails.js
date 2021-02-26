@@ -14,7 +14,6 @@
 import ApiClient from '../ApiClient';
 import PayoutMethodBankAccountTypeEnum from './PayoutMethodBankAccountTypeEnum';
 import PayoutMethodCashProviderEnum from './PayoutMethodCashProviderEnum';
-import PayoutMethodCountryEnum from './PayoutMethodCountryEnum';
 import PayoutMethodDetailsBTC from './PayoutMethodDetailsBTC';
 import PayoutMethodDetailsBalance from './PayoutMethodDetailsBalance';
 import PayoutMethodDetailsGBPBank from './PayoutMethodDetailsGBPBank';
@@ -34,7 +33,7 @@ import PayoutMethodMobileProviderEnum from './PayoutMethodMobileProviderEnum';
 /**
  * The PayoutMethodDetails model module.
  * @module Model/PayoutMethodDetails
- * @version 1.12.0
+ * @version 1.12.1
  */
 class PayoutMethodDetails {
     /**
@@ -209,10 +208,6 @@ PayoutMethodDetailsXOFCash.prototype['phone_number'] = undefined;
  * @member {module:Model/PayoutMethodCashProviderEnum} cash_provider
  */
 PayoutMethodDetailsXOFCash.prototype['cash_provider'] = undefined;
-/**
- * @member {module:Model/PayoutMethodCountryEnum} country
- */
-PayoutMethodDetailsXOFCash.prototype['country'] = undefined;
 // Implement PayoutMethodDetailsGHSBank interface:
 /**
  * @member {String} first_name
