@@ -182,6 +182,7 @@ Class | Method | HTTP request | Description
  - [TransferzeroSdk.PayoutMethod](docs/PayoutMethod.md)
  - [TransferzeroSdk.PayoutMethodBankAccountTypeEnum](docs/PayoutMethodBankAccountTypeEnum.md)
  - [TransferzeroSdk.PayoutMethodCashProviderEnum](docs/PayoutMethodCashProviderEnum.md)
+ - [TransferzeroSdk.PayoutMethodCountryEnum](docs/PayoutMethodCountryEnum.md)
  - [TransferzeroSdk.PayoutMethodDetails](docs/PayoutMethodDetails.md)
  - [TransferzeroSdk.PayoutMethodDetailsBTC](docs/PayoutMethodDetailsBTC.md)
  - [TransferzeroSdk.PayoutMethodDetailsBalance](docs/PayoutMethodDetailsBalance.md)
@@ -271,5 +272,5 @@ apiClient.basePath = 'https://api-sandbox.transferzero.com/v1';
 
 
 - API version: 1.0
-- Package version: 1.12.1
+- Package version: 1.12.2
 - Build package: org.openapitools.codegen.languages.JavascriptClientCodegen

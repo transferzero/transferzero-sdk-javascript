@@ -40,6 +40,83 @@ export default class PayoutMethodCountryEnum {
         "SN" = "SN";
 
     
+        /**
+         * value: "NG"
+         * @const
+         */
+        "NG" = "NG";
+
+    
+        /**
+         * value: "MA"
+         * @const
+         */
+        "MA" = "MA";
+
+    
+        /**
+         * value: "TZ"
+         * @const
+         */
+        "TZ" = "TZ";
+
+    
+        /**
+         * value: "GH"
+         * @const
+         */
+        "GH" = "GH";
+
+    
+        /**
+         * value: "UG"
+         * @const
+         */
+        "UG" = "UG";
+
+    
+        /**
+         * value: "KE"
+         * @const
+         */
+        "KE" = "KE";
+
+    
+        /**
+         * value: "NJ"
+         * @const
+         */
+        "NJ" = "NJ";
+
+    
+        /**
+         * value: "EU"
+         * @const
+         */
+        "EU" = "EU";
+
+    
+        /**
+         * value: "GB"
+         * @const
+         */
+        "GB" = "GB";
+
+    
+        /**
+         * value: "ZA"
+         * @const
+         */
+        "ZA" = "ZA";
+
+    
+        /**
+         * value: "EG"
+         * @const
+         */
+        "EG" = "EG";
+
+    
 
     /**
     * Returns a <code>PayoutMethodCountryEnum</code> enum value from a Javascript object name.
