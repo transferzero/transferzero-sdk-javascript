@@ -64,6 +64,7 @@ import PayoutMethodDetailsBTC from './Model/PayoutMethodDetailsBTC';
 import PayoutMethodDetailsBalance from './Model/PayoutMethodDetailsBalance';
 import PayoutMethodDetailsGBPBank from './Model/PayoutMethodDetailsGBPBank';
 import PayoutMethodDetailsGHSBank from './Model/PayoutMethodDetailsGHSBank';
+import PayoutMethodDetailsGHSCash from './Model/PayoutMethodDetailsGHSCash';
 import PayoutMethodDetailsIBAN from './Model/PayoutMethodDetailsIBAN';
 import PayoutMethodDetailsMADCash from './Model/PayoutMethodDetailsMADCash';
 import PayoutMethodDetailsMobile from './Model/PayoutMethodDetailsMobile';
@@ -477,6 +478,12 @@ export default {
      * @property {module:Model/PayoutMethodDetailsGHSBank}
      */
     PayoutMethodDetailsGHSBank,
+
+    /**
+     * The PayoutMethodDetailsGHSCash model constructor.
+     * @property {module:Model/PayoutMethodDetailsGHSCash}
+     */
+    PayoutMethodDetailsGHSCash,
 
     /**
      * The PayoutMethodDetailsIBAN model constructor.
@@ -940,6 +947,7 @@ export {
     PayoutMethodDetailsBalance,
     PayoutMethodDetailsGBPBank,
     PayoutMethodDetailsGHSBank,
+    PayoutMethodDetailsGHSCash,
     PayoutMethodDetailsIBAN,
     PayoutMethodDetailsMADCash,
     PayoutMethodDetailsMobile,

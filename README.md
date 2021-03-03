@@ -188,6 +188,7 @@ Class | Method | HTTP request | Description
  - [TransferzeroSdk.PayoutMethodDetailsBalance](docs/PayoutMethodDetailsBalance.md)
  - [TransferzeroSdk.PayoutMethodDetailsGBPBank](docs/PayoutMethodDetailsGBPBank.md)
  - [TransferzeroSdk.PayoutMethodDetailsGHSBank](docs/PayoutMethodDetailsGHSBank.md)
+ - [TransferzeroSdk.PayoutMethodDetailsGHSCash](docs/PayoutMethodDetailsGHSCash.md)
  - [TransferzeroSdk.PayoutMethodDetailsIBAN](docs/PayoutMethodDetailsIBAN.md)
  - [TransferzeroSdk.PayoutMethodDetailsMADCash](docs/PayoutMethodDetailsMADCash.md)
  - [TransferzeroSdk.PayoutMethodDetailsMobile](docs/PayoutMethodDetailsMobile.md)
