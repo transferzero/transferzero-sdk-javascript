@@ -19,7 +19,7 @@ import PayinMethodDetailsNGNBank from './PayinMethodDetailsNGNBank';
 /**
  * The PayinMethodDetails model module.
  * @module Model/PayinMethodDetails
- * @version 1.12.2
+ * @version 1.13.0
  */
 class PayinMethodDetails {
     /**

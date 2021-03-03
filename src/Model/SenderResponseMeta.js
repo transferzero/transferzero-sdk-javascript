@@ -17,7 +17,7 @@ import SenderResponseExisting from './SenderResponseExisting';
 /**
  * The SenderResponseMeta model module.
  * @module Model/SenderResponseMeta
- * @version 1.12.2
+ * @version 1.13.0
  */
 class SenderResponseMeta {
     /**
