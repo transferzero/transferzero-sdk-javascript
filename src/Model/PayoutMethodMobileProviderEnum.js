@@ -34,6 +34,13 @@ export default class PayoutMethodMobileProviderEnum {
 
     
         /**
+         * value: "moov"
+         * @const
+         */
+        "moov" = "moov";
+
+    
+        /**
          * value: "mtn"
          * @const
          */

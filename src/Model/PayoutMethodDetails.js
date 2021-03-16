@@ -174,6 +174,10 @@ PayoutMethodDetailsXOFMobile.prototype['phone_number'] = undefined;
  * @member {module:Model/PayoutMethodMobileProviderEnum} mobile_provider
  */
 PayoutMethodDetailsXOFMobile.prototype['mobile_provider'] = undefined;
+/**
+ * @member {module:Model/PayoutMethodCountryEnum} country
+ */
+PayoutMethodDetailsXOFMobile.prototype['country'] = undefined;
 // Implement PayoutMethodDetailsXOFBank interface:
 /**
  * @member {String} first_name

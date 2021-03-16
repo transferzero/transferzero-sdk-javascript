@@ -12,6 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
+import PayoutMethodCountryEnum from './PayoutMethodCountryEnum';
 import PayoutMethodMobileProviderEnum from './PayoutMethodMobileProviderEnum';
 
 /**
@@ -22,7 +23,7 @@ import PayoutMethodMobileProviderEnum from './PayoutMethodMobileProviderEnum';
 class PayoutMethodDetailsXOFMobile {
     /**
      * Constructs a new <code>PayoutMethodDetailsXOFMobile</code>.
-     * &#x60;&#x60;&#x60;JSON \&quot;details\&quot;: {   \&quot;first_name\&quot;: \&quot;First\&quot;,   \&quot;last_name\&quot;: \&quot;Last\&quot;,   \&quot;phone_number\&quot;: \&quot;774044436\&quot;     # local or international Senegalese format   \&quot;mobile_provider\&quot;: \&quot;orange\&quot;, # \&quot;orange\&quot; or \&quot;tigo\&quot; } &#x60;&#x60;&#x60;
+     * &#x60;&#x60;&#x60;JSON \&quot;details\&quot;: {   \&quot;first_name\&quot;: \&quot;First\&quot;,   \&quot;last_name\&quot;: \&quot;Last\&quot;,   \&quot;phone_number\&quot;: \&quot;774044436\&quot;,     # local or international Senegalese or Ivory Coast format   \&quot;mobile_provider\&quot;: \&quot;orange\&quot;, # \&quot;orange\&quot; or \&quot;tigo\&quot; for Senegal; \&quot;orange\&quot;, \&quot;mtn\&quot; or \&quot;moov\&quot; for Ivory Coast   \&quot;country\&quot; # Optional; Values: \&quot;SN\&quot; for Senegal or \&quot;CI\&quot; for Ivory Coast; Default value is \&quot;SN\&quot; } &#x60;&#x60;&#x60;
      * @alias module:Model/PayoutMethodDetailsXOFMobile
      * @param firstName {String} 
      * @param lastName {String} 
@@ -69,6 +70,9 @@ class PayoutMethodDetailsXOFMobile {
             if (data.hasOwnProperty('mobile_provider')) {
                 obj['mobile_provider'] = PayoutMethodMobileProviderEnum.constructFromObject(data['mobile_provider']);
             }
+            if (data.hasOwnProperty('country')) {
+                obj['country'] = PayoutMethodCountryEnum.constructFromObject(data['country']);
+            }
         }
         return obj;
     }
@@ -95,6 +99,11 @@ PayoutMethodDetailsXOFMobile.prototype['phone_number'] = undefined;
  * @member {module:Model/PayoutMethodMobileProviderEnum} mobile_provider
  */
 PayoutMethodDetailsXOFMobile.prototype['mobile_provider'] = undefined;
+
+/**
+ * @member {module:Model/PayoutMethodCountryEnum} country
+ */
+PayoutMethodDetailsXOFMobile.prototype['country'] = undefined;
 
 
 
