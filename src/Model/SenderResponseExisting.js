@@ -17,7 +17,7 @@ import Sender from './Sender';
 /**
  * The SenderResponseExisting model module.
  * @module Model/SenderResponseExisting
- * @version 1.13.0
+ * @version 1.14.0
  */
 class SenderResponseExisting {
     /**

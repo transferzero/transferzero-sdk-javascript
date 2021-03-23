@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The PayoutMethodDetailsZARBank model module.
  * @module Model/PayoutMethodDetailsZARBank
- * @version 1.13.0
+ * @version 1.14.0
  */
 class PayoutMethodDetailsZARBank {
     /**
