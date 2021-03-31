@@ -8,8 +8,8 @@ Name | Type | Description | Notes
 **phoneNumber** | **String** |  | 
 **senderIdentityCardType** | [**PayoutMethodIdentityCardTypeEnum**](PayoutMethodIdentityCardTypeEnum.md) |  | 
 **senderIdentityCardId** | **String** |  | 
-**senderCityOfBirth** | **String** |  | 
-**senderCountryOfBirth** | **String** |  | 
+**senderCityOfBirth** | **String** |  | [optional] 
+**senderCountryOfBirth** | **String** |  | [optional] 
 **senderGender** | [**PayoutMethodGenderEnum**](PayoutMethodGenderEnum.md) |  | 
 **reason** | **String** |  | [optional] 
 **identityCardType** | [**PayoutMethodIdentityCardTypeEnum**](PayoutMethodIdentityCardTypeEnum.md) |  | [optional] 
