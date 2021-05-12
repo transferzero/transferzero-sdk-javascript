@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **senderIdentityCardId** | **String** |  | 
 **senderCityOfBirth** | **String** |  | [optional] 
 **senderCountryOfBirth** | **String** |  | [optional] 
-**senderGender** | [**PayoutMethodGenderEnum**](PayoutMethodGenderEnum.md) |  | 
+**senderGender** | [**PayoutMethodGenderEnum**](PayoutMethodGenderEnum.md) |  | [optional] 
 **reason** | **String** |  | [optional] 
 **identityCardType** | [**PayoutMethodIdentityCardTypeEnum**](PayoutMethodIdentityCardTypeEnum.md) |  | [optional] 
 **identityCardId** | **String** |  | [optional] 
