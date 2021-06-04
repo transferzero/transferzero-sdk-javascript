@@ -73,6 +73,7 @@ import PayoutMethodDetailsXOFBank from './Model/PayoutMethodDetailsXOFBank';
 import PayoutMethodDetailsXOFCash from './Model/PayoutMethodDetailsXOFCash';
 import PayoutMethodDetailsXOFMobile from './Model/PayoutMethodDetailsXOFMobile';
 import PayoutMethodDetailsZARBank from './Model/PayoutMethodDetailsZARBank';
+import PayoutMethodEntityTypeEnum from './Model/PayoutMethodEntityTypeEnum';
 import PayoutMethodGenderEnum from './Model/PayoutMethodGenderEnum';
 import PayoutMethodIdentityCardTypeEnum from './Model/PayoutMethodIdentityCardTypeEnum';
 import PayoutMethodListResponse from './Model/PayoutMethodListResponse';
@@ -534,6 +535,12 @@ export default {
     PayoutMethodDetailsZARBank,
 
     /**
+     * The PayoutMethodEntityTypeEnum model constructor.
+     * @property {module:Model/PayoutMethodEntityTypeEnum}
+     */
+    PayoutMethodEntityTypeEnum,
+
+    /**
      * The PayoutMethodGenderEnum model constructor.
      * @property {module:Model/PayoutMethodGenderEnum}
      */
@@ -956,6 +963,7 @@ export {
     PayoutMethodDetailsXOFCash,
     PayoutMethodDetailsXOFMobile,
     PayoutMethodDetailsZARBank,
+    PayoutMethodEntityTypeEnum,
     PayoutMethodGenderEnum,
     PayoutMethodIdentityCardTypeEnum,
     PayoutMethodListResponse,

@@ -13,5 +13,11 @@ Name | Type | Description | Notes
 **bankAccount** | **String** |  | 
 **phoneNumber** | **String** |  | 
 **transferReasonCode** | **String** |  | [optional] 
+**name** | **String** |  | [optional] 
+**contactFirstName** | **String** |  | [optional] 
+**contactLastName** | **String** |  | [optional] 
+**registrationNumber** | **String** |  | [optional] 
+**natureOfBusiness** | **String** |  | [optional] 
+**entityType** | [**PayoutMethodEntityTypeEnum**](PayoutMethodEntityTypeEnum.md) |  | [optional] 
 
 
