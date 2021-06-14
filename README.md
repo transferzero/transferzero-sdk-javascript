@@ -197,11 +197,12 @@ Class | Method | HTTP request | Description
  - [TransferzeroSdk.PayoutMethodDetailsXOFCash](docs/PayoutMethodDetailsXOFCash.md)
  - [TransferzeroSdk.PayoutMethodDetailsXOFMobile](docs/PayoutMethodDetailsXOFMobile.md)
  - [TransferzeroSdk.PayoutMethodDetailsZARBank](docs/PayoutMethodDetailsZARBank.md)
- - [TransferzeroSdk.PayoutMethodEntityTypeEnum](docs/PayoutMethodEntityTypeEnum.md)
  - [TransferzeroSdk.PayoutMethodGenderEnum](docs/PayoutMethodGenderEnum.md)
  - [TransferzeroSdk.PayoutMethodIdentityCardTypeEnum](docs/PayoutMethodIdentityCardTypeEnum.md)
+ - [TransferzeroSdk.PayoutMethodLegalEntityTypeEnum](docs/PayoutMethodLegalEntityTypeEnum.md)
  - [TransferzeroSdk.PayoutMethodListResponse](docs/PayoutMethodListResponse.md)
  - [TransferzeroSdk.PayoutMethodMobileProviderEnum](docs/PayoutMethodMobileProviderEnum.md)
+ - [TransferzeroSdk.PayoutMethodNatureOfBusinessEnum](docs/PayoutMethodNatureOfBusinessEnum.md)
  - [TransferzeroSdk.PayoutMethodRequest](docs/PayoutMethodRequest.md)
  - [TransferzeroSdk.PayoutMethodResponse](docs/PayoutMethodResponse.md)
  - [TransferzeroSdk.PayoutMethodWebhook](docs/PayoutMethodWebhook.md)
@@ -274,5 +275,5 @@ apiClient.basePath = 'https://api-sandbox.transferzero.com/v1';
 
 
 - API version: 1.0
-- Package version: 1.14.0
+- Package version: 1.14.1
 - Build package: org.openapitools.codegen.languages.JavascriptClientCodegen

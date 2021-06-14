@@ -28,15 +28,16 @@ import PayoutMethodDetailsXOFBank from './PayoutMethodDetailsXOFBank';
 import PayoutMethodDetailsXOFCash from './PayoutMethodDetailsXOFCash';
 import PayoutMethodDetailsXOFMobile from './PayoutMethodDetailsXOFMobile';
 import PayoutMethodDetailsZARBank from './PayoutMethodDetailsZARBank';
-import PayoutMethodEntityTypeEnum from './PayoutMethodEntityTypeEnum';
 import PayoutMethodGenderEnum from './PayoutMethodGenderEnum';
 import PayoutMethodIdentityCardTypeEnum from './PayoutMethodIdentityCardTypeEnum';
+import PayoutMethodLegalEntityTypeEnum from './PayoutMethodLegalEntityTypeEnum';
 import PayoutMethodMobileProviderEnum from './PayoutMethodMobileProviderEnum';
+import PayoutMethodNatureOfBusinessEnum from './PayoutMethodNatureOfBusinessEnum';
 
 /**
  * The PayoutMethodDetails model module.
  * @module Model/PayoutMethodDetails
- * @version 1.14.0
+ * @version 1.14.1
  */
 class PayoutMethodDetails {
     /**
@@ -423,13 +424,13 @@ PayoutMethodDetailsZARBank.prototype['contact_last_name'] = undefined;
  */
 PayoutMethodDetailsZARBank.prototype['registration_number'] = undefined;
 /**
- * @member {String} nature_of_business
+ * @member {module:Model/PayoutMethodNatureOfBusinessEnum} nature_of_business
  */
 PayoutMethodDetailsZARBank.prototype['nature_of_business'] = undefined;
 /**
- * @member {module:Model/PayoutMethodEntityTypeEnum} entity_type
+ * @member {module:Model/PayoutMethodLegalEntityTypeEnum} legal_entity_type
  */
-PayoutMethodDetailsZARBank.prototype['entity_type'] = undefined;
+PayoutMethodDetailsZARBank.prototype['legal_entity_type'] = undefined;
 
 
 
