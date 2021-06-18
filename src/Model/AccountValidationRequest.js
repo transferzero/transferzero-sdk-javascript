@@ -144,7 +144,13 @@ AccountValidationRequest['CountryEnum'] = {
      * value: "GH"
      * @const
      */
-    "GH": "GH"
+    "GH": "GH",
+
+    /**
+     * value: "SN"
+     * @const
+     */
+    "SN": "SN"
 };
 
 
@@ -165,7 +171,13 @@ AccountValidationRequest['CurrencyEnum'] = {
      * value: "GHS"
      * @const
      */
-    "GHS": "GHS"
+    "GHS": "GHS",
+
+    /**
+     * value: "XOF"
+     * @const
+     */
+    "XOF": "XOF"
 };
 
 

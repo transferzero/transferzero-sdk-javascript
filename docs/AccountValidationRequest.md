@@ -20,6 +20,8 @@ Name | Type | Description | Notes
 
 * `GH` (value: `"GH"`)
 
+* `SN` (value: `"SN"`)
+
 
 
 
@@ -30,6 +32,8 @@ Name | Type | Description | Notes
 * `NGN` (value: `"NGN"`)
 
 * `GHS` (value: `"GHS"`)
+
+* `XOF` (value: `"XOF"`)
 
 
 
