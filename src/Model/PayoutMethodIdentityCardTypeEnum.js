@@ -34,10 +34,10 @@ export default class PayoutMethodIdentityCardTypeEnum {
 
     
         /**
-         * value: "ID"
+         * value: "NI"
          * @const
          */
-        "ID" = "ID";
+        "NI" = "NI";
 
     
 
