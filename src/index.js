@@ -59,6 +59,7 @@ import PayoutMethod from './Model/PayoutMethod';
 import PayoutMethodBankAccountTypeEnum from './Model/PayoutMethodBankAccountTypeEnum';
 import PayoutMethodCashProviderEnum from './Model/PayoutMethodCashProviderEnum';
 import PayoutMethodCountryEnum from './Model/PayoutMethodCountryEnum';
+import PayoutMethodCountryEnumUSDBank from './Model/PayoutMethodCountryEnumUSDBank';
 import PayoutMethodDetails from './Model/PayoutMethodDetails';
 import PayoutMethodDetailsBTC from './Model/PayoutMethodDetailsBTC';
 import PayoutMethodDetailsBalance from './Model/PayoutMethodDetailsBalance';
@@ -69,6 +70,7 @@ import PayoutMethodDetailsIBAN from './Model/PayoutMethodDetailsIBAN';
 import PayoutMethodDetailsMADCash from './Model/PayoutMethodDetailsMADCash';
 import PayoutMethodDetailsMobile from './Model/PayoutMethodDetailsMobile';
 import PayoutMethodDetailsNGNBank from './Model/PayoutMethodDetailsNGNBank';
+import PayoutMethodDetailsUSDBank from './Model/PayoutMethodDetailsUSDBank';
 import PayoutMethodDetailsXOFBank from './Model/PayoutMethodDetailsXOFBank';
 import PayoutMethodDetailsXOFCash from './Model/PayoutMethodDetailsXOFCash';
 import PayoutMethodDetailsXOFMobile from './Model/PayoutMethodDetailsXOFMobile';
@@ -452,6 +454,12 @@ export default {
     PayoutMethodCountryEnum,
 
     /**
+     * The PayoutMethodCountryEnumUSDBank model constructor.
+     * @property {module:Model/PayoutMethodCountryEnumUSDBank}
+     */
+    PayoutMethodCountryEnumUSDBank,
+
+    /**
      * The PayoutMethodDetails model constructor.
      * @property {module:Model/PayoutMethodDetails}
      */
@@ -510,6 +518,12 @@ export default {
      * @property {module:Model/PayoutMethodDetailsNGNBank}
      */
     PayoutMethodDetailsNGNBank,
+
+    /**
+     * The PayoutMethodDetailsUSDBank model constructor.
+     * @property {module:Model/PayoutMethodDetailsUSDBank}
+     */
+    PayoutMethodDetailsUSDBank,
 
     /**
      * The PayoutMethodDetailsXOFBank model constructor.
@@ -956,6 +970,7 @@ export {
     PayoutMethodBankAccountTypeEnum,
     PayoutMethodCashProviderEnum,
     PayoutMethodCountryEnum,
+    PayoutMethodCountryEnumUSDBank,
     PayoutMethodDetails,
     PayoutMethodDetailsBTC,
     PayoutMethodDetailsBalance,
@@ -966,6 +981,7 @@ export {
     PayoutMethodDetailsMADCash,
     PayoutMethodDetailsMobile,
     PayoutMethodDetailsNGNBank,
+    PayoutMethodDetailsUSDBank,
     PayoutMethodDetailsXOFBank,
     PayoutMethodDetailsXOFCash,
     PayoutMethodDetailsXOFMobile,
