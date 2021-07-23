@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The Pagination model module.
  * @module Model/Pagination
- * @version 1.14.1
+ * @version 1.15.0
  */
 class Pagination {
     /**

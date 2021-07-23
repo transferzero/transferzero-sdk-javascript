@@ -18,7 +18,7 @@ import PayoutMethodCountryEnum from './PayoutMethodCountryEnum';
 /**
  * The PayoutMethodDetailsXOFCash model module.
  * @module Model/PayoutMethodDetailsXOFCash
- * @version 1.14.1
+ * @version 1.15.0
  */
 class PayoutMethodDetailsXOFCash {
     /**

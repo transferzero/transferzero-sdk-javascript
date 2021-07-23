@@ -17,7 +17,7 @@ import PayoutMethodIdentityCardTypeEnum from './PayoutMethodIdentityCardTypeEnum
 /**
  * The PayoutMethodDetailsKESBank model module.
  * @module Model/PayoutMethodDetailsKESBank
- * @version 1.14.1
+ * @version 1.15.0
  */
 class PayoutMethodDetailsKESBank {
     /**

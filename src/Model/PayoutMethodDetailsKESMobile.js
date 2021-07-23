@@ -18,7 +18,7 @@ import PayoutMethodMobileProviderEnum from './PayoutMethodMobileProviderEnum';
 /**
  * The PayoutMethodDetailsKESMobile model module.
  * @module Model/PayoutMethodDetailsKESMobile
- * @version 1.14.1
+ * @version 1.15.0
  */
 class PayoutMethodDetailsKESMobile {
     /**

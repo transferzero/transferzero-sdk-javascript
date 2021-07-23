@@ -17,7 +17,7 @@ import Currency from './Currency';
 /**
  * The CurrencyListResponse model module.
  * @module Model/CurrencyListResponse
- * @version 1.14.1
+ * @version 1.15.0
  */
 class CurrencyListResponse {
     /**
