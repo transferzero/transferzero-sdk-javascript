@@ -67,6 +67,8 @@ import PayoutMethodDetailsGBPBank from './Model/PayoutMethodDetailsGBPBank';
 import PayoutMethodDetailsGHSBank from './Model/PayoutMethodDetailsGHSBank';
 import PayoutMethodDetailsGHSCash from './Model/PayoutMethodDetailsGHSCash';
 import PayoutMethodDetailsIBAN from './Model/PayoutMethodDetailsIBAN';
+import PayoutMethodDetailsKESBank from './Model/PayoutMethodDetailsKESBank';
+import PayoutMethodDetailsKESMobile from './Model/PayoutMethodDetailsKESMobile';
 import PayoutMethodDetailsMADCash from './Model/PayoutMethodDetailsMADCash';
 import PayoutMethodDetailsMobile from './Model/PayoutMethodDetailsMobile';
 import PayoutMethodDetailsNGNBank from './Model/PayoutMethodDetailsNGNBank';
@@ -500,6 +502,18 @@ export default {
      * @property {module:Model/PayoutMethodDetailsIBAN}
      */
     PayoutMethodDetailsIBAN,
+
+    /**
+     * The PayoutMethodDetailsKESBank model constructor.
+     * @property {module:Model/PayoutMethodDetailsKESBank}
+     */
+    PayoutMethodDetailsKESBank,
+
+    /**
+     * The PayoutMethodDetailsKESMobile model constructor.
+     * @property {module:Model/PayoutMethodDetailsKESMobile}
+     */
+    PayoutMethodDetailsKESMobile,
 
     /**
      * The PayoutMethodDetailsMADCash model constructor.
@@ -978,6 +992,8 @@ export {
     PayoutMethodDetailsGHSBank,
     PayoutMethodDetailsGHSCash,
     PayoutMethodDetailsIBAN,
+    PayoutMethodDetailsKESBank,
+    PayoutMethodDetailsKESMobile,
     PayoutMethodDetailsMADCash,
     PayoutMethodDetailsMobile,
     PayoutMethodDetailsNGNBank,

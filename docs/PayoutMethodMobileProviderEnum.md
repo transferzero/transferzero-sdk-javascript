@@ -15,4 +15,6 @@
 
 * `vodafone` (value: `"vodafone"`)
 
+* `mpesa` (value: `"mpesa"`)
+
 

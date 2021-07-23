@@ -21,6 +21,8 @@ import PayoutMethodDetailsGBPBank from './PayoutMethodDetailsGBPBank';
 import PayoutMethodDetailsGHSBank from './PayoutMethodDetailsGHSBank';
 import PayoutMethodDetailsGHSCash from './PayoutMethodDetailsGHSCash';
 import PayoutMethodDetailsIBAN from './PayoutMethodDetailsIBAN';
+import PayoutMethodDetailsKESBank from './PayoutMethodDetailsKESBank';
+import PayoutMethodDetailsKESMobile from './PayoutMethodDetailsKESMobile';
 import PayoutMethodDetailsMADCash from './PayoutMethodDetailsMADCash';
 import PayoutMethodDetailsMobile from './PayoutMethodDetailsMobile';
 import PayoutMethodDetailsNGNBank from './PayoutMethodDetailsNGNBank';
@@ -58,6 +60,8 @@ class PayoutMethodDetails {
      * @implements module:Model/PayoutMethodDetailsBTC
      * @implements module:Model/PayoutMethodDetailsZARBank
      * @implements module:Model/PayoutMethodDetailsUSDBank
+     * @implements module:Model/PayoutMethodDetailsKESMobile
+     * @implements module:Model/PayoutMethodDetailsKESBank
      * @param firstName {} 
      * @param lastName {} 
      * @param bankCode {} 
@@ -70,15 +74,19 @@ class PayoutMethodDetails {
      * @param bankCountry {} 
      * @param senderIdentityCardType {} 
      * @param senderIdentityCardId {} 
+     * @param identityCardType {} 
+     * @param identityCardId {} 
      * @param name {} 
      * @param address {} 
      * @param street {} 
      * @param postalCode {} 
      * @param city {} 
+     * @param transferReasonCode {} 
+     * @param swiftCode {} 
      */
-    constructor(firstName, lastName, bankCode, bankAccount, phoneNumber, mobileProvider, country, iban, bankName, bankCountry, senderIdentityCardType, senderIdentityCardId, name, address, street, postalCode, city) { 
-        PayoutMethodDetailsNGNBank.initialize(this, firstName, lastName, bankCode, bankAccount);PayoutMethodDetailsMobile.initialize(this, firstName, lastName, phoneNumber);PayoutMethodDetailsXOFMobile.initialize(this, firstName, lastName, phoneNumber, mobileProvider);PayoutMethodDetailsXOFBank.initialize(this, firstName, lastName, iban, bankName, bankCountry);PayoutMethodDetailsXOFCash.initialize(this, firstName, lastName, phoneNumber);PayoutMethodDetailsGHSBank.initialize(this, firstName, lastName, bankCode, bankAccount);PayoutMethodDetailsGHSCash.initialize(this, firstName, lastName, phoneNumber);PayoutMethodDetailsGBPBank.initialize(this, firstName, lastName);PayoutMethodDetailsIBAN.initialize(this, firstName, lastName, iban);PayoutMethodDetailsMADCash.initialize(this, firstName, lastName, phoneNumber, senderIdentityCardType, senderIdentityCardId);PayoutMethodDetailsBalance.initialize(this);PayoutMethodDetailsBTC.initialize(this, firstName, lastName, name, address);PayoutMethodDetailsZARBank.initialize(this, firstName, lastName, street, postalCode, city, bankCode, bankAccount, phoneNumber);PayoutMethodDetailsUSDBank.initialize(this, firstName, lastName, phoneNumber, bankCode, bankAccount, country);
-        PayoutMethodDetails.initialize(this, firstName, lastName, bankCode, bankAccount, phoneNumber, mobileProvider, country, iban, bankName, bankCountry, senderIdentityCardType, senderIdentityCardId, name, address, street, postalCode, city);
+    constructor(firstName, lastName, bankCode, bankAccount, phoneNumber, mobileProvider, country, iban, bankName, bankCountry, senderIdentityCardType, senderIdentityCardId, identityCardType, identityCardId, name, address, street, postalCode, city, transferReasonCode, swiftCode) { 
+        PayoutMethodDetailsNGNBank.initialize(this, firstName, lastName, bankCode, bankAccount);PayoutMethodDetailsMobile.initialize(this, firstName, lastName, phoneNumber);PayoutMethodDetailsXOFMobile.initialize(this, firstName, lastName, phoneNumber, mobileProvider);PayoutMethodDetailsXOFBank.initialize(this, firstName, lastName, iban, bankName, bankCountry);PayoutMethodDetailsXOFCash.initialize(this, firstName, lastName, phoneNumber);PayoutMethodDetailsGHSBank.initialize(this, firstName, lastName, bankCode, bankAccount);PayoutMethodDetailsGHSCash.initialize(this, firstName, lastName, phoneNumber);PayoutMethodDetailsGBPBank.initialize(this, firstName, lastName);PayoutMethodDetailsIBAN.initialize(this, firstName, lastName, iban);PayoutMethodDetailsMADCash.initialize(this, firstName, lastName, phoneNumber, senderIdentityCardType, senderIdentityCardId);PayoutMethodDetailsBalance.initialize(this);PayoutMethodDetailsBTC.initialize(this, firstName, lastName, name, address);PayoutMethodDetailsZARBank.initialize(this, firstName, lastName, street, postalCode, city, bankCode, bankAccount, phoneNumber);PayoutMethodDetailsUSDBank.initialize(this, firstName, lastName, phoneNumber, bankCode, bankAccount, country);PayoutMethodDetailsKESMobile.initialize(this, firstName, lastName, street, phoneNumber, mobileProvider, transferReasonCode, identityCardType, identityCardId);PayoutMethodDetailsKESBank.initialize(this, firstName, lastName, bankCode, street, bankAccount, bankName, swiftCode, transferReasonCode, identityCardType, identityCardId);
+        PayoutMethodDetails.initialize(this, firstName, lastName, bankCode, bankAccount, phoneNumber, mobileProvider, country, iban, bankName, bankCountry, senderIdentityCardType, senderIdentityCardId, identityCardType, identityCardId, name, address, street, postalCode, city, transferReasonCode, swiftCode);
     }
 
     /**
@@ -86,7 +94,7 @@ class PayoutMethodDetails {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, firstName, lastName, bankCode, bankAccount, phoneNumber, mobileProvider, country, iban, bankName, bankCountry, senderIdentityCardType, senderIdentityCardId, name, address, street, postalCode, city) { 
+    static initialize(obj, firstName, lastName, bankCode, bankAccount, phoneNumber, mobileProvider, country, iban, bankName, bankCountry, senderIdentityCardType, senderIdentityCardId, identityCardType, identityCardId, name, address, street, postalCode, city, transferReasonCode, swiftCode) { 
     }
 
     /**
@@ -113,6 +121,8 @@ class PayoutMethodDetails {
             PayoutMethodDetailsBTC.constructFromObject(data, obj);
             PayoutMethodDetailsZARBank.constructFromObject(data, obj);
             PayoutMethodDetailsUSDBank.constructFromObject(data, obj);
+            PayoutMethodDetailsKESMobile.constructFromObject(data, obj);
+            PayoutMethodDetailsKESBank.constructFromObject(data, obj);
 
         }
         return obj;
@@ -460,6 +470,84 @@ PayoutMethodDetailsUSDBank.prototype['bank_account'] = undefined;
  * @member {module:Model/PayoutMethodCountryEnumUSDBank} country
  */
 PayoutMethodDetailsUSDBank.prototype['country'] = undefined;
+// Implement PayoutMethodDetailsKESMobile interface:
+/**
+ * @member {String} first_name
+ */
+PayoutMethodDetailsKESMobile.prototype['first_name'] = undefined;
+/**
+ * @member {String} last_name
+ */
+PayoutMethodDetailsKESMobile.prototype['last_name'] = undefined;
+/**
+ * @member {String} street
+ */
+PayoutMethodDetailsKESMobile.prototype['street'] = undefined;
+/**
+ * @member {String} phone_number
+ */
+PayoutMethodDetailsKESMobile.prototype['phone_number'] = undefined;
+/**
+ * @member {module:Model/PayoutMethodMobileProviderEnum} mobile_provider
+ */
+PayoutMethodDetailsKESMobile.prototype['mobile_provider'] = undefined;
+/**
+ * @member {String} transfer_reason_code
+ */
+PayoutMethodDetailsKESMobile.prototype['transfer_reason_code'] = undefined;
+/**
+ * @member {module:Model/PayoutMethodIdentityCardTypeEnum} identity_card_type
+ */
+PayoutMethodDetailsKESMobile.prototype['identity_card_type'] = undefined;
+/**
+ * @member {String} identity_card_id
+ */
+PayoutMethodDetailsKESMobile.prototype['identity_card_id'] = undefined;
+// Implement PayoutMethodDetailsKESBank interface:
+/**
+ * @member {String} first_name
+ */
+PayoutMethodDetailsKESBank.prototype['first_name'] = undefined;
+/**
+ * @member {String} last_name
+ */
+PayoutMethodDetailsKESBank.prototype['last_name'] = undefined;
+/**
+ * @member {String} bank_code
+ */
+PayoutMethodDetailsKESBank.prototype['bank_code'] = undefined;
+/**
+ * @member {String} street
+ */
+PayoutMethodDetailsKESBank.prototype['street'] = undefined;
+/**
+ * @member {String} bank_account
+ */
+PayoutMethodDetailsKESBank.prototype['bank_account'] = undefined;
+/**
+ * @member {String} bank_name
+ */
+PayoutMethodDetailsKESBank.prototype['bank_name'] = undefined;
+/**
+ * @member {String} branch_code
+ */
+PayoutMethodDetailsKESBank.prototype['branch_code'] = undefined;
+/**
+ * @member {String} swift_code
+ */
+PayoutMethodDetailsKESBank.prototype['swift_code'] = undefined;
+/**
+ * @member {String} transfer_reason_code
+ */
+PayoutMethodDetailsKESBank.prototype['transfer_reason_code'] = undefined;
+/**
+ * @member {module:Model/PayoutMethodIdentityCardTypeEnum} identity_card_type
+ */
+PayoutMethodDetailsKESBank.prototype['identity_card_type'] = undefined;
+/**
+ * @member {String} identity_card_id
+ */
+PayoutMethodDetailsKESBank.prototype['identity_card_id'] = undefined;
 
 
 
