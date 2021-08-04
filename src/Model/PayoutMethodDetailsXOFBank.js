@@ -16,22 +16,20 @@ import ApiClient from '../ApiClient';
 /**
  * The PayoutMethodDetailsXOFBank model module.
  * @module Model/PayoutMethodDetailsXOFBank
- * @version 1.15.0
+ * @version 1.15.1
  */
 class PayoutMethodDetailsXOFBank {
     /**
      * Constructs a new <code>PayoutMethodDetailsXOFBank</code>.
-     * &#x60;&#x60;&#x60;JSON \&quot;details\&quot;: {   \&quot;first_name\&quot;: \&quot;First\&quot;,   \&quot;last_name\&quot;: \&quot;Last\&quot;,   \&quot;iban\&quot;: \&quot;SN08SN0000000000000000000000\&quot;,   \&quot;bank_name\&quot;: \&quot;BRM\&quot;,   \&quot;bank_country\&quot;: \&quot;SN\&quot; # ISO country code for Senegal } &#x60;&#x60;&#x60;
+     * &#x60;&#x60;&#x60;JSON \&quot;details\&quot;: {   \&quot;first_name\&quot;: \&quot;First\&quot;,   \&quot;last_name\&quot;: \&quot;Last\&quot;,   \&quot;iban\&quot;: \&quot;BJ0610100100144390000769\&quot;, # BBAN format   \&quot;bank_name\&quot;: \&quot;Bank Of Africa Bénin\&quot;,   \&quot;bank_country\&quot;: \&quot;BJ\&quot;, # ISO country code for Benin   \&quot;bank_code\&quot;: \&quot;BJ061\&quot; } &#x60;&#x60;&#x60;  See [XOF Bank](https://docs.transferzero.com/docs/payout-details/#xofbank) documentation for the bank_code list
      * @alias module:Model/PayoutMethodDetailsXOFBank
      * @param firstName {String} 
      * @param lastName {String} 
      * @param iban {String} 
-     * @param bankName {String} 
-     * @param bankCountry {String} 
      */
-    constructor(firstName, lastName, iban, bankName, bankCountry) { 
+    constructor(firstName, lastName, iban) { 
         
-        PayoutMethodDetailsXOFBank.initialize(this, firstName, lastName, iban, bankName, bankCountry);
+        PayoutMethodDetailsXOFBank.initialize(this, firstName, lastName, iban);
     }
 
     /**
@@ -39,12 +37,10 @@ class PayoutMethodDetailsXOFBank {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, firstName, lastName, iban, bankName, bankCountry) { 
+    static initialize(obj, firstName, lastName, iban) { 
         obj['first_name'] = firstName;
         obj['last_name'] = lastName;
         obj['iban'] = iban;
-        obj['bank_name'] = bankName;
-        obj['bank_country'] = bankCountry;
     }
 
     /**
@@ -72,6 +68,9 @@ class PayoutMethodDetailsXOFBank {
             }
             if (data.hasOwnProperty('bank_country')) {
                 obj['bank_country'] = ApiClient.convertToType(data['bank_country'], 'String');
+            }
+            if (data.hasOwnProperty('bank_code')) {
+                obj['bank_code'] = ApiClient.convertToType(data['bank_code'], 'String');
             }
         }
         return obj;
@@ -104,6 +103,11 @@ PayoutMethodDetailsXOFBank.prototype['bank_name'] = undefined;
  * @member {String} bank_country
  */
 PayoutMethodDetailsXOFBank.prototype['bank_country'] = undefined;
+
+/**
+ * @member {String} bank_code
+ */
+PayoutMethodDetailsXOFBank.prototype['bank_code'] = undefined;
 
 
 

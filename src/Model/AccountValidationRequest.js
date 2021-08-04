@@ -17,7 +17,7 @@ import PayoutMethodMobileProviderEnum from './PayoutMethodMobileProviderEnum';
 /**
  * The AccountValidationRequest model module.
  * @module Model/AccountValidationRequest
- * @version 1.15.0
+ * @version 1.15.1
  */
 class AccountValidationRequest {
     /**
@@ -60,6 +60,9 @@ class AccountValidationRequest {
             if (data.hasOwnProperty('bank_code')) {
                 obj['bank_code'] = ApiClient.convertToType(data['bank_code'], 'String');
             }
+            if (data.hasOwnProperty('iban')) {
+                obj['iban'] = ApiClient.convertToType(data['iban'], 'String');
+            }
             if (data.hasOwnProperty('phone_number')) {
                 obj['phone_number'] = ApiClient.convertToType(data['phone_number'], 'String');
             }
@@ -93,6 +96,12 @@ AccountValidationRequest.prototype['bank_account'] = undefined;
  * @member {String} bank_code
  */
 AccountValidationRequest.prototype['bank_code'] = undefined;
+
+/**
+ * IBAN to query - BBAN format for XOF bank accounts
+ * @member {String} iban
+ */
+AccountValidationRequest.prototype['iban'] = undefined;
 
 /**
  * Phone number to query
@@ -150,7 +159,13 @@ AccountValidationRequest['CountryEnum'] = {
      * value: "SN"
      * @const
      */
-    "SN": "SN"
+    "SN": "SN",
+
+    /**
+     * value: "CI"
+     * @const
+     */
+    "CI": "CI"
 };
 
 

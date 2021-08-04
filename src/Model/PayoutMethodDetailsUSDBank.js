@@ -17,7 +17,7 @@ import PayoutMethodCountryEnumUSDBank from './PayoutMethodCountryEnumUSDBank';
 /**
  * The PayoutMethodDetailsUSDBank model module.
  * @module Model/PayoutMethodDetailsUSDBank
- * @version 1.15.0
+ * @version 1.15.1
  */
 class PayoutMethodDetailsUSDBank {
     /**
