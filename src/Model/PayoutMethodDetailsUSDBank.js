@@ -12,7 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
-import PayoutMethodCountryEnumUSDBank from './PayoutMethodCountryEnumUSDBank';
+import PayoutMethodCountryEnum from './PayoutMethodCountryEnum';
 
 /**
  * The PayoutMethodDetailsUSDBank model module.
@@ -22,14 +22,14 @@ import PayoutMethodCountryEnumUSDBank from './PayoutMethodCountryEnumUSDBank';
 class PayoutMethodDetailsUSDBank {
     /**
      * Constructs a new <code>PayoutMethodDetailsUSDBank</code>.
-     * &#x60;&#x60;&#x60;JSON   \&quot;details\&quot;: {     \&quot;first_name\&quot;: \&quot;Jane\&quot;,     \&quot;last_name\&quot;: \&quot;Doe\&quot;,     \&quot;phone_number\&quot;: \&quot;+2341234567\&quot;,     \&quot;bank_code\&quot;: \&quot;057\&quot;,     \&quot;bank_account\&quot;: \&quot;1234567890\&quot;,     \&quot;country\&quot;: \&quot;NG\&quot;   } &#x60;&#x60;&#x60; See [USD Bank](https://docs.transferzero.com/docs/payout-details/#usdbank) documentation for the bank_code list
+     * &#x60;&#x60;&#x60;JSON   \&quot;details\&quot;: {     \&quot;first_name\&quot;: \&quot;Jane\&quot;,     \&quot;last_name\&quot;: \&quot;Doe\&quot;,     \&quot;phone_number\&quot;: \&quot;+2341234567\&quot;,     \&quot;bank_code\&quot;: \&quot;057\&quot;,     \&quot;bank_account\&quot;: \&quot;1234567890\&quot;,     \&quot;country\&quot;: \&quot;NG\&quot;   } &#x60;&#x60;&#x60; See [USD Bank](https://docs.transferzero.com/docs/payout-details/#usdbank) documentation for the bank_code and country lists
      * @alias module:Model/PayoutMethodDetailsUSDBank
      * @param firstName {String} 
      * @param lastName {String} 
      * @param phoneNumber {String} 
      * @param bankCode {String} 
      * @param bankAccount {String} 
-     * @param country {module:Model/PayoutMethodCountryEnumUSDBank} 
+     * @param country {module:Model/PayoutMethodCountryEnum} 
      */
     constructor(firstName, lastName, phoneNumber, bankCode, bankAccount, country) { 
         
@@ -77,7 +77,7 @@ class PayoutMethodDetailsUSDBank {
                 obj['bank_account'] = ApiClient.convertToType(data['bank_account'], 'String');
             }
             if (data.hasOwnProperty('country')) {
-                obj['country'] = PayoutMethodCountryEnumUSDBank.constructFromObject(data['country']);
+                obj['country'] = PayoutMethodCountryEnum.constructFromObject(data['country']);
             }
         }
         return obj;
@@ -112,7 +112,7 @@ PayoutMethodDetailsUSDBank.prototype['bank_code'] = undefined;
 PayoutMethodDetailsUSDBank.prototype['bank_account'] = undefined;
 
 /**
- * @member {module:Model/PayoutMethodCountryEnumUSDBank} country
+ * @member {module:Model/PayoutMethodCountryEnum} country
  */
 PayoutMethodDetailsUSDBank.prototype['country'] = undefined;
 
