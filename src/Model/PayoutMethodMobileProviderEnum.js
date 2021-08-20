@@ -68,6 +68,20 @@ export default class PayoutMethodMobileProviderEnum {
         "mpesa" = "mpesa";
 
     
+        /**
+         * value: "africell"
+         * @const
+         */
+        "africell" = "africell";
+
+    
+        /**
+         * value: "telecom"
+         * @const
+         */
+        "telecom" = "telecom";
+
+    
 
     /**
     * Returns a <code>PayoutMethodMobileProviderEnum</code> enum value from a Javascript object name.

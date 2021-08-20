@@ -17,4 +17,8 @@
 
 * `mpesa` (value: `"mpesa"`)
 
+* `africell` (value: `"africell"`)
+
+* `telecom` (value: `"telecom"`)
+
 
