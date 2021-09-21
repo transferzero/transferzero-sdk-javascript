@@ -125,9 +125,6 @@ class Recipient {
             if (data.hasOwnProperty('id')) {
                 obj['id'] = ApiClient.convertToType(data['id'], 'String');
             }
-            if (data.hasOwnProperty('type')) {
-                obj['type'] = ApiClient.convertToType(data['type'], 'String');
-            }
             if (data.hasOwnProperty('errors')) {
                 obj['errors'] = ApiClient.convertToType(data['errors'], {'String': [ValidationErrorDescription]});
             }
@@ -266,12 +263,6 @@ Recipient.prototype['output_currency'] = undefined;
 Recipient.prototype['id'] = undefined;
 
 /**
- * Type of recipient to create - either person or business (defaults to person) 
- * @member {module:Model/Recipient.TypeEnum} type
- */
-Recipient.prototype['type'] = undefined;
-
-/**
  * The fields that have some problems and don't pass validation
  * @member {Object.<String, Array.<module:Model/ValidationErrorDescription>>} errors
  */
@@ -279,27 +270,6 @@ Recipient.prototype['errors'] = undefined;
 
 
 
-
-
-/**
- * Allowed values for the <code>type</code> property.
- * @enum {String}
- * @readonly
- */
-Recipient['TypeEnum'] = {
-
-    /**
-     * value: "person"
-     * @const
-     */
-    "person": "person",
-
-    /**
-     * value: "business"
-     * @const
-     */
-    "business": "business"
-};
 
 
 

@@ -25,18 +25,6 @@ Name | Type | Description | Notes
 **outputAmount** | **Number** | The amount that will be paid to the recipient | [optional] 
 **outputCurrency** | **String** | The currency the payment will be delivered in | [optional] 
 **id** | **String** |  | [optional] 
-**type** | **String** | Type of recipient to create - either person or business (defaults to person)  | [optional] 
 **errors** | **{String: [ValidationErrorDescription]}** | The fields that have some problems and don&#39;t pass validation | [optional] 
-
-
-<a name="TypeEnum"></a>
-## Enum: TypeEnum
-
-
-* `person` (value: `"person"`)
-
-* `business` (value: `"business"`)
-
-
 
 
