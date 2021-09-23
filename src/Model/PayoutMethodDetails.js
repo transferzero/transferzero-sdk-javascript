@@ -41,7 +41,7 @@ import PayoutMethodNatureOfBusinessEnum from './PayoutMethodNatureOfBusinessEnum
 /**
  * The PayoutMethodDetails model module.
  * @module Model/PayoutMethodDetails
- * @version 1.16.0
+ * @version 1.16.1
  */
 class PayoutMethodDetails {
     /**

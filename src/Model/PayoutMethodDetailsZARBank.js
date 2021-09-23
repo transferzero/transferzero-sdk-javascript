@@ -18,7 +18,7 @@ import PayoutMethodNatureOfBusinessEnum from './PayoutMethodNatureOfBusinessEnum
 /**
  * The PayoutMethodDetailsZARBank model module.
  * @module Model/PayoutMethodDetailsZARBank
- * @version 1.16.0
+ * @version 1.16.1
  */
 class PayoutMethodDetailsZARBank {
     /**
