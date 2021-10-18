@@ -14,29 +14,29 @@
 import ApiClient from '../ApiClient';
 import PayoutMethodIdentityCardTypeEnum from './PayoutMethodIdentityCardTypeEnum';
 import PayoutMethodMobileProviderEnum from './PayoutMethodMobileProviderEnum';
+import PayoutMethodTransferReasonEnum from './PayoutMethodTransferReasonEnum';
 
 /**
  * The PayoutMethodDetailsKESMobile model module.
  * @module Model/PayoutMethodDetailsKESMobile
- * @version 1.16.1
+ * @version 1.17.0
  */
 class PayoutMethodDetailsKESMobile {
     /**
      * Constructs a new <code>PayoutMethodDetailsKESMobile</code>.
-     * &#x60;&#x60;&#x60;JSON   \&quot;details\&quot;: {     \&quot;first_name\&quot;: \&quot;First\&quot;,     \&quot;last_name\&quot;: \&quot;Last\&quot;,     \&quot;street\&quot;: \&quot;Main Street\&quot;,     \&quot;phone_number\&quot;: \&quot;+254997853134\&quot;,     \&quot;mobile_provider\&quot;: \&quot;mpesa\&quot;,     \&quot;transfer_reason_code\&quot;: \&quot;185\&quot;,     \&quot;identity_card_type\&quot;: \&quot;ID\&quot;,     \&quot;identity_card_id\&quot;: \&quot;AB12345678\&quot;   } &#x60;&#x60;&#x60;  See [KES Mobile](https://docs.transferzero.com/docs/payout-details/#kesmobile) documentation for transfer_reason_code lists
+     * &#x60;&#x60;&#x60;JSON   \&quot;details\&quot;: {     \&quot;first_name\&quot;: \&quot;First\&quot;,     \&quot;last_name\&quot;: \&quot;Last\&quot;,     \&quot;street\&quot;: \&quot;Main Street\&quot;,     \&quot;phone_number\&quot;: \&quot;+254997853134\&quot;,     \&quot;mobile_provider\&quot;: \&quot;mpesa\&quot;,     \&quot;transfer_reason\&quot;: \&quot;personal_account\&quot;, // New transfer reason field     \&quot;identity_card_type\&quot;: \&quot;ID\&quot;,     \&quot;identity_card_id\&quot;: \&quot;AB12345678\&quot;   } &#x60;&#x60;&#x60;  See [KES Mobile](https://docs.transferzero.com/docs/payout-details/#kesmobile) documentation for transfer_reason lists
      * @alias module:Model/PayoutMethodDetailsKESMobile
      * @param firstName {String} 
      * @param lastName {String} 
      * @param street {String} 
      * @param phoneNumber {String} 
      * @param mobileProvider {module:Model/PayoutMethodMobileProviderEnum} 
-     * @param transferReasonCode {String} 
      * @param identityCardType {module:Model/PayoutMethodIdentityCardTypeEnum} 
      * @param identityCardId {String} 
      */
-    constructor(firstName, lastName, street, phoneNumber, mobileProvider, transferReasonCode, identityCardType, identityCardId) { 
+    constructor(firstName, lastName, street, phoneNumber, mobileProvider, identityCardType, identityCardId) { 
         
-        PayoutMethodDetailsKESMobile.initialize(this, firstName, lastName, street, phoneNumber, mobileProvider, transferReasonCode, identityCardType, identityCardId);
+        PayoutMethodDetailsKESMobile.initialize(this, firstName, lastName, street, phoneNumber, mobileProvider, identityCardType, identityCardId);
     }
 
     /**
@@ -44,13 +44,12 @@ class PayoutMethodDetailsKESMobile {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, firstName, lastName, street, phoneNumber, mobileProvider, transferReasonCode, identityCardType, identityCardId) { 
+    static initialize(obj, firstName, lastName, street, phoneNumber, mobileProvider, identityCardType, identityCardId) { 
         obj['first_name'] = firstName;
         obj['last_name'] = lastName;
         obj['street'] = street;
         obj['phone_number'] = phoneNumber;
         obj['mobile_provider'] = mobileProvider;
-        obj['transfer_reason_code'] = transferReasonCode;
         obj['identity_card_type'] = identityCardType;
         obj['identity_card_id'] = identityCardId;
     }
@@ -83,6 +82,9 @@ class PayoutMethodDetailsKESMobile {
             }
             if (data.hasOwnProperty('transfer_reason_code')) {
                 obj['transfer_reason_code'] = ApiClient.convertToType(data['transfer_reason_code'], 'String');
+            }
+            if (data.hasOwnProperty('transfer_reason')) {
+                obj['transfer_reason'] = PayoutMethodTransferReasonEnum.constructFromObject(data['transfer_reason']);
             }
             if (data.hasOwnProperty('identity_card_type')) {
                 obj['identity_card_type'] = PayoutMethodIdentityCardTypeEnum.constructFromObject(data['identity_card_type']);
@@ -126,6 +128,11 @@ PayoutMethodDetailsKESMobile.prototype['mobile_provider'] = undefined;
  * @member {String} transfer_reason_code
  */
 PayoutMethodDetailsKESMobile.prototype['transfer_reason_code'] = undefined;
+
+/**
+ * @member {module:Model/PayoutMethodTransferReasonEnum} transfer_reason
+ */
+PayoutMethodDetailsKESMobile.prototype['transfer_reason'] = undefined;
 
 /**
  * @member {module:Model/PayoutMethodIdentityCardTypeEnum} identity_card_type

@@ -209,6 +209,7 @@ Class | Method | HTTP request | Description
  - [TransferzeroSdk.PayoutMethodNatureOfBusinessEnum](docs/PayoutMethodNatureOfBusinessEnum.md)
  - [TransferzeroSdk.PayoutMethodRequest](docs/PayoutMethodRequest.md)
  - [TransferzeroSdk.PayoutMethodResponse](docs/PayoutMethodResponse.md)
+ - [TransferzeroSdk.PayoutMethodTransferReasonEnum](docs/PayoutMethodTransferReasonEnum.md)
  - [TransferzeroSdk.PayoutMethodWebhook](docs/PayoutMethodWebhook.md)
  - [TransferzeroSdk.PoliticallyExposedPerson](docs/PoliticallyExposedPerson.md)
  - [TransferzeroSdk.ProofOfPayment](docs/ProofOfPayment.md)
@@ -279,5 +280,5 @@ apiClient.basePath = 'https://api-sandbox.transferzero.com/v1';
 
 
 - API version: 1.0
-- Package version: 1.16.1
+- Package version: 1.17.0
 - Build package: org.openapitools.codegen.languages.JavascriptClientCodegen

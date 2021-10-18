@@ -85,6 +85,7 @@ import PayoutMethodMobileProviderEnum from './Model/PayoutMethodMobileProviderEn
 import PayoutMethodNatureOfBusinessEnum from './Model/PayoutMethodNatureOfBusinessEnum';
 import PayoutMethodRequest from './Model/PayoutMethodRequest';
 import PayoutMethodResponse from './Model/PayoutMethodResponse';
+import PayoutMethodTransferReasonEnum from './Model/PayoutMethodTransferReasonEnum';
 import PayoutMethodWebhook from './Model/PayoutMethodWebhook';
 import PoliticallyExposedPerson from './Model/PoliticallyExposedPerson';
 import ProofOfPayment from './Model/ProofOfPayment';
@@ -170,7 +171,7 @@ import WebhooksApi from './Api/WebhooksApi';
 * </pre>
 * </p>
 * @module index
-* @version 1.16.1
+* @version 1.17.0
 */
 export default {
     /**
@@ -612,6 +613,12 @@ export default {
     PayoutMethodResponse,
 
     /**
+     * The PayoutMethodTransferReasonEnum model constructor.
+     * @property {module:Model/PayoutMethodTransferReasonEnum}
+     */
+    PayoutMethodTransferReasonEnum,
+
+    /**
      * The PayoutMethodWebhook model constructor.
      * @property {module:Model/PayoutMethodWebhook}
      */
@@ -1010,6 +1017,7 @@ export {
     PayoutMethodNatureOfBusinessEnum,
     PayoutMethodRequest,
     PayoutMethodResponse,
+    PayoutMethodTransferReasonEnum,
     PayoutMethodWebhook,
     PoliticallyExposedPerson,
     ProofOfPayment,

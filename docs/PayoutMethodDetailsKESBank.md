@@ -11,7 +11,8 @@ Name | Type | Description | Notes
 **bankName** | **String** |  | 
 **branchCode** | **String** |  | [optional] 
 **swiftCode** | **String** |  | 
-**transferReasonCode** | **String** |  | 
+**transferReasonCode** | **String** |  | [optional] 
+**transferReason** | [**PayoutMethodTransferReasonEnum**](PayoutMethodTransferReasonEnum.md) |  | [optional] 
 **identityCardType** | [**PayoutMethodIdentityCardTypeEnum**](PayoutMethodIdentityCardTypeEnum.md) |  | 
 **identityCardId** | **String** |  | 
 

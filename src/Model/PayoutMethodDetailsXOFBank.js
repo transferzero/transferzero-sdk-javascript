@@ -12,16 +12,17 @@
  */
 
 import ApiClient from '../ApiClient';
+import PayoutMethodTransferReasonEnum from './PayoutMethodTransferReasonEnum';
 
 /**
  * The PayoutMethodDetailsXOFBank model module.
  * @module Model/PayoutMethodDetailsXOFBank
- * @version 1.16.1
+ * @version 1.17.0
  */
 class PayoutMethodDetailsXOFBank {
     /**
      * Constructs a new <code>PayoutMethodDetailsXOFBank</code>.
-     * &#x60;&#x60;&#x60;JSON \&quot;details\&quot;: {   \&quot;first_name\&quot;: \&quot;First\&quot;,   \&quot;last_name\&quot;: \&quot;Last\&quot;,   \&quot;iban\&quot;: \&quot;BJ0610100100144390000769\&quot;, # BBAN format   \&quot;bank_name\&quot;: \&quot;Bank Of Africa Bénin\&quot;,   \&quot;bank_country\&quot;: \&quot;BJ\&quot;, # ISO country code for Benin   \&quot;bank_code\&quot;: \&quot;BJ061\&quot; } &#x60;&#x60;&#x60;  See [XOF Bank](https://docs.transferzero.com/docs/payout-details/#xofbank) documentation for the bank_code list
+     * &#x60;&#x60;&#x60;JSON \&quot;details\&quot;: {   \&quot;first_name\&quot;: \&quot;First\&quot;,   \&quot;last_name\&quot;: \&quot;Last\&quot;,   \&quot;iban\&quot;: \&quot;BJ0610100100144390000769\&quot;, # BBAN format   \&quot;bank_name\&quot;: \&quot;Bank Of Africa Bénin\&quot;,   \&quot;bank_country\&quot;: \&quot;BJ\&quot;, # ISO country code for Benin   \&quot;bank_code\&quot;: \&quot;BJ061\&quot;,   \&quot;transfer_reason\&quot;: \&quot;personal_account\&quot; } &#x60;&#x60;&#x60;  See [XOF Bank](https://docs.transferzero.com/docs/payout-details/#xofbank) documentation for the bank_code and transfer_reason lists
      * @alias module:Model/PayoutMethodDetailsXOFBank
      * @param firstName {String} 
      * @param lastName {String} 
@@ -72,6 +73,9 @@ class PayoutMethodDetailsXOFBank {
             if (data.hasOwnProperty('bank_code')) {
                 obj['bank_code'] = ApiClient.convertToType(data['bank_code'], 'String');
             }
+            if (data.hasOwnProperty('transfer_reason')) {
+                obj['transfer_reason'] = PayoutMethodTransferReasonEnum.constructFromObject(data['transfer_reason']);
+            }
         }
         return obj;
     }
@@ -108,6 +112,11 @@ PayoutMethodDetailsXOFBank.prototype['bank_country'] = undefined;
  * @member {String} bank_code
  */
 PayoutMethodDetailsXOFBank.prototype['bank_code'] = undefined;
+
+/**
+ * @member {module:Model/PayoutMethodTransferReasonEnum} transfer_reason
+ */
+PayoutMethodDetailsXOFBank.prototype['transfer_reason'] = undefined;
 
 
 
