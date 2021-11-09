@@ -51,6 +51,7 @@ Name | Type | Description | Notes
 **cityOfBirth** | **String** | City of birth of sender | [optional] 
 **countryOfBirth** | **String** | Country of birth of sender in 2-character alpha ISO 3166-2 country format | [optional] 
 **gender** | **String** | The gender of the sender:  - &#x60;M&#x60;: Male - &#x60;F&#x60;: Female - &#x60;O&#x60;: Other | [optional] 
+**salesLeadId** | **String** | Sales Lead ID for tracking (optional) | [optional] 
 **createdAt** | **String** | Date and time of sender was created | [optional] 
 
 

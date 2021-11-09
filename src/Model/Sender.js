@@ -20,7 +20,7 @@ import ValidationErrorDescription from './ValidationErrorDescription';
 /**
  * The Sender model module.
  * @module Model/Sender
- * @version 1.17.0
+ * @version 1.17.1
  */
 class Sender {
     /**
@@ -211,6 +211,9 @@ class Sender {
             }
             if (data.hasOwnProperty('gender')) {
                 obj['gender'] = ApiClient.convertToType(data['gender'], 'String');
+            }
+            if (data.hasOwnProperty('sales_lead_id')) {
+                obj['sales_lead_id'] = ApiClient.convertToType(data['sales_lead_id'], 'String');
             }
             if (data.hasOwnProperty('created_at')) {
                 obj['created_at'] = ApiClient.convertToType(data['created_at'], 'String');
@@ -507,6 +510,12 @@ Sender.prototype['country_of_birth'] = undefined;
  * @member {module:Model/Sender.GenderEnum} gender
  */
 Sender.prototype['gender'] = undefined;
+
+/**
+ * Sales Lead ID for tracking (optional)
+ * @member {String} sales_lead_id
+ */
+Sender.prototype['sales_lead_id'] = undefined;
 
 /**
  * Date and time of sender was created
