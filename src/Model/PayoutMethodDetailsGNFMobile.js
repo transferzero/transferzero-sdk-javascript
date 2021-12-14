@@ -15,22 +15,23 @@ import ApiClient from '../ApiClient';
 import PayoutMethodMobileProviderEnum from './PayoutMethodMobileProviderEnum';
 
 /**
- * The PayoutMethodDetailsMobile model module.
- * @module Model/PayoutMethodDetailsMobile
+ * The PayoutMethodDetailsGNFMobile model module.
+ * @module Model/PayoutMethodDetailsGNFMobile
  * @version 1.18.0
  */
-class PayoutMethodDetailsMobile {
+class PayoutMethodDetailsGNFMobile {
     /**
-     * Constructs a new <code>PayoutMethodDetailsMobile</code>.
-     * &#x60;&#x60;&#x60;JSON \&quot;details\&quot;: {   \&quot;first_name\&quot;: \&quot;First\&quot;,   \&quot;last_name\&quot;: \&quot;Last\&quot;,   \&quot;phone_number\&quot;: \&quot;7087661234\&quot; // local or international format } &#x60;&#x60;&#x60;  Please note when sending XOF::Cash payments you should subscribe to the recipient.pending webhook, as that will broadcast the payment reference ID the customer need to use to obtain the funds. Example webhook response excerpt -  &#x60;&#x60;&#x60;JSON {   (...)   \&quot;state\&quot;:\&quot;pending\&quot;,   \&quot;metadata\&quot;: {     \&quot;payment_reference\&quot;:\&quot;9M5GJRJUBCY\&quot;   },   (...) } &#x60;&#x60;&#x60;
-     * @alias module:Model/PayoutMethodDetailsMobile
+     * Constructs a new <code>PayoutMethodDetailsGNFMobile</code>.
+     * &#x60;&#x60;&#x60;JSON \&quot;details\&quot;: {   \&quot;first_name\&quot;: \&quot;First\&quot;,   \&quot;last_name\&quot;: \&quot;Last\&quot;,   \&quot;phone_number\&quot;: \&quot;444044436\&quot;, // local or international Guinea format   \&quot;mobile_provider\&quot;: \&quot;mtn\&quot; } &#x60;&#x60;&#x60;
+     * @alias module:Model/PayoutMethodDetailsGNFMobile
      * @param firstName {String} 
      * @param lastName {String} 
      * @param phoneNumber {String} 
+     * @param mobileProvider {module:Model/PayoutMethodMobileProviderEnum} 
      */
-    constructor(firstName, lastName, phoneNumber) { 
+    constructor(firstName, lastName, phoneNumber, mobileProvider) { 
         
-        PayoutMethodDetailsMobile.initialize(this, firstName, lastName, phoneNumber);
+        PayoutMethodDetailsGNFMobile.initialize(this, firstName, lastName, phoneNumber, mobileProvider);
     }
 
     /**
@@ -38,22 +39,23 @@ class PayoutMethodDetailsMobile {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, firstName, lastName, phoneNumber) { 
+    static initialize(obj, firstName, lastName, phoneNumber, mobileProvider) { 
         obj['first_name'] = firstName;
         obj['last_name'] = lastName;
         obj['phone_number'] = phoneNumber;
+        obj['mobile_provider'] = mobileProvider;
     }
 
     /**
-     * Constructs a <code>PayoutMethodDetailsMobile</code> from a plain JavaScript object, optionally creating a new instance.
+     * Constructs a <code>PayoutMethodDetailsGNFMobile</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @param {module:Model/PayoutMethodDetailsMobile} obj Optional instance to populate.
-     * @return {module:Model/PayoutMethodDetailsMobile} The populated <code>PayoutMethodDetailsMobile</code> instance.
+     * @param {module:Model/PayoutMethodDetailsGNFMobile} obj Optional instance to populate.
+     * @return {module:Model/PayoutMethodDetailsGNFMobile} The populated <code>PayoutMethodDetailsGNFMobile</code> instance.
      */
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new PayoutMethodDetailsMobile();
+            obj = obj || new PayoutMethodDetailsGNFMobile();
 
             if (data.hasOwnProperty('first_name')) {
                 obj['first_name'] = ApiClient.convertToType(data['first_name'], 'String');
@@ -77,27 +79,27 @@ class PayoutMethodDetailsMobile {
 /**
  * @member {String} first_name
  */
-PayoutMethodDetailsMobile.prototype['first_name'] = undefined;
+PayoutMethodDetailsGNFMobile.prototype['first_name'] = undefined;
 
 /**
  * @member {String} last_name
  */
-PayoutMethodDetailsMobile.prototype['last_name'] = undefined;
+PayoutMethodDetailsGNFMobile.prototype['last_name'] = undefined;
 
 /**
  * @member {String} phone_number
  */
-PayoutMethodDetailsMobile.prototype['phone_number'] = undefined;
+PayoutMethodDetailsGNFMobile.prototype['phone_number'] = undefined;
 
 /**
  * @member {module:Model/PayoutMethodMobileProviderEnum} mobile_provider
  */
-PayoutMethodDetailsMobile.prototype['mobile_provider'] = undefined;
+PayoutMethodDetailsGNFMobile.prototype['mobile_provider'] = undefined;
 
 
 
 
 
 
-export default PayoutMethodDetailsMobile;
+export default PayoutMethodDetailsGNFMobile;
 

@@ -19,7 +19,7 @@ import ApiLogResponse from '../Model/ApiLogResponse';
 /**
 * APILogs service.
 * @module Api/APILogsApi
-* @version 1.17.2
+* @version 1.18.0
 */
 export default class APILogsApi {
 

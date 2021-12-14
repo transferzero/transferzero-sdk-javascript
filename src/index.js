@@ -65,6 +65,7 @@ import PayoutMethodDetailsBalance from './Model/PayoutMethodDetailsBalance';
 import PayoutMethodDetailsGBPBank from './Model/PayoutMethodDetailsGBPBank';
 import PayoutMethodDetailsGHSBank from './Model/PayoutMethodDetailsGHSBank';
 import PayoutMethodDetailsGHSCash from './Model/PayoutMethodDetailsGHSCash';
+import PayoutMethodDetailsGNFMobile from './Model/PayoutMethodDetailsGNFMobile';
 import PayoutMethodDetailsIBAN from './Model/PayoutMethodDetailsIBAN';
 import PayoutMethodDetailsKESBank from './Model/PayoutMethodDetailsKESBank';
 import PayoutMethodDetailsKESMobile from './Model/PayoutMethodDetailsKESMobile';
@@ -73,6 +74,7 @@ import PayoutMethodDetailsMobile from './Model/PayoutMethodDetailsMobile';
 import PayoutMethodDetailsNGNBank from './Model/PayoutMethodDetailsNGNBank';
 import PayoutMethodDetailsUSDBank from './Model/PayoutMethodDetailsUSDBank';
 import PayoutMethodDetailsUSDCash from './Model/PayoutMethodDetailsUSDCash';
+import PayoutMethodDetailsXAFMobile from './Model/PayoutMethodDetailsXAFMobile';
 import PayoutMethodDetailsXOFBank from './Model/PayoutMethodDetailsXOFBank';
 import PayoutMethodDetailsXOFCash from './Model/PayoutMethodDetailsXOFCash';
 import PayoutMethodDetailsXOFMobile from './Model/PayoutMethodDetailsXOFMobile';
@@ -171,7 +173,7 @@ import WebhooksApi from './Api/WebhooksApi';
 * </pre>
 * </p>
 * @module index
-* @version 1.17.2
+* @version 1.18.0
 */
 export default {
     /**
@@ -493,6 +495,12 @@ export default {
     PayoutMethodDetailsGHSCash,
 
     /**
+     * The PayoutMethodDetailsGNFMobile model constructor.
+     * @property {module:Model/PayoutMethodDetailsGNFMobile}
+     */
+    PayoutMethodDetailsGNFMobile,
+
+    /**
      * The PayoutMethodDetailsIBAN model constructor.
      * @property {module:Model/PayoutMethodDetailsIBAN}
      */
@@ -539,6 +547,12 @@ export default {
      * @property {module:Model/PayoutMethodDetailsUSDCash}
      */
     PayoutMethodDetailsUSDCash,
+
+    /**
+     * The PayoutMethodDetailsXAFMobile model constructor.
+     * @property {module:Model/PayoutMethodDetailsXAFMobile}
+     */
+    PayoutMethodDetailsXAFMobile,
 
     /**
      * The PayoutMethodDetailsXOFBank model constructor.
@@ -997,6 +1011,7 @@ export {
     PayoutMethodDetailsGBPBank,
     PayoutMethodDetailsGHSBank,
     PayoutMethodDetailsGHSCash,
+    PayoutMethodDetailsGNFMobile,
     PayoutMethodDetailsIBAN,
     PayoutMethodDetailsKESBank,
     PayoutMethodDetailsKESMobile,
@@ -1005,6 +1020,7 @@ export {
     PayoutMethodDetailsNGNBank,
     PayoutMethodDetailsUSDBank,
     PayoutMethodDetailsUSDCash,
+    PayoutMethodDetailsXAFMobile,
     PayoutMethodDetailsXOFBank,
     PayoutMethodDetailsXOFCash,
     PayoutMethodDetailsXOFMobile,

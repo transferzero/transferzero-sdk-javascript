@@ -1,4 +1,4 @@
-# TransferzeroSdk.PayoutMethodDetailsXOFMobile
+# TransferzeroSdk.PayoutMethodDetailsXAFMobile
 
 ## Properties
 Name | Type | Description | Notes
@@ -8,6 +8,5 @@ Name | Type | Description | Notes
 **phoneNumber** | **String** |  | 
 **mobileProvider** | [**PayoutMethodMobileProviderEnum**](PayoutMethodMobileProviderEnum.md) |  | 
 **country** | [**PayoutMethodCountryEnum**](PayoutMethodCountryEnum.md) |  | [optional] 
-**transferReason** | [**PayoutMethodTransferReasonEnum**](PayoutMethodTransferReasonEnum.md) |  | [optional] 
 
 

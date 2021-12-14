@@ -14,18 +14,17 @@
 import ApiClient from '../ApiClient';
 import PayoutMethodCountryEnum from './PayoutMethodCountryEnum';
 import PayoutMethodMobileProviderEnum from './PayoutMethodMobileProviderEnum';
-import PayoutMethodTransferReasonEnum from './PayoutMethodTransferReasonEnum';
 
 /**
- * The PayoutMethodDetailsXOFMobile model module.
- * @module Model/PayoutMethodDetailsXOFMobile
+ * The PayoutMethodDetailsXAFMobile model module.
+ * @module Model/PayoutMethodDetailsXAFMobile
  * @version 1.18.0
  */
-class PayoutMethodDetailsXOFMobile {
+class PayoutMethodDetailsXAFMobile {
     /**
-     * Constructs a new <code>PayoutMethodDetailsXOFMobile</code>.
-     * &#x60;&#x60;&#x60;JSON \&quot;details\&quot;: {   \&quot;first_name\&quot;: \&quot;First\&quot;,   \&quot;last_name\&quot;: \&quot;Last\&quot;,   \&quot;phone_number\&quot;: \&quot;774044436\&quot;, // local or international Senegalese or Ivory Coast format   \&quot;mobile_provider\&quot;: \&quot;orange\&quot;, // \&quot;orange\&quot; or \&quot;tigo\&quot; for Senegal; \&quot;orange\&quot;, \&quot;mtn\&quot; or \&quot;moov\&quot; for Ivory Coast; \&quot;orange\&quot; or \&quot;mobicash\&quot; for Burkina Faso and Mali   \&quot;country\&quot; // Optional; Values: \&quot;SN\&quot; for Senegal; \&quot;CI\&quot; for Ivory Coast; \&quot;ML\&quot; for Mali; \&quot;BF\&quot; for Burkina Faso; Default value is \&quot;SN\&quot;   \&quot;transfer_reason\&quot;: \&quot;personal_account\&quot; // mandatory for Mali payouts, optional otherwise } &#x60;&#x60;&#x60;
-     * @alias module:Model/PayoutMethodDetailsXOFMobile
+     * Constructs a new <code>PayoutMethodDetailsXAFMobile</code>.
+     * &#x60;&#x60;&#x60;JSON \&quot;details\&quot;: {   \&quot;first_name\&quot;: \&quot;First\&quot;,   \&quot;last_name\&quot;: \&quot;Last\&quot;,   \&quot;phone_number\&quot;: \&quot;674044436\&quot;, // local or international cameroon format   \&quot;mobile_provider\&quot;: \&quot;orange\&quot;, // or mtn\&quot;   \&quot;country\&quot; // Optional; Values: \&quot;CM\&quot; } &#x60;&#x60;&#x60;
+     * @alias module:Model/PayoutMethodDetailsXAFMobile
      * @param firstName {String} 
      * @param lastName {String} 
      * @param phoneNumber {String} 
@@ -33,7 +32,7 @@ class PayoutMethodDetailsXOFMobile {
      */
     constructor(firstName, lastName, phoneNumber, mobileProvider) { 
         
-        PayoutMethodDetailsXOFMobile.initialize(this, firstName, lastName, phoneNumber, mobileProvider);
+        PayoutMethodDetailsXAFMobile.initialize(this, firstName, lastName, phoneNumber, mobileProvider);
     }
 
     /**
@@ -49,15 +48,15 @@ class PayoutMethodDetailsXOFMobile {
     }
 
     /**
-     * Constructs a <code>PayoutMethodDetailsXOFMobile</code> from a plain JavaScript object, optionally creating a new instance.
+     * Constructs a <code>PayoutMethodDetailsXAFMobile</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @param {module:Model/PayoutMethodDetailsXOFMobile} obj Optional instance to populate.
-     * @return {module:Model/PayoutMethodDetailsXOFMobile} The populated <code>PayoutMethodDetailsXOFMobile</code> instance.
+     * @param {module:Model/PayoutMethodDetailsXAFMobile} obj Optional instance to populate.
+     * @return {module:Model/PayoutMethodDetailsXAFMobile} The populated <code>PayoutMethodDetailsXAFMobile</code> instance.
      */
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new PayoutMethodDetailsXOFMobile();
+            obj = obj || new PayoutMethodDetailsXAFMobile();
 
             if (data.hasOwnProperty('first_name')) {
                 obj['first_name'] = ApiClient.convertToType(data['first_name'], 'String');
@@ -74,9 +73,6 @@ class PayoutMethodDetailsXOFMobile {
             if (data.hasOwnProperty('country')) {
                 obj['country'] = PayoutMethodCountryEnum.constructFromObject(data['country']);
             }
-            if (data.hasOwnProperty('transfer_reason')) {
-                obj['transfer_reason'] = PayoutMethodTransferReasonEnum.constructFromObject(data['transfer_reason']);
-            }
         }
         return obj;
     }
@@ -87,37 +83,32 @@ class PayoutMethodDetailsXOFMobile {
 /**
  * @member {String} first_name
  */
-PayoutMethodDetailsXOFMobile.prototype['first_name'] = undefined;
+PayoutMethodDetailsXAFMobile.prototype['first_name'] = undefined;
 
 /**
  * @member {String} last_name
  */
-PayoutMethodDetailsXOFMobile.prototype['last_name'] = undefined;
+PayoutMethodDetailsXAFMobile.prototype['last_name'] = undefined;
 
 /**
  * @member {String} phone_number
  */
-PayoutMethodDetailsXOFMobile.prototype['phone_number'] = undefined;
+PayoutMethodDetailsXAFMobile.prototype['phone_number'] = undefined;
 
 /**
  * @member {module:Model/PayoutMethodMobileProviderEnum} mobile_provider
  */
-PayoutMethodDetailsXOFMobile.prototype['mobile_provider'] = undefined;
+PayoutMethodDetailsXAFMobile.prototype['mobile_provider'] = undefined;
 
 /**
  * @member {module:Model/PayoutMethodCountryEnum} country
  */
-PayoutMethodDetailsXOFMobile.prototype['country'] = undefined;
-
-/**
- * @member {module:Model/PayoutMethodTransferReasonEnum} transfer_reason
- */
-PayoutMethodDetailsXOFMobile.prototype['transfer_reason'] = undefined;
+PayoutMethodDetailsXAFMobile.prototype['country'] = undefined;
 
 
 
 
 
 
-export default PayoutMethodDetailsXOFMobile;
+export default PayoutMethodDetailsXAFMobile;
 

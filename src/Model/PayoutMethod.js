@@ -19,7 +19,7 @@ import ValidationErrorDescription from './ValidationErrorDescription';
 /**
  * The PayoutMethod model module.
  * @module Model/PayoutMethod
- * @version 1.17.2
+ * @version 1.18.0
  */
 class PayoutMethod {
     /**
@@ -77,7 +77,7 @@ class PayoutMethod {
 }
 
 /**
- * Contains the currency to send the money to, and the type of the money movement  Commonly used payout types are:  - `NGN::Bank` - for Nigerian bank account payments. - `NGN::Mobile` - for Nigerian mobile money payments. - `GHS::Bank` - for Ghanaian bank account payments. - `GHS::Mobile` - for Ghanaian mobile money payments. - `GHS::Cash` - for Ghanaian cash remittance payments. - `UGX::Mobile` - for Ugandan mobile money payments. - `TZS::Mobile` - for Tanzanian mobile money payments. - `XOF::Mobile` - for mobile money payments to West-Africa. - `XOF::Bank` - for Senegalese bank account payments. - `XOF::Cash` - for Senegalese cash remittance payments. - `MAD::Cash` - for Moroccan cash remittance payments. - `EUR::Bank` - for IBAN bank transfers in EUR. - `GBP::Bank` - for IBAN bank and FP accounts transfers in GBP. - `ZAR::Bank` - for South Africa bank account payments. - `USD::Bank` - for USD account payments. *** Currently Nigeria only and in Beta phase *** - `USD::Cash` - for USD cash remittance payments. *** Currently Nigeria only and in Beta phase *** - `KES::Bank` - for Kenyan bank account payments. - `KES::Mobile` - for Kenyan mobile money payments.  You can also send funds to the internal balance using `CCY::Balance`, where `CCY` is the appropriate currency. See [Collection from senders](https://docs.transferzero.com/docs/additional-features/#collections-from-senders) for more info on how to collect money into internal balance 
+ * Contains the currency to send the money to, and the type of the money movement  Commonly used payout types are:  - `NGN::Bank` - for Nigerian bank account payments. - `NGN::Mobile` - for Nigerian mobile money payments. - `GHS::Bank` - for Ghanaian bank account payments. - `GHS::Mobile` - for Ghanaian mobile money payments. - `GHS::Cash` - for Ghanaian cash remittance payments. - `UGX::Mobile` - for Ugandan mobile money payments. - `TZS::Mobile` - for Tanzanian mobile money payments. - `XOF::Mobile` - for mobile money payments to West-Africa. - `XOF::Bank` - for Senegalese bank account payments. - `XOF::Cash` - for Senegalese cash remittance payments. - `MAD::Cash` - for Moroccan cash remittance payments. - `EUR::Bank` - for IBAN bank transfers in EUR. - `GBP::Bank` - for IBAN bank and FP accounts transfers in GBP. - `ZAR::Bank` - for South Africa bank account payments. - `USD::Bank` - for USD account payments. *** Currently Nigeria only and in Beta phase *** - `USD::Cash` - for USD cash remittance payments. *** Currently Nigeria only and in Beta phase *** - `KES::Bank` - for Kenyan bank account payments. - `KES::Mobile` - for Kenyan mobile money payments. - `XAF::Mobile` - for mobile money payments to Cameroon. - `GNF::Mobile` - for mobile money payments to Guinea.  You can also send funds to the internal balance using `CCY::Balance`, where `CCY` is the appropriate currency. See [Collection from senders](https://docs.transferzero.com/docs/additional-features/#collections-from-senders) for more info on how to collect money into internal balance 
  * @member {String} type
  */
 PayoutMethod.prototype['type'] = undefined;

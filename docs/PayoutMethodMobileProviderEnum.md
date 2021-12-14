@@ -21,4 +21,6 @@
 
 * `telecom` (value: `"telecom"`)
 
+* `mobicash` (value: `"mobicash"`)
+
 

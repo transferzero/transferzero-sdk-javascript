@@ -189,6 +189,7 @@ Class | Method | HTTP request | Description
  - [TransferzeroSdk.PayoutMethodDetailsGBPBank](docs/PayoutMethodDetailsGBPBank.md)
  - [TransferzeroSdk.PayoutMethodDetailsGHSBank](docs/PayoutMethodDetailsGHSBank.md)
  - [TransferzeroSdk.PayoutMethodDetailsGHSCash](docs/PayoutMethodDetailsGHSCash.md)
+ - [TransferzeroSdk.PayoutMethodDetailsGNFMobile](docs/PayoutMethodDetailsGNFMobile.md)
  - [TransferzeroSdk.PayoutMethodDetailsIBAN](docs/PayoutMethodDetailsIBAN.md)
  - [TransferzeroSdk.PayoutMethodDetailsKESBank](docs/PayoutMethodDetailsKESBank.md)
  - [TransferzeroSdk.PayoutMethodDetailsKESMobile](docs/PayoutMethodDetailsKESMobile.md)
@@ -197,6 +198,7 @@ Class | Method | HTTP request | Description
  - [TransferzeroSdk.PayoutMethodDetailsNGNBank](docs/PayoutMethodDetailsNGNBank.md)
  - [TransferzeroSdk.PayoutMethodDetailsUSDBank](docs/PayoutMethodDetailsUSDBank.md)
  - [TransferzeroSdk.PayoutMethodDetailsUSDCash](docs/PayoutMethodDetailsUSDCash.md)
+ - [TransferzeroSdk.PayoutMethodDetailsXAFMobile](docs/PayoutMethodDetailsXAFMobile.md)
  - [TransferzeroSdk.PayoutMethodDetailsXOFBank](docs/PayoutMethodDetailsXOFBank.md)
  - [TransferzeroSdk.PayoutMethodDetailsXOFCash](docs/PayoutMethodDetailsXOFCash.md)
  - [TransferzeroSdk.PayoutMethodDetailsXOFMobile](docs/PayoutMethodDetailsXOFMobile.md)
@@ -280,5 +282,5 @@ apiClient.basePath = 'https://api-sandbox.transferzero.com/v1';
 
 
 - API version: 1.0
-- Package version: 1.17.2
+- Package version: 1.18.0
 - Build package: org.openapitools.codegen.languages.JavascriptClientCodegen

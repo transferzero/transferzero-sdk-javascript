@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The PayinMethodDetailsNGNBank model module.
  * @module Model/PayinMethodDetailsNGNBank
- * @version 1.17.2
+ * @version 1.18.0
  */
 class PayinMethodDetailsNGNBank {
     /**
