@@ -17,7 +17,7 @@ import Document from './Document';
 /**
  * The DocumentRequest model module.
  * @module Model/DocumentRequest
- * @version 1.18.0
+ * @version 1.18.1
  */
 class DocumentRequest {
     /**
