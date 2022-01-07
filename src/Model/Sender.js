@@ -179,6 +179,9 @@ class Sender {
             if (data.hasOwnProperty('trading_address')) {
                 obj['trading_address'] = ApiClient.convertToType(data['trading_address'], 'String');
             }
+            if (data.hasOwnProperty('trading_name')) {
+                obj['trading_name'] = ApiClient.convertToType(data['trading_name'], 'String');
+            }
             if (data.hasOwnProperty('number_monthly_transactions')) {
                 obj['number_monthly_transactions'] = ApiClient.convertToType(data['number_monthly_transactions'], 'String');
             }
@@ -444,6 +447,12 @@ Sender.prototype['trading_country'] = undefined;
  * @member {String} trading_address
  */
 Sender.prototype['trading_address'] = undefined;
+
+/**
+ * The Business trading name (used only with a Business sender)
+ * @member {String} trading_name
+ */
+Sender.prototype['trading_name'] = undefined;
 
 /**
  * The estimated number of monthly transactions (used only with a Business sender)
