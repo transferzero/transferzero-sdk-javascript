@@ -16,6 +16,7 @@ Name | Type | Description | Notes
 **id** | **String** |  | [optional] 
 **documentId** | **String** | Document ID issued by government | [optional] 
 **expiryDate** | **Date** | Document expiry date issued by government | [optional] 
+**source** | **String** | Determines the document&#39;s source. Default value \&quot;Manual\&quot; | [optional] 
 **errors** | **{String: [ValidationErrorDescription]}** | The fields that have some problems and don&#39;t pass validation | [optional] 
 
 

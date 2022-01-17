@@ -17,7 +17,7 @@ import ValidationErrorDescription from './ValidationErrorDescription';
 /**
  * The Document model module.
  * @module Model/Document
- * @version 1.18.1
+ * @version 1.18.2
  */
 class Document {
     /**
@@ -90,6 +90,9 @@ class Document {
             }
             if (data.hasOwnProperty('expiry_date')) {
                 obj['expiry_date'] = ApiClient.convertToType(data['expiry_date'], 'Date');
+            }
+            if (data.hasOwnProperty('source')) {
+                obj['source'] = ApiClient.convertToType(data['source'], 'String');
             }
             if (data.hasOwnProperty('errors')) {
                 obj['errors'] = ApiClient.convertToType(data['errors'], {'String': [ValidationErrorDescription]});
@@ -175,6 +178,12 @@ Document.prototype['document_id'] = undefined;
  * @member {Date} expiry_date
  */
 Document.prototype['expiry_date'] = undefined;
+
+/**
+ * Determines the document's source. Default value \"Manual\"
+ * @member {String} source
+ */
+Document.prototype['source'] = undefined;
 
 /**
  * The fields that have some problems and don't pass validation
