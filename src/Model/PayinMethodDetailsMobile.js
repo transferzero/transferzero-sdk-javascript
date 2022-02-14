@@ -12,6 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
+import PayoutMethodMobileProviderEnum from './PayoutMethodMobileProviderEnum';
 
 /**
  * The PayinMethodDetailsMobile model module.
@@ -53,6 +54,9 @@ class PayinMethodDetailsMobile {
             if (data.hasOwnProperty('phone_number')) {
                 obj['phone_number'] = ApiClient.convertToType(data['phone_number'], 'String');
             }
+            if (data.hasOwnProperty('mobile_provider')) {
+                obj['mobile_provider'] = PayoutMethodMobileProviderEnum.constructFromObject(data['mobile_provider']);
+            }
             if (data.hasOwnProperty('send_instructions')) {
                 obj['send_instructions'] = ApiClient.convertToType(data['send_instructions'], 'Boolean');
             }
@@ -68,6 +72,11 @@ class PayinMethodDetailsMobile {
  * @member {String} phone_number
  */
 PayinMethodDetailsMobile.prototype['phone_number'] = undefined;
+
+/**
+ * @member {module:Model/PayoutMethodMobileProviderEnum} mobile_provider
+ */
+PayinMethodDetailsMobile.prototype['mobile_provider'] = undefined;
 
 /**
  * States whether to send out the instructions to the phone number on how to pay the funds or not. This shuold always be set to true, otherwise the sender might not receive a prompt for payment.

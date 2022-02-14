@@ -15,6 +15,7 @@ import ApiClient from '../ApiClient';
 import PayinMethodDetailsBTC from './PayinMethodDetailsBTC';
 import PayinMethodDetailsMobile from './PayinMethodDetailsMobile';
 import PayinMethodDetailsNGNBank from './PayinMethodDetailsNGNBank';
+import PayoutMethodMobileProviderEnum from './PayoutMethodMobileProviderEnum';
 
 /**
  * The PayinMethodDetails model module.
@@ -83,6 +84,10 @@ PayinMethodDetailsNGNBank.prototype['redirect_url'] = undefined;
  * @member {String} phone_number
  */
 PayinMethodDetailsMobile.prototype['phone_number'] = undefined;
+/**
+ * @member {module:Model/PayoutMethodMobileProviderEnum} mobile_provider
+ */
+PayinMethodDetailsMobile.prototype['mobile_provider'] = undefined;
 /**
  * States whether to send out the instructions to the phone number on how to pay the funds or not. This shuold always be set to true, otherwise the sender might not receive a prompt for payment.
  * @member {Boolean} send_instructions
