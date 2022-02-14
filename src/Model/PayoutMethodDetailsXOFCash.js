@@ -23,15 +23,16 @@ import PayoutMethodCountryEnum from './PayoutMethodCountryEnum';
 class PayoutMethodDetailsXOFCash {
     /**
      * Constructs a new <code>PayoutMethodDetailsXOFCash</code>.
-     * &#x60;&#x60;&#x60;JSON \&quot;details\&quot;: {   \&quot;first_name\&quot;: \&quot;First\&quot;,   \&quot;last_name\&quot;: \&quot;Last\&quot;,   \&quot;phone_number\&quot;: \&quot;221774044436\&quot;, // local or international format   \&quot;cash_provider\&quot;: \&quot;wizall\&quot; // Optional; Values: \&quot;wizall\&quot;; Default value is \&quot;wizall\&quot;;   \&quot;country\&quot;: \&quot;SN\&quot; // Optional; Values: \&quot;CI\&quot;, \&quot;ML\&quot; or \&quot;SN\&quot;; Default value is \&quot;SN\&quot;; } &#x60;&#x60;&#x60;  Please note all senders trying to create Wizall cash pickup requests must have &#x60;identity_type&#x60; and &#x60;identity_number&#x60; present. The fields above are generally considered optional for senders for other payment corridors. If you wish to use an existing sender who has some of these fields missing you can provide them alongside the &#x60;id&#x60; or &#x60;external_id&#x60; field in the sender details. For example -  &#x60;&#x60;&#x60;JSON {   \&quot;transaction\&quot;: {       \&quot;sender\&quot;: {         \&quot;external_id\&quot;: \&quot;&lt;id of sender&gt;\&quot;,         \&quot;identity_type\&quot;: \&quot;ID\&quot;,         \&quot;identity_number\&quot;: \&quot;AB12345678\&quot;,         (...)       },       (...)     } } &#x60;&#x60;&#x60;
+     * &#x60;&#x60;&#x60;JSON \&quot;details\&quot;: {   \&quot;first_name\&quot;: \&quot;First\&quot;,   \&quot;last_name\&quot;: \&quot;Last\&quot;,   \&quot;phone_number\&quot;: \&quot;221774044436\&quot;, // local or international format   \&quot;cash_provider\&quot;: \&quot;wizall\&quot; // Mandatory; Values: \&quot;wizall\&quot;;   \&quot;country\&quot;: \&quot;SN\&quot; // Optional; Values: \&quot;CI\&quot;, \&quot;ML\&quot; or \&quot;SN\&quot;; Default value is \&quot;SN\&quot;; } &#x60;&#x60;&#x60;  Please note all senders trying to create Wizall cash pickup requests must have &#x60;identity_type&#x60; and &#x60;identity_number&#x60; present. The fields above are generally considered optional for senders for other payment corridors. If you wish to use an existing sender who has some of these fields missing you can provide them alongside the &#x60;id&#x60; or &#x60;external_id&#x60; field in the sender details. For example -  &#x60;&#x60;&#x60;JSON {   \&quot;transaction\&quot;: {       \&quot;sender\&quot;: {         \&quot;external_id\&quot;: \&quot;&lt;id of sender&gt;\&quot;,         \&quot;identity_type\&quot;: \&quot;ID\&quot;,         \&quot;identity_number\&quot;: \&quot;AB12345678\&quot;,         (...)       },       (...)     } } &#x60;&#x60;&#x60;
      * @alias module:Model/PayoutMethodDetailsXOFCash
      * @param firstName {String} 
      * @param lastName {String} 
      * @param phoneNumber {String} 
+     * @param cashProvider {module:Model/PayoutMethodCashProviderEnum} 
      */
-    constructor(firstName, lastName, phoneNumber) { 
+    constructor(firstName, lastName, phoneNumber, cashProvider) { 
         
-        PayoutMethodDetailsXOFCash.initialize(this, firstName, lastName, phoneNumber);
+        PayoutMethodDetailsXOFCash.initialize(this, firstName, lastName, phoneNumber, cashProvider);
     }
 
     /**
@@ -39,10 +40,11 @@ class PayoutMethodDetailsXOFCash {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, firstName, lastName, phoneNumber) { 
+    static initialize(obj, firstName, lastName, phoneNumber, cashProvider) { 
         obj['first_name'] = firstName;
         obj['last_name'] = lastName;
         obj['phone_number'] = phoneNumber;
+        obj['cash_provider'] = cashProvider;
     }
 
     /**
