@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The PayinMethodDetailsNGNBank model module.
  * @module Model/PayinMethodDetailsNGNBank
- * @version 1.18.2
+ * @version 1.19.0
  */
 class PayinMethodDetailsNGNBank {
     /**
@@ -62,13 +62,13 @@ class PayinMethodDetailsNGNBank {
 }
 
 /**
- * The payment method which the user will use to make the payments. Options are `bank`, `card` or you can leave empty to support both.
+ * The payment method which the sender will use to make the payments. Options are `bank`, `card` or you can leave empty to support both.
  * @member {String} payment_method
  */
 PayinMethodDetailsNGNBank.prototype['payment_method'] = undefined;
 
 /**
- * This is where the user should be redirected back when the payment has been finished
+ * This is where the sender should be redirected back when the payment has been finished
  * @member {String} redirect_url
  */
 PayinMethodDetailsNGNBank.prototype['redirect_url'] = undefined;

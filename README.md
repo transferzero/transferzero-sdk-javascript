@@ -104,6 +104,10 @@ Class | Method | HTTP request | Description
 *TransferzeroSdk.DocumentsApi* | [**postDocuments**](docs/DocumentsApi.md#postDocuments) | **POST** /documents | Creating a document
 *TransferzeroSdk.LogsApi* | [**getWebhookLog**](docs/LogsApi.md#getWebhookLog) | **GET** /logs/{Webhook Log ID} | Fetch an individual webhook log
 *TransferzeroSdk.LogsApi* | [**getWebhookLogs**](docs/LogsApi.md#getWebhookLogs) | **GET** /logs/webhooks | Fetch a list of webhook logs
+*TransferzeroSdk.PayinMethodsApi* | [**deletePayinMethod**](docs/PayinMethodsApi.md#deletePayinMethod) | **DELETE** /payin_methods/{PayinMethod ID} | Deleting a payin method
+*TransferzeroSdk.PayinMethodsApi* | [**getPayinMethod**](docs/PayinMethodsApi.md#getPayinMethod) | **GET** /payin_methods/{PayinMethod ID} | Fetching a payin method
+*TransferzeroSdk.PayinMethodsApi* | [**patchPayinMethod**](docs/PayinMethodsApi.md#patchPayinMethod) | **PATCH** /payin_methods/{PayinMethod ID} | Updating a payin method
+*TransferzeroSdk.PayinMethodsApi* | [**retryPayinMethod**](docs/PayinMethodsApi.md#retryPayinMethod) | **POST** /payin_methods/{PayinMethod ID}/retry | Retries PayinMethod
 *TransferzeroSdk.PaymentMethodsApi* | [**paymentMethodsIn**](docs/PaymentMethodsApi.md#paymentMethodsIn) | **GET** /info/payment_methods/in | This method returns possible payin methods.
 *TransferzeroSdk.PaymentMethodsApi* | [**paymentMethodsOut**](docs/PaymentMethodsApi.md#paymentMethodsOut) | **GET** /info/payment_methods/out | This method returns possible payout methods.
 *TransferzeroSdk.PayoutMethodsApi* | [**deletePayoutMethod**](docs/PayoutMethodsApi.md#deletePayoutMethod) | **DELETE** /payout_methods/{Payout Method ID} | Deleting a payout method
@@ -176,6 +180,9 @@ Class | Method | HTTP request | Description
  - [TransferzeroSdk.PayinMethodDetailsMobile](docs/PayinMethodDetailsMobile.md)
  - [TransferzeroSdk.PayinMethodDetailsNGNBank](docs/PayinMethodDetailsNGNBank.md)
  - [TransferzeroSdk.PayinMethodRequest](docs/PayinMethodRequest.md)
+ - [TransferzeroSdk.PayinMethodResponse](docs/PayinMethodResponse.md)
+ - [TransferzeroSdk.PayinMethodState](docs/PayinMethodState.md)
+ - [TransferzeroSdk.PayinMethodUxFlow](docs/PayinMethodUxFlow.md)
  - [TransferzeroSdk.PaymentMethod](docs/PaymentMethod.md)
  - [TransferzeroSdk.PaymentMethodListResponse](docs/PaymentMethodListResponse.md)
  - [TransferzeroSdk.PaymentMethodOpposite](docs/PaymentMethodOpposite.md)
@@ -231,6 +238,7 @@ Class | Method | HTTP request | Description
  - [TransferzeroSdk.SenderResponseMeta](docs/SenderResponseMeta.md)
  - [TransferzeroSdk.SenderState](docs/SenderState.md)
  - [TransferzeroSdk.SenderWebhook](docs/SenderWebhook.md)
+ - [TransferzeroSdk.StateReasonDetails](docs/StateReasonDetails.md)
  - [TransferzeroSdk.Transaction](docs/Transaction.md)
  - [TransferzeroSdk.TransactionListResponse](docs/TransactionListResponse.md)
  - [TransferzeroSdk.TransactionRequest](docs/TransactionRequest.md)
@@ -282,5 +290,5 @@ apiClient.basePath = 'https://api-sandbox.transferzero.com/v1';
 
 
 - API version: 1.0
-- Package version: 1.18.2
+- Package version: 1.19.0
 - Build package: org.openapitools.codegen.languages.JavascriptClientCodegen

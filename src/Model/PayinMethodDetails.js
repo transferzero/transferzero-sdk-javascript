@@ -20,7 +20,7 @@ import PayoutMethodMobileProviderEnum from './PayoutMethodMobileProviderEnum';
 /**
  * The PayinMethodDetails model module.
  * @module Model/PayinMethodDetails
- * @version 1.18.2
+ * @version 1.19.0
  */
 class PayinMethodDetails {
     /**
@@ -30,11 +30,10 @@ class PayinMethodDetails {
      * @implements module:Model/PayinMethodDetailsNGNBank
      * @implements module:Model/PayinMethodDetailsMobile
      * @implements module:Model/PayinMethodDetailsBTC
-     * @param phoneNumber {} The phone number where the funds should be collected from
      */
-    constructor(phoneNumber) { 
-        PayinMethodDetailsNGNBank.initialize(this);PayinMethodDetailsMobile.initialize(this, phoneNumber);PayinMethodDetailsBTC.initialize(this);
-        PayinMethodDetails.initialize(this, phoneNumber);
+    constructor() { 
+        PayinMethodDetailsNGNBank.initialize(this);PayinMethodDetailsMobile.initialize(this);PayinMethodDetailsBTC.initialize(this);
+        PayinMethodDetails.initialize(this);
     }
 
     /**
@@ -42,7 +41,7 @@ class PayinMethodDetails {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, phoneNumber) { 
+    static initialize(obj) { 
     }
 
     /**
@@ -69,12 +68,12 @@ class PayinMethodDetails {
 
 // Implement PayinMethodDetailsNGNBank interface:
 /**
- * The payment method which the user will use to make the payments. Options are `bank`, `card` or you can leave empty to support both.
+ * The payment method which the sender will use to make the payments. Options are `bank`, `card` or you can leave empty to support both.
  * @member {String} payment_method
  */
 PayinMethodDetailsNGNBank.prototype['payment_method'] = undefined;
 /**
- * This is where the user should be redirected back when the payment has been finished
+ * This is where the sender should be redirected back when the payment has been finished
  * @member {String} redirect_url
  */
 PayinMethodDetailsNGNBank.prototype['redirect_url'] = undefined;
@@ -88,11 +87,6 @@ PayinMethodDetailsMobile.prototype['phone_number'] = undefined;
  * @member {module:Model/PayoutMethodMobileProviderEnum} mobile_provider
  */
 PayinMethodDetailsMobile.prototype['mobile_provider'] = undefined;
-/**
- * States whether to send out the instructions to the phone number on how to pay the funds or not. This shuold always be set to true, otherwise the sender might not receive a prompt for payment.
- * @member {Boolean} send_instructions
- */
-PayinMethodDetailsMobile.prototype['send_instructions'] = undefined;
 // Implement PayinMethodDetailsBTC interface:
 /**
  * Please make sure the refund_address is a valid BTC address belonging to the sender, as that is going to be used in case the transaction has to be refunded.

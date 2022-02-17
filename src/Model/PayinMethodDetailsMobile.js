@@ -17,18 +17,17 @@ import PayoutMethodMobileProviderEnum from './PayoutMethodMobileProviderEnum';
 /**
  * The PayinMethodDetailsMobile model module.
  * @module Model/PayinMethodDetailsMobile
- * @version 1.18.2
+ * @version 1.19.0
  */
 class PayinMethodDetailsMobile {
     /**
      * Constructs a new <code>PayinMethodDetailsMobile</code>.
-     * &#x60;&#x60;&#x60;JSON \&quot;details\&quot;: {   \&quot;phone_number\&quot;: \&quot;+2569999999\&quot;,   \&quot;send_instructions\&quot;: true } &#x60;&#x60;&#x60;
+     * &#x60;&#x60;&#x60;JSON \&quot;details\&quot;: {   \&quot;phone_number\&quot;: \&quot;+2569999999\&quot;, } &#x60;&#x60;&#x60;
      * @alias module:Model/PayinMethodDetailsMobile
-     * @param phoneNumber {String} The phone number where the funds should be collected from
      */
-    constructor(phoneNumber) { 
+    constructor() { 
         
-        PayinMethodDetailsMobile.initialize(this, phoneNumber);
+        PayinMethodDetailsMobile.initialize(this);
     }
 
     /**
@@ -36,8 +35,7 @@ class PayinMethodDetailsMobile {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, phoneNumber) { 
-        obj['phone_number'] = phoneNumber;
+    static initialize(obj) { 
     }
 
     /**
@@ -57,9 +55,6 @@ class PayinMethodDetailsMobile {
             if (data.hasOwnProperty('mobile_provider')) {
                 obj['mobile_provider'] = PayoutMethodMobileProviderEnum.constructFromObject(data['mobile_provider']);
             }
-            if (data.hasOwnProperty('send_instructions')) {
-                obj['send_instructions'] = ApiClient.convertToType(data['send_instructions'], 'Boolean');
-            }
         }
         return obj;
     }
@@ -77,12 +72,6 @@ PayinMethodDetailsMobile.prototype['phone_number'] = undefined;
  * @member {module:Model/PayoutMethodMobileProviderEnum} mobile_provider
  */
 PayinMethodDetailsMobile.prototype['mobile_provider'] = undefined;
-
-/**
- * States whether to send out the instructions to the phone number on how to pay the funds or not. This shuold always be set to true, otherwise the sender might not receive a prompt for payment.
- * @member {Boolean} send_instructions
- */
-PayinMethodDetailsMobile.prototype['send_instructions'] = undefined;
 
 
 

@@ -13,11 +13,15 @@
 
 import ApiClient from '../ApiClient';
 import PayinMethodDetails from './PayinMethodDetails';
+import PayinMethodState from './PayinMethodState';
+import PayinMethodUxFlow from './PayinMethodUxFlow';
+import StateReasonDetails from './StateReasonDetails';
+import ValidationErrorDescription from './ValidationErrorDescription';
 
 /**
  * The PayinMethod model module.
  * @module Model/PayinMethod
- * @version 1.18.2
+ * @version 1.19.0
  */
 class PayinMethod {
     /**
@@ -52,8 +56,20 @@ class PayinMethod {
             if (data.hasOwnProperty('type')) {
                 obj['type'] = ApiClient.convertToType(data['type'], 'String');
             }
+            if (data.hasOwnProperty('ux_flow')) {
+                obj['ux_flow'] = PayinMethodUxFlow.constructFromObject(data['ux_flow']);
+            }
             if (data.hasOwnProperty('in_details')) {
                 obj['in_details'] = PayinMethodDetails.constructFromObject(data['in_details']);
+            }
+            if (data.hasOwnProperty('id')) {
+                obj['id'] = ApiClient.convertToType(data['id'], 'String');
+            }
+            if (data.hasOwnProperty('state')) {
+                obj['state'] = PayinMethodState.constructFromObject(data['state']);
+            }
+            if (data.hasOwnProperty('state_reason_details')) {
+                obj['state_reason_details'] = StateReasonDetails.constructFromObject(data['state_reason_details']);
             }
             if (data.hasOwnProperty('out_details')) {
                 obj['out_details'] = ApiClient.convertToType(data['out_details'], Object);
@@ -61,8 +77,8 @@ class PayinMethod {
             if (data.hasOwnProperty('instructions')) {
                 obj['instructions'] = ApiClient.convertToType(data['instructions'], Object);
             }
-            if (data.hasOwnProperty('provider')) {
-                obj['provider'] = ApiClient.convertToType(data['provider'], 'String');
+            if (data.hasOwnProperty('errors')) {
+                obj['errors'] = ApiClient.convertToType(data['errors'], {'String': [ValidationErrorDescription]});
             }
         }
         return obj;
@@ -72,15 +88,35 @@ class PayinMethod {
 }
 
 /**
- * Describes how the payment should be requested from the user.  Possible values: - `NGN::Bank`: NGN bank and card collection requests - `NGN::Mobile`: NGN mobile collections - `GHS::Mobile`: GHS mobile collections - `TZS::Mobile`: TZS mobile collections - `UGX::Mobile`: UGX mobile collections - `EUR::Bank`: EUR IBAN collections - `GBP::Bank`: GBP IBAN collections 
+ * Describes how the payment should be requested from the sender.  Possible values: - `GHS::Mobile`: GHS mobile collections - `UGX::Mobile`: UGX mobile collections - `EUR::Bank`: EUR IBAN collections - `GBP::Bank`: GBP IBAN collections 
  * @member {String} type
  */
 PayinMethod.prototype['type'] = undefined;
 
 /**
+ * @member {module:Model/PayinMethodUxFlow} ux_flow
+ */
+PayinMethod.prototype['ux_flow'] = undefined;
+
+/**
  * @member {module:Model/PayinMethodDetails} in_details
  */
 PayinMethod.prototype['in_details'] = undefined;
+
+/**
+ * @member {String} id
+ */
+PayinMethod.prototype['id'] = undefined;
+
+/**
+ * @member {module:Model/PayinMethodState} state
+ */
+PayinMethod.prototype['state'] = undefined;
+
+/**
+ * @member {module:Model/StateReasonDetails} state_reason_details
+ */
+PayinMethod.prototype['state_reason_details'] = undefined;
 
 /**
  * This will contain the description on where to pay the funds. Please see the [Collections Details](https://docs.transferzero.com/docs/collection-details) in the API documentation on what to expect here.
@@ -95,10 +131,10 @@ PayinMethod.prototype['out_details'] = undefined;
 PayinMethod.prototype['instructions'] = undefined;
 
 /**
- * Describes which provider to use for collection. Please see the [Collections Details](https://docs.transferzero.com/docs/collection-details) in the API documentation on the valid values
- * @member {String} provider
+ * The fields that have some problems and don't pass validation
+ * @member {Object.<String, Array.<module:Model/ValidationErrorDescription>>} errors
  */
-PayinMethod.prototype['provider'] = undefined;
+PayinMethod.prototype['errors'] = undefined;
 
 
 

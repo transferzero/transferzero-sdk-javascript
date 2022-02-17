@@ -12,19 +12,21 @@
  */
 
 import ApiClient from '../ApiClient';
+import StateReasonDetails from './StateReasonDetails';
 
 /**
  * The RecipientStateReasonDetails model module.
  * @module Model/RecipientStateReasonDetails
- * @version 1.18.2
+ * @version 1.19.0
  */
 class RecipientStateReasonDetails {
     /**
      * Constructs a new <code>RecipientStateReasonDetails</code>.
      * @alias module:Model/RecipientStateReasonDetails
+     * @implements module:Model/StateReasonDetails
      */
     constructor() { 
-        
+        StateReasonDetails.initialize(this);
         RecipientStateReasonDetails.initialize(this);
     }
 
@@ -46,19 +48,8 @@ class RecipientStateReasonDetails {
     static constructFromObject(data, obj) {
         if (data) {
             obj = obj || new RecipientStateReasonDetails();
+            StateReasonDetails.constructFromObject(data, obj);
 
-            if (data.hasOwnProperty('code')) {
-                obj['code'] = ApiClient.convertToType(data['code'], 'String');
-            }
-            if (data.hasOwnProperty('category')) {
-                obj['category'] = ApiClient.convertToType(data['category'], 'String');
-            }
-            if (data.hasOwnProperty('messages')) {
-                obj['messages'] = ApiClient.convertToType(data['messages'], ['String']);
-            }
-            if (data.hasOwnProperty('description')) {
-                obj['description'] = ApiClient.convertToType(data['description'], 'String');
-            }
         }
         return obj;
     }
@@ -66,31 +57,28 @@ class RecipientStateReasonDetails {
 
 }
 
+
+// Implement StateReasonDetails interface:
 /**
- * Status code of failed transaction
+ * Status code of transaction
  * @member {String} code
  */
-RecipientStateReasonDetails.prototype['code'] = undefined;
-
+StateReasonDetails.prototype['code'] = undefined;
 /**
- * Main category of error, it could be paid, unknown, pickupable, temporary_error, recipient_error, sender_error
+ * Main category of status code, it could be paid, unknown, pickupable, temporary_error, recipient_error, sender_error, sender_action_required
  * @member {String} category
  */
-RecipientStateReasonDetails.prototype['category'] = undefined;
-
+StateReasonDetails.prototype['category'] = undefined;
 /**
  * Tiered messages
  * @member {Array.<String>} messages
  */
-RecipientStateReasonDetails.prototype['messages'] = undefined;
-
+StateReasonDetails.prototype['messages'] = undefined;
 /**
  * Public, human readable, detailed error message
  * @member {String} description
  */
-RecipientStateReasonDetails.prototype['description'] = undefined;
-
-
+StateReasonDetails.prototype['description'] = undefined;
 
 
 

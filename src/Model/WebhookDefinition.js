@@ -17,7 +17,7 @@ import ValidationErrorDescription from './ValidationErrorDescription';
 /**
  * The WebhookDefinition model module.
  * @module Model/WebhookDefinition
- * @version 1.18.2
+ * @version 1.19.0
  */
 class WebhookDefinition {
     /**

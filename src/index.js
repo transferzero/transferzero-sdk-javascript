@@ -52,6 +52,9 @@ import PayinMethodDetailsBTC from './Model/PayinMethodDetailsBTC';
 import PayinMethodDetailsMobile from './Model/PayinMethodDetailsMobile';
 import PayinMethodDetailsNGNBank from './Model/PayinMethodDetailsNGNBank';
 import PayinMethodRequest from './Model/PayinMethodRequest';
+import PayinMethodResponse from './Model/PayinMethodResponse';
+import PayinMethodState from './Model/PayinMethodState';
+import PayinMethodUxFlow from './Model/PayinMethodUxFlow';
 import PaymentMethod from './Model/PaymentMethod';
 import PaymentMethodListResponse from './Model/PaymentMethodListResponse';
 import PaymentMethodOpposite from './Model/PaymentMethodOpposite';
@@ -107,6 +110,7 @@ import SenderResponseExisting from './Model/SenderResponseExisting';
 import SenderResponseMeta from './Model/SenderResponseMeta';
 import SenderState from './Model/SenderState';
 import SenderWebhook from './Model/SenderWebhook';
+import StateReasonDetails from './Model/StateReasonDetails';
 import Transaction from './Model/Transaction';
 import TransactionListResponse from './Model/TransactionListResponse';
 import TransactionRequest from './Model/TransactionRequest';
@@ -136,6 +140,7 @@ import AccountsApi from './Api/AccountsApi';
 import CurrencyInfoApi from './Api/CurrencyInfoApi';
 import DocumentsApi from './Api/DocumentsApi';
 import LogsApi from './Api/LogsApi';
+import PayinMethodsApi from './Api/PayinMethodsApi';
 import PaymentMethodsApi from './Api/PaymentMethodsApi';
 import PayoutMethodsApi from './Api/PayoutMethodsApi';
 import RecipientsApi from './Api/RecipientsApi';
@@ -173,7 +178,7 @@ import WebhooksApi from './Api/WebhooksApi';
 * </pre>
 * </p>
 * @module index
-* @version 1.18.2
+* @version 1.19.0
 */
 export default {
     /**
@@ -415,6 +420,24 @@ export default {
      * @property {module:Model/PayinMethodRequest}
      */
     PayinMethodRequest,
+
+    /**
+     * The PayinMethodResponse model constructor.
+     * @property {module:Model/PayinMethodResponse}
+     */
+    PayinMethodResponse,
+
+    /**
+     * The PayinMethodState model constructor.
+     * @property {module:Model/PayinMethodState}
+     */
+    PayinMethodState,
+
+    /**
+     * The PayinMethodUxFlow model constructor.
+     * @property {module:Model/PayinMethodUxFlow}
+     */
+    PayinMethodUxFlow,
 
     /**
      * The PaymentMethod model constructor.
@@ -747,6 +770,12 @@ export default {
     SenderWebhook,
 
     /**
+     * The StateReasonDetails model constructor.
+     * @property {module:Model/StateReasonDetails}
+     */
+    StateReasonDetails,
+
+    /**
      * The Transaction model constructor.
      * @property {module:Model/Transaction}
      */
@@ -921,6 +950,12 @@ export default {
     LogsApi,
 
     /**
+    * The PayinMethodsApi service constructor.
+    * @property {module:Api/PayinMethodsApi}
+    */
+    PayinMethodsApi,
+
+    /**
     * The PaymentMethodsApi service constructor.
     * @property {module:Api/PaymentMethodsApi}
     */
@@ -998,6 +1033,9 @@ export {
     PayinMethodDetailsMobile,
     PayinMethodDetailsNGNBank,
     PayinMethodRequest,
+    PayinMethodResponse,
+    PayinMethodState,
+    PayinMethodUxFlow,
     PaymentMethod,
     PaymentMethodListResponse,
     PaymentMethodOpposite,
@@ -1053,6 +1091,7 @@ export {
     SenderResponseMeta,
     SenderState,
     SenderWebhook,
+    StateReasonDetails,
     Transaction,
     TransactionListResponse,
     TransactionRequest,
@@ -1082,6 +1121,7 @@ export {
     CurrencyInfoApi,
     DocumentsApi,
     LogsApi,
+    PayinMethodsApi,
     PaymentMethodsApi,
     PayoutMethodsApi,
     RecipientsApi,
