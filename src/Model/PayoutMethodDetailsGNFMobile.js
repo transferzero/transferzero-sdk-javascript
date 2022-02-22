@@ -17,7 +17,7 @@ import PayoutMethodMobileProviderEnum from './PayoutMethodMobileProviderEnum';
 /**
  * The PayoutMethodDetailsGNFMobile model module.
  * @module Model/PayoutMethodDetailsGNFMobile
- * @version 1.19.0
+ * @version 1.19.1
  */
 class PayoutMethodDetailsGNFMobile {
     /**

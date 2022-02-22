@@ -21,7 +21,7 @@ import WebhookDefinitionResponse from '../Model/WebhookDefinitionResponse';
 /**
 * Webhooks service.
 * @module Api/WebhooksApi
-* @version 1.19.0
+* @version 1.19.1
 */
 export default class WebhooksApi {
 

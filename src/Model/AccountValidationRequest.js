@@ -17,7 +17,7 @@ import PayoutMethodMobileProviderEnum from './PayoutMethodMobileProviderEnum';
 /**
  * The AccountValidationRequest model module.
  * @module Model/AccountValidationRequest
- * @version 1.19.0
+ * @version 1.19.1
  */
 class AccountValidationRequest {
     /**

@@ -33,6 +33,27 @@ export default class PayinMethodUxFlow {
         "bank_transfer" = "bank_transfer";
 
     
+        /**
+         * value: "http_redirect"
+         * @const
+         */
+        "http_redirect" = "http_redirect";
+
+    
+        /**
+         * value: "blockchain"
+         * @const
+         */
+        "blockchain" = "blockchain";
+
+    
+        /**
+         * value: "unknown"
+         * @const
+         */
+        "unknown" = "unknown";
+
+    
 
     /**
     * Returns a <code>PayinMethodUxFlow</code> enum value from a Javascript object name.
