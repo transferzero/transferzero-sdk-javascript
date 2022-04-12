@@ -17,7 +17,7 @@ import PayoutMethodMobileProviderEnum from './PayoutMethodMobileProviderEnum';
 /**
  * The PayinMethodDetailsMobile model module.
  * @module Model/PayinMethodDetailsMobile
- * @version 1.19.1
+ * @version 1.19.2
  */
 class PayinMethodDetailsMobile {
     /**
@@ -55,6 +55,9 @@ class PayinMethodDetailsMobile {
             if (data.hasOwnProperty('mobile_provider')) {
                 obj['mobile_provider'] = PayoutMethodMobileProviderEnum.constructFromObject(data['mobile_provider']);
             }
+            if (data.hasOwnProperty('otp')) {
+                obj['otp'] = ApiClient.convertToType(data['otp'], 'String');
+            }
         }
         return obj;
     }
@@ -72,6 +75,12 @@ PayinMethodDetailsMobile.prototype['phone_number'] = undefined;
  * @member {module:Model/PayoutMethodMobileProviderEnum} mobile_provider
  */
 PayinMethodDetailsMobile.prototype['mobile_provider'] = undefined;
+
+/**
+ * The OTP that the sender received in otp verified ussd popup ux flow.
+ * @member {String} otp
+ */
+PayinMethodDetailsMobile.prototype['otp'] = undefined;
 
 
 

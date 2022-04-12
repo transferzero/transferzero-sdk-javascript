@@ -19,7 +19,7 @@ import PayinMethodResponse from '../Model/PayinMethodResponse';
 /**
 * PayinMethods service.
 * @module Api/PayinMethodsApi
-* @version 1.19.1
+* @version 1.19.2
 */
 export default class PayinMethodsApi {
 
@@ -200,7 +200,7 @@ export default class PayinMethodsApi {
      * Retries PayinMethod
      * Retries the collection process for the payin method.  Please note only payin methods in &#x60;error&#x60; state can be retried.
      * @param {String} payinMethodID ID of the payin method whose collection process should be retried  Example: &#x60;/v1/payin_methods/9d4d7b73-a94c-4979-ab57-09074fd55d33/retry&#x60;
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:Model/PayinMethodResponse} and HTTP response
      */
     retryPayinMethodWithHttpInfo(payinMethodID) {
       let postBody = null;
@@ -223,8 +223,8 @@ export default class PayinMethodsApi {
 
       let authNames = ['AuthorizationKey', 'AuthorizationNonce', 'AuthorizationSecret', 'AuthorizationSignature'];
       let contentTypes = [];
-      let accepts = [];
-      let returnType = null;
+      let accepts = ['application/json'];
+      let returnType = PayinMethodResponse;
 
       return this.apiClient.callApi(
         '/payin_methods/{PayinMethod ID}/retry', 'POST',
@@ -237,7 +237,7 @@ export default class PayinMethodsApi {
      * Retries PayinMethod
      * Retries the collection process for the payin method.  Please note only payin methods in &#x60;error&#x60; state can be retried.
      * @param {String} payinMethodID ID of the payin method whose collection process should be retried  Example: &#x60;/v1/payin_methods/9d4d7b73-a94c-4979-ab57-09074fd55d33/retry&#x60;
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:Model/PayinMethodResponse}
      */
     retryPayinMethod(payinMethodID) {
       return this.retryPayinMethodWithHttpInfo(payinMethodID)

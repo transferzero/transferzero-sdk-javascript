@@ -226,7 +226,7 @@ apiClient.basePath = 'https://api-sandbox.transferzero.com/v1';
 
 <a name="retryPayinMethod"></a>
 # **retryPayinMethod**
-> retryPayinMethod(payinMethodID)
+> PayinMethodResponse retryPayinMethod(payinMethodID)
 
 Retries PayinMethod
 
@@ -244,8 +244,8 @@ apiClient.basePath = 'https://api-sandbox.transferzero.com/v1';
 
 let apiInstance = new PayinMethodsApi(apiClient);
 
-apiInstance.retryPayinMethod(payinMethodID).then(() => {
-  console.log('API called successfully.');
+apiInstance.retryPayinMethod(payinMethodID).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   if (error.isValidationError) {
     let result = error.getResponseObject();
@@ -267,7 +267,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**PayinMethodResponse**](PayinMethodResponse.md)
 
 ### Authorization
 
@@ -293,5 +293,5 @@ apiClient.basePath = 'https://api-sandbox.transferzero.com/v1';
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: application/json
 

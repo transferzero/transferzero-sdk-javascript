@@ -20,7 +20,7 @@ import PayoutMethodMobileProviderEnum from './PayoutMethodMobileProviderEnum';
 /**
  * The PayinMethodDetails model module.
  * @module Model/PayinMethodDetails
- * @version 1.19.1
+ * @version 1.19.2
  */
 class PayinMethodDetails {
     /**
@@ -87,6 +87,11 @@ PayinMethodDetailsMobile.prototype['phone_number'] = undefined;
  * @member {module:Model/PayoutMethodMobileProviderEnum} mobile_provider
  */
 PayinMethodDetailsMobile.prototype['mobile_provider'] = undefined;
+/**
+ * The OTP that the sender received in otp verified ussd popup ux flow.
+ * @member {String} otp
+ */
+PayinMethodDetailsMobile.prototype['otp'] = undefined;
 // Implement PayinMethodDetailsBTC interface:
 /**
  * Please make sure the refund_address is a valid BTC address belonging to the sender, as that is going to be used in case the transaction has to be refunded.

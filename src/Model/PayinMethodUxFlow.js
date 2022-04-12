@@ -27,6 +27,20 @@ export default class PayinMethodUxFlow {
 
     
         /**
+         * value: "ussd_menu_approval"
+         * @const
+         */
+        "ussd_menu_approval" = "ussd_menu_approval";
+
+    
+        /**
+         * value: "otp_verified_ussd_popup"
+         * @const
+         */
+        "otp_verified_ussd_popup" = "otp_verified_ussd_popup";
+
+    
+        /**
          * value: "bank_transfer"
          * @const
          */
