@@ -202,7 +202,7 @@ export default class SendersApi {
 
     /**
      * Updating a sender
-     * Updates the sender specified in the URL path.
+     * Updates a single sender by the Sender ID
      * @param {String} senderID ID of the sender to get.  Example: &#x60;/v1/senders/bf9ff782-e182-45ac-abea-5bce83ad6670&#x60;
      * @param {module:Model/SenderRequest} senderRequest 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:Model/SenderResponse} and HTTP response
@@ -245,7 +245,7 @@ export default class SendersApi {
 
     /**
      * Updating a sender
-     * Updates the sender specified in the URL path.
+     * Updates a single sender by the Sender ID
      * @param {String} senderID ID of the sender to get.  Example: &#x60;/v1/senders/bf9ff782-e182-45ac-abea-5bce83ad6670&#x60;
      * @param {module:Model/SenderRequest} senderRequest 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:Model/SenderResponse}

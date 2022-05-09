@@ -140,7 +140,7 @@ export default class PayinMethodsApi {
 
     /**
      * Updating a payin method
-     * Updates the payin method specified in the URL path.
+     * Updates a single payin method by the Payin Method ID
      * @param {String} payinMethodID ID of the payin method to get.  Example: &#x60;/v1/payin_methods/bf9ff782-e182-45ac-abea-5bce83ad6670&#x60;
      * @param {module:Model/PayinMethod} payinMethod 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:Model/PayinMethodResponse} and HTTP response
@@ -183,7 +183,7 @@ export default class PayinMethodsApi {
 
     /**
      * Updating a payin method
-     * Updates the payin method specified in the URL path.
+     * Updates a single payin method by the Payin Method ID
      * @param {String} payinMethodID ID of the payin method to get.  Example: &#x60;/v1/payin_methods/bf9ff782-e182-45ac-abea-5bce83ad6670&#x60;
      * @param {module:Model/PayinMethod} payinMethod 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:Model/PayinMethodResponse}

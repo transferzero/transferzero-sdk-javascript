@@ -209,7 +209,7 @@ export default class PayoutMethodsApi {
 
     /**
      * Updating a payout method
-     * Updates the payout method specified in the URL path.
+     * Updates a single payout method by the Payout Method ID
      * @param {String} payoutMethodID ID of the payout method to get.  Example: &#x60;/v1/payout_methods/bf9ff782-e182-45ac-abea-5bce83ad6670&#x60;
      * @param {module:Model/PayoutMethod} payoutMethod 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:Model/PayoutMethodResponse} and HTTP response
@@ -252,7 +252,7 @@ export default class PayoutMethodsApi {
 
     /**
      * Updating a payout method
-     * Updates the payout method specified in the URL path.
+     * Updates a single payout method by the Payout Method ID
      * @param {String} payoutMethodID ID of the payout method to get.  Example: &#x60;/v1/payout_methods/bf9ff782-e182-45ac-abea-5bce83ad6670&#x60;
      * @param {module:Model/PayoutMethod} payoutMethod 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:Model/PayoutMethodResponse}

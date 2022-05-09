@@ -158,7 +158,7 @@ apiClient.basePath = 'https://api-sandbox.transferzero.com/v1';
 
 Updating a payin method
 
-Updates the payin method specified in the URL path.
+Updates a single payin method by the Payin Method ID
 
 ### Example
 ```javascript

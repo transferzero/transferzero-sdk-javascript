@@ -245,7 +245,7 @@ apiClient.basePath = 'https://api-sandbox.transferzero.com/v1';
 
 Updating a payout method
 
-Updates the payout method specified in the URL path.
+Updates a single payout method by the Payout Method ID
 
 ### Example
 ```javascript
