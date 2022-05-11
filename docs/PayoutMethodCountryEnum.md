@@ -327,7 +327,7 @@
 
 * `MP` (value: `"MP"`)
 
-* `false` (value: `"false"`)
+* `NO` (value: `"NO"`)
 
 * `OM` (value: `"OM"`)
 

@@ -1154,10 +1154,10 @@ export default class PayoutMethodCountryEnum {
 
     
         /**
-         * value: "false"
+         * value: "NO"
          * @const
          */
-        "false" = "false";
+        "NO" = "NO";
 
     
         /**
