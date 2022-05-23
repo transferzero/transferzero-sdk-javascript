@@ -17,7 +17,7 @@ import Recipient from './Recipient';
 /**
  * The RecipientRequest model module.
  * @module Model/RecipientRequest
- * @version 1.19.2
+ * @version 1.19.3
  */
 class RecipientRequest {
     /**

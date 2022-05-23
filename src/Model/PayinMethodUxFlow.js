@@ -27,6 +27,13 @@ export default class PayinMethodUxFlow {
 
     
         /**
+         * value: "ussd_voucher"
+         * @const
+         */
+        "ussd_voucher" = "ussd_voucher";
+
+    
+        /**
          * value: "ussd_menu_approval"
          * @const
          */

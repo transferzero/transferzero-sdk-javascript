@@ -5,6 +5,8 @@
 
 * `ussd_popup` (value: `"ussd_popup"`)
 
+* `ussd_voucher` (value: `"ussd_voucher"`)
+
 * `ussd_menu_approval` (value: `"ussd_menu_approval"`)
 
 * `otp_verified_ussd_popup` (value: `"otp_verified_ussd_popup"`)
