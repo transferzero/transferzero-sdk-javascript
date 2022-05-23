@@ -19,7 +19,7 @@ import WebhookLogMetadataResponse from './WebhookLogMetadataResponse';
 /**
  * The WebhookLogMetadata model module.
  * @module Model/WebhookLogMetadata
- * @version 1.19.3
+ * @version 1.19.4
  */
 class WebhookLogMetadata {
     /**
