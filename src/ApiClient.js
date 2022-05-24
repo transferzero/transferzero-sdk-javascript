@@ -15,7 +15,7 @@
 import crypto from 'crypto';
 import querystring from 'querystring';
 import superagent from 'superagent';
-import { v4 as uuid } from 'uuid';
+import uuid from 'uuid/v4';
 
 class ApiError {
   constructor(error, responseObject, response) {
