@@ -54,30 +54,6 @@
       //expect(instance).to.be.a(TransferzeroSdk.RecipientStateReasonDetails);
     });
 
-    it('should have the property code (base name: "code")', function() {
-      // uncomment below and update the code to test the property code
-      //var instane = new TransferzeroSdk.RecipientStateReasonDetails();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property category (base name: "category")', function() {
-      // uncomment below and update the code to test the property category
-      //var instane = new TransferzeroSdk.RecipientStateReasonDetails();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property messages (base name: "messages")', function() {
-      // uncomment below and update the code to test the property messages
-      //var instane = new TransferzeroSdk.RecipientStateReasonDetails();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property description (base name: "description")', function() {
-      // uncomment below and update the code to test the property description
-      //var instane = new TransferzeroSdk.RecipientStateReasonDetails();
-      //expect(instance).to.be();
-    });
-
   });
 
 }));

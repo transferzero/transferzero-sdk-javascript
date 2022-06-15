@@ -114,6 +114,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property stateReasonDetails (base name: "state_reason_details")', function() {
+      // uncomment below and update the code to test the property stateReasonDetails
+      //var instane = new TransferzeroSdk.Recipient();
+      //expect(instance).to.be();
+    });
+
     it('should have the property state (base name: "state")', function() {
       // uncomment below and update the code to test the property state
       //var instane = new TransferzeroSdk.Recipient();
@@ -122,6 +128,12 @@
 
     it('should have the property transactionId (base name: "transaction_id")', function() {
       // uncomment below and update the code to test the property transactionId
+      //var instane = new TransferzeroSdk.Recipient();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property transactionExternalId (base name: "transaction_external_id")', function() {
+      // uncomment below and update the code to test the property transactionExternalId
       //var instane = new TransferzeroSdk.Recipient();
       //expect(instance).to.be();
     });
@@ -170,6 +182,12 @@
 
     it('should have the property id (base name: "id")', function() {
       // uncomment below and update the code to test the property id
+      //var instane = new TransferzeroSdk.Recipient();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property type (base name: "type")', function() {
+      // uncomment below and update the code to test the property type
       //var instane = new TransferzeroSdk.Recipient();
       //expect(instance).to.be();
     });

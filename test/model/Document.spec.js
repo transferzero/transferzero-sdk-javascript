@@ -54,14 +54,14 @@
       //expect(instance).to.be.a(TransferzeroSdk.Document);
     });
 
-    it('should have the property senderId (base name: "sender_id")', function() {
-      // uncomment below and update the code to test the property senderId
+    it('should have the property upload (base name: "upload")', function() {
+      // uncomment below and update the code to test the property upload
       //var instane = new TransferzeroSdk.Document();
       //expect(instance).to.be();
     });
 
-    it('should have the property upload (base name: "upload")', function() {
-      // uncomment below and update the code to test the property upload
+    it('should have the property url (base name: "url")', function() {
+      // uncomment below and update the code to test the property url
       //var instane = new TransferzeroSdk.Document();
       //expect(instance).to.be();
     });
@@ -116,6 +116,24 @@
 
     it('should have the property id (base name: "id")', function() {
       // uncomment below and update the code to test the property id
+      //var instane = new TransferzeroSdk.Document();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property documentId (base name: "document_id")', function() {
+      // uncomment below and update the code to test the property documentId
+      //var instane = new TransferzeroSdk.Document();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property expiryDate (base name: "expiry_date")', function() {
+      // uncomment below and update the code to test the property expiryDate
+      //var instane = new TransferzeroSdk.Document();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property source (base name: "source")', function() {
+      // uncomment below and update the code to test the property source
       //var instane = new TransferzeroSdk.Document();
       //expect(instance).to.be();
     });

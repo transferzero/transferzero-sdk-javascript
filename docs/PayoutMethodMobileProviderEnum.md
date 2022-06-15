@@ -23,6 +23,10 @@
 
 * `mobicash` (value: `"mobicash"`)
 
+* `emoney` (value: `"emoney"`)
+
+* `free` (value: `"free"`)
+
 * `wave` (value: `"wave"`)
 
 

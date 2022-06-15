@@ -60,8 +60,14 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property sendInstructions (base name: "send_instructions")', function() {
-      // uncomment below and update the code to test the property sendInstructions
+    it('should have the property mobileProvider (base name: "mobile_provider")', function() {
+      // uncomment below and update the code to test the property mobileProvider
+      //var instane = new TransferzeroSdk.PayinMethodDetailsMobile();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property otp (base name: "otp")', function() {
+      // uncomment below and update the code to test the property otp
       //var instane = new TransferzeroSdk.PayinMethodDetailsMobile();
       //expect(instance).to.be();
     });

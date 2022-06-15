@@ -78,6 +78,18 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property country (base name: "country")', function() {
+      // uncomment below and update the code to test the property country
+      //var instane = new TransferzeroSdk.PayoutMethodDetailsXOFMobile();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property transferReason (base name: "transfer_reason")', function() {
+      // uncomment below and update the code to test the property transferReason
+      //var instane = new TransferzeroSdk.PayoutMethodDetailsXOFMobile();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

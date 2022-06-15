@@ -78,6 +78,16 @@
         done();
       });
     });
+    describe('proofOfPayments', function() {
+      it('should call proofOfPayments successfully', function(done) {
+        //uncomment below and update the code to test proofOfPayments
+        //instance.proofOfPayments(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
   });
 
 }));

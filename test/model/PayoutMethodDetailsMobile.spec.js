@@ -72,6 +72,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property mobileProvider (base name: "mobile_provider")', function() {
+      // uncomment below and update the code to test the property mobileProvider
+      //var instane = new TransferzeroSdk.PayoutMethodDetailsMobile();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

@@ -84,6 +84,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property email (base name: "email")', function() {
+      // uncomment below and update the code to test the property email
+      //var instane = new TransferzeroSdk.PayoutMethodDetailsZARBank();
+      //expect(instance).to.be();
+    });
+
     it('should have the property bankCode (base name: "bank_code")', function() {
       // uncomment below and update the code to test the property bankCode
       //var instane = new TransferzeroSdk.PayoutMethodDetailsZARBank();
@@ -104,6 +110,48 @@
 
     it('should have the property transferReasonCode (base name: "transfer_reason_code")', function() {
       // uncomment below and update the code to test the property transferReasonCode
+      //var instane = new TransferzeroSdk.PayoutMethodDetailsZARBank();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property transferReason (base name: "transfer_reason")', function() {
+      // uncomment below and update the code to test the property transferReason
+      //var instane = new TransferzeroSdk.PayoutMethodDetailsZARBank();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property name (base name: "name")', function() {
+      // uncomment below and update the code to test the property name
+      //var instane = new TransferzeroSdk.PayoutMethodDetailsZARBank();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property contactFirstName (base name: "contact_first_name")', function() {
+      // uncomment below and update the code to test the property contactFirstName
+      //var instane = new TransferzeroSdk.PayoutMethodDetailsZARBank();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property contactLastName (base name: "contact_last_name")', function() {
+      // uncomment below and update the code to test the property contactLastName
+      //var instane = new TransferzeroSdk.PayoutMethodDetailsZARBank();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property registrationNumber (base name: "registration_number")', function() {
+      // uncomment below and update the code to test the property registrationNumber
+      //var instane = new TransferzeroSdk.PayoutMethodDetailsZARBank();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property natureOfBusiness (base name: "nature_of_business")', function() {
+      // uncomment below and update the code to test the property natureOfBusiness
+      //var instane = new TransferzeroSdk.PayoutMethodDetailsZARBank();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property legalEntityType (base name: "legal_entity_type")', function() {
+      // uncomment below and update the code to test the property legalEntityType
       //var instane = new TransferzeroSdk.PayoutMethodDetailsZARBank();
       //expect(instance).to.be();
     });

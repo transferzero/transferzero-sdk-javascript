@@ -66,6 +66,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property margin (base name: "margin")', function() {
+      // uncomment below and update the code to test the property margin
+      //var instane = new TransferzeroSdk.CurrencyOpposite();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

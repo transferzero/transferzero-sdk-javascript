@@ -108,6 +108,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property transferReason (base name: "transfer_reason")', function() {
+      // uncomment below and update the code to test the property transferReason
+      //var instane = new TransferzeroSdk.PayoutMethodDetailsKESBank();
+      //expect(instance).to.be();
+    });
+
     it('should have the property identityCardType (base name: "identity_card_type")', function() {
       // uncomment below and update the code to test the property identityCardType
       //var instane = new TransferzeroSdk.PayoutMethodDetailsKESBank();

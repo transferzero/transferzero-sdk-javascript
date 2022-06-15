@@ -48,16 +48,6 @@
   }
 
   describe('DocumentsApi', function() {
-    describe('deleteDocument', function() {
-      it('should call deleteDocument successfully', function(done) {
-        //uncomment below and update the code to test deleteDocument
-        //instance.deleteDocument(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
     describe('getDocument', function() {
       it('should call getDocument successfully', function(done) {
         //uncomment below and update the code to test getDocument

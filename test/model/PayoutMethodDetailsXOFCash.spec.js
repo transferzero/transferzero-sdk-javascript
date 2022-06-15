@@ -66,18 +66,6 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property identityCardId (base name: "identity_card_id")', function() {
-      // uncomment below and update the code to test the property identityCardId
-      //var instane = new TransferzeroSdk.PayoutMethodDetailsXOFCash();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property identityCardType (base name: "identity_card_type")', function() {
-      // uncomment below and update the code to test the property identityCardType
-      //var instane = new TransferzeroSdk.PayoutMethodDetailsXOFCash();
-      //expect(instance).to.be();
-    });
-
     it('should have the property phoneNumber (base name: "phone_number")', function() {
       // uncomment below and update the code to test the property phoneNumber
       //var instane = new TransferzeroSdk.PayoutMethodDetailsXOFCash();
@@ -86,6 +74,12 @@
 
     it('should have the property cashProvider (base name: "cash_provider")', function() {
       // uncomment below and update the code to test the property cashProvider
+      //var instane = new TransferzeroSdk.PayoutMethodDetailsXOFCash();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property country (base name: "country")', function() {
+      // uncomment below and update the code to test the property country
       //var instane = new TransferzeroSdk.PayoutMethodDetailsXOFCash();
       //expect(instance).to.be();
     });

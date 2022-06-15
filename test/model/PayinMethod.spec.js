@@ -60,8 +60,32 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property uxFlow (base name: "ux_flow")', function() {
+      // uncomment below and update the code to test the property uxFlow
+      //var instane = new TransferzeroSdk.PayinMethod();
+      //expect(instance).to.be();
+    });
+
     it('should have the property inDetails (base name: "in_details")', function() {
       // uncomment below and update the code to test the property inDetails
+      //var instane = new TransferzeroSdk.PayinMethod();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property id (base name: "id")', function() {
+      // uncomment below and update the code to test the property id
+      //var instane = new TransferzeroSdk.PayinMethod();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property state (base name: "state")', function() {
+      // uncomment below and update the code to test the property state
+      //var instane = new TransferzeroSdk.PayinMethod();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property stateReasonDetails (base name: "state_reason_details")', function() {
+      // uncomment below and update the code to test the property stateReasonDetails
       //var instane = new TransferzeroSdk.PayinMethod();
       //expect(instance).to.be();
     });
@@ -78,8 +102,8 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property provider (base name: "provider")', function() {
-      // uncomment below and update the code to test the property provider
+    it('should have the property errors (base name: "errors")', function() {
+      // uncomment below and update the code to test the property errors
       //var instane = new TransferzeroSdk.PayinMethod();
       //expect(instance).to.be();
     });

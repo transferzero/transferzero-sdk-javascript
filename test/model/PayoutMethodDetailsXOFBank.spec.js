@@ -84,6 +84,18 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property bankCode (base name: "bank_code")', function() {
+      // uncomment below and update the code to test the property bankCode
+      //var instane = new TransferzeroSdk.PayoutMethodDetailsXOFBank();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property transferReason (base name: "transfer_reason")', function() {
+      // uncomment below and update the code to test the property transferReason
+      //var instane = new TransferzeroSdk.PayoutMethodDetailsXOFBank();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

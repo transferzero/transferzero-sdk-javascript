@@ -54,14 +54,44 @@
       //expect(instance).to.be.a(TransferzeroSdk.Sender);
     });
 
+    it('should have the property id (base name: "id")', function() {
+      // uncomment below and update the code to test the property id
+      //var instane = new TransferzeroSdk.Sender();
+      //expect(instance).to.be();
+    });
+
     it('should have the property type (base name: "type")', function() {
       // uncomment below and update the code to test the property type
       //var instane = new TransferzeroSdk.Sender();
       //expect(instance).to.be();
     });
 
+    it('should have the property state (base name: "state")', function() {
+      // uncomment below and update the code to test the property state
+      //var instane = new TransferzeroSdk.Sender();
+      //expect(instance).to.be();
+    });
+
     it('should have the property country (base name: "country")', function() {
       // uncomment below and update the code to test the property country
+      //var instane = new TransferzeroSdk.Sender();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property street (base name: "street")', function() {
+      // uncomment below and update the code to test the property street
+      //var instane = new TransferzeroSdk.Sender();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property postalCode (base name: "postal_code")', function() {
+      // uncomment below and update the code to test the property postalCode
+      //var instane = new TransferzeroSdk.Sender();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property city (base name: "city")', function() {
+      // uncomment below and update the code to test the property city
       //var instane = new TransferzeroSdk.Sender();
       //expect(instance).to.be();
     });
@@ -84,6 +114,42 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property ip (base name: "ip")', function() {
+      // uncomment below and update the code to test the property ip
+      //var instane = new TransferzeroSdk.Sender();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property addressDescription (base name: "address_description")', function() {
+      // uncomment below and update the code to test the property addressDescription
+      //var instane = new TransferzeroSdk.Sender();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property identificationNumber (base name: "identification_number")', function() {
+      // uncomment below and update the code to test the property identificationNumber
+      //var instane = new TransferzeroSdk.Sender();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property identificationType (base name: "identification_type")', function() {
+      // uncomment below and update the code to test the property identificationType
+      //var instane = new TransferzeroSdk.Sender();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property lang (base name: "lang")', function() {
+      // uncomment below and update the code to test the property lang
+      //var instane = new TransferzeroSdk.Sender();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property name (base name: "name")', function() {
+      // uncomment below and update the code to test the property name
+      //var instane = new TransferzeroSdk.Sender();
+      //expect(instance).to.be();
+    });
+
     it('should have the property firstName (base name: "first_name")', function() {
       // uncomment below and update the code to test the property firstName
       //var instane = new TransferzeroSdk.Sender();
@@ -102,6 +168,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property birthDate (base name: "birth_date")', function() {
+      // uncomment below and update the code to test the property birthDate
+      //var instane = new TransferzeroSdk.Sender();
+      //expect(instance).to.be();
+    });
+
     it('should have the property occupation (base name: "occupation")', function() {
       // uncomment below and update the code to test the property occupation
       //var instane = new TransferzeroSdk.Sender();
@@ -114,74 +186,110 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property onboardingStatus (base name: "onboarding_status")', function() {
-      // uncomment below and update the code to test the property onboardingStatus
+    it('should have the property legalEntityType (base name: "legal_entity_type")', function() {
+      // uncomment below and update the code to test the property legalEntityType
       //var instane = new TransferzeroSdk.Sender();
       //expect(instance).to.be();
     });
 
-    it('should have the property address (base name: "address")', function() {
-      // uncomment below and update the code to test the property address
+    it('should have the property registrationDate (base name: "registration_date")', function() {
+      // uncomment below and update the code to test the property registrationDate
       //var instane = new TransferzeroSdk.Sender();
       //expect(instance).to.be();
     });
 
-    it('should have the property description (base name: "description")', function() {
-      // uncomment below and update the code to test the property description
+    it('should have the property registrationNumber (base name: "registration_number")', function() {
+      // uncomment below and update the code to test the property registrationNumber
       //var instane = new TransferzeroSdk.Sender();
       //expect(instance).to.be();
     });
 
-    it('should have the property name (base name: "name")', function() {
-      // uncomment below and update the code to test the property name
+    it('should have the property natureOfBusiness (base name: "nature_of_business")', function() {
+      // uncomment below and update the code to test the property natureOfBusiness
       //var instane = new TransferzeroSdk.Sender();
       //expect(instance).to.be();
     });
 
-    it('should have the property city (base name: "city")', function() {
-      // uncomment below and update the code to test the property city
+    it('should have the property sourceOfFunds (base name: "source_of_funds")', function() {
+      // uncomment below and update the code to test the property sourceOfFunds
       //var instane = new TransferzeroSdk.Sender();
       //expect(instance).to.be();
     });
 
-    it('should have the property street (base name: "street")', function() {
-      // uncomment below and update the code to test the property street
+    it('should have the property customSourceOfFunds (base name: "custom_source_of_funds")', function() {
+      // uncomment below and update the code to test the property customSourceOfFunds
       //var instane = new TransferzeroSdk.Sender();
       //expect(instance).to.be();
     });
 
-    it('should have the property addressDescription (base name: "address_description")', function() {
-      // uncomment below and update the code to test the property addressDescription
+    it('should have the property coreBusinessActivity (base name: "core_business_activity")', function() {
+      // uncomment below and update the code to test the property coreBusinessActivity
       //var instane = new TransferzeroSdk.Sender();
       //expect(instance).to.be();
     });
 
-    it('should have the property postalCode (base name: "postal_code")', function() {
-      // uncomment below and update the code to test the property postalCode
+    it('should have the property purposeOfOpeningAccount (base name: "purpose_of_opening_account")', function() {
+      // uncomment below and update the code to test the property purposeOfOpeningAccount
       //var instane = new TransferzeroSdk.Sender();
       //expect(instance).to.be();
     });
 
-    it('should have the property birthDate (base name: "birth_date")', function() {
-      // uncomment below and update the code to test the property birthDate
+    it('should have the property officePhone (base name: "office_phone")', function() {
+      // uncomment below and update the code to test the property officePhone
       //var instane = new TransferzeroSdk.Sender();
       //expect(instance).to.be();
     });
 
-    it('should have the property ip (base name: "ip")', function() {
-      // uncomment below and update the code to test the property ip
+    it('should have the property vatRegistrationNumber (base name: "vat_registration_number")', function() {
+      // uncomment below and update the code to test the property vatRegistrationNumber
       //var instane = new TransferzeroSdk.Sender();
       //expect(instance).to.be();
     });
 
-    it('should have the property identificationNumber (base name: "identification_number")', function() {
-      // uncomment below and update the code to test the property identificationNumber
+    it('should have the property financialRegulator (base name: "financial_regulator")', function() {
+      // uncomment below and update the code to test the property financialRegulator
       //var instane = new TransferzeroSdk.Sender();
       //expect(instance).to.be();
     });
 
-    it('should have the property identificationType (base name: "identification_type")', function() {
-      // uncomment below and update the code to test the property identificationType
+    it('should have the property regulatoryLicenceNumber (base name: "regulatory_licence_number")', function() {
+      // uncomment below and update the code to test the property regulatoryLicenceNumber
+      //var instane = new TransferzeroSdk.Sender();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property contactPersonEmail (base name: "contact_person_email")', function() {
+      // uncomment below and update the code to test the property contactPersonEmail
+      //var instane = new TransferzeroSdk.Sender();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property tradingCountry (base name: "trading_country")', function() {
+      // uncomment below and update the code to test the property tradingCountry
+      //var instane = new TransferzeroSdk.Sender();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property tradingAddress (base name: "trading_address")', function() {
+      // uncomment below and update the code to test the property tradingAddress
+      //var instane = new TransferzeroSdk.Sender();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property tradingName (base name: "trading_name")', function() {
+      // uncomment below and update the code to test the property tradingName
+      //var instane = new TransferzeroSdk.Sender();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property numberMonthlyTransactions (base name: "number_monthly_transactions")', function() {
+      // uncomment below and update the code to test the property numberMonthlyTransactions
+      //var instane = new TransferzeroSdk.Sender();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property amountMonthlyTransactions (base name: "amount_monthly_transactions")', function() {
+      // uncomment below and update the code to test the property amountMonthlyTransactions
       //var instane = new TransferzeroSdk.Sender();
       //expect(instance).to.be();
     });
@@ -198,14 +306,20 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property state (base name: "state")', function() {
-      // uncomment below and update the code to test the property state
+    it('should have the property errors (base name: "errors")', function() {
+      // uncomment below and update the code to test the property errors
       //var instane = new TransferzeroSdk.Sender();
       //expect(instance).to.be();
     });
 
-    it('should have the property id (base name: "id")', function() {
-      // uncomment below and update the code to test the property id
+    it('should have the property onboardingStatus (base name: "onboarding_status")', function() {
+      // uncomment below and update the code to test the property onboardingStatus
+      //var instane = new TransferzeroSdk.Sender();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property politicallyExposedPeople (base name: "politically_exposed_people")', function() {
+      // uncomment below and update the code to test the property politicallyExposedPeople
       //var instane = new TransferzeroSdk.Sender();
       //expect(instance).to.be();
     });
@@ -216,8 +330,32 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property errors (base name: "errors")', function() {
-      // uncomment below and update the code to test the property errors
+    it('should have the property cityOfBirth (base name: "city_of_birth")', function() {
+      // uncomment below and update the code to test the property cityOfBirth
+      //var instane = new TransferzeroSdk.Sender();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property countryOfBirth (base name: "country_of_birth")', function() {
+      // uncomment below and update the code to test the property countryOfBirth
+      //var instane = new TransferzeroSdk.Sender();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property gender (base name: "gender")', function() {
+      // uncomment below and update the code to test the property gender
+      //var instane = new TransferzeroSdk.Sender();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property salesLeadId (base name: "sales_lead_id")', function() {
+      // uncomment below and update the code to test the property salesLeadId
+      //var instane = new TransferzeroSdk.Sender();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property createdAt (base name: "created_at")', function() {
+      // uncomment below and update the code to test the property createdAt
       //var instane = new TransferzeroSdk.Sender();
       //expect(instance).to.be();
     });

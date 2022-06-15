@@ -90,6 +90,20 @@ export default class PayoutMethodMobileProviderEnum {
 
     
         /**
+         * value: "emoney"
+         * @const
+         */
+        "emoney" = "emoney";
+
+    
+        /**
+         * value: "free"
+         * @const
+         */
+        "free" = "free";
+
+    
+        /**
          * value: "wave"
          * @const
          */

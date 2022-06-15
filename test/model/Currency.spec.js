@@ -102,12 +102,6 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property margin (base name: "margin")', function() {
-      // uncomment below and update the code to test the property margin
-      //var instane = new TransferzeroSdk.Currency();
-      //expect(instance).to.be();
-    });
-
     it('should have the property usdEquivalent (base name: "usd_equivalent")', function() {
       // uncomment below and update the code to test the property usdEquivalent
       //var instane = new TransferzeroSdk.Currency();
