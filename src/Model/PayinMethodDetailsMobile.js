@@ -12,12 +12,13 @@
  */
 
 import ApiClient from '../ApiClient';
+import PayoutMethodCountryEnum from './PayoutMethodCountryEnum';
 import PayoutMethodMobileProviderEnum from './PayoutMethodMobileProviderEnum';
 
 /**
  * The PayinMethodDetailsMobile model module.
  * @module Model/PayinMethodDetailsMobile
- * @version 1.20.0
+ * @version 1.21.0
  */
 class PayinMethodDetailsMobile {
     /**
@@ -55,6 +56,9 @@ class PayinMethodDetailsMobile {
             if (data.hasOwnProperty('mobile_provider')) {
                 obj['mobile_provider'] = PayoutMethodMobileProviderEnum.constructFromObject(data['mobile_provider']);
             }
+            if (data.hasOwnProperty('country')) {
+                obj['country'] = PayoutMethodCountryEnum.constructFromObject(data['country']);
+            }
             if (data.hasOwnProperty('otp')) {
                 obj['otp'] = ApiClient.convertToType(data['otp'], 'String');
             }
@@ -75,6 +79,11 @@ PayinMethodDetailsMobile.prototype['phone_number'] = undefined;
  * @member {module:Model/PayoutMethodMobileProviderEnum} mobile_provider
  */
 PayinMethodDetailsMobile.prototype['mobile_provider'] = undefined;
+
+/**
+ * @member {module:Model/PayoutMethodCountryEnum} country
+ */
+PayinMethodDetailsMobile.prototype['country'] = undefined;
 
 /**
  * The OTP that the sender received in otp verified ussd popup ux flow.

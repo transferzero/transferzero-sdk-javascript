@@ -18,7 +18,7 @@ import PaginationMeta from './PaginationMeta';
 /**
  * The ApiLogListResponse model module.
  * @module Model/ApiLogListResponse
- * @version 1.20.0
+ * @version 1.21.0
  */
 class ApiLogListResponse {
     /**

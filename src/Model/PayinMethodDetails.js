@@ -15,12 +15,13 @@ import ApiClient from '../ApiClient';
 import PayinMethodDetailsBTC from './PayinMethodDetailsBTC';
 import PayinMethodDetailsMobile from './PayinMethodDetailsMobile';
 import PayinMethodDetailsNGNBank from './PayinMethodDetailsNGNBank';
+import PayoutMethodCountryEnum from './PayoutMethodCountryEnum';
 import PayoutMethodMobileProviderEnum from './PayoutMethodMobileProviderEnum';
 
 /**
  * The PayinMethodDetails model module.
  * @module Model/PayinMethodDetails
- * @version 1.20.0
+ * @version 1.21.0
  */
 class PayinMethodDetails {
     /**
@@ -87,6 +88,10 @@ PayinMethodDetailsMobile.prototype['phone_number'] = undefined;
  * @member {module:Model/PayoutMethodMobileProviderEnum} mobile_provider
  */
 PayinMethodDetailsMobile.prototype['mobile_provider'] = undefined;
+/**
+ * @member {module:Model/PayoutMethodCountryEnum} country
+ */
+PayinMethodDetailsMobile.prototype['country'] = undefined;
 /**
  * The OTP that the sender received in otp verified ussd popup ux flow.
  * @member {String} otp

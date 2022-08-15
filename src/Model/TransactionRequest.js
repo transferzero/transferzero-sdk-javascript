@@ -17,7 +17,7 @@ import Transaction from './Transaction';
 /**
  * The TransactionRequest model module.
  * @module Model/TransactionRequest
- * @version 1.20.0
+ * @version 1.21.0
  */
 class TransactionRequest {
     /**
