@@ -205,6 +205,7 @@ Class | Method | HTTP request | Description
  - [TransferzeroSdk.PayoutMethodDetailsNGNBank](docs/PayoutMethodDetailsNGNBank.md)
  - [TransferzeroSdk.PayoutMethodDetailsUSDBank](docs/PayoutMethodDetailsUSDBank.md)
  - [TransferzeroSdk.PayoutMethodDetailsUSDCash](docs/PayoutMethodDetailsUSDCash.md)
+ - [TransferzeroSdk.PayoutMethodDetailsXAFBank](docs/PayoutMethodDetailsXAFBank.md)
  - [TransferzeroSdk.PayoutMethodDetailsXAFMobile](docs/PayoutMethodDetailsXAFMobile.md)
  - [TransferzeroSdk.PayoutMethodDetailsXOFBank](docs/PayoutMethodDetailsXOFBank.md)
  - [TransferzeroSdk.PayoutMethodDetailsXOFCash](docs/PayoutMethodDetailsXOFCash.md)
@@ -290,5 +291,5 @@ apiClient.basePath = 'https://api-sandbox.transferzero.com/v1';
 
 
 - API version: 1.0
-- Package version: 1.21.0
+- Package version: 1.22.0
 - Build package: org.openapitools.codegen.languages.JavascriptClientCodegen

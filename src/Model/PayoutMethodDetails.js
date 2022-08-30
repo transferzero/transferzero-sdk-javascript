@@ -29,6 +29,7 @@ import PayoutMethodDetailsMobile from './PayoutMethodDetailsMobile';
 import PayoutMethodDetailsNGNBank from './PayoutMethodDetailsNGNBank';
 import PayoutMethodDetailsUSDBank from './PayoutMethodDetailsUSDBank';
 import PayoutMethodDetailsUSDCash from './PayoutMethodDetailsUSDCash';
+import PayoutMethodDetailsXAFBank from './PayoutMethodDetailsXAFBank';
 import PayoutMethodDetailsXAFMobile from './PayoutMethodDetailsXAFMobile';
 import PayoutMethodDetailsXOFBank from './PayoutMethodDetailsXOFBank';
 import PayoutMethodDetailsXOFCash from './PayoutMethodDetailsXOFCash';
@@ -44,7 +45,7 @@ import PayoutMethodTransferReasonEnum from './PayoutMethodTransferReasonEnum';
 /**
  * The PayoutMethodDetails model module.
  * @module Model/PayoutMethodDetails
- * @version 1.21.0
+ * @version 1.22.0
  */
 class PayoutMethodDetails {
     /**
@@ -68,6 +69,7 @@ class PayoutMethodDetails {
      * @implements module:Model/PayoutMethodDetailsKESMobile
      * @implements module:Model/PayoutMethodDetailsKESBank
      * @implements module:Model/PayoutMethodDetailsXAFMobile
+     * @implements module:Model/PayoutMethodDetailsXAFBank
      * @implements module:Model/PayoutMethodDetailsGNFMobile
      * @param firstName {} 
      * @param lastName {} 
@@ -91,7 +93,7 @@ class PayoutMethodDetails {
      * @param swiftCode {} 
      */
     constructor(firstName, lastName, bankCode, bankAccount, phoneNumber, mobileProvider, country, iban, bankName, cashProvider, senderIdentityCardType, senderIdentityCardId, identityCardType, identityCardId, name, address, street, postalCode, city, swiftCode) { 
-        PayoutMethodDetailsNGNBank.initialize(this, firstName, lastName, bankCode, bankAccount);PayoutMethodDetailsMobile.initialize(this, firstName, lastName, phoneNumber);PayoutMethodDetailsXOFMobile.initialize(this, firstName, lastName, phoneNumber, mobileProvider);PayoutMethodDetailsXOFBank.initialize(this, firstName, lastName, iban);PayoutMethodDetailsXOFCash.initialize(this, firstName, lastName, phoneNumber, cashProvider);PayoutMethodDetailsGHSBank.initialize(this, firstName, lastName, bankCode, bankAccount);PayoutMethodDetailsGHSCash.initialize(this, firstName, lastName, phoneNumber);PayoutMethodDetailsGBPBank.initialize(this, firstName, lastName);PayoutMethodDetailsIBAN.initialize(this, firstName, lastName, iban);PayoutMethodDetailsMADCash.initialize(this, firstName, lastName, phoneNumber, senderIdentityCardType, senderIdentityCardId);PayoutMethodDetailsBalance.initialize(this);PayoutMethodDetailsBTC.initialize(this, firstName, lastName, name, address);PayoutMethodDetailsZARBank.initialize(this, firstName, lastName, street, postalCode, city, bankCode, bankAccount, phoneNumber);PayoutMethodDetailsUSDBank.initialize(this, firstName, lastName, phoneNumber, bankCode, bankAccount, country);PayoutMethodDetailsUSDCash.initialize(this, firstName, lastName, phoneNumber, country);PayoutMethodDetailsKESMobile.initialize(this, firstName, lastName, street, phoneNumber, mobileProvider, identityCardType, identityCardId);PayoutMethodDetailsKESBank.initialize(this, firstName, lastName, bankCode, street, bankAccount, bankName, swiftCode, identityCardType, identityCardId);PayoutMethodDetailsXAFMobile.initialize(this, firstName, lastName, phoneNumber, mobileProvider);PayoutMethodDetailsGNFMobile.initialize(this, firstName, lastName, phoneNumber, mobileProvider);
+        PayoutMethodDetailsNGNBank.initialize(this, firstName, lastName, bankCode, bankAccount);PayoutMethodDetailsMobile.initialize(this, firstName, lastName, phoneNumber);PayoutMethodDetailsXOFMobile.initialize(this, firstName, lastName, phoneNumber, mobileProvider);PayoutMethodDetailsXOFBank.initialize(this, firstName, lastName, iban);PayoutMethodDetailsXOFCash.initialize(this, firstName, lastName, phoneNumber, cashProvider);PayoutMethodDetailsGHSBank.initialize(this, firstName, lastName, bankCode, bankAccount);PayoutMethodDetailsGHSCash.initialize(this, firstName, lastName, phoneNumber);PayoutMethodDetailsGBPBank.initialize(this, firstName, lastName);PayoutMethodDetailsIBAN.initialize(this, firstName, lastName, iban);PayoutMethodDetailsMADCash.initialize(this, firstName, lastName, phoneNumber, senderIdentityCardType, senderIdentityCardId);PayoutMethodDetailsBalance.initialize(this);PayoutMethodDetailsBTC.initialize(this, firstName, lastName, name, address);PayoutMethodDetailsZARBank.initialize(this, firstName, lastName, street, postalCode, city, bankCode, bankAccount, phoneNumber);PayoutMethodDetailsUSDBank.initialize(this, firstName, lastName, phoneNumber, bankCode, bankAccount, country);PayoutMethodDetailsUSDCash.initialize(this, firstName, lastName, phoneNumber, country);PayoutMethodDetailsKESMobile.initialize(this, firstName, lastName, street, phoneNumber, mobileProvider, identityCardType, identityCardId);PayoutMethodDetailsKESBank.initialize(this, firstName, lastName, bankCode, street, bankAccount, bankName, swiftCode, identityCardType, identityCardId);PayoutMethodDetailsXAFMobile.initialize(this, firstName, lastName, phoneNumber, mobileProvider);PayoutMethodDetailsXAFBank.initialize(this, firstName, lastName, iban);PayoutMethodDetailsGNFMobile.initialize(this, firstName, lastName, phoneNumber, mobileProvider);
         PayoutMethodDetails.initialize(this, firstName, lastName, bankCode, bankAccount, phoneNumber, mobileProvider, country, iban, bankName, cashProvider, senderIdentityCardType, senderIdentityCardId, identityCardType, identityCardId, name, address, street, postalCode, city, swiftCode);
     }
 
@@ -131,6 +133,7 @@ class PayoutMethodDetails {
             PayoutMethodDetailsKESMobile.constructFromObject(data, obj);
             PayoutMethodDetailsKESBank.constructFromObject(data, obj);
             PayoutMethodDetailsXAFMobile.constructFromObject(data, obj);
+            PayoutMethodDetailsXAFBank.constructFromObject(data, obj);
             PayoutMethodDetailsGNFMobile.constructFromObject(data, obj);
 
         }
@@ -619,6 +622,43 @@ PayoutMethodDetailsXAFMobile.prototype['mobile_provider'] = undefined;
  * @member {module:Model/PayoutMethodCountryEnum} country
  */
 PayoutMethodDetailsXAFMobile.prototype['country'] = undefined;
+// Implement PayoutMethodDetailsXAFBank interface:
+/**
+ * @member {String} first_name
+ */
+PayoutMethodDetailsXAFBank.prototype['first_name'] = undefined;
+/**
+ * @member {String} last_name
+ */
+PayoutMethodDetailsXAFBank.prototype['last_name'] = undefined;
+/**
+ * @member {String} iban
+ */
+PayoutMethodDetailsXAFBank.prototype['iban'] = undefined;
+/**
+ * @member {String} bank_account
+ */
+PayoutMethodDetailsXAFBank.prototype['bank_account'] = undefined;
+/**
+ * @member {String} bank_name
+ */
+PayoutMethodDetailsXAFBank.prototype['bank_name'] = undefined;
+/**
+ * @member {String} bank_country
+ */
+PayoutMethodDetailsXAFBank.prototype['bank_country'] = undefined;
+/**
+ * @member {String} bank_code
+ */
+PayoutMethodDetailsXAFBank.prototype['bank_code'] = undefined;
+/**
+ * @member {String} sort_code
+ */
+PayoutMethodDetailsXAFBank.prototype['sort_code'] = undefined;
+/**
+ * @member {module:Model/PayoutMethodTransferReasonEnum} transfer_reason
+ */
+PayoutMethodDetailsXAFBank.prototype['transfer_reason'] = undefined;
 // Implement PayoutMethodDetailsGNFMobile interface:
 /**
  * @member {String} first_name
