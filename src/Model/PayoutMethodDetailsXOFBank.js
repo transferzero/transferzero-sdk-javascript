@@ -17,7 +17,7 @@ import PayoutMethodTransferReasonEnum from './PayoutMethodTransferReasonEnum';
 /**
  * The PayoutMethodDetailsXOFBank model module.
  * @module Model/PayoutMethodDetailsXOFBank
- * @version 1.22.1
+ * @version 1.23.0
  */
 class PayoutMethodDetailsXOFBank {
     /**

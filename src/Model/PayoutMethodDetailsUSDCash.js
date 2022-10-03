@@ -17,7 +17,7 @@ import PayoutMethodCountryEnum from './PayoutMethodCountryEnum';
 /**
  * The PayoutMethodDetailsUSDCash model module.
  * @module Model/PayoutMethodDetailsUSDCash
- * @version 1.22.1
+ * @version 1.23.0
  */
 class PayoutMethodDetailsUSDCash {
     /**
