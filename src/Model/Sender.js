@@ -20,7 +20,7 @@ import ValidationErrorDescription from './ValidationErrorDescription';
 /**
  * The Sender model module.
  * @module Model/Sender
- * @version 1.23.0
+ * @version 1.23.1
  */
 class Sender {
     /**
@@ -359,7 +359,7 @@ Sender.prototype['occupation'] = undefined;
 Sender.prototype['nationality'] = undefined;
 
 /**
- * Legal entity type (used only with a Business sender)  Available values:   - sole_proprietorship: Sole Proprietorship   - partnership: Partnership   - privately_owned_company: Privately Owned Company (Limited Company)   - publicly_owned_company: Publicly Listed Company (PLC)   - government_owned_entity: Government Owned Entity Trusts   - trust: Foundations & Similar Entities   - ngo: Non-Government Organisations / Charities inc Religious bodies and place of worship   - club_and_society: Clubs and Societies   - go: GO (Majority Owned Subsidiary of State-Owned Company)   - financial_institution: Financial Institution  Please note not all values are acceptable for some our corridors. Please reach out to our sales teams for more information.  Note that if you select `financial_institution` then the fields `vat_registration_number`, `financial_regulator` and `regulatory_licence_number` will be mandatory as well.
+ * Legal entity type (used only with a Business sender)  Available values:   - sole_proprietorship: Sole Proprietorship   - partnership: Partnership   - privately_owned_company: Privately Owned Company (Limited Company)   - publicly_owned_company: Publicly Listed Company (PLC)   - government_owned_entity: Government Owned Entity Trusts   - trust: Foundations & Similar Entities   - ngo: Non-Government Organisations / Charities inc Religious bodies and place of worship   - club_and_society: Clubs and Societies   - go: GO (Majority Owned Subsidiary of State-Owned Company)   - financial_institution: Financial Institution   - mto: Money Transfer Operator (MTO) / Other Licensed Financial Institution  Please note not all values are acceptable for some our corridors. Please reach out to our sales teams for more information.  Note that if you select `financial_institution` then the fields `vat_registration_number`, `financial_regulator` and `regulatory_licence_number` will be mandatory as well.
  * @member {module:Model/Sender.LegalEntityTypeEnum} legal_entity_type
  */
 Sender.prototype['legal_entity_type'] = undefined;
@@ -661,7 +661,13 @@ Sender['LegalEntityTypeEnum'] = {
      * value: "financial_institution"
      * @const
      */
-    "financial_institution": "financial_institution"
+    "financial_institution": "financial_institution",
+
+    /**
+     * value: "mto"
+     * @const
+     */
+    "mto": "mto"
 };
 
 
