@@ -20,7 +20,7 @@ import ValidationErrorDescription from './ValidationErrorDescription';
 /**
  * The Sender model module.
  * @module Model/Sender
- * @version 1.23.1
+ * @version 1.23.2
  */
 class Sender {
     /**
@@ -221,6 +221,39 @@ class Sender {
             if (data.hasOwnProperty('created_at')) {
                 obj['created_at'] = ApiClient.convertToType(data['created_at'], 'String');
             }
+            if (data.hasOwnProperty('company_office_number')) {
+                obj['company_office_number'] = ApiClient.convertToType(data['company_office_number'], 'String');
+            }
+            if (data.hasOwnProperty('company_office_number_country')) {
+                obj['company_office_number_country'] = ApiClient.convertToType(data['company_office_number_country'], 'String');
+            }
+            if (data.hasOwnProperty('aml_officer_email')) {
+                obj['aml_officer_email'] = ApiClient.convertToType(data['aml_officer_email'], 'String');
+            }
+            if (data.hasOwnProperty('aml_officer_phone')) {
+                obj['aml_officer_phone'] = ApiClient.convertToType(data['aml_officer_phone'], 'String');
+            }
+            if (data.hasOwnProperty('aml_officer_phone_country')) {
+                obj['aml_officer_phone_country'] = ApiClient.convertToType(data['aml_officer_phone_country'], 'String');
+            }
+            if (data.hasOwnProperty('company_website_url')) {
+                obj['company_website_url'] = ApiClient.convertToType(data['company_website_url'], 'String');
+            }
+            if (data.hasOwnProperty('tax_identification_no')) {
+                obj['tax_identification_no'] = ApiClient.convertToType(data['tax_identification_no'], 'String');
+            }
+            if (data.hasOwnProperty('number_of_employees_in_company')) {
+                obj['number_of_employees_in_company'] = ApiClient.convertToType(data['number_of_employees_in_company'], 'String');
+            }
+            if (data.hasOwnProperty('list_of_countries_of_operation')) {
+                obj['list_of_countries_of_operation'] = ApiClient.convertToType(data['list_of_countries_of_operation'], ['String']);
+            }
+            if (data.hasOwnProperty('estimated_annual_revenue_turnover')) {
+                obj['estimated_annual_revenue_turnover'] = ApiClient.convertToType(data['estimated_annual_revenue_turnover'], 'String');
+            }
+            if (data.hasOwnProperty('declaration')) {
+                obj['declaration'] = ApiClient.convertToType(data['declaration'], 'String');
+            }
         }
         return obj;
     }
@@ -359,7 +392,7 @@ Sender.prototype['occupation'] = undefined;
 Sender.prototype['nationality'] = undefined;
 
 /**
- * Legal entity type (used only with a Business sender)  Available values:   - sole_proprietorship: Sole Proprietorship   - partnership: Partnership   - privately_owned_company: Privately Owned Company (Limited Company)   - publicly_owned_company: Publicly Listed Company (PLC)   - government_owned_entity: Government Owned Entity Trusts   - trust: Foundations & Similar Entities   - ngo: Non-Government Organisations / Charities inc Religious bodies and place of worship   - club_and_society: Clubs and Societies   - go: GO (Majority Owned Subsidiary of State-Owned Company)   - financial_institution: Financial Institution   - mto: Money Transfer Operator (MTO) / Other Licensed Financial Institution  Please note not all values are acceptable for some our corridors. Please reach out to our sales teams for more information.  Note that if you select `financial_institution` then the fields `vat_registration_number`, `financial_regulator` and `regulatory_licence_number` will be mandatory as well.
+ * Legal entity type (used only with a Business sender)  Available values:   - sole_proprietorship: Sole Proprietorship   - partnership: Partnership   - privately_owned_company: Privately Owned Company (Limited Company)   - publicly_owned_company: Publicly Listed Company (PLC)   - government_owned_entity: Government Owned Entity Trusts   - trust: Foundations & Similar Entities   - ngo: Non-Government Organisations / Charities inc Religious bodies and place of worship   - club_and_society: Clubs and Societies   - go: GO (Majority Owned Subsidiary of State-Owned Company)   - financial_institution: Financial Institution   - mto: Money Transfer Operator (MTO) / Other Licensed Financial Institution  Please note not all values are acceptable for some our corridors. Please reach out to our sales teams for more information.  Note that if you select `financial_institution` then the fields `vat_registration_number`, `financial_regulator` and `regulatory_licence_number` will be mandatory as well.  Note that if you select `mto` then following fields will be mandatory as well: `regulatory_licence_number`, `company_office_number`, `company_office_number_country`, `aml_officer_email`, `aml_officer_phone`, `aml_officer_phone_country`, `company_website_url`, `tax_identification_no`, `number_of_employees_in_company`, `list_of_countries_of_operation`, `estimated_annual_revenue_turnover`, `declaration`.
  * @member {module:Model/Sender.LegalEntityTypeEnum} legal_entity_type
  */
 Sender.prototype['legal_entity_type'] = undefined;
@@ -531,6 +564,72 @@ Sender.prototype['sales_lead_id'] = undefined;
  * @member {String} created_at
  */
 Sender.prototype['created_at'] = undefined;
+
+/**
+ * Phone number of company office (without country callcode, used only with a Business sender)
+ * @member {String} company_office_number
+ */
+Sender.prototype['company_office_number'] = undefined;
+
+/**
+ * Phone number country of company office in 2-character alpha ISO 3166-2 country format (used only with a Business sender)
+ * @member {String} company_office_number_country
+ */
+Sender.prototype['company_office_number_country'] = undefined;
+
+/**
+ * Email address of AML Officer (used only with a Business sender)
+ * @member {String} aml_officer_email
+ */
+Sender.prototype['aml_officer_email'] = undefined;
+
+/**
+ * Phone number of AML Officer (without country callcode, used only with a Business sender)
+ * @member {String} aml_officer_phone
+ */
+Sender.prototype['aml_officer_phone'] = undefined;
+
+/**
+ * Phone number country of AML Officer in 2-character alpha ISO 3166-2 country format (used only with a Business sender)
+ * @member {String} aml_officer_phone_country
+ */
+Sender.prototype['aml_officer_phone_country'] = undefined;
+
+/**
+ * Company website URL (used only with a Business sender)
+ * @member {String} company_website_url
+ */
+Sender.prototype['company_website_url'] = undefined;
+
+/**
+ * Tax Identification Number (used only with a Business sender)
+ * @member {String} tax_identification_no
+ */
+Sender.prototype['tax_identification_no'] = undefined;
+
+/**
+ * Number of employees in company (used only with a Business sender)
+ * @member {String} number_of_employees_in_company
+ */
+Sender.prototype['number_of_employees_in_company'] = undefined;
+
+/**
+ * List of countries of operation (used only with a Business sender)
+ * @member {Array.<String>} list_of_countries_of_operation
+ */
+Sender.prototype['list_of_countries_of_operation'] = undefined;
+
+/**
+ * Estimated annual turnover (in USD or equivalent, used only with a Business sender)
+ * @member {String} estimated_annual_revenue_turnover
+ */
+Sender.prototype['estimated_annual_revenue_turnover'] = undefined;
+
+/**
+ * Declaration that the signatory is authorised (used only with a Business sender)
+ * @member {String} declaration
+ */
+Sender.prototype['declaration'] = undefined;
 
 
 
