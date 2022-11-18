@@ -5,6 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **firstName** | **String** |  | 
 **lastName** | **String** |  | 
+**phoneNumber** | **String** |  | [optional] 
 **bankCode** | **String** |  | 
 **branchCode** | **String** |  | 
 **bankAccount** | **String** |  | 

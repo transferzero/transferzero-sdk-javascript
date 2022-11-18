@@ -46,7 +46,7 @@ import PayoutMethodTransferReasonEnum from './PayoutMethodTransferReasonEnum';
 /**
  * The PayoutMethodDetails model module.
  * @module Model/PayoutMethodDetails
- * @version 1.23.2
+ * @version 1.23.3
  */
 class PayoutMethodDetails {
     /**
@@ -691,6 +691,10 @@ PayoutMethodDetailsBRLBank.prototype['first_name'] = undefined;
  * @member {String} last_name
  */
 PayoutMethodDetailsBRLBank.prototype['last_name'] = undefined;
+/**
+ * @member {String} phone_number
+ */
+PayoutMethodDetailsBRLBank.prototype['phone_number'] = undefined;
 /**
  * @member {String} bank_code
  */
