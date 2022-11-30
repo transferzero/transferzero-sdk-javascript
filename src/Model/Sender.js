@@ -20,25 +20,24 @@ import ValidationErrorDescription from './ValidationErrorDescription';
 /**
  * The Sender model module.
  * @module Model/Sender
- * @version 1.23.3
+ * @version 1.23.4
  */
 class Sender {
     /**
      * Constructs a new <code>Sender</code>.
-     * This contains the details of the sender. The first time a specific sender is used the full details should be provided. Once a sender is created and is used, the next time you MUST only send the ID of the sender. This is so we can match the same sender across multiple transactions for KYC and audit purposes.  Personal Sender Example: &#x60;&#x60;&#x60;json {   // name   \&quot;first_name\&quot;: \&quot;Jane\&quot;,   \&quot;last_name\&quot;: \&quot;Doe\&quot;,    // address   \&quot;country\&quot;: \&quot;US\&quot;,   \&quot;city\&quot;: \&quot;New York\&quot;,   \&quot;street\&quot;: \&quot;20 W 34th St\&quot;,   \&quot;postal_code\&quot;: \&quot;10001\&quot;,   \&quot;address_description\&quot;: \&quot;\&quot;,    // DOB   \&quot;birth_date\&quot;: \&quot;1974-12-24\&quot;,    // Contact Details; You can usually use your company&#39;s contact details here   \&quot;phone_country\&quot;: \&quot;US\&quot;,   \&quot;phone_number\&quot;: \&quot;5555551234\&quot;,   \&quot;email\&quot;: \&quot;info@transferzero.com\&quot;,    // ID of the sender in your system   \&quot;external_id\&quot;: \&quot;Sender:US:234523\&quot;,    // these fields are mandatory, but you can usually leave them with the following default values:   \&quot;documents\&quot;: [ ],   \&quot;ip\&quot;: \&quot;127.0.0.1\&quot;,   \&quot;metadata\&quot;: {} } &#x60;&#x60;&#x60;  Business Sender Example:  &#x60;&#x60;&#x60;json {   \&quot;type\&quot;: \&quot;business\&quot;,   \&quot;name\&quot;: \&quot;Company name\&quot;,    // Country of Incorporation   \&quot;country\&quot;: \&quot;US\&quot;,    // Trading address of the company   \&quot;trading_country\&quot;: \&quot;US\&quot;,   \&quot;city\&quot;: \&quot;New York\&quot;,   \&quot;street\&quot;: \&quot;20 W 34th St\&quot;,   \&quot;postal_code\&quot;: \&quot;10001\&quot;,   \&quot;address_description\&quot;: \&quot;\&quot;,    // Company Details   \&quot;legal_entity_type\&quot;: \&quot;privately_owned_company\&quot;,   \&quot;registration_date\&quot;: \&quot;2012-01-25\&quot;,   \&quot;registration_number\&quot;: \&quot;VAT1234567\&quot;,   \&quot;nature_of_business\&quot;: \&quot;retail_trade\&quot;,    // Contact Details   \&quot;phone_country\&quot;: \&quot;US\&quot;,   \&quot;phone_number\&quot;: \&quot;5555551234\&quot;,   \&quot;email\&quot;: \&quot;example@home.org\&quot;,    // ID of the sender in your system   \&quot;external_id\&quot;: \&quot;Sender:Business:US:234523\&quot;,    // these fields are mandatory, but you can usually leave them with the following default values:   \&quot;documents\&quot;: [ ],   \&quot;ip\&quot;: \&quot;127.0.0.1\&quot;,   \&quot;metadata\&quot;: {} } &#x60;&#x60;&#x60;  [Sender in the API documentation](https://docs.transferzero.com/docs/transaction-flow/#sender)
+     * This contains the details of the sender. The first time a specific sender is used the full details should be provided. Once a sender is created and is used, the next time you MUST only send the ID of the sender. This is so we can match the same sender across multiple transactions for KYC and audit purposes.  Personal Sender Example: &#x60;&#x60;&#x60;json {   // name   \&quot;first_name\&quot;: \&quot;Jane\&quot;,   \&quot;last_name\&quot;: \&quot;Doe\&quot;,    // address   \&quot;country\&quot;: \&quot;US\&quot;,   \&quot;city\&quot;: \&quot;New York\&quot;,   \&quot;street\&quot;: \&quot;20 W 34th St\&quot;,   \&quot;postal_code\&quot;: \&quot;10001\&quot;,   \&quot;address_description\&quot;: \&quot;\&quot;,    // DOB   \&quot;birth_date\&quot;: \&quot;1974-12-24\&quot;,    // Contact Details; You can usually use your company&#39;s contact details here   \&quot;phone_number\&quot;: \&quot;+15555551234\&quot;,   \&quot;email\&quot;: \&quot;info@transferzero.com\&quot;,    // ID of the sender in your system   \&quot;external_id\&quot;: \&quot;Sender:US:234523\&quot;,    // these fields are mandatory, but you can usually leave them with the following default values:   \&quot;documents\&quot;: [ ],   \&quot;ip\&quot;: \&quot;127.0.0.1\&quot;,   \&quot;metadata\&quot;: {} } &#x60;&#x60;&#x60;  Business Sender Example:  &#x60;&#x60;&#x60;json {   \&quot;type\&quot;: \&quot;business\&quot;,   \&quot;name\&quot;: \&quot;Company name\&quot;,    // Country of Incorporation   \&quot;country\&quot;: \&quot;US\&quot;,    // Trading address of the company   \&quot;trading_country\&quot;: \&quot;US\&quot;,   \&quot;city\&quot;: \&quot;New York\&quot;,   \&quot;street\&quot;: \&quot;20 W 34th St\&quot;,   \&quot;postal_code\&quot;: \&quot;10001\&quot;,   \&quot;address_description\&quot;: \&quot;\&quot;,    // Company Details   \&quot;legal_entity_type\&quot;: \&quot;privately_owned_company\&quot;,   \&quot;registration_date\&quot;: \&quot;2012-01-25\&quot;,   \&quot;registration_number\&quot;: \&quot;VAT1234567\&quot;,   \&quot;nature_of_business\&quot;: \&quot;retail_trade\&quot;,    // Contact Details   \&quot;phone_number\&quot;: \&quot;+15555551234\&quot;,   \&quot;email\&quot;: \&quot;example@home.org\&quot;,    // ID of the sender in your system   \&quot;external_id\&quot;: \&quot;Sender:Business:US:234523\&quot;,    // these fields are mandatory, but you can usually leave them with the following default values:   \&quot;documents\&quot;: [ ],   \&quot;ip\&quot;: \&quot;127.0.0.1\&quot;,   \&quot;metadata\&quot;: {} } &#x60;&#x60;&#x60;  [Sender in the API documentation](https://docs.transferzero.com/docs/transaction-flow/#sender)
      * @alias module:Model/Sender
      * @param country {String} Country of sender in 2-character alpha ISO 3166-2 country format. This is the residential country for personal senders and the country of incorporation for business senders.
      * @param street {String} Sender's street
      * @param postalCode {String} Zip code of sender
      * @param city {String} Sender's city
-     * @param phoneCountry {String} Phone country of sender in 2-character alpha ISO 3166-2 country format
      * @param email {String} Email of sender
      * @param ip {String} IP of sender
      * @param documents {Array.<module:Model/Document>} Needed for KYC checks. Required to approve the sender unless KYC is waived for your account. Please send us an empty list of documents: `\"documents\": [ ]` in the request if KYC has been waived.  If the documents already exist, please send the Document ID eg. ```JSON \"documents\": [   {     \"id\": \"b6648ba3-1c7b-4f59-8580-684899c84a07\"   } ] ```
      */
-    constructor(country, street, postalCode, city, phoneCountry, email, ip, documents) { 
+    constructor(country, street, postalCode, city, email, ip, documents) { 
         
-        Sender.initialize(this, country, street, postalCode, city, phoneCountry, email, ip, documents);
+        Sender.initialize(this, country, street, postalCode, city, email, ip, documents);
     }
 
     /**
@@ -46,12 +45,11 @@ class Sender {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, country, street, postalCode, city, phoneCountry, email, ip, documents) { 
+    static initialize(obj, country, street, postalCode, city, email, ip, documents) { 
         obj['country'] = country;
         obj['street'] = street;
         obj['postal_code'] = postalCode;
         obj['city'] = city;
-        obj['phone_country'] = phoneCountry;
         obj['email'] = email;
         obj['ip'] = ip;
         obj['documents'] = documents;

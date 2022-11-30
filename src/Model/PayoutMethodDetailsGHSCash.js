@@ -16,12 +16,12 @@ import ApiClient from '../ApiClient';
 /**
  * The PayoutMethodDetailsGHSCash model module.
  * @module Model/PayoutMethodDetailsGHSCash
- * @version 1.23.3
+ * @version 1.23.4
  */
 class PayoutMethodDetailsGHSCash {
     /**
      * Constructs a new <code>PayoutMethodDetailsGHSCash</code>.
-     * &#x60;&#x60;&#x60;JSON \&quot;details\&quot;: {   \&quot;first_name\&quot;: \&quot;First\&quot;,   \&quot;last_name\&quot;: \&quot;Last\&quot;,   \&quot;phone_number\&quot;: \&quot;0322023144\&quot; } &#x60;&#x60;&#x60;
+     * &#x60;&#x60;&#x60;JSON \&quot;details\&quot;: {   \&quot;first_name\&quot;: \&quot;First\&quot;,   \&quot;last_name\&quot;: \&quot;Last\&quot;,   \&quot;phone_number\&quot;: \&quot;+233322023144\&quot; } &#x60;&#x60;&#x60;
      * @alias module:Model/PayoutMethodDetailsGHSCash
      * @param firstName {String} 
      * @param lastName {String} 

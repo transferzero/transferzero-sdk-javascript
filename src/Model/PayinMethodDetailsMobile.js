@@ -18,12 +18,12 @@ import PayoutMethodMobileProviderEnum from './PayoutMethodMobileProviderEnum';
 /**
  * The PayinMethodDetailsMobile model module.
  * @module Model/PayinMethodDetailsMobile
- * @version 1.23.3
+ * @version 1.23.4
  */
 class PayinMethodDetailsMobile {
     /**
      * Constructs a new <code>PayinMethodDetailsMobile</code>.
-     * &#x60;&#x60;&#x60;JSON \&quot;details\&quot;: {   \&quot;phone_number\&quot;: \&quot;+2569999999\&quot;, } &#x60;&#x60;&#x60;
+     * &#x60;&#x60;&#x60;JSON \&quot;details\&quot;: {   \&quot;phone_number\&quot;: \&quot;+256129999999\&quot;, } &#x60;&#x60;&#x60;
      * @alias module:Model/PayinMethodDetailsMobile
      */
     constructor() { 

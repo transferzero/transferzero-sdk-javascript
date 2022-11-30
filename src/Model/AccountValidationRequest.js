@@ -17,7 +17,7 @@ import PayoutMethodMobileProviderEnum from './PayoutMethodMobileProviderEnum';
 /**
  * The AccountValidationRequest model module.
  * @module Model/AccountValidationRequest
- * @version 1.23.3
+ * @version 1.23.4
  */
 class AccountValidationRequest {
     /**
@@ -104,7 +104,7 @@ AccountValidationRequest.prototype['bank_code'] = undefined;
 AccountValidationRequest.prototype['iban'] = undefined;
 
 /**
- * Phone number to query
+ * Phone number to query in E.164 format
  * @member {String} phone_number
  */
 AccountValidationRequest.prototype['phone_number'] = undefined;

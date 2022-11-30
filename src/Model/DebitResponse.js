@@ -17,7 +17,7 @@ import Debit from './Debit';
 /**
  * The DebitResponse model module.
  * @module Model/DebitResponse
- * @version 1.23.3
+ * @version 1.23.4
  */
 class DebitResponse {
     /**

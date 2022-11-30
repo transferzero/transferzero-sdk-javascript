@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ApiLog model module.
  * @module Model/ApiLog
- * @version 1.23.3
+ * @version 1.23.4
  */
 class ApiLog {
     /**

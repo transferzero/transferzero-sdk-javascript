@@ -17,7 +17,7 @@ import WebhookLog from './WebhookLog';
 /**
  * The WebhookLogResponse model module.
  * @module Model/WebhookLogResponse
- * @version 1.23.3
+ * @version 1.23.4
  */
 class WebhookLogResponse {
     /**
