@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The PayoutMethodDetailsGHSBank model module.
  * @module Model/PayoutMethodDetailsGHSBank
- * @version 1.23.4
+ * @version 1.23.5
  */
 class PayoutMethodDetailsGHSBank {
     /**

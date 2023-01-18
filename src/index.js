@@ -90,6 +90,7 @@ import PayoutMethodLegalEntityTypeEnum from './Model/PayoutMethodLegalEntityType
 import PayoutMethodListResponse from './Model/PayoutMethodListResponse';
 import PayoutMethodMobileProviderEnum from './Model/PayoutMethodMobileProviderEnum';
 import PayoutMethodNatureOfBusinessEnum from './Model/PayoutMethodNatureOfBusinessEnum';
+import PayoutMethodPixKeyTypeEnum from './Model/PayoutMethodPixKeyTypeEnum';
 import PayoutMethodRequest from './Model/PayoutMethodRequest';
 import PayoutMethodResponse from './Model/PayoutMethodResponse';
 import PayoutMethodTransferReasonEnum from './Model/PayoutMethodTransferReasonEnum';
@@ -180,7 +181,7 @@ import WebhooksApi from './Api/WebhooksApi';
 * </pre>
 * </p>
 * @module index
-* @version 1.23.4
+* @version 1.23.5
 */
 export default {
     /**
@@ -652,6 +653,12 @@ export default {
     PayoutMethodNatureOfBusinessEnum,
 
     /**
+     * The PayoutMethodPixKeyTypeEnum model constructor.
+     * @property {module:Model/PayoutMethodPixKeyTypeEnum}
+     */
+    PayoutMethodPixKeyTypeEnum,
+
+    /**
      * The PayoutMethodRequest model constructor.
      * @property {module:Model/PayoutMethodRequest}
      */
@@ -1085,6 +1092,7 @@ export {
     PayoutMethodListResponse,
     PayoutMethodMobileProviderEnum,
     PayoutMethodNatureOfBusinessEnum,
+    PayoutMethodPixKeyTypeEnum,
     PayoutMethodRequest,
     PayoutMethodResponse,
     PayoutMethodTransferReasonEnum,

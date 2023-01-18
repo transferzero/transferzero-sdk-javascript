@@ -218,6 +218,7 @@ Class | Method | HTTP request | Description
  - [TransferzeroSdk.PayoutMethodListResponse](docs/PayoutMethodListResponse.md)
  - [TransferzeroSdk.PayoutMethodMobileProviderEnum](docs/PayoutMethodMobileProviderEnum.md)
  - [TransferzeroSdk.PayoutMethodNatureOfBusinessEnum](docs/PayoutMethodNatureOfBusinessEnum.md)
+ - [TransferzeroSdk.PayoutMethodPixKeyTypeEnum](docs/PayoutMethodPixKeyTypeEnum.md)
  - [TransferzeroSdk.PayoutMethodRequest](docs/PayoutMethodRequest.md)
  - [TransferzeroSdk.PayoutMethodResponse](docs/PayoutMethodResponse.md)
  - [TransferzeroSdk.PayoutMethodTransferReasonEnum](docs/PayoutMethodTransferReasonEnum.md)
@@ -292,5 +293,5 @@ apiClient.basePath = 'https://api-sandbox.transferzero.com/v1';
 
 
 - API version: 1.0
-- Package version: 1.23.4
+- Package version: 1.23.5
 - Build package: org.openapitools.codegen.languages.JavascriptClientCodegen
