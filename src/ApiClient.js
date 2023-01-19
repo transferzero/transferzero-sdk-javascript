@@ -36,7 +36,7 @@ class ApiError {
 
 /**
 * @module ApiClient
-* @version 1.23.5
+* @version 1.23.6
 */
 
 /**
@@ -461,7 +461,7 @@ export default class ApiClient {
       // set header parameters
       request.set(this.defaultHeaders).set(this.normalizeParams(headerParams));
 
-      request.set("User-Agent","TransferZero-SDK/JavaScript/1.23.5");
+      request.set("User-Agent","TransferZero-SDK/JavaScript/1.23.6");
 
       // set requestAgent if it is set by user
       if (this.requestAgent) {

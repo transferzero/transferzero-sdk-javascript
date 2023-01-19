@@ -104,6 +104,13 @@ export default class PayoutMethodCountryEnum {
 
     
         /**
+         * value: "AX"
+         * @const
+         */
+        "AX" = "AX";
+
+    
+        /**
          * value: "AU"
          * @const
          */
