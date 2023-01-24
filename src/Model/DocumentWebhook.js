@@ -18,7 +18,7 @@ import Webhook from './Webhook';
 /**
  * The DocumentWebhook model module.
  * @module Model/DocumentWebhook
- * @version 1.23.6
+ * @version 1.23.7
  */
 class DocumentWebhook {
     /**

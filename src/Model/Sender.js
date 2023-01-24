@@ -20,7 +20,7 @@ import ValidationErrorDescription from './ValidationErrorDescription';
 /**
  * The Sender model module.
  * @module Model/Sender
- * @version 1.23.6
+ * @version 1.23.7
  */
 class Sender {
     /**
@@ -237,9 +237,6 @@ class Sender {
             if (data.hasOwnProperty('company_website_url')) {
                 obj['company_website_url'] = ApiClient.convertToType(data['company_website_url'], 'String');
             }
-            if (data.hasOwnProperty('tax_identification_no')) {
-                obj['tax_identification_no'] = ApiClient.convertToType(data['tax_identification_no'], 'String');
-            }
             if (data.hasOwnProperty('number_of_employees_in_company')) {
                 obj['number_of_employees_in_company'] = ApiClient.convertToType(data['number_of_employees_in_company'], 'String');
             }
@@ -390,7 +387,7 @@ Sender.prototype['occupation'] = undefined;
 Sender.prototype['nationality'] = undefined;
 
 /**
- * Legal entity type (used only with a Business sender)  Available values:   - sole_proprietorship: Sole Proprietorship   - partnership: Partnership   - privately_owned_company: Privately Owned Company (Limited Company)   - publicly_owned_company: Publicly Listed Company (PLC)   - government_owned_entity: Government Owned Entity Trusts   - trust: Foundations & Similar Entities   - ngo: Non-Government Organisations / Charities inc Religious bodies and place of worship   - club_and_society: Clubs and Societies   - go: GO (Majority Owned Subsidiary of State-Owned Company)   - financial_institution: Financial Institution   - mto: Money Transfer Operator (MTO) / Other Licensed Financial Institution  Please note not all values are acceptable for some our corridors. Please reach out to our sales teams for more information.  Note that if you select `financial_institution` then the fields `vat_registration_number`, `financial_regulator` and `regulatory_licence_number` will be mandatory as well.  Note that if you select `mto` then following fields will be mandatory as well: `regulatory_licence_number`, `company_office_number`, `company_office_number_country`, `aml_officer_email`, `aml_officer_phone`, `aml_officer_phone_country`, `company_website_url`, `tax_identification_no`, `number_of_employees_in_company`, `list_of_countries_of_operation`, `estimated_annual_revenue_turnover`, `declaration`.
+ * Legal entity type (used only with a Business sender)  Available values:   - sole_proprietorship: Sole Proprietorship   - partnership: Partnership   - privately_owned_company: Privately Owned Company (Limited Company)   - publicly_owned_company: Publicly Listed Company (PLC)   - government_owned_entity: Government Owned Entity Trusts   - trust: Foundations & Similar Entities   - ngo: Non-Government Organisations / Charities inc Religious bodies and place of worship   - club_and_society: Clubs and Societies   - go: GO (Majority Owned Subsidiary of State-Owned Company)   - financial_institution: Financial Institution   - mto: Money Transfer Operator (MTO) / Other Licensed Financial Institution  Please note not all values are acceptable for some our corridors. Please reach out to our sales teams for more information.  Note that if you select `financial_institution` then the fields `vat_registration_number`, `financial_regulator` and `regulatory_licence_number` will be mandatory as well.  Note that if you select `mto` then following fields will be mandatory as well: `vat_registration_number`, `financial_regulator`, `regulatory_licence_number`, `company_office_number`, `company_office_number_country`, `aml_officer_email`, `aml_officer_phone`, `aml_officer_phone_country`, `company_website_url`, `number_of_employees_in_company`, `list_of_countries_of_operation`, `estimated_annual_revenue_turnover`, `declaration`.
  * @member {module:Model/Sender.LegalEntityTypeEnum} legal_entity_type
  */
 Sender.prototype['legal_entity_type'] = undefined;
@@ -598,12 +595,6 @@ Sender.prototype['aml_officer_phone_country'] = undefined;
  * @member {String} company_website_url
  */
 Sender.prototype['company_website_url'] = undefined;
-
-/**
- * Tax Identification Number (used only with a Business sender)
- * @member {String} tax_identification_no
- */
-Sender.prototype['tax_identification_no'] = undefined;
 
 /**
  * Number of employees in company (used only with a Business sender)
