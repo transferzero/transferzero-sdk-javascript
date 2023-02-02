@@ -76,6 +76,7 @@ import PayoutMethodDetailsKESMobile from './Model/PayoutMethodDetailsKESMobile';
 import PayoutMethodDetailsMADCash from './Model/PayoutMethodDetailsMADCash';
 import PayoutMethodDetailsMobile from './Model/PayoutMethodDetailsMobile';
 import PayoutMethodDetailsNGNBank from './Model/PayoutMethodDetailsNGNBank';
+import PayoutMethodDetailsNZDBank from './Model/PayoutMethodDetailsNZDBank';
 import PayoutMethodDetailsUSDBank from './Model/PayoutMethodDetailsUSDBank';
 import PayoutMethodDetailsUSDCash from './Model/PayoutMethodDetailsUSDCash';
 import PayoutMethodDetailsXAFBank from './Model/PayoutMethodDetailsXAFBank';
@@ -181,7 +182,7 @@ import WebhooksApi from './Api/WebhooksApi';
 * </pre>
 * </p>
 * @module index
-* @version 1.23.7
+* @version 1.24.0
 */
 export default {
     /**
@@ -567,6 +568,12 @@ export default {
      * @property {module:Model/PayoutMethodDetailsNGNBank}
      */
     PayoutMethodDetailsNGNBank,
+
+    /**
+     * The PayoutMethodDetailsNZDBank model constructor.
+     * @property {module:Model/PayoutMethodDetailsNZDBank}
+     */
+    PayoutMethodDetailsNZDBank,
 
     /**
      * The PayoutMethodDetailsUSDBank model constructor.
@@ -1078,6 +1085,7 @@ export {
     PayoutMethodDetailsMADCash,
     PayoutMethodDetailsMobile,
     PayoutMethodDetailsNGNBank,
+    PayoutMethodDetailsNZDBank,
     PayoutMethodDetailsUSDBank,
     PayoutMethodDetailsUSDCash,
     PayoutMethodDetailsXAFBank,
