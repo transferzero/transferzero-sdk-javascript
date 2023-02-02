@@ -5,6 +5,8 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **firstName** | **String** |  | 
 **lastName** | **String** |  | 
+**city** | **String** |  | 
+**postalCode** | **String** |  | 
 **phoneNumber** | **String** |  | [optional] 
 **bankCode** | **String** |  | [optional] 
 **branchCode** | **String** |  | [optional] 
