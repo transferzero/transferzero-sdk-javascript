@@ -199,6 +199,7 @@ Class | Method | HTTP request | Description
  - [TransferzeroSdk.PayoutMethodDetailsGHSCash](docs/PayoutMethodDetailsGHSCash.md)
  - [TransferzeroSdk.PayoutMethodDetailsGNFMobile](docs/PayoutMethodDetailsGNFMobile.md)
  - [TransferzeroSdk.PayoutMethodDetailsIBAN](docs/PayoutMethodDetailsIBAN.md)
+ - [TransferzeroSdk.PayoutMethodDetailsINRBank](docs/PayoutMethodDetailsINRBank.md)
  - [TransferzeroSdk.PayoutMethodDetailsKESBank](docs/PayoutMethodDetailsKESBank.md)
  - [TransferzeroSdk.PayoutMethodDetailsKESMobile](docs/PayoutMethodDetailsKESMobile.md)
  - [TransferzeroSdk.PayoutMethodDetailsMADCash](docs/PayoutMethodDetailsMADCash.md)
