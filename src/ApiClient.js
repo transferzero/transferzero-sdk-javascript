@@ -1,6 +1,6 @@
 /**
- * TransferZero API
- * Reference documentation for the TransferZero API V1
+ * BitPesa Private API
+ * API specification used for internal BitPesa endpoints
  *
  * OpenAPI spec version: 1.0
  * 
@@ -54,7 +54,7 @@ export default class ApiClient {
         /**
          * The base URL against which to resolve every API call's (relative) path.
          * @type {String}
-         * @default https://api-sandbox.transferzero.com/v1
+         * @default https://api-sandbox.bitpesa.co/v1
          */
         this.basePath = config.basePath;
         this.apiKey = config.apiKey;
