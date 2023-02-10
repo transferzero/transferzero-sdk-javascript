@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The OpenCorporatesSupportedCountries model module.
  * @module Model/OpenCorporatesSupportedCountries
- * @version 1.24.0
+ * @version 1.25.0
  */
 class OpenCorporatesSupportedCountries {
     /**

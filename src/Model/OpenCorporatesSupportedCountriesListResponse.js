@@ -17,7 +17,7 @@ import OpenCorporatesSupportedCountries from './OpenCorporatesSupportedCountries
 /**
  * The OpenCorporatesSupportedCountriesListResponse model module.
  * @module Model/OpenCorporatesSupportedCountriesListResponse
- * @version 1.24.0
+ * @version 1.25.0
  */
 class OpenCorporatesSupportedCountriesListResponse {
     /**

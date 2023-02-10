@@ -17,7 +17,7 @@ import PoliticallyExposedPerson from './PoliticallyExposedPerson';
 /**
  * The PoliticallyExposedPersonResponse model module.
  * @module Model/PoliticallyExposedPersonResponse
- * @version 1.24.0
+ * @version 1.25.0
  */
 class PoliticallyExposedPersonResponse {
     /**

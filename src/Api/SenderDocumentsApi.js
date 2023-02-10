@@ -19,7 +19,7 @@ import DocumentResponse from '../Model/DocumentResponse';
 /**
 * SenderDocuments service.
 * @module Api/SenderDocumentsApi
-* @version 1.24.0
+* @version 1.25.0
 */
 export default class SenderDocumentsApi {
 

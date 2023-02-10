@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The OpenCorporatesSenderUpdate model module.
  * @module Model/OpenCorporatesSenderUpdate
- * @version 1.24.0
+ * @version 1.25.0
  */
 class OpenCorporatesSenderUpdate {
     /**

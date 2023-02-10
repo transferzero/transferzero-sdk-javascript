@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The EntityCreateRequest model module.
  * @module Model/EntityCreateRequest
- * @version 1.24.0
+ * @version 1.25.0
  */
 class EntityCreateRequest {
     /**

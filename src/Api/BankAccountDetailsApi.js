@@ -18,7 +18,7 @@ import BankAccountDetailsResponse from '../Model/BankAccountDetailsResponse';
 /**
 * BankAccountDetails service.
 * @module Api/BankAccountDetailsApi
-* @version 1.24.0
+* @version 1.25.0
 */
 export default class BankAccountDetailsApi {
 

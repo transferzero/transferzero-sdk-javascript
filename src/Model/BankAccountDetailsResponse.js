@@ -18,7 +18,7 @@ import PaginationMeta from './PaginationMeta';
 /**
  * The BankAccountDetailsResponse model module.
  * @module Model/BankAccountDetailsResponse
- * @version 1.24.0
+ * @version 1.25.0
  */
 class BankAccountDetailsResponse {
     /**

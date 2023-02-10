@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The TransactionReqLimitsResponseObject model module.
  * @module Model/TransactionReqLimitsResponseObject
- * @version 1.24.0
+ * @version 1.25.0
  */
 class TransactionReqLimitsResponseObject {
     /**
