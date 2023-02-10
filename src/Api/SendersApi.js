@@ -1,6 +1,6 @@
 /**
- * BitPesa Private API
- * API specification used for internal BitPesa endpoints
+ * TransferZero API
+ * Reference documentation for the TransferZero API V1
  *
  * OpenAPI spec version: 1.0
  * 
@@ -20,7 +20,7 @@ import SenderResponse from '../Model/SenderResponse';
 /**
 * Senders service.
 * @module Api/SendersApi
-* @version 1.24.0
+* @version 1.25.0
 */
 export default class SendersApi {
 
@@ -35,57 +35,6 @@ export default class SendersApi {
         this.apiClient = apiClient || ApiClient.instance;
     }
 
-
-
-    /**
-     * Change sender onboarding state to &#39;profile_completed&#39;
-     * Transition sender to the &#39;profile_completed&#39; onboarding state. This will only work if the sender has all the required documents uploaded and profile information present. 
-     * @param {String} senderID ID of the sender to get.  Example: &#x60;/v1/senders/bf9ff782-e182-45ac-abea-5bce83ad6670/confirm_verification&#x60;
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:Model/SenderResponse} and HTTP response
-     */
-    confirmSenderVerificationWithHttpInfo(senderID) {
-      let postBody = null;
-
-      // verify the required parameter 'senderID' is set
-      if (senderID === undefined || senderID === null) {
-        throw new Error("Missing the required parameter 'senderID' when calling confirmSenderVerification");
-      }
-
-
-      let pathParams = {
-        'Sender ID': senderID
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = ['AuthorizationKey', 'AuthorizationNonce', 'AuthorizationSecret', 'AuthorizationSignature'];
-      let contentTypes = [];
-      let accepts = ['application/json'];
-      let returnType = SenderResponse;
-
-      return this.apiClient.callApi(
-        '/senders/{Sender ID}/confirm_verification', 'POST',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType
-      );
-    }
-
-    /**
-     * Change sender onboarding state to &#39;profile_completed&#39;
-     * Transition sender to the &#39;profile_completed&#39; onboarding state. This will only work if the sender has all the required documents uploaded and profile information present. 
-     * @param {String} senderID ID of the sender to get.  Example: &#x60;/v1/senders/bf9ff782-e182-45ac-abea-5bce83ad6670/confirm_verification&#x60;
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:Model/SenderResponse}
-     */
-    confirmSenderVerification(senderID) {
-      return this.confirmSenderVerificationWithHttpInfo(senderID)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
 
 
     /**
