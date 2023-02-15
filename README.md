@@ -1,7 +1,7 @@
 # transferzero-sdk
 
 TransferzeroSdk - JavaScript client for transferzero-sdk
-API specification used for internal BitPesa endpoints
+Reference documentation for the TransferZero API V1
 
 For more information, please visit:
 
@@ -84,7 +84,7 @@ if (webhook.event.startsWith('transaction')) {
 
 ## Documentation for API Endpoints
 
-All URIs are relative to *https://api-sandbox.bitpesa.co/v1*
+All URIs are relative to *https://api-sandbox.transferzero.com/v1*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
@@ -96,23 +96,14 @@ Class | Method | HTTP request | Description
 *TransferzeroSdk.AccountValidationApi* | [**postAccountValidations**](docs/AccountValidationApi.md#postAccountValidations) | **POST** /account_validations | Validates the existence of a bank account or a mobile phone number
 *TransferzeroSdk.AccountsApi* | [**getAccount**](docs/AccountsApi.md#getAccount) | **GET** /accounts/{Currency} | Fetches account balance for specified currrency
 *TransferzeroSdk.AccountsApi* | [**getAccounts**](docs/AccountsApi.md#getAccounts) | **GET** /accounts | Fetches account balances for all currencies
-*TransferzeroSdk.BankAccountDetailsApi* | [**getBankAccountDetails**](docs/BankAccountDetailsApi.md#getBankAccountDetails) | **GET** /bank_account_details/{Currency} | Fetching bank account details
 *TransferzeroSdk.CurrencyInfoApi* | [**infoCurrencies**](docs/CurrencyInfoApi.md#infoCurrencies) | **GET** /info/currencies | Getting a list of possible requested currencies
 *TransferzeroSdk.CurrencyInfoApi* | [**infoCurrenciesIn**](docs/CurrencyInfoApi.md#infoCurrenciesIn) | **GET** /info/currencies/in | Getting a list of possible input currencies
 *TransferzeroSdk.CurrencyInfoApi* | [**infoCurrenciesOut**](docs/CurrencyInfoApi.md#infoCurrenciesOut) | **GET** /info/currencies/out | Getting a list of possible output currencies
 *TransferzeroSdk.DocumentsApi* | [**getDocument**](docs/DocumentsApi.md#getDocument) | **GET** /documents/{Document ID} | Fetching a document
 *TransferzeroSdk.DocumentsApi* | [**getDocuments**](docs/DocumentsApi.md#getDocuments) | **GET** /documents | Getting a list of documents
 *TransferzeroSdk.DocumentsApi* | [**postDocuments**](docs/DocumentsApi.md#postDocuments) | **POST** /documents | Creating a document
-*TransferzeroSdk.EntitiesApi* | [**getEntities**](docs/EntitiesApi.md#getEntities) | **GET** /risk_assessment/entities/{Entity Type}/summary | Listing entities
-*TransferzeroSdk.EntitiesApi* | [**getEntitiesByParams**](docs/EntitiesApi.md#getEntitiesByParams) | **GET** /risk_assessment/entities/{Entity Type}/search | Listing entities by params (rating and/or state)
-*TransferzeroSdk.EntitiesApi* | [**getEntity**](docs/EntitiesApi.md#getEntity) | **GET** /risk_assessment/entities/{Entity Type}/{Entity ID} | Fetching a entity
-*TransferzeroSdk.EntitiesApi* | [**patchEntity**](docs/EntitiesApi.md#patchEntity) | **PATCH** /risk_assessment/entities/{Entity Type}/{Entity ID} | Updating an entity
-*TransferzeroSdk.EntitiesApi* | [**postEntity**](docs/EntitiesApi.md#postEntity) | **POST** /risk_assessment/entities/{Entity Type}/{Entity ID} | Creating an entity
 *TransferzeroSdk.LogsApi* | [**getWebhookLog**](docs/LogsApi.md#getWebhookLog) | **GET** /logs/{Webhook Log ID} | Fetch an individual webhook log
 *TransferzeroSdk.LogsApi* | [**getWebhookLogs**](docs/LogsApi.md#getWebhookLogs) | **GET** /logs/webhooks | Fetch a list of webhook logs
-*TransferzeroSdk.OpenCorporatesCompanySearchApi* | [**searchCompany**](docs/OpenCorporatesCompanySearchApi.md#searchCompany) | **POST** /open_corporates/search | Search for a company on Open Corporates
-*TransferzeroSdk.OpenCorporatesSenderUpdateApi* | [**updateSender**](docs/OpenCorporatesSenderUpdateApi.md#updateSender) | **POST** /open_corporates/update_sender | Update Sender with data retrieved from Open Corporates
-*TransferzeroSdk.OpenCorporatesSupportedCountriesApi* | [**getOpenCorporatesSupportedCountries**](docs/OpenCorporatesSupportedCountriesApi.md#getOpenCorporatesSupportedCountries) | **GET** /open_corporates/countries | Get List of Supported Countries from OpenCorporates
 *TransferzeroSdk.PayinMethodsApi* | [**deletePayinMethod**](docs/PayinMethodsApi.md#deletePayinMethod) | **DELETE** /payin_methods/{PayinMethod ID} | Deleting a payin method
 *TransferzeroSdk.PayinMethodsApi* | [**getPayinMethod**](docs/PayinMethodsApi.md#getPayinMethod) | **GET** /payin_methods/{PayinMethod ID} | Fetching a payin method
 *TransferzeroSdk.PayinMethodsApi* | [**patchPayinMethod**](docs/PayinMethodsApi.md#patchPayinMethod) | **PATCH** /payin_methods/{PayinMethod ID} | Updating a payin method
@@ -124,35 +115,15 @@ Class | Method | HTTP request | Description
 *TransferzeroSdk.PayoutMethodsApi* | [**getPayoutMethods**](docs/PayoutMethodsApi.md#getPayoutMethods) | **GET** /payout_methods | Listing payout methods
 *TransferzeroSdk.PayoutMethodsApi* | [**patchPayoutMethod**](docs/PayoutMethodsApi.md#patchPayoutMethod) | **PATCH** /payout_methods/{Payout Method ID} | Updating a payout method
 *TransferzeroSdk.PayoutMethodsApi* | [**postPayoutMethods**](docs/PayoutMethodsApi.md#postPayoutMethods) | **POST** /payout_methods | Creating a payout method
-*TransferzeroSdk.PoliticallyExposedPeopleApi* | [**deletePoliticallyExposedPerson**](docs/PoliticallyExposedPeopleApi.md#deletePoliticallyExposedPerson) | **DELETE** /politically_exposed_people/{PoliticallyExposedPerson ID} | Deleting a politically exposed person
-*TransferzeroSdk.PoliticallyExposedPeopleApi* | [**getPoliticallyExposedPeople**](docs/PoliticallyExposedPeopleApi.md#getPoliticallyExposedPeople) | **GET** /politically_exposed_people | Listing Politically Exposed People
-*TransferzeroSdk.PoliticallyExposedPeopleApi* | [**getPoliticallyExposedPerson**](docs/PoliticallyExposedPeopleApi.md#getPoliticallyExposedPerson) | **GET** /politically_exposed_people/{PoliticallyExposedPerson ID} | Fetching a politically exposed person
-*TransferzeroSdk.PoliticallyExposedPeopleApi* | [**patchPoliticallyExposedPerson**](docs/PoliticallyExposedPeopleApi.md#patchPoliticallyExposedPerson) | **PATCH** /politically_exposed_people/{PoliticallyExposedPerson ID} | Updating a politically exposed person
-*TransferzeroSdk.PoliticallyExposedPeopleApi* | [**postPoliticallyExposedPeople**](docs/PoliticallyExposedPeopleApi.md#postPoliticallyExposedPeople) | **POST** /politically_exposed_people | Creating a politically exposed person
 *TransferzeroSdk.RecipientsApi* | [**deleteRecipient**](docs/RecipientsApi.md#deleteRecipient) | **DELETE** /recipients/{Recipient ID} | Cancelling a recipient
 *TransferzeroSdk.RecipientsApi* | [**getRecipients**](docs/RecipientsApi.md#getRecipients) | **GET** /recipients | Getting a list of recipients with filtering
 *TransferzeroSdk.RecipientsApi* | [**patchRecipient**](docs/RecipientsApi.md#patchRecipient) | **PATCH** /recipients/{Recipient ID} | Updating a recipient
 *TransferzeroSdk.RecipientsApi* | [**proofOfPayments**](docs/RecipientsApi.md#proofOfPayments) | **GET** /recipients/{Recipient ID}/proof_of_payments | Returns list of proof of payments
-*TransferzeroSdk.SanctionedCountriesApi* | [**getSanctionedCountries**](docs/SanctionedCountriesApi.md#getSanctionedCountries) | **GET** /sanctioned_countries | Get List of Sanctioned Countries
-*TransferzeroSdk.SenderDocumentsApi* | [**addDocumentSender**](docs/SenderDocumentsApi.md#addDocumentSender) | **POST** /senders/{Sender ID}/documents/{Document ID}/add | Adding a document to a sender
-*TransferzeroSdk.SenderDocumentsApi* | [**getSenderDocument**](docs/SenderDocumentsApi.md#getSenderDocument) | **GET** /senders/{Sender ID}/documents/{Document ID} | Fetching a document belonging to a sender
-*TransferzeroSdk.SenderDocumentsApi* | [**getSenderDocuments**](docs/SenderDocumentsApi.md#getSenderDocuments) | **GET** /senders/{Sender ID}/documents | Getting a list of documents belonging to a sender
-*TransferzeroSdk.SenderDocumentsApi* | [**removeDocumentSender**](docs/SenderDocumentsApi.md#removeDocumentSender) | **POST** /senders/{Sender ID}/documents/{Document ID}/remove | Removing a document from a sender
-*TransferzeroSdk.SendersApi* | [**confirmSenderVerification**](docs/SendersApi.md#confirmSenderVerification) | **POST** /senders/{Sender ID}/confirm_verification | Change sender onboarding state to &#39;profile_completed&#39;
 *TransferzeroSdk.SendersApi* | [**deleteSender**](docs/SendersApi.md#deleteSender) | **DELETE** /senders/{Sender ID} | Deleting a sender
 *TransferzeroSdk.SendersApi* | [**getSender**](docs/SendersApi.md#getSender) | **GET** /senders/{Sender ID} | Fetching a sender
 *TransferzeroSdk.SendersApi* | [**getSenders**](docs/SendersApi.md#getSenders) | **GET** /senders | Listing senders
 *TransferzeroSdk.SendersApi* | [**patchSender**](docs/SendersApi.md#patchSender) | **PATCH** /senders/{Sender ID} | Updating a sender
 *TransferzeroSdk.SendersApi* | [**postSenders**](docs/SendersApi.md#postSenders) | **POST** /senders | Creating a sender
-*TransferzeroSdk.TransactionRequestsApi* | [**addDocumentTransactionRequest**](docs/TransactionRequestsApi.md#addDocumentTransactionRequest) | **POST** /transaction_requests/{Transaction Request ID}/add_document | Adding a document to a transaction request (deprecated)
-*TransferzeroSdk.TransactionRequestsApi* | [**cancelTransactionRequest**](docs/TransactionRequestsApi.md#cancelTransactionRequest) | **POST** /transaction_requests/{Transaction Request ID}/cancel | Cancelling a transaction request
-*TransferzeroSdk.TransactionRequestsApi* | [**confirmTransactionRequest**](docs/TransactionRequestsApi.md#confirmTransactionRequest) | **POST** /transaction_requests/{Transaction Request ID}/confirm | Confirming a transaction request
-*TransferzeroSdk.TransactionRequestsApi* | [**getTransactionRequest**](docs/TransactionRequestsApi.md#getTransactionRequest) | **GET** /transaction_requests/{Transaction Request ID} | Fetching a transaction request
-*TransferzeroSdk.TransactionRequestsApi* | [**getTransactionRequests**](docs/TransactionRequestsApi.md#getTransactionRequests) | **GET** /transaction_requests | Listing transaction requests
-*TransferzeroSdk.TransactionRequestsApi* | [**postTransactionRequest**](docs/TransactionRequestsApi.md#postTransactionRequest) | **POST** /transaction_requests | Creating a transaction request
-*TransferzeroSdk.TransactionRequestsApi* | [**restfulAddDocumentTransactionRequest**](docs/TransactionRequestsApi.md#restfulAddDocumentTransactionRequest) | **POST** /transaction_requests/{Transaction Request ID}/documents/{Document ID}/add | Adding a document to a transaction request
-*TransferzeroSdk.TransactionRequestsApi* | [**transactionRequestLimits**](docs/TransactionRequestsApi.md#transactionRequestLimits) | **GET** /transaction_requests/limits | Specifies the limits for transaction requests
-*TransferzeroSdk.TransactionRequestsApi* | [**validateTransactionRequests**](docs/TransactionRequestsApi.md#validateTransactionRequests) | **POST** /transaction_requests/validate | Validates a transaction request payload
 *TransferzeroSdk.TransactionsApi* | [**calculateTransactions**](docs/TransactionsApi.md#calculateTransactions) | **POST** /transactions/calculate | Calculates transaction amounts for a transaction payload
 *TransferzeroSdk.TransactionsApi* | [**createAndFundTransaction**](docs/TransactionsApi.md#createAndFundTransaction) | **POST** /transactions/create_and_fund | Creates a new transaction and funds it from account balance
 *TransferzeroSdk.TransactionsApi* | [**getTransaction**](docs/TransactionsApi.md#getTransaction) | **GET** /transactions/{Transaction ID} | Fetch a single transaction
@@ -181,8 +152,6 @@ Class | Method | HTTP request | Description
  - [TransferzeroSdk.ApiLog](docs/ApiLog.md)
  - [TransferzeroSdk.ApiLogListResponse](docs/ApiLogListResponse.md)
  - [TransferzeroSdk.ApiLogResponse](docs/ApiLogResponse.md)
- - [TransferzeroSdk.BankAccountDetails](docs/BankAccountDetails.md)
- - [TransferzeroSdk.BankAccountDetailsResponse](docs/BankAccountDetailsResponse.md)
  - [TransferzeroSdk.Currency](docs/Currency.md)
  - [TransferzeroSdk.CurrencyExchange](docs/CurrencyExchange.md)
  - [TransferzeroSdk.CurrencyExchangeListResponse](docs/CurrencyExchangeListResponse.md)
@@ -199,27 +168,10 @@ Class | Method | HTTP request | Description
  - [TransferzeroSdk.DocumentRequest](docs/DocumentRequest.md)
  - [TransferzeroSdk.DocumentResponse](docs/DocumentResponse.md)
  - [TransferzeroSdk.DocumentWebhook](docs/DocumentWebhook.md)
- - [TransferzeroSdk.Entity](docs/Entity.md)
- - [TransferzeroSdk.EntityCreateRequest](docs/EntityCreateRequest.md)
- - [TransferzeroSdk.EntityCreateResponse](docs/EntityCreateResponse.md)
- - [TransferzeroSdk.EntityListResponse](docs/EntityListResponse.md)
- - [TransferzeroSdk.EntityRating](docs/EntityRating.md)
- - [TransferzeroSdk.EntityState](docs/EntityState.md)
- - [TransferzeroSdk.EntityUpdateRequest](docs/EntityUpdateRequest.md)
- - [TransferzeroSdk.EntityUpdateResponse](docs/EntityUpdateResponse.md)
  - [TransferzeroSdk.ErrorStatus](docs/ErrorStatus.md)
  - [TransferzeroSdk.FieldDescription](docs/FieldDescription.md)
  - [TransferzeroSdk.FieldSelectValidation](docs/FieldSelectValidation.md)
  - [TransferzeroSdk.FieldValidation](docs/FieldValidation.md)
- - [TransferzeroSdk.OpenCorporatesSearch](docs/OpenCorporatesSearch.md)
- - [TransferzeroSdk.OpenCorporatesSearchRequest](docs/OpenCorporatesSearchRequest.md)
- - [TransferzeroSdk.OpenCorporatesSearchResponse](docs/OpenCorporatesSearchResponse.md)
- - [TransferzeroSdk.OpenCorporatesSenderUpdate](docs/OpenCorporatesSenderUpdate.md)
- - [TransferzeroSdk.OpenCorporatesSenderUpdateRequest](docs/OpenCorporatesSenderUpdateRequest.md)
- - [TransferzeroSdk.OpenCorporatesSenderUpdateResponse](docs/OpenCorporatesSenderUpdateResponse.md)
- - [TransferzeroSdk.OpenCorporatesSenderUpdateResult](docs/OpenCorporatesSenderUpdateResult.md)
- - [TransferzeroSdk.OpenCorporatesSupportedCountries](docs/OpenCorporatesSupportedCountries.md)
- - [TransferzeroSdk.OpenCorporatesSupportedCountriesListResponse](docs/OpenCorporatesSupportedCountriesListResponse.md)
  - [TransferzeroSdk.Pagination](docs/Pagination.md)
  - [TransferzeroSdk.PaginationMeta](docs/PaginationMeta.md)
  - [TransferzeroSdk.PayinMethod](docs/PayinMethod.md)
@@ -263,6 +215,7 @@ Class | Method | HTTP request | Description
  - [TransferzeroSdk.PayoutMethodDetailsXOFCash](docs/PayoutMethodDetailsXOFCash.md)
  - [TransferzeroSdk.PayoutMethodDetailsXOFMobile](docs/PayoutMethodDetailsXOFMobile.md)
  - [TransferzeroSdk.PayoutMethodDetailsZARBank](docs/PayoutMethodDetailsZARBank.md)
+ - [TransferzeroSdk.PayoutMethodDetailsZMWBank](docs/PayoutMethodDetailsZMWBank.md)
  - [TransferzeroSdk.PayoutMethodGenderEnum](docs/PayoutMethodGenderEnum.md)
  - [TransferzeroSdk.PayoutMethodIdentityCardTypeEnum](docs/PayoutMethodIdentityCardTypeEnum.md)
  - [TransferzeroSdk.PayoutMethodLegalEntityTypeEnum](docs/PayoutMethodLegalEntityTypeEnum.md)
@@ -275,8 +228,6 @@ Class | Method | HTTP request | Description
  - [TransferzeroSdk.PayoutMethodTransferReasonEnum](docs/PayoutMethodTransferReasonEnum.md)
  - [TransferzeroSdk.PayoutMethodWebhook](docs/PayoutMethodWebhook.md)
  - [TransferzeroSdk.PoliticallyExposedPerson](docs/PoliticallyExposedPerson.md)
- - [TransferzeroSdk.PoliticallyExposedPersonListResponse](docs/PoliticallyExposedPersonListResponse.md)
- - [TransferzeroSdk.PoliticallyExposedPersonResponse](docs/PoliticallyExposedPersonResponse.md)
  - [TransferzeroSdk.ProofOfPayment](docs/ProofOfPayment.md)
  - [TransferzeroSdk.ProofOfPaymentListResponse](docs/ProofOfPaymentListResponse.md)
  - [TransferzeroSdk.Recipient](docs/Recipient.md)
@@ -286,8 +237,6 @@ Class | Method | HTTP request | Description
  - [TransferzeroSdk.RecipientState](docs/RecipientState.md)
  - [TransferzeroSdk.RecipientStateReasonDetails](docs/RecipientStateReasonDetails.md)
  - [TransferzeroSdk.RecipientWebhook](docs/RecipientWebhook.md)
- - [TransferzeroSdk.SanctionedCountry](docs/SanctionedCountry.md)
- - [TransferzeroSdk.SanctionedCountryListResponse](docs/SanctionedCountryListResponse.md)
  - [TransferzeroSdk.Sender](docs/Sender.md)
  - [TransferzeroSdk.SenderListResponse](docs/SenderListResponse.md)
  - [TransferzeroSdk.SenderRequest](docs/SenderRequest.md)
@@ -299,12 +248,6 @@ Class | Method | HTTP request | Description
  - [TransferzeroSdk.StateReasonDetails](docs/StateReasonDetails.md)
  - [TransferzeroSdk.Transaction](docs/Transaction.md)
  - [TransferzeroSdk.TransactionListResponse](docs/TransactionListResponse.md)
- - [TransferzeroSdk.TransactionReq](docs/TransactionReq.md)
- - [TransferzeroSdk.TransactionReqLimitsResponse](docs/TransactionReqLimitsResponse.md)
- - [TransferzeroSdk.TransactionReqLimitsResponseObject](docs/TransactionReqLimitsResponseObject.md)
- - [TransferzeroSdk.TransactionReqListResponse](docs/TransactionReqListResponse.md)
- - [TransferzeroSdk.TransactionReqRequest](docs/TransactionReqRequest.md)
- - [TransferzeroSdk.TransactionReqResponse](docs/TransactionReqResponse.md)
  - [TransferzeroSdk.TransactionRequest](docs/TransactionRequest.md)
  - [TransferzeroSdk.TransactionResponse](docs/TransactionResponse.md)
  - [TransferzeroSdk.TransactionResponseExisting](docs/TransactionResponseExisting.md)
@@ -335,7 +278,7 @@ You can set the API Key and Secret by passing a config object when creating an A
 const apiClient = new ApiClient({
   apiKey: '<key>',
   apiSecret: '<secret>',
-  basePath: 'https://api-sandbox.bitpesa.co/v1'
+  basePath: 'https://api-sandbox.transferzero.com/v1'
 });
 ```
 
@@ -345,7 +288,7 @@ Or by setting the properties on an ApiClient instance:
 const apiClient = new ApiClient();
 apiClient.apiKey = '<key>';
 apiClient.apiSecret = '<secret>';
-apiClient.basePath = 'https://api-sandbox.bitpesa.co/v1';
+apiClient.basePath = 'https://api-sandbox.transferzero.com/v1';
 ```
 
 ## Author
