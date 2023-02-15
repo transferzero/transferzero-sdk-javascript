@@ -1,6 +1,6 @@
 /**
- * TransferZero API
- * Reference documentation for the TransferZero API V1
+ * BitPesa Private API
+ * API specification used for internal BitPesa endpoints
  *
  * OpenAPI spec version: 1.0
  * 
@@ -24,6 +24,8 @@ import AccountValidationResult from './Model/AccountValidationResult';
 import ApiLog from './Model/ApiLog';
 import ApiLogListResponse from './Model/ApiLogListResponse';
 import ApiLogResponse from './Model/ApiLogResponse';
+import BankAccountDetails from './Model/BankAccountDetails';
+import BankAccountDetailsResponse from './Model/BankAccountDetailsResponse';
 import Currency from './Model/Currency';
 import CurrencyExchange from './Model/CurrencyExchange';
 import CurrencyExchangeListResponse from './Model/CurrencyExchangeListResponse';
@@ -40,10 +42,27 @@ import DocumentListResponse from './Model/DocumentListResponse';
 import DocumentRequest from './Model/DocumentRequest';
 import DocumentResponse from './Model/DocumentResponse';
 import DocumentWebhook from './Model/DocumentWebhook';
+import Entity from './Model/Entity';
+import EntityCreateRequest from './Model/EntityCreateRequest';
+import EntityCreateResponse from './Model/EntityCreateResponse';
+import EntityListResponse from './Model/EntityListResponse';
+import EntityRating from './Model/EntityRating';
+import EntityState from './Model/EntityState';
+import EntityUpdateRequest from './Model/EntityUpdateRequest';
+import EntityUpdateResponse from './Model/EntityUpdateResponse';
 import ErrorStatus from './Model/ErrorStatus';
 import FieldDescription from './Model/FieldDescription';
 import FieldSelectValidation from './Model/FieldSelectValidation';
 import FieldValidation from './Model/FieldValidation';
+import OpenCorporatesSearch from './Model/OpenCorporatesSearch';
+import OpenCorporatesSearchRequest from './Model/OpenCorporatesSearchRequest';
+import OpenCorporatesSearchResponse from './Model/OpenCorporatesSearchResponse';
+import OpenCorporatesSenderUpdate from './Model/OpenCorporatesSenderUpdate';
+import OpenCorporatesSenderUpdateRequest from './Model/OpenCorporatesSenderUpdateRequest';
+import OpenCorporatesSenderUpdateResponse from './Model/OpenCorporatesSenderUpdateResponse';
+import OpenCorporatesSenderUpdateResult from './Model/OpenCorporatesSenderUpdateResult';
+import OpenCorporatesSupportedCountries from './Model/OpenCorporatesSupportedCountries';
+import OpenCorporatesSupportedCountriesListResponse from './Model/OpenCorporatesSupportedCountriesListResponse';
 import Pagination from './Model/Pagination';
 import PaginationMeta from './Model/PaginationMeta';
 import PayinMethod from './Model/PayinMethod';
@@ -100,6 +119,8 @@ import PayoutMethodResponse from './Model/PayoutMethodResponse';
 import PayoutMethodTransferReasonEnum from './Model/PayoutMethodTransferReasonEnum';
 import PayoutMethodWebhook from './Model/PayoutMethodWebhook';
 import PoliticallyExposedPerson from './Model/PoliticallyExposedPerson';
+import PoliticallyExposedPersonListResponse from './Model/PoliticallyExposedPersonListResponse';
+import PoliticallyExposedPersonResponse from './Model/PoliticallyExposedPersonResponse';
 import ProofOfPayment from './Model/ProofOfPayment';
 import ProofOfPaymentListResponse from './Model/ProofOfPaymentListResponse';
 import Recipient from './Model/Recipient';
@@ -109,6 +130,8 @@ import RecipientResponse from './Model/RecipientResponse';
 import RecipientState from './Model/RecipientState';
 import RecipientStateReasonDetails from './Model/RecipientStateReasonDetails';
 import RecipientWebhook from './Model/RecipientWebhook';
+import SanctionedCountry from './Model/SanctionedCountry';
+import SanctionedCountryListResponse from './Model/SanctionedCountryListResponse';
 import Sender from './Model/Sender';
 import SenderListResponse from './Model/SenderListResponse';
 import SenderRequest from './Model/SenderRequest';
@@ -120,6 +143,12 @@ import SenderWebhook from './Model/SenderWebhook';
 import StateReasonDetails from './Model/StateReasonDetails';
 import Transaction from './Model/Transaction';
 import TransactionListResponse from './Model/TransactionListResponse';
+import TransactionReq from './Model/TransactionReq';
+import TransactionReqLimitsResponse from './Model/TransactionReqLimitsResponse';
+import TransactionReqLimitsResponseObject from './Model/TransactionReqLimitsResponseObject';
+import TransactionReqListResponse from './Model/TransactionReqListResponse';
+import TransactionReqRequest from './Model/TransactionReqRequest';
+import TransactionReqResponse from './Model/TransactionReqResponse';
 import TransactionRequest from './Model/TransactionRequest';
 import TransactionResponse from './Model/TransactionResponse';
 import TransactionResponseExisting from './Model/TransactionResponseExisting';
@@ -144,14 +173,23 @@ import APILogsApi from './Api/APILogsApi';
 import AccountDebitsApi from './Api/AccountDebitsApi';
 import AccountValidationApi from './Api/AccountValidationApi';
 import AccountsApi from './Api/AccountsApi';
+import BankAccountDetailsApi from './Api/BankAccountDetailsApi';
 import CurrencyInfoApi from './Api/CurrencyInfoApi';
 import DocumentsApi from './Api/DocumentsApi';
+import EntitiesApi from './Api/EntitiesApi';
 import LogsApi from './Api/LogsApi';
+import OpenCorporatesCompanySearchApi from './Api/OpenCorporatesCompanySearchApi';
+import OpenCorporatesSenderUpdateApi from './Api/OpenCorporatesSenderUpdateApi';
+import OpenCorporatesSupportedCountriesApi from './Api/OpenCorporatesSupportedCountriesApi';
 import PayinMethodsApi from './Api/PayinMethodsApi';
 import PaymentMethodsApi from './Api/PaymentMethodsApi';
 import PayoutMethodsApi from './Api/PayoutMethodsApi';
+import PoliticallyExposedPeopleApi from './Api/PoliticallyExposedPeopleApi';
 import RecipientsApi from './Api/RecipientsApi';
+import SanctionedCountriesApi from './Api/SanctionedCountriesApi';
+import SenderDocumentsApi from './Api/SenderDocumentsApi';
 import SendersApi from './Api/SendersApi';
+import TransactionRequestsApi from './Api/TransactionRequestsApi';
 import TransactionsApi from './Api/TransactionsApi';
 import WebhooksApi from './Api/WebhooksApi';
 
@@ -261,6 +299,18 @@ export default {
     ApiLogResponse,
 
     /**
+     * The BankAccountDetails model constructor.
+     * @property {module:Model/BankAccountDetails}
+     */
+    BankAccountDetails,
+
+    /**
+     * The BankAccountDetailsResponse model constructor.
+     * @property {module:Model/BankAccountDetailsResponse}
+     */
+    BankAccountDetailsResponse,
+
+    /**
      * The Currency model constructor.
      * @property {module:Model/Currency}
      */
@@ -357,6 +407,54 @@ export default {
     DocumentWebhook,
 
     /**
+     * The Entity model constructor.
+     * @property {module:Model/Entity}
+     */
+    Entity,
+
+    /**
+     * The EntityCreateRequest model constructor.
+     * @property {module:Model/EntityCreateRequest}
+     */
+    EntityCreateRequest,
+
+    /**
+     * The EntityCreateResponse model constructor.
+     * @property {module:Model/EntityCreateResponse}
+     */
+    EntityCreateResponse,
+
+    /**
+     * The EntityListResponse model constructor.
+     * @property {module:Model/EntityListResponse}
+     */
+    EntityListResponse,
+
+    /**
+     * The EntityRating model constructor.
+     * @property {module:Model/EntityRating}
+     */
+    EntityRating,
+
+    /**
+     * The EntityState model constructor.
+     * @property {module:Model/EntityState}
+     */
+    EntityState,
+
+    /**
+     * The EntityUpdateRequest model constructor.
+     * @property {module:Model/EntityUpdateRequest}
+     */
+    EntityUpdateRequest,
+
+    /**
+     * The EntityUpdateResponse model constructor.
+     * @property {module:Model/EntityUpdateResponse}
+     */
+    EntityUpdateResponse,
+
+    /**
      * The ErrorStatus model constructor.
      * @property {module:Model/ErrorStatus}
      */
@@ -379,6 +477,60 @@ export default {
      * @property {module:Model/FieldValidation}
      */
     FieldValidation,
+
+    /**
+     * The OpenCorporatesSearch model constructor.
+     * @property {module:Model/OpenCorporatesSearch}
+     */
+    OpenCorporatesSearch,
+
+    /**
+     * The OpenCorporatesSearchRequest model constructor.
+     * @property {module:Model/OpenCorporatesSearchRequest}
+     */
+    OpenCorporatesSearchRequest,
+
+    /**
+     * The OpenCorporatesSearchResponse model constructor.
+     * @property {module:Model/OpenCorporatesSearchResponse}
+     */
+    OpenCorporatesSearchResponse,
+
+    /**
+     * The OpenCorporatesSenderUpdate model constructor.
+     * @property {module:Model/OpenCorporatesSenderUpdate}
+     */
+    OpenCorporatesSenderUpdate,
+
+    /**
+     * The OpenCorporatesSenderUpdateRequest model constructor.
+     * @property {module:Model/OpenCorporatesSenderUpdateRequest}
+     */
+    OpenCorporatesSenderUpdateRequest,
+
+    /**
+     * The OpenCorporatesSenderUpdateResponse model constructor.
+     * @property {module:Model/OpenCorporatesSenderUpdateResponse}
+     */
+    OpenCorporatesSenderUpdateResponse,
+
+    /**
+     * The OpenCorporatesSenderUpdateResult model constructor.
+     * @property {module:Model/OpenCorporatesSenderUpdateResult}
+     */
+    OpenCorporatesSenderUpdateResult,
+
+    /**
+     * The OpenCorporatesSupportedCountries model constructor.
+     * @property {module:Model/OpenCorporatesSupportedCountries}
+     */
+    OpenCorporatesSupportedCountries,
+
+    /**
+     * The OpenCorporatesSupportedCountriesListResponse model constructor.
+     * @property {module:Model/OpenCorporatesSupportedCountriesListResponse}
+     */
+    OpenCorporatesSupportedCountriesListResponse,
 
     /**
      * The Pagination model constructor.
@@ -717,6 +869,18 @@ export default {
     PoliticallyExposedPerson,
 
     /**
+     * The PoliticallyExposedPersonListResponse model constructor.
+     * @property {module:Model/PoliticallyExposedPersonListResponse}
+     */
+    PoliticallyExposedPersonListResponse,
+
+    /**
+     * The PoliticallyExposedPersonResponse model constructor.
+     * @property {module:Model/PoliticallyExposedPersonResponse}
+     */
+    PoliticallyExposedPersonResponse,
+
+    /**
      * The ProofOfPayment model constructor.
      * @property {module:Model/ProofOfPayment}
      */
@@ -769,6 +933,18 @@ export default {
      * @property {module:Model/RecipientWebhook}
      */
     RecipientWebhook,
+
+    /**
+     * The SanctionedCountry model constructor.
+     * @property {module:Model/SanctionedCountry}
+     */
+    SanctionedCountry,
+
+    /**
+     * The SanctionedCountryListResponse model constructor.
+     * @property {module:Model/SanctionedCountryListResponse}
+     */
+    SanctionedCountryListResponse,
 
     /**
      * The Sender model constructor.
@@ -835,6 +1011,42 @@ export default {
      * @property {module:Model/TransactionListResponse}
      */
     TransactionListResponse,
+
+    /**
+     * The TransactionReq model constructor.
+     * @property {module:Model/TransactionReq}
+     */
+    TransactionReq,
+
+    /**
+     * The TransactionReqLimitsResponse model constructor.
+     * @property {module:Model/TransactionReqLimitsResponse}
+     */
+    TransactionReqLimitsResponse,
+
+    /**
+     * The TransactionReqLimitsResponseObject model constructor.
+     * @property {module:Model/TransactionReqLimitsResponseObject}
+     */
+    TransactionReqLimitsResponseObject,
+
+    /**
+     * The TransactionReqListResponse model constructor.
+     * @property {module:Model/TransactionReqListResponse}
+     */
+    TransactionReqListResponse,
+
+    /**
+     * The TransactionReqRequest model constructor.
+     * @property {module:Model/TransactionReqRequest}
+     */
+    TransactionReqRequest,
+
+    /**
+     * The TransactionReqResponse model constructor.
+     * @property {module:Model/TransactionReqResponse}
+     */
+    TransactionReqResponse,
 
     /**
      * The TransactionRequest model constructor.
@@ -981,6 +1193,12 @@ export default {
     AccountsApi,
 
     /**
+    * The BankAccountDetailsApi service constructor.
+    * @property {module:Api/BankAccountDetailsApi}
+    */
+    BankAccountDetailsApi,
+
+    /**
     * The CurrencyInfoApi service constructor.
     * @property {module:Api/CurrencyInfoApi}
     */
@@ -993,10 +1211,34 @@ export default {
     DocumentsApi,
 
     /**
+    * The EntitiesApi service constructor.
+    * @property {module:Api/EntitiesApi}
+    */
+    EntitiesApi,
+
+    /**
     * The LogsApi service constructor.
     * @property {module:Api/LogsApi}
     */
     LogsApi,
+
+    /**
+    * The OpenCorporatesCompanySearchApi service constructor.
+    * @property {module:Api/OpenCorporatesCompanySearchApi}
+    */
+    OpenCorporatesCompanySearchApi,
+
+    /**
+    * The OpenCorporatesSenderUpdateApi service constructor.
+    * @property {module:Api/OpenCorporatesSenderUpdateApi}
+    */
+    OpenCorporatesSenderUpdateApi,
+
+    /**
+    * The OpenCorporatesSupportedCountriesApi service constructor.
+    * @property {module:Api/OpenCorporatesSupportedCountriesApi}
+    */
+    OpenCorporatesSupportedCountriesApi,
 
     /**
     * The PayinMethodsApi service constructor.
@@ -1017,16 +1259,40 @@ export default {
     PayoutMethodsApi,
 
     /**
+    * The PoliticallyExposedPeopleApi service constructor.
+    * @property {module:Api/PoliticallyExposedPeopleApi}
+    */
+    PoliticallyExposedPeopleApi,
+
+    /**
     * The RecipientsApi service constructor.
     * @property {module:Api/RecipientsApi}
     */
     RecipientsApi,
 
     /**
+    * The SanctionedCountriesApi service constructor.
+    * @property {module:Api/SanctionedCountriesApi}
+    */
+    SanctionedCountriesApi,
+
+    /**
+    * The SenderDocumentsApi service constructor.
+    * @property {module:Api/SenderDocumentsApi}
+    */
+    SenderDocumentsApi,
+
+    /**
     * The SendersApi service constructor.
     * @property {module:Api/SendersApi}
     */
     SendersApi,
+
+    /**
+    * The TransactionRequestsApi service constructor.
+    * @property {module:Api/TransactionRequestsApi}
+    */
+    TransactionRequestsApi,
 
     /**
     * The TransactionsApi service constructor.
@@ -1054,6 +1320,8 @@ export {
     ApiLog,
     ApiLogListResponse,
     ApiLogResponse,
+    BankAccountDetails,
+    BankAccountDetailsResponse,
     Currency,
     CurrencyExchange,
     CurrencyExchangeListResponse,
@@ -1070,10 +1338,27 @@ export {
     DocumentRequest,
     DocumentResponse,
     DocumentWebhook,
+    Entity,
+    EntityCreateRequest,
+    EntityCreateResponse,
+    EntityListResponse,
+    EntityRating,
+    EntityState,
+    EntityUpdateRequest,
+    EntityUpdateResponse,
     ErrorStatus,
     FieldDescription,
     FieldSelectValidation,
     FieldValidation,
+    OpenCorporatesSearch,
+    OpenCorporatesSearchRequest,
+    OpenCorporatesSearchResponse,
+    OpenCorporatesSenderUpdate,
+    OpenCorporatesSenderUpdateRequest,
+    OpenCorporatesSenderUpdateResponse,
+    OpenCorporatesSenderUpdateResult,
+    OpenCorporatesSupportedCountries,
+    OpenCorporatesSupportedCountriesListResponse,
     Pagination,
     PaginationMeta,
     PayinMethod,
@@ -1130,6 +1415,8 @@ export {
     PayoutMethodTransferReasonEnum,
     PayoutMethodWebhook,
     PoliticallyExposedPerson,
+    PoliticallyExposedPersonListResponse,
+    PoliticallyExposedPersonResponse,
     ProofOfPayment,
     ProofOfPaymentListResponse,
     Recipient,
@@ -1139,6 +1426,8 @@ export {
     RecipientState,
     RecipientStateReasonDetails,
     RecipientWebhook,
+    SanctionedCountry,
+    SanctionedCountryListResponse,
     Sender,
     SenderListResponse,
     SenderRequest,
@@ -1150,6 +1439,12 @@ export {
     StateReasonDetails,
     Transaction,
     TransactionListResponse,
+    TransactionReq,
+    TransactionReqLimitsResponse,
+    TransactionReqLimitsResponseObject,
+    TransactionReqListResponse,
+    TransactionReqRequest,
+    TransactionReqResponse,
     TransactionRequest,
     TransactionResponse,
     TransactionResponseExisting,
@@ -1174,14 +1469,23 @@ export {
     AccountDebitsApi,
     AccountValidationApi,
     AccountsApi,
+    BankAccountDetailsApi,
     CurrencyInfoApi,
     DocumentsApi,
+    EntitiesApi,
     LogsApi,
+    OpenCorporatesCompanySearchApi,
+    OpenCorporatesSenderUpdateApi,
+    OpenCorporatesSupportedCountriesApi,
     PayinMethodsApi,
     PaymentMethodsApi,
     PayoutMethodsApi,
+    PoliticallyExposedPeopleApi,
     RecipientsApi,
+    SanctionedCountriesApi,
+    SenderDocumentsApi,
     SendersApi,
+    TransactionRequestsApi,
     TransactionsApi,
     WebhooksApi
 };
