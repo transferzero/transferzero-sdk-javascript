@@ -1,15 +1,87 @@
 # TransferzeroSdk.SendersApi
 
-All URIs are relative to *https://api-sandbox.transferzero.com/v1*
+All URIs are relative to *https://api-sandbox.bitpesa.co/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**confirmSenderVerification**](SendersApi.md#confirmSenderVerification) | **POST** /senders/{Sender ID}/confirm_verification | Change sender onboarding state to &#39;profile_completed&#39;
 [**deleteSender**](SendersApi.md#deleteSender) | **DELETE** /senders/{Sender ID} | Deleting a sender
 [**getSender**](SendersApi.md#getSender) | **GET** /senders/{Sender ID} | Fetching a sender
 [**getSenders**](SendersApi.md#getSenders) | **GET** /senders | Listing senders
 [**patchSender**](SendersApi.md#patchSender) | **PATCH** /senders/{Sender ID} | Updating a sender
 [**postSenders**](SendersApi.md#postSenders) | **POST** /senders | Creating a sender
 
+
+<a name="confirmSenderVerification"></a>
+# **confirmSenderVerification**
+> SenderResponse confirmSenderVerification(senderID)
+
+Change sender onboarding state to &#39;profile_completed&#39;
+
+Transition sender to the &#39;profile_completed&#39; onboarding state. This will only work if the sender has all the required documents uploaded and profile information present. 
+
+### Example
+```javascript
+import { SendersApi } from 'transferzero-sdk';
+
+// Configure API key authorization
+const apiClient = new ApiClient();
+apiClient.apiKey = '<key>';
+apiClient.apiSecret = '<secret>';
+apiClient.basePath = 'https://api-sandbox.bitpesa.co/v1';
+
+let apiInstance = new SendersApi(apiClient);
+
+apiInstance.confirmSenderVerification(senderID).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  if (error.isValidationError) {
+    let result = error.getResponseObject();
+    console.log(result);
+    console.error("WARN: Validation error occurred when calling the endpoint");
+  } else {
+    console.error("Exception when calling SendersApi#confirmSenderVerification");
+    throw error;
+  }
+});
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **senderID** | [**String**](.md)| ID of the sender to get.  Example: &#x60;/v1/senders/bf9ff782-e182-45ac-abea-5bce83ad6670/confirm_verification&#x60; | 
+
+### Return type
+
+[**SenderResponse**](SenderResponse.md)
+
+### Authorization
+
+You can set the API Key and Secret by passing a config object when creating an ApiClient:
+
+```js
+const apiClient = new ApiClient({
+  apiKey: '<key>',
+  apiSecret: '<secret>',
+  basePath: 'https://api-sandbox.bitpesa.co/v1'
+});
+```
+
+Or by setting the properties on an ApiClient instance:
+
+```js
+const apiClient = new ApiClient();
+apiClient.apiKey = '<key>';
+apiClient.apiSecret = '<secret>';
+apiClient.basePath = 'https://api-sandbox.bitpesa.co/v1';
+```
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
 
 <a name="deleteSender"></a>
 # **deleteSender**
@@ -27,7 +99,7 @@ import { SendersApi } from 'transferzero-sdk';
 const apiClient = new ApiClient();
 apiClient.apiKey = '<key>';
 apiClient.apiSecret = '<secret>';
-apiClient.basePath = 'https://api-sandbox.transferzero.com/v1';
+apiClient.basePath = 'https://api-sandbox.bitpesa.co/v1';
 
 let apiInstance = new SendersApi(apiClient);
 
@@ -64,7 +136,7 @@ You can set the API Key and Secret by passing a config object when creating an A
 const apiClient = new ApiClient({
   apiKey: '<key>',
   apiSecret: '<secret>',
-  basePath: 'https://api-sandbox.transferzero.com/v1'
+  basePath: 'https://api-sandbox.bitpesa.co/v1'
 });
 ```
 
@@ -74,7 +146,7 @@ Or by setting the properties on an ApiClient instance:
 const apiClient = new ApiClient();
 apiClient.apiKey = '<key>';
 apiClient.apiSecret = '<secret>';
-apiClient.basePath = 'https://api-sandbox.transferzero.com/v1';
+apiClient.basePath = 'https://api-sandbox.bitpesa.co/v1';
 ```
 
 ### HTTP request headers
@@ -98,7 +170,7 @@ import { SendersApi } from 'transferzero-sdk';
 const apiClient = new ApiClient();
 apiClient.apiKey = '<key>';
 apiClient.apiSecret = '<secret>';
-apiClient.basePath = 'https://api-sandbox.transferzero.com/v1';
+apiClient.basePath = 'https://api-sandbox.bitpesa.co/v1';
 
 let apiInstance = new SendersApi(apiClient);
 
@@ -135,7 +207,7 @@ You can set the API Key and Secret by passing a config object when creating an A
 const apiClient = new ApiClient({
   apiKey: '<key>',
   apiSecret: '<secret>',
-  basePath: 'https://api-sandbox.transferzero.com/v1'
+  basePath: 'https://api-sandbox.bitpesa.co/v1'
 });
 ```
 
@@ -145,7 +217,7 @@ Or by setting the properties on an ApiClient instance:
 const apiClient = new ApiClient();
 apiClient.apiKey = '<key>';
 apiClient.apiSecret = '<secret>';
-apiClient.basePath = 'https://api-sandbox.transferzero.com/v1';
+apiClient.basePath = 'https://api-sandbox.bitpesa.co/v1';
 ```
 
 ### HTTP request headers
@@ -169,7 +241,7 @@ import { SendersApi } from 'transferzero-sdk';
 const apiClient = new ApiClient();
 apiClient.apiKey = '<key>';
 apiClient.apiSecret = '<secret>';
-apiClient.basePath = 'https://api-sandbox.transferzero.com/v1';
+apiClient.basePath = 'https://api-sandbox.bitpesa.co/v1';
 
 let apiInstance = new SendersApi(apiClient);
 
@@ -217,7 +289,7 @@ You can set the API Key and Secret by passing a config object when creating an A
 const apiClient = new ApiClient({
   apiKey: '<key>',
   apiSecret: '<secret>',
-  basePath: 'https://api-sandbox.transferzero.com/v1'
+  basePath: 'https://api-sandbox.bitpesa.co/v1'
 });
 ```
 
@@ -227,7 +299,7 @@ Or by setting the properties on an ApiClient instance:
 const apiClient = new ApiClient();
 apiClient.apiKey = '<key>';
 apiClient.apiSecret = '<secret>';
-apiClient.basePath = 'https://api-sandbox.transferzero.com/v1';
+apiClient.basePath = 'https://api-sandbox.bitpesa.co/v1';
 ```
 
 ### HTTP request headers
@@ -251,7 +323,7 @@ import { SendersApi } from 'transferzero-sdk';
 const apiClient = new ApiClient();
 apiClient.apiKey = '<key>';
 apiClient.apiSecret = '<secret>';
-apiClient.basePath = 'https://api-sandbox.transferzero.com/v1';
+apiClient.basePath = 'https://api-sandbox.bitpesa.co/v1';
 
 let apiInstance = new SendersApi(apiClient);
 
@@ -289,7 +361,7 @@ You can set the API Key and Secret by passing a config object when creating an A
 const apiClient = new ApiClient({
   apiKey: '<key>',
   apiSecret: '<secret>',
-  basePath: 'https://api-sandbox.transferzero.com/v1'
+  basePath: 'https://api-sandbox.bitpesa.co/v1'
 });
 ```
 
@@ -299,7 +371,7 @@ Or by setting the properties on an ApiClient instance:
 const apiClient = new ApiClient();
 apiClient.apiKey = '<key>';
 apiClient.apiSecret = '<secret>';
-apiClient.basePath = 'https://api-sandbox.transferzero.com/v1';
+apiClient.basePath = 'https://api-sandbox.bitpesa.co/v1';
 ```
 
 ### HTTP request headers
@@ -323,7 +395,7 @@ import { SendersApi } from 'transferzero-sdk';
 const apiClient = new ApiClient();
 apiClient.apiKey = '<key>';
 apiClient.apiSecret = '<secret>';
-apiClient.basePath = 'https://api-sandbox.transferzero.com/v1';
+apiClient.basePath = 'https://api-sandbox.bitpesa.co/v1';
 
 let apiInstance = new SendersApi(apiClient);
 
@@ -360,7 +432,7 @@ You can set the API Key and Secret by passing a config object when creating an A
 const apiClient = new ApiClient({
   apiKey: '<key>',
   apiSecret: '<secret>',
-  basePath: 'https://api-sandbox.transferzero.com/v1'
+  basePath: 'https://api-sandbox.bitpesa.co/v1'
 });
 ```
 
@@ -370,7 +442,7 @@ Or by setting the properties on an ApiClient instance:
 const apiClient = new ApiClient();
 apiClient.apiKey = '<key>';
 apiClient.apiSecret = '<secret>';
-apiClient.basePath = 'https://api-sandbox.transferzero.com/v1';
+apiClient.basePath = 'https://api-sandbox.bitpesa.co/v1';
 ```
 
 ### HTTP request headers
