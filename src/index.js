@@ -65,6 +65,7 @@ import PayoutMethodCountryEnum from './Model/PayoutMethodCountryEnum';
 import PayoutMethodDetails from './Model/PayoutMethodDetails';
 import PayoutMethodDetailsBRLBank from './Model/PayoutMethodDetailsBRLBank';
 import PayoutMethodDetailsBTC from './Model/PayoutMethodDetailsBTC';
+import PayoutMethodDetailsBWPBank from './Model/PayoutMethodDetailsBWPBank';
 import PayoutMethodDetailsBalance from './Model/PayoutMethodDetailsBalance';
 import PayoutMethodDetailsGBPBank from './Model/PayoutMethodDetailsGBPBank';
 import PayoutMethodDetailsGHSBank from './Model/PayoutMethodDetailsGHSBank';
@@ -86,6 +87,7 @@ import PayoutMethodDetailsXOFBank from './Model/PayoutMethodDetailsXOFBank';
 import PayoutMethodDetailsXOFCash from './Model/PayoutMethodDetailsXOFCash';
 import PayoutMethodDetailsXOFMobile from './Model/PayoutMethodDetailsXOFMobile';
 import PayoutMethodDetailsZARBank from './Model/PayoutMethodDetailsZARBank';
+import PayoutMethodDetailsZMWBank from './Model/PayoutMethodDetailsZMWBank';
 import PayoutMethodGenderEnum from './Model/PayoutMethodGenderEnum';
 import PayoutMethodIdentityCardTypeEnum from './Model/PayoutMethodIdentityCardTypeEnum';
 import PayoutMethodLegalEntityTypeEnum from './Model/PayoutMethodLegalEntityTypeEnum';
@@ -183,7 +185,7 @@ import WebhooksApi from './Api/WebhooksApi';
 * </pre>
 * </p>
 * @module index
-* @version 1.24.0
+* @version 1.25.0
 */
 export default {
     /**
@@ -505,6 +507,12 @@ export default {
     PayoutMethodDetailsBTC,
 
     /**
+     * The PayoutMethodDetailsBWPBank model constructor.
+     * @property {module:Model/PayoutMethodDetailsBWPBank}
+     */
+    PayoutMethodDetailsBWPBank,
+
+    /**
      * The PayoutMethodDetailsBalance model constructor.
      * @property {module:Model/PayoutMethodDetailsBalance}
      */
@@ -629,6 +637,12 @@ export default {
      * @property {module:Model/PayoutMethodDetailsZARBank}
      */
     PayoutMethodDetailsZARBank,
+
+    /**
+     * The PayoutMethodDetailsZMWBank model constructor.
+     * @property {module:Model/PayoutMethodDetailsZMWBank}
+     */
+    PayoutMethodDetailsZMWBank,
 
     /**
      * The PayoutMethodGenderEnum model constructor.
@@ -1081,6 +1095,7 @@ export {
     PayoutMethodDetails,
     PayoutMethodDetailsBRLBank,
     PayoutMethodDetailsBTC,
+    PayoutMethodDetailsBWPBank,
     PayoutMethodDetailsBalance,
     PayoutMethodDetailsGBPBank,
     PayoutMethodDetailsGHSBank,
@@ -1102,6 +1117,7 @@ export {
     PayoutMethodDetailsXOFCash,
     PayoutMethodDetailsXOFMobile,
     PayoutMethodDetailsZARBank,
+    PayoutMethodDetailsZMWBank,
     PayoutMethodGenderEnum,
     PayoutMethodIdentityCardTypeEnum,
     PayoutMethodLegalEntityTypeEnum,

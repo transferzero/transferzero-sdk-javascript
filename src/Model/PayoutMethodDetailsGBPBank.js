@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The PayoutMethodDetailsGBPBank model module.
  * @module Model/PayoutMethodDetailsGBPBank
- * @version 1.24.0
+ * @version 1.25.0
  */
 class PayoutMethodDetailsGBPBank {
     /**
