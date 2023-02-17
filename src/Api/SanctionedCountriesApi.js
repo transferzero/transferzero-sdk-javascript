@@ -18,7 +18,7 @@ import SanctionedCountryListResponse from '../Model/SanctionedCountryListRespons
 /**
 * SanctionedCountries service.
 * @module Api/SanctionedCountriesApi
-* @version 1.25.0
+* @version 1.24.0
 */
 export default class SanctionedCountriesApi {
 

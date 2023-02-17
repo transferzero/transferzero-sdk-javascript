@@ -17,7 +17,7 @@ import SanctionedCountry from './SanctionedCountry';
 /**
  * The SanctionedCountryListResponse model module.
  * @module Model/SanctionedCountryListResponse
- * @version 1.25.0
+ * @version 1.24.0
  */
 class SanctionedCountryListResponse {
     /**

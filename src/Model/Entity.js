@@ -18,7 +18,7 @@ import EntityState from './EntityState';
 /**
  * The Entity model module.
  * @module Model/Entity
- * @version 1.25.0
+ * @version 1.24.0
  */
 class Entity {
     /**

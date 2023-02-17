@@ -22,7 +22,7 @@ import EntityUpdateResponse from '../Model/EntityUpdateResponse';
 /**
 * Entities service.
 * @module Api/EntitiesApi
-* @version 1.25.0
+* @version 1.24.0
 */
 export default class EntitiesApi {
 

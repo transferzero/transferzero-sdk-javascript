@@ -18,7 +18,7 @@ import OpenCorporatesSupportedCountriesListResponse from '../Model/OpenCorporate
 /**
 * OpenCorporatesSupportedCountries service.
 * @module Api/OpenCorporatesSupportedCountriesApi
-* @version 1.25.0
+* @version 1.24.0
 */
 export default class OpenCorporatesSupportedCountriesApi {
 

@@ -19,7 +19,7 @@ import ValidationErrorDescription from './ValidationErrorDescription';
 /**
  * The OpenCorporatesSenderUpdateResult model module.
  * @module Model/OpenCorporatesSenderUpdateResult
- * @version 1.25.0
+ * @version 1.24.0
  */
 class OpenCorporatesSenderUpdateResult {
     /**

@@ -19,7 +19,7 @@ import OpenCorporatesSearchResponse from '../Model/OpenCorporatesSearchResponse'
 /**
 * OpenCorporatesCompanySearch service.
 * @module Api/OpenCorporatesCompanySearchApi
-* @version 1.25.0
+* @version 1.24.0
 */
 export default class OpenCorporatesCompanySearchApi {
 

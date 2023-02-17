@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SanctionedCountry model module.
  * @module Model/SanctionedCountry
- * @version 1.25.0
+ * @version 1.24.0
  */
 class SanctionedCountry {
     /**

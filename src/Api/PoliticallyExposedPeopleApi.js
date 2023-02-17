@@ -20,7 +20,7 @@ import PoliticallyExposedPersonResponse from '../Model/PoliticallyExposedPersonR
 /**
 * PoliticallyExposedPeople service.
 * @module Api/PoliticallyExposedPeopleApi
-* @version 1.25.0
+* @version 1.24.0
 */
 export default class PoliticallyExposedPeopleApi {
 

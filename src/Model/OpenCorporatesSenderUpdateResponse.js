@@ -17,7 +17,7 @@ import OpenCorporatesSenderUpdateResult from './OpenCorporatesSenderUpdateResult
 /**
  * The OpenCorporatesSenderUpdateResponse model module.
  * @module Model/OpenCorporatesSenderUpdateResponse
- * @version 1.25.0
+ * @version 1.24.0
  */
 class OpenCorporatesSenderUpdateResponse {
     /**

@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The BankAccountDetails model module.
  * @module Model/BankAccountDetails
- * @version 1.25.0
+ * @version 1.24.0
  */
 class BankAccountDetails {
     /**

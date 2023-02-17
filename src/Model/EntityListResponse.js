@@ -17,7 +17,7 @@ import Entity from './Entity';
 /**
  * The EntityListResponse model module.
  * @module Model/EntityListResponse
- * @version 1.25.0
+ * @version 1.24.0
  */
 class EntityListResponse {
     /**

@@ -17,7 +17,7 @@ import OpenCorporatesSearch from './OpenCorporatesSearch';
 /**
  * The OpenCorporatesSearchResponse model module.
  * @module Model/OpenCorporatesSearchResponse
- * @version 1.25.0
+ * @version 1.24.0
  */
 class OpenCorporatesSearchResponse {
     /**
