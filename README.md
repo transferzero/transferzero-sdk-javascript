@@ -193,7 +193,6 @@ Class | Method | HTTP request | Description
  - [TransferzeroSdk.PayoutMethodDetails](docs/PayoutMethodDetails.md)
  - [TransferzeroSdk.PayoutMethodDetailsBRLBank](docs/PayoutMethodDetailsBRLBank.md)
  - [TransferzeroSdk.PayoutMethodDetailsBTC](docs/PayoutMethodDetailsBTC.md)
- - [TransferzeroSdk.PayoutMethodDetailsBWPBank](docs/PayoutMethodDetailsBWPBank.md)
  - [TransferzeroSdk.PayoutMethodDetailsBalance](docs/PayoutMethodDetailsBalance.md)
  - [TransferzeroSdk.PayoutMethodDetailsGBPBank](docs/PayoutMethodDetailsGBPBank.md)
  - [TransferzeroSdk.PayoutMethodDetailsGHSBank](docs/PayoutMethodDetailsGHSBank.md)
@@ -215,7 +214,6 @@ Class | Method | HTTP request | Description
  - [TransferzeroSdk.PayoutMethodDetailsXOFCash](docs/PayoutMethodDetailsXOFCash.md)
  - [TransferzeroSdk.PayoutMethodDetailsXOFMobile](docs/PayoutMethodDetailsXOFMobile.md)
  - [TransferzeroSdk.PayoutMethodDetailsZARBank](docs/PayoutMethodDetailsZARBank.md)
- - [TransferzeroSdk.PayoutMethodDetailsZMWBank](docs/PayoutMethodDetailsZMWBank.md)
  - [TransferzeroSdk.PayoutMethodGenderEnum](docs/PayoutMethodGenderEnum.md)
  - [TransferzeroSdk.PayoutMethodIdentityCardTypeEnum](docs/PayoutMethodIdentityCardTypeEnum.md)
  - [TransferzeroSdk.PayoutMethodLegalEntityTypeEnum](docs/PayoutMethodLegalEntityTypeEnum.md)
@@ -297,5 +295,5 @@ apiClient.basePath = 'https://api-sandbox.transferzero.com/v1';
 
 
 - API version: 1.0
-- Package version: 1.25.0
+- Package version: 1.24.0
 - Build package: org.openapitools.codegen.languages.JavascriptClientCodegen

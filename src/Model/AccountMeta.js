@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The AccountMeta model module.
  * @module Model/AccountMeta
- * @version 1.25.0
+ * @version 1.24.0
  */
 class AccountMeta {
     /**
