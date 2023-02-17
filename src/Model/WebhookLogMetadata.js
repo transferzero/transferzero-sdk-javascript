@@ -1,6 +1,6 @@
 /**
- * TransferZero API
- * Reference documentation for the TransferZero API V1
+ * BitPesa Private API
+ * API specification used for internal BitPesa endpoints
  *
  * OpenAPI spec version: 1.0
  * 
@@ -19,7 +19,7 @@ import WebhookLogMetadataResponse from './WebhookLogMetadataResponse';
 /**
  * The WebhookLogMetadata model module.
  * @module Model/WebhookLogMetadata
- * @version 1.25.0
+ * @version 1.24.0
  */
 class WebhookLogMetadata {
     /**

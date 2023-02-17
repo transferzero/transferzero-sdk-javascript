@@ -1,6 +1,6 @@
 /**
- * TransferZero API
- * Reference documentation for the TransferZero API V1
+ * BitPesa Private API
+ * API specification used for internal BitPesa endpoints
  *
  * OpenAPI spec version: 1.0
  * 
@@ -36,7 +36,7 @@ class ApiError {
 
 /**
 * @module ApiClient
-* @version 1.25.0
+* @version 1.24.0
 */
 
 /**
@@ -54,7 +54,7 @@ export default class ApiClient {
         /**
          * The base URL against which to resolve every API call's (relative) path.
          * @type {String}
-         * @default https://api-sandbox.transferzero.com/v1
+         * @default https://api-sandbox.bitpesa.co/v1
          */
         this.basePath = config.basePath;
         this.apiKey = config.apiKey;
@@ -461,7 +461,7 @@ export default class ApiClient {
       // set header parameters
       request.set(this.defaultHeaders).set(this.normalizeParams(headerParams));
 
-      request.set("User-Agent","TransferZero-SDK/JavaScript/1.25.0");
+      request.set("User-Agent","TransferZero-SDK/JavaScript/1.24.0");
 
       // set requestAgent if it is set by user
       if (this.requestAgent) {

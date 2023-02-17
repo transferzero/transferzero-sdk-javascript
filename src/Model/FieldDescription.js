@@ -1,6 +1,6 @@
 /**
- * TransferZero API
- * Reference documentation for the TransferZero API V1
+ * BitPesa Private API
+ * API specification used for internal BitPesa endpoints
  *
  * OpenAPI spec version: 1.0
  * 
@@ -17,7 +17,7 @@ import FieldValidation from './FieldValidation';
 /**
  * The FieldDescription model module.
  * @module Model/FieldDescription
- * @version 1.25.0
+ * @version 1.24.0
  */
 class FieldDescription {
     /**

@@ -1,6 +1,6 @@
 /**
- * TransferZero API
- * Reference documentation for the TransferZero API V1
+ * BitPesa Private API
+ * API specification used for internal BitPesa endpoints
  *
  * OpenAPI spec version: 1.0
  * 
@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ApiLog model module.
  * @module Model/ApiLog
- * @version 1.25.0
+ * @version 1.24.0
  */
 class ApiLog {
     /**
