@@ -17,7 +17,7 @@ import ApiLog from './ApiLog';
 /**
  * The ApiLogResponse model module.
  * @module Model/ApiLogResponse
- * @version 1.25.0
+ * @version 1.26.0
  */
 class ApiLogResponse {
     /**

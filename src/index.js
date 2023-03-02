@@ -67,6 +67,7 @@ import PayoutMethodDetailsBRLBank from './Model/PayoutMethodDetailsBRLBank';
 import PayoutMethodDetailsBTC from './Model/PayoutMethodDetailsBTC';
 import PayoutMethodDetailsBWPBank from './Model/PayoutMethodDetailsBWPBank';
 import PayoutMethodDetailsBalance from './Model/PayoutMethodDetailsBalance';
+import PayoutMethodDetailsCADBank from './Model/PayoutMethodDetailsCADBank';
 import PayoutMethodDetailsGBPBank from './Model/PayoutMethodDetailsGBPBank';
 import PayoutMethodDetailsGHSBank from './Model/PayoutMethodDetailsGHSBank';
 import PayoutMethodDetailsGHSCash from './Model/PayoutMethodDetailsGHSCash';
@@ -185,7 +186,7 @@ import WebhooksApi from './Api/WebhooksApi';
 * </pre>
 * </p>
 * @module index
-* @version 1.25.0
+* @version 1.26.0
 */
 export default {
     /**
@@ -517,6 +518,12 @@ export default {
      * @property {module:Model/PayoutMethodDetailsBalance}
      */
     PayoutMethodDetailsBalance,
+
+    /**
+     * The PayoutMethodDetailsCADBank model constructor.
+     * @property {module:Model/PayoutMethodDetailsCADBank}
+     */
+    PayoutMethodDetailsCADBank,
 
     /**
      * The PayoutMethodDetailsGBPBank model constructor.
@@ -1097,6 +1104,7 @@ export {
     PayoutMethodDetailsBTC,
     PayoutMethodDetailsBWPBank,
     PayoutMethodDetailsBalance,
+    PayoutMethodDetailsCADBank,
     PayoutMethodDetailsGBPBank,
     PayoutMethodDetailsGHSBank,
     PayoutMethodDetailsGHSCash,

@@ -195,6 +195,7 @@ Class | Method | HTTP request | Description
  - [TransferzeroSdk.PayoutMethodDetailsBTC](docs/PayoutMethodDetailsBTC.md)
  - [TransferzeroSdk.PayoutMethodDetailsBWPBank](docs/PayoutMethodDetailsBWPBank.md)
  - [TransferzeroSdk.PayoutMethodDetailsBalance](docs/PayoutMethodDetailsBalance.md)
+ - [TransferzeroSdk.PayoutMethodDetailsCADBank](docs/PayoutMethodDetailsCADBank.md)
  - [TransferzeroSdk.PayoutMethodDetailsGBPBank](docs/PayoutMethodDetailsGBPBank.md)
  - [TransferzeroSdk.PayoutMethodDetailsGHSBank](docs/PayoutMethodDetailsGHSBank.md)
  - [TransferzeroSdk.PayoutMethodDetailsGHSCash](docs/PayoutMethodDetailsGHSCash.md)
@@ -297,5 +298,5 @@ apiClient.basePath = 'https://api-sandbox.transferzero.com/v1';
 
 
 - API version: 1.0
-- Package version: 1.25.0
+- Package version: 1.26.0
 - Build package: org.openapitools.codegen.languages.JavascriptClientCodegen
