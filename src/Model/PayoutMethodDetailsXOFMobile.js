@@ -19,7 +19,7 @@ import PayoutMethodTransferReasonEnum from './PayoutMethodTransferReasonEnum';
 /**
  * The PayoutMethodDetailsXOFMobile model module.
  * @module Model/PayoutMethodDetailsXOFMobile
- * @version 1.26.0
+ * @version 1.26.1
  */
 class PayoutMethodDetailsXOFMobile {
     /**

@@ -40,6 +40,20 @@ export default class PayoutMethodIdentityCardTypeEnum {
         "ID" = "ID";
 
     
+        /**
+         * value: "DL"
+         * @const
+         */
+        "DL" = "DL";
+
+    
+        /**
+         * value: "OT"
+         * @const
+         */
+        "OT" = "OT";
+
+    
 
     /**
     * Returns a <code>PayoutMethodIdentityCardTypeEnum</code> enum value from a Javascript object name.

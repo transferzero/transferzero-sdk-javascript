@@ -19,7 +19,7 @@ import PayoutMethodTransferReasonEnum from './PayoutMethodTransferReasonEnum';
 /**
  * The PayoutMethodDetailsZARBank model module.
  * @module Model/PayoutMethodDetailsZARBank
- * @version 1.26.0
+ * @version 1.26.1
  */
 class PayoutMethodDetailsZARBank {
     /**
