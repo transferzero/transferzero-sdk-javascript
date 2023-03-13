@@ -36,7 +36,7 @@ class ApiError {
 
 /**
 * @module ApiClient
-* @version 1.26.1
+* @version 1.26.2
 */
 
 /**
@@ -461,7 +461,7 @@ export default class ApiClient {
       // set header parameters
       request.set(this.defaultHeaders).set(this.normalizeParams(headerParams));
 
-      request.set("User-Agent","TransferZero-SDK/JavaScript/1.26.1");
+      request.set("User-Agent","TransferZero-SDK/JavaScript/1.26.2");
 
       // set requestAgent if it is set by user
       if (this.requestAgent) {
@@ -528,7 +528,7 @@ export default class ApiClient {
                     var data = this.deserialize(response, returnType);
                     if (error) {
                         const apiError = new ApiError(error, data, response);
-                        if (response.status === 422) {
+                        if (response && response.status === 422) {
                             apiError.isValidationError = true;
                         }
                         reject(apiError);
