@@ -26,9 +26,11 @@ import ApiLogListResponse from './Model/ApiLogListResponse';
 import ApiLogResponse from './Model/ApiLogResponse';
 import Currency from './Model/Currency';
 import CurrencyExchange from './Model/CurrencyExchange';
+import CurrencyExchangeAllOf from './Model/CurrencyExchangeAllOf';
 import CurrencyExchangeListResponse from './Model/CurrencyExchangeListResponse';
 import CurrencyListResponse from './Model/CurrencyListResponse';
 import CurrencyOpposite from './Model/CurrencyOpposite';
+import CurrencyOppositeAllOf from './Model/CurrencyOppositeAllOf';
 import Debit from './Model/Debit';
 import DebitListRequest from './Model/DebitListRequest';
 import DebitListResponse from './Model/DebitListResponse';
@@ -40,6 +42,7 @@ import DocumentListResponse from './Model/DocumentListResponse';
 import DocumentRequest from './Model/DocumentRequest';
 import DocumentResponse from './Model/DocumentResponse';
 import DocumentWebhook from './Model/DocumentWebhook';
+import DocumentWebhookAllOf from './Model/DocumentWebhookAllOf';
 import ErrorStatus from './Model/ErrorStatus';
 import FieldDescription from './Model/FieldDescription';
 import FieldSelectValidation from './Model/FieldSelectValidation';
@@ -58,6 +61,7 @@ import PayinMethodUxFlow from './Model/PayinMethodUxFlow';
 import PaymentMethod from './Model/PaymentMethod';
 import PaymentMethodListResponse from './Model/PaymentMethodListResponse';
 import PaymentMethodOpposite from './Model/PaymentMethodOpposite';
+import PaymentMethodOppositeAllOf from './Model/PaymentMethodOppositeAllOf';
 import PayoutMethod from './Model/PayoutMethod';
 import PayoutMethodBankAccountTypeEnum from './Model/PayoutMethodBankAccountTypeEnum';
 import PayoutMethodCashProviderEnum from './Model/PayoutMethodCashProviderEnum';
@@ -101,6 +105,7 @@ import PayoutMethodRequest from './Model/PayoutMethodRequest';
 import PayoutMethodResponse from './Model/PayoutMethodResponse';
 import PayoutMethodTransferReasonEnum from './Model/PayoutMethodTransferReasonEnum';
 import PayoutMethodWebhook from './Model/PayoutMethodWebhook';
+import PayoutMethodWebhookAllOf from './Model/PayoutMethodWebhookAllOf';
 import PoliticallyExposedPerson from './Model/PoliticallyExposedPerson';
 import ProofOfPayment from './Model/ProofOfPayment';
 import ProofOfPaymentListResponse from './Model/ProofOfPaymentListResponse';
@@ -111,6 +116,7 @@ import RecipientResponse from './Model/RecipientResponse';
 import RecipientState from './Model/RecipientState';
 import RecipientStateReasonDetails from './Model/RecipientStateReasonDetails';
 import RecipientWebhook from './Model/RecipientWebhook';
+import RecipientWebhookAllOf from './Model/RecipientWebhookAllOf';
 import Sender from './Model/Sender';
 import SenderListResponse from './Model/SenderListResponse';
 import SenderRequest from './Model/SenderRequest';
@@ -119,6 +125,7 @@ import SenderResponseExisting from './Model/SenderResponseExisting';
 import SenderResponseMeta from './Model/SenderResponseMeta';
 import SenderState from './Model/SenderState';
 import SenderWebhook from './Model/SenderWebhook';
+import SenderWebhookAllOf from './Model/SenderWebhookAllOf';
 import StateReasonDetails from './Model/StateReasonDetails';
 import Transaction from './Model/Transaction';
 import TransactionListResponse from './Model/TransactionListResponse';
@@ -129,6 +136,7 @@ import TransactionResponseMeta from './Model/TransactionResponseMeta';
 import TransactionState from './Model/TransactionState';
 import TransactionTraits from './Model/TransactionTraits';
 import TransactionWebhook from './Model/TransactionWebhook';
+import TransactionWebhookAllOf from './Model/TransactionWebhookAllOf';
 import ValidationErrorDescription from './Model/ValidationErrorDescription';
 import Webhook from './Model/Webhook';
 import WebhookDefinition from './Model/WebhookDefinition';
@@ -275,6 +283,12 @@ export default {
     CurrencyExchange,
 
     /**
+     * The CurrencyExchangeAllOf model constructor.
+     * @property {module:Model/CurrencyExchangeAllOf}
+     */
+    CurrencyExchangeAllOf,
+
+    /**
      * The CurrencyExchangeListResponse model constructor.
      * @property {module:Model/CurrencyExchangeListResponse}
      */
@@ -291,6 +305,12 @@ export default {
      * @property {module:Model/CurrencyOpposite}
      */
     CurrencyOpposite,
+
+    /**
+     * The CurrencyOppositeAllOf model constructor.
+     * @property {module:Model/CurrencyOppositeAllOf}
+     */
+    CurrencyOppositeAllOf,
 
     /**
      * The Debit model constructor.
@@ -357,6 +377,12 @@ export default {
      * @property {module:Model/DocumentWebhook}
      */
     DocumentWebhook,
+
+    /**
+     * The DocumentWebhookAllOf model constructor.
+     * @property {module:Model/DocumentWebhookAllOf}
+     */
+    DocumentWebhookAllOf,
 
     /**
      * The ErrorStatus model constructor.
@@ -465,6 +491,12 @@ export default {
      * @property {module:Model/PaymentMethodOpposite}
      */
     PaymentMethodOpposite,
+
+    /**
+     * The PaymentMethodOppositeAllOf model constructor.
+     * @property {module:Model/PaymentMethodOppositeAllOf}
+     */
+    PaymentMethodOppositeAllOf,
 
     /**
      * The PayoutMethod model constructor.
@@ -725,6 +757,12 @@ export default {
     PayoutMethodWebhook,
 
     /**
+     * The PayoutMethodWebhookAllOf model constructor.
+     * @property {module:Model/PayoutMethodWebhookAllOf}
+     */
+    PayoutMethodWebhookAllOf,
+
+    /**
      * The PoliticallyExposedPerson model constructor.
      * @property {module:Model/PoliticallyExposedPerson}
      */
@@ -785,6 +823,12 @@ export default {
     RecipientWebhook,
 
     /**
+     * The RecipientWebhookAllOf model constructor.
+     * @property {module:Model/RecipientWebhookAllOf}
+     */
+    RecipientWebhookAllOf,
+
+    /**
      * The Sender model constructor.
      * @property {module:Model/Sender}
      */
@@ -831,6 +875,12 @@ export default {
      * @property {module:Model/SenderWebhook}
      */
     SenderWebhook,
+
+    /**
+     * The SenderWebhookAllOf model constructor.
+     * @property {module:Model/SenderWebhookAllOf}
+     */
+    SenderWebhookAllOf,
 
     /**
      * The StateReasonDetails model constructor.
@@ -891,6 +941,12 @@ export default {
      * @property {module:Model/TransactionWebhook}
      */
     TransactionWebhook,
+
+    /**
+     * The TransactionWebhookAllOf model constructor.
+     * @property {module:Model/TransactionWebhookAllOf}
+     */
+    TransactionWebhookAllOf,
 
     /**
      * The ValidationErrorDescription model constructor.
@@ -1070,9 +1126,11 @@ export {
     ApiLogResponse,
     Currency,
     CurrencyExchange,
+    CurrencyExchangeAllOf,
     CurrencyExchangeListResponse,
     CurrencyListResponse,
     CurrencyOpposite,
+    CurrencyOppositeAllOf,
     Debit,
     DebitListRequest,
     DebitListResponse,
@@ -1084,6 +1142,7 @@ export {
     DocumentRequest,
     DocumentResponse,
     DocumentWebhook,
+    DocumentWebhookAllOf,
     ErrorStatus,
     FieldDescription,
     FieldSelectValidation,
@@ -1102,6 +1161,7 @@ export {
     PaymentMethod,
     PaymentMethodListResponse,
     PaymentMethodOpposite,
+    PaymentMethodOppositeAllOf,
     PayoutMethod,
     PayoutMethodBankAccountTypeEnum,
     PayoutMethodCashProviderEnum,
@@ -1145,6 +1205,7 @@ export {
     PayoutMethodResponse,
     PayoutMethodTransferReasonEnum,
     PayoutMethodWebhook,
+    PayoutMethodWebhookAllOf,
     PoliticallyExposedPerson,
     ProofOfPayment,
     ProofOfPaymentListResponse,
@@ -1155,6 +1216,7 @@ export {
     RecipientState,
     RecipientStateReasonDetails,
     RecipientWebhook,
+    RecipientWebhookAllOf,
     Sender,
     SenderListResponse,
     SenderRequest,
@@ -1163,6 +1225,7 @@ export {
     SenderResponseMeta,
     SenderState,
     SenderWebhook,
+    SenderWebhookAllOf,
     StateReasonDetails,
     Transaction,
     TransactionListResponse,
@@ -1173,6 +1236,7 @@ export {
     TransactionState,
     TransactionTraits,
     TransactionWebhook,
+    TransactionWebhookAllOf,
     ValidationErrorDescription,
     Webhook,
     WebhookDefinition,

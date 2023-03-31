@@ -13,6 +13,7 @@
 
 import ApiClient from '../ApiClient';
 import Currency from './Currency';
+import CurrencyOppositeAllOf from './CurrencyOppositeAllOf';
 
 /**
  * The CurrencyOpposite model module.
@@ -25,9 +26,10 @@ class CurrencyOpposite {
      * @alias module:Model/CurrencyOpposite
      * @extends module:Model/Currency
      * @implements module:Model/Currency
+     * @implements module:Model/CurrencyOppositeAllOf
      */
     constructor() { 
-        Currency.initialize(this);
+        Currency.initialize(this);CurrencyOppositeAllOf.initialize(this);
         CurrencyOpposite.initialize(this);
     }
 
@@ -51,40 +53,14 @@ class CurrencyOpposite {
             obj = obj || new CurrencyOpposite();
             Currency.constructFromObject(data, obj);
             Currency.constructFromObject(data, obj);
+            CurrencyOppositeAllOf.constructFromObject(data, obj);
 
-            if (data.hasOwnProperty('rate')) {
-                obj['rate'] = ApiClient.convertToType(data['rate'], 'Number');
-            }
-            if (data.hasOwnProperty('mtm_rate')) {
-                obj['mtm_rate'] = ApiClient.convertToType(data['mtm_rate'], 'Number');
-            }
-            if (data.hasOwnProperty('margin')) {
-                obj['margin'] = ApiClient.convertToType(data['margin'], 'String');
-            }
         }
         return obj;
     }
 
 
 }
-
-/**
- * The rate of this particular currency with the base one
- * @member {Number} rate
- */
-CurrencyOpposite.prototype['rate'] = undefined;
-
-/**
- * Mark to market rate of this particular currency against the base one with the margin factored in
- * @member {Number} mtm_rate
- */
-CurrencyOpposite.prototype['mtm_rate'] = undefined;
-
-/**
- * The margin set for transactions of this particular currency with the base one
- * @member {String} margin
- */
-CurrencyOpposite.prototype['margin'] = undefined;
 
 
 // Implement Currency interface:
@@ -133,6 +109,22 @@ Currency.prototype['max'] = undefined;
  * @member {String} usd_equivalent
  */
 Currency.prototype['usd_equivalent'] = undefined;
+// Implement CurrencyOppositeAllOf interface:
+/**
+ * The rate of this particular currency with the base one
+ * @member {Number} rate
+ */
+CurrencyOppositeAllOf.prototype['rate'] = undefined;
+/**
+ * Mark to market rate of this particular currency against the base one with the margin factored in
+ * @member {Number} mtm_rate
+ */
+CurrencyOppositeAllOf.prototype['mtm_rate'] = undefined;
+/**
+ * The margin set for transactions of this particular currency with the base one
+ * @member {String} margin
+ */
+CurrencyOppositeAllOf.prototype['margin'] = undefined;
 
 
 

@@ -12,7 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
-import Recipient from './Recipient';
+import RecipientWebhookAllOf from './RecipientWebhookAllOf';
 import Webhook from './Webhook';
 
 /**
@@ -26,12 +26,13 @@ class RecipientWebhook {
      * @alias module:Model/RecipientWebhook
      * @extends module:Model/Webhook
      * @implements module:Model/Webhook
+     * @implements module:Model/RecipientWebhookAllOf
      * @param webhook {} The ID of the webhook that was used to send out this callback
      * @param event {} The event that triggered this webhook
-     * @param _object {} 
+     * @param _object {} The returned object
      */
     constructor(webhook, event, _object) { 
-        Webhook.initialize(this, webhook, event, _object);
+        Webhook.initialize(this, webhook, event, _object);RecipientWebhookAllOf.initialize(this);
         RecipientWebhook.initialize(this, webhook, event, _object);
     }
 
@@ -55,21 +56,14 @@ class RecipientWebhook {
             obj = obj || new RecipientWebhook();
             Webhook.constructFromObject(data, obj);
             Webhook.constructFromObject(data, obj);
+            RecipientWebhookAllOf.constructFromObject(data, obj);
 
-            if (data.hasOwnProperty('object')) {
-                obj['object'] = Recipient.constructFromObject(data['object']);
-            }
         }
         return obj;
     }
 
 
 }
-
-/**
- * @member {module:Model/Recipient} object
- */
-RecipientWebhook.prototype['object'] = undefined;
 
 
 // Implement Webhook interface:
@@ -88,6 +82,11 @@ Webhook.prototype['event'] = undefined;
  * @member {Object} object
  */
 Webhook.prototype['object'] = undefined;
+// Implement RecipientWebhookAllOf interface:
+/**
+ * @member {module:Model/Recipient} object
+ */
+RecipientWebhookAllOf.prototype['object'] = undefined;
 
 
 
