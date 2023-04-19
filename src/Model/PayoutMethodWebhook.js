@@ -12,13 +12,13 @@
  */
 
 import ApiClient from '../ApiClient';
-import PayoutMethodWebhookAllOf from './PayoutMethodWebhookAllOf';
+import PayoutMethod from './PayoutMethod';
 import Webhook from './Webhook';
 
 /**
  * The PayoutMethodWebhook model module.
  * @module Model/PayoutMethodWebhook
- * @version 1.27.0
+ * @version 1.27.3
  */
 class PayoutMethodWebhook {
     /**
@@ -26,13 +26,12 @@ class PayoutMethodWebhook {
      * @alias module:Model/PayoutMethodWebhook
      * @extends module:Model/Webhook
      * @implements module:Model/Webhook
-     * @implements module:Model/PayoutMethodWebhookAllOf
      * @param webhook {} The ID of the webhook that was used to send out this callback
      * @param event {} The event that triggered this webhook
-     * @param _object {} The returned object
+     * @param _object {} 
      */
     constructor(webhook, event, _object) { 
-        Webhook.initialize(this, webhook, event, _object);PayoutMethodWebhookAllOf.initialize(this);
+        Webhook.initialize(this, webhook, event, _object);
         PayoutMethodWebhook.initialize(this, webhook, event, _object);
     }
 
@@ -56,14 +55,21 @@ class PayoutMethodWebhook {
             obj = obj || new PayoutMethodWebhook();
             Webhook.constructFromObject(data, obj);
             Webhook.constructFromObject(data, obj);
-            PayoutMethodWebhookAllOf.constructFromObject(data, obj);
 
+            if (data.hasOwnProperty('object')) {
+                obj['object'] = PayoutMethod.constructFromObject(data['object']);
+            }
         }
         return obj;
     }
 
 
 }
+
+/**
+ * @member {module:Model/PayoutMethod} object
+ */
+PayoutMethodWebhook.prototype['object'] = undefined;
 
 
 // Implement Webhook interface:
@@ -82,11 +88,6 @@ Webhook.prototype['event'] = undefined;
  * @member {Object} object
  */
 Webhook.prototype['object'] = undefined;
-// Implement PayoutMethodWebhookAllOf interface:
-/**
- * @member {module:Model/PayoutMethod} object
- */
-PayoutMethodWebhookAllOf.prototype['object'] = undefined;
 
 
 

@@ -14,12 +14,11 @@
 import ApiClient from '../ApiClient';
 import FieldDescription from './FieldDescription';
 import PaymentMethod from './PaymentMethod';
-import PaymentMethodOppositeAllOf from './PaymentMethodOppositeAllOf';
 
 /**
  * The PaymentMethodOpposite model module.
  * @module Model/PaymentMethodOpposite
- * @version 1.27.0
+ * @version 1.27.3
  */
 class PaymentMethodOpposite {
     /**
@@ -27,10 +26,9 @@ class PaymentMethodOpposite {
      * @alias module:Model/PaymentMethodOpposite
      * @extends module:Model/PaymentMethod
      * @implements module:Model/PaymentMethod
-     * @implements module:Model/PaymentMethodOppositeAllOf
      */
     constructor() { 
-        PaymentMethod.initialize(this);PaymentMethodOppositeAllOf.initialize(this);
+        PaymentMethod.initialize(this);
         PaymentMethodOpposite.initialize(this);
     }
 
@@ -54,14 +52,22 @@ class PaymentMethodOpposite {
             obj = obj || new PaymentMethodOpposite();
             PaymentMethod.constructFromObject(data, obj);
             PaymentMethod.constructFromObject(data, obj);
-            PaymentMethodOppositeAllOf.constructFromObject(data, obj);
 
+            if (data.hasOwnProperty('opposites')) {
+                obj['opposites'] = ApiClient.convertToType(data['opposites'], [PaymentMethod]);
+            }
         }
         return obj;
     }
 
 
 }
+
+/**
+ * List of all providers that can be used in conjunction with the main provider
+ * @member {Array.<module:Model/PaymentMethod>} opposites
+ */
+PaymentMethodOpposite.prototype['opposites'] = undefined;
 
 
 // Implement PaymentMethod interface:
@@ -95,12 +101,6 @@ PaymentMethod.prototype['default'] = undefined;
  * @member {Object.<String, module:Model/FieldDescription>} fields
  */
 PaymentMethod.prototype['fields'] = undefined;
-// Implement PaymentMethodOppositeAllOf interface:
-/**
- * List of all providers that can be used in conjunction with the main provider
- * @member {Array.<module:Model/PaymentMethod>} opposites
- */
-PaymentMethodOppositeAllOf.prototype['opposites'] = undefined;
 
 
 

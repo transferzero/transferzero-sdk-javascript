@@ -18,7 +18,7 @@ import PaymentMethodListResponse from '../Model/PaymentMethodListResponse';
 /**
 * PaymentMethods service.
 * @module Api/PaymentMethodsApi
-* @version 1.27.0
+* @version 1.27.3
 */
 export default class PaymentMethodsApi {
 

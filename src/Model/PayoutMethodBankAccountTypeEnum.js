@@ -33,6 +33,20 @@ export default class PayoutMethodBankAccountTypeEnum {
         "20" = "20";
 
     
+        /**
+         * value: "30"
+         * @const
+         */
+        "30" = "30";
+
+    
+        /**
+         * value: "40"
+         * @const
+         */
+        "40" = "40";
+
+    
 
     /**
     * Returns a <code>PayoutMethodBankAccountTypeEnum</code> enum value from a Javascript object name.
