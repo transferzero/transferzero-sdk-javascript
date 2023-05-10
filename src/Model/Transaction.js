@@ -22,7 +22,7 @@ import ValidationErrorDescription from './ValidationErrorDescription';
 /**
  * The Transaction model module.
  * @module Model/Transaction
- * @version 1.27.3
+ * @version 1.27.4
  */
 class Transaction {
     /**

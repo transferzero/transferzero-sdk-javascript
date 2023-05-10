@@ -29,4 +29,8 @@
 
 * `wave` (value: `"wave"`)
 
+* `expresso` (value: `"expresso"`)
+
+* `tmoney` (value: `"tmoney"`)
+
 

@@ -110,6 +110,20 @@ export default class PayoutMethodMobileProviderEnum {
         "wave" = "wave";
 
     
+        /**
+         * value: "expresso"
+         * @const
+         */
+        "expresso" = "expresso";
+
+    
+        /**
+         * value: "tmoney"
+         * @const
+         */
+        "tmoney" = "tmoney";
+
+    
 
     /**
     * Returns a <code>PayoutMethodMobileProviderEnum</code> enum value from a Javascript object name.
