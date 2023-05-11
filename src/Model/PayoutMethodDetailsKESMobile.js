@@ -19,7 +19,7 @@ import PayoutMethodTransferReasonEnum from './PayoutMethodTransferReasonEnum';
 /**
  * The PayoutMethodDetailsKESMobile model module.
  * @module Model/PayoutMethodDetailsKESMobile
- * @version 1.27.4
+ * @version 1.27.5
  */
 class PayoutMethodDetailsKESMobile {
     /**

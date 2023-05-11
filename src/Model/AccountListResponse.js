@@ -18,7 +18,7 @@ import AccountMeta from './AccountMeta';
 /**
  * The AccountListResponse model module.
  * @module Model/AccountListResponse
- * @version 1.27.4
+ * @version 1.27.5
  */
 class AccountListResponse {
     /**

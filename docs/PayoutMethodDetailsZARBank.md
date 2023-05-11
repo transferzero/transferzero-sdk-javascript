@@ -5,11 +5,12 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **firstName** | **String** |  | 
 **lastName** | **String** |  | 
-**street** | **String** |  | 
-**postalCode** | **String** |  | 
-**city** | **String** |  | 
+**street** | **String** |  | [optional] 
+**postalCode** | **String** |  | [optional] 
+**city** | **String** |  | [optional] 
 **email** | **String** |  | [optional] 
-**bankCode** | **String** |  | 
+**bankCode** | **String** |  | [optional] 
+**branchCode** | **String** |  | [optional] 
 **bankAccount** | **String** |  | 
 **phoneNumber** | **String** |  | 
 **transferReasonCode** | **String** |  | [optional] 

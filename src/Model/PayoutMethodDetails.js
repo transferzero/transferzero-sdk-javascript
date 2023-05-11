@@ -52,7 +52,7 @@ import PayoutMethodPixKeyTypeEnum from './PayoutMethodPixKeyTypeEnum';
 /**
  * The PayoutMethodDetails model module.
  * @module Model/PayoutMethodDetails
- * @version 1.27.4
+ * @version 1.27.5
  */
 class PayoutMethodDetails {
     /**
@@ -105,13 +105,13 @@ class PayoutMethodDetails {
      * @param street {} 
      * @param postalCode {} 
      * @param city {} 
-     * @param swiftCode {} 
      * @param branchCode {} 
+     * @param swiftCode {} 
      * @param ifscCode {} 
      */
-    constructor(firstName, lastName, bankCode, bankAccount, phoneNumber, mobileProvider, country, transferReason, iban, bankName, cashProvider, senderIdentityCardType, senderIdentityCardId, identityCardType, identityCardId, name, address, street, postalCode, city, swiftCode, branchCode, ifscCode) { 
-        PayoutMethodDetailsNGNBank.initialize(this, firstName, lastName, bankCode, bankAccount);PayoutMethodDetailsMobile.initialize(this, firstName, lastName, phoneNumber);PayoutMethodDetailsXOFMobile.initialize(this, firstName, lastName, phoneNumber, mobileProvider);PayoutMethodDetailsXOFBank.initialize(this, firstName, lastName, iban);PayoutMethodDetailsXOFCash.initialize(this, firstName, lastName, phoneNumber, cashProvider);PayoutMethodDetailsGHSBank.initialize(this, firstName, lastName, bankCode, bankAccount);PayoutMethodDetailsGHSCash.initialize(this, firstName, lastName, phoneNumber);PayoutMethodDetailsGBPBank.initialize(this, firstName, lastName);PayoutMethodDetailsIBAN.initialize(this, firstName, lastName, iban);PayoutMethodDetailsMADCash.initialize(this, firstName, lastName, phoneNumber, senderIdentityCardType, senderIdentityCardId);PayoutMethodDetailsBalance.initialize(this);PayoutMethodDetailsBTC.initialize(this, firstName, lastName, name, address);PayoutMethodDetailsZARBank.initialize(this, firstName, lastName, street, postalCode, city, bankCode, bankAccount, phoneNumber);PayoutMethodDetailsUSDBank.initialize(this, firstName, lastName, bankAccount, country);PayoutMethodDetailsUSDCash.initialize(this, firstName, lastName, phoneNumber, country);PayoutMethodDetailsKESMobile.initialize(this, firstName, lastName, street, phoneNumber, mobileProvider, identityCardType, identityCardId);PayoutMethodDetailsKESBank.initialize(this, firstName, lastName, bankCode, street, bankAccount, bankName, swiftCode, identityCardType, identityCardId);PayoutMethodDetailsXAFMobile.initialize(this, firstName, lastName, phoneNumber, mobileProvider);PayoutMethodDetailsXAFBank.initialize(this, firstName, lastName, iban);PayoutMethodDetailsGNFMobile.initialize(this, firstName, lastName, phoneNumber, mobileProvider);PayoutMethodDetailsBRLBank.initialize(this, firstName, lastName, city, postalCode, identityCardType, identityCardId, transferReason);PayoutMethodDetailsNZDBank.initialize(this, firstName, lastName, bankAccount, bankName);PayoutMethodDetailsINRBank.initialize(this, firstName, lastName, city, street, postalCode, phoneNumber, bankName, bankAccount, ifscCode);PayoutMethodDetailsBWPBank.initialize(this, firstName, lastName, bankName, bankAccount, branchCode);PayoutMethodDetailsZMWBank.initialize(this, firstName, lastName, bankAccount, branchCode);PayoutMethodDetailsCADBank.initialize(this, firstName, lastName, bankAccount, bankCode, branchCode);PayoutMethodDetailsUGXBank.initialize(this, firstName, lastName, street, city, postalCode, identityCardId, bankAccount, branchCode, transferReason);
-        PayoutMethodDetails.initialize(this, firstName, lastName, bankCode, bankAccount, phoneNumber, mobileProvider, country, transferReason, iban, bankName, cashProvider, senderIdentityCardType, senderIdentityCardId, identityCardType, identityCardId, name, address, street, postalCode, city, swiftCode, branchCode, ifscCode);
+    constructor(firstName, lastName, bankCode, bankAccount, phoneNumber, mobileProvider, country, transferReason, iban, bankName, cashProvider, senderIdentityCardType, senderIdentityCardId, identityCardType, identityCardId, name, address, street, postalCode, city, branchCode, swiftCode, ifscCode) { 
+        PayoutMethodDetailsNGNBank.initialize(this, firstName, lastName, bankCode, bankAccount);PayoutMethodDetailsMobile.initialize(this, firstName, lastName, phoneNumber);PayoutMethodDetailsXOFMobile.initialize(this, firstName, lastName, phoneNumber, mobileProvider);PayoutMethodDetailsXOFBank.initialize(this, firstName, lastName, iban);PayoutMethodDetailsXOFCash.initialize(this, firstName, lastName, phoneNumber, cashProvider);PayoutMethodDetailsGHSBank.initialize(this, firstName, lastName, bankCode, bankAccount);PayoutMethodDetailsGHSCash.initialize(this, firstName, lastName, phoneNumber);PayoutMethodDetailsGBPBank.initialize(this, firstName, lastName);PayoutMethodDetailsIBAN.initialize(this, firstName, lastName, iban);PayoutMethodDetailsMADCash.initialize(this, firstName, lastName, phoneNumber, senderIdentityCardType, senderIdentityCardId);PayoutMethodDetailsBalance.initialize(this);PayoutMethodDetailsBTC.initialize(this, firstName, lastName, name, address);PayoutMethodDetailsZARBank.initialize(this, firstName, lastName, bankAccount, phoneNumber);PayoutMethodDetailsUSDBank.initialize(this, firstName, lastName, bankAccount, country);PayoutMethodDetailsUSDCash.initialize(this, firstName, lastName, phoneNumber, country);PayoutMethodDetailsKESMobile.initialize(this, firstName, lastName, street, phoneNumber, mobileProvider, identityCardType, identityCardId);PayoutMethodDetailsKESBank.initialize(this, firstName, lastName, bankCode, street, bankAccount, bankName, swiftCode, identityCardType, identityCardId);PayoutMethodDetailsXAFMobile.initialize(this, firstName, lastName, phoneNumber, mobileProvider);PayoutMethodDetailsXAFBank.initialize(this, firstName, lastName, iban);PayoutMethodDetailsGNFMobile.initialize(this, firstName, lastName, phoneNumber, mobileProvider);PayoutMethodDetailsBRLBank.initialize(this, firstName, lastName, city, postalCode, identityCardType, identityCardId, transferReason);PayoutMethodDetailsNZDBank.initialize(this, firstName, lastName, bankAccount, bankName);PayoutMethodDetailsINRBank.initialize(this, firstName, lastName, city, street, postalCode, phoneNumber, bankName, bankAccount, ifscCode);PayoutMethodDetailsBWPBank.initialize(this, firstName, lastName, bankName, bankAccount, branchCode);PayoutMethodDetailsZMWBank.initialize(this, firstName, lastName, bankAccount, branchCode);PayoutMethodDetailsCADBank.initialize(this, firstName, lastName, bankAccount, bankCode, branchCode);PayoutMethodDetailsUGXBank.initialize(this, firstName, lastName, street, city, postalCode, identityCardId, bankAccount, branchCode, transferReason);
+        PayoutMethodDetails.initialize(this, firstName, lastName, bankCode, bankAccount, phoneNumber, mobileProvider, country, transferReason, iban, bankName, cashProvider, senderIdentityCardType, senderIdentityCardId, identityCardType, identityCardId, name, address, street, postalCode, city, branchCode, swiftCode, ifscCode);
     }
 
     /**
@@ -119,7 +119,7 @@ class PayoutMethodDetails {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, firstName, lastName, bankCode, bankAccount, phoneNumber, mobileProvider, country, transferReason, iban, bankName, cashProvider, senderIdentityCardType, senderIdentityCardId, identityCardType, identityCardId, name, address, street, postalCode, city, swiftCode, branchCode, ifscCode) { 
+    static initialize(obj, firstName, lastName, bankCode, bankAccount, phoneNumber, mobileProvider, country, transferReason, iban, bankName, cashProvider, senderIdentityCardType, senderIdentityCardId, identityCardType, identityCardId, name, address, street, postalCode, city, branchCode, swiftCode, ifscCode) { 
     }
 
     /**
@@ -457,6 +457,10 @@ PayoutMethodDetailsZARBank.prototype['email'] = undefined;
  * @member {String} bank_code
  */
 PayoutMethodDetailsZARBank.prototype['bank_code'] = undefined;
+/**
+ * @member {String} branch_code
+ */
+PayoutMethodDetailsZARBank.prototype['branch_code'] = undefined;
 /**
  * @member {String} bank_account
  */

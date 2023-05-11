@@ -19,25 +19,21 @@ import PayoutMethodTransferReasonEnum from './PayoutMethodTransferReasonEnum';
 /**
  * The PayoutMethodDetailsZARBank model module.
  * @module Model/PayoutMethodDetailsZARBank
- * @version 1.27.4
+ * @version 1.27.5
  */
 class PayoutMethodDetailsZARBank {
     /**
      * Constructs a new <code>PayoutMethodDetailsZARBank</code>.
-     * &#x60;&#x60;&#x60;JSON   \&quot;details\&quot;: {     \&quot;first_name\&quot;: \&quot;First\&quot;, //  Mandatory for personal payouts;     \&quot;last_name\&quot;: \&quot;Last\&quot;, //  Mandatory for personal payouts;     \&quot;name\&quot; \&quot;First Ltd\&quot;, // Mandatory for business payouts;     \&quot;contact_first_name\&quot; \&quot;Business\&quot;, // Mandatory for business payouts;     \&quot;contact_last_name\&quot; \&quot;Contact\&quot;, // Mandatory for business payouts;     \&quot;street\&quot;: \&quot;Main Street\&quot;,     \&quot;postal_code\&quot;: \&quot;AB0001\&quot;,     \&quot;city\&quot;: \&quot;Cape Town\&quot;,     \&quot;email\&quot;: \&quot;recipient@email.com\&quot;,     \&quot;bank_name\&quot; &#39;Bank Zero&#39;, // Optional     \&quot;bank_code\&quot;: \&quot;334810\&quot;,     \&quot;bank_account\&quot;: \&quot;12345678\&quot;,     \&quot;phone_number\&quot;: \&quot;+27119785313\&quot;, // E.164 international format     \&quot;transfer_reason\&quot;: \&quot;personal_account\&quot;, // New transfer reason field     \&quot;legal_entity_type\&quot;: \&quot;sole_proprietorship\&quot;, // Optional; Default value is \&quot;person\&quot;; Mandatory for business payouts;     \&quot;nature_of_business\&quot;: \&quot;mining\&quot;, // Optional for business payouts;     \&quot;registration_number\&quot;: \&quot;17364BGC\&quot; // Optional for business payouts;   } &#x60;&#x60;&#x60;  See [ZAR Bank](https://docs.transferzero.com/docs/payout-details/#zarbank) documentation for the bank_code and transfer_reason lists
+     * &#x60;&#x60;&#x60;JSON   \&quot;details\&quot;: {     \&quot;first_name\&quot;: \&quot;First\&quot;, //  Mandatory for personal payouts;     \&quot;last_name\&quot;: \&quot;Last\&quot;, //  Mandatory for personal payouts;     \&quot;name\&quot; \&quot;First Ltd\&quot;, // Mandatory for business payouts;     \&quot;contact_first_name\&quot; \&quot;Business\&quot;,     \&quot;contact_last_name\&quot; \&quot;Contact\&quot;,     \&quot;street\&quot;: \&quot;Main Street\&quot;,     \&quot;postal_code\&quot;: \&quot;AB0001\&quot;,     \&quot;city\&quot;: \&quot;Cape Town\&quot;,     \&quot;email\&quot;: \&quot;recipient@email.com\&quot;,     \&quot;bank_name\&quot; &#39;Bank Zero&#39;, // Optional     \&quot;bank_code\&quot;: \&quot;334810\&quot;,  // Optional; Required if branch_code is empty     \&quot;branch_code\&quot;: \&quot;630067\&quot;, // Optional; Required if bank_code is empty     \&quot;bank_account\&quot;: \&quot;12345678\&quot;,     \&quot;phone_number\&quot;: \&quot;+27119785313\&quot;, // E.164 international format     \&quot;transfer_reason\&quot;: \&quot;personal_account\&quot;, // New transfer reason field     \&quot;legal_entity_type\&quot;: \&quot;sole_proprietorship\&quot;, // Optional; Default value is \&quot;person\&quot;;     \&quot;nature_of_business\&quot;: \&quot;mining\&quot;, // Optional for business payouts;     \&quot;registration_number\&quot;: \&quot;17364BGC\&quot; // Optional for business payouts;   } &#x60;&#x60;&#x60;  See [ZAR Bank](https://docs.transferzero.com/docs/payout-details/#zarbank) documentation for the bank_code and transfer_reason lists
      * @alias module:Model/PayoutMethodDetailsZARBank
      * @param firstName {String} 
      * @param lastName {String} 
-     * @param street {String} 
-     * @param postalCode {String} 
-     * @param city {String} 
-     * @param bankCode {String} 
      * @param bankAccount {String} 
      * @param phoneNumber {String} 
      */
-    constructor(firstName, lastName, street, postalCode, city, bankCode, bankAccount, phoneNumber) { 
+    constructor(firstName, lastName, bankAccount, phoneNumber) { 
         
-        PayoutMethodDetailsZARBank.initialize(this, firstName, lastName, street, postalCode, city, bankCode, bankAccount, phoneNumber);
+        PayoutMethodDetailsZARBank.initialize(this, firstName, lastName, bankAccount, phoneNumber);
     }
 
     /**
@@ -45,13 +41,9 @@ class PayoutMethodDetailsZARBank {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, firstName, lastName, street, postalCode, city, bankCode, bankAccount, phoneNumber) { 
+    static initialize(obj, firstName, lastName, bankAccount, phoneNumber) { 
         obj['first_name'] = firstName;
         obj['last_name'] = lastName;
-        obj['street'] = street;
-        obj['postal_code'] = postalCode;
-        obj['city'] = city;
-        obj['bank_code'] = bankCode;
         obj['bank_account'] = bankAccount;
         obj['phone_number'] = phoneNumber;
     }
@@ -87,6 +79,9 @@ class PayoutMethodDetailsZARBank {
             }
             if (data.hasOwnProperty('bank_code')) {
                 obj['bank_code'] = ApiClient.convertToType(data['bank_code'], 'String');
+            }
+            if (data.hasOwnProperty('branch_code')) {
+                obj['branch_code'] = ApiClient.convertToType(data['branch_code'], 'String');
             }
             if (data.hasOwnProperty('bank_account')) {
                 obj['bank_account'] = ApiClient.convertToType(data['bank_account'], 'String');
@@ -159,6 +154,11 @@ PayoutMethodDetailsZARBank.prototype['email'] = undefined;
  * @member {String} bank_code
  */
 PayoutMethodDetailsZARBank.prototype['bank_code'] = undefined;
+
+/**
+ * @member {String} branch_code
+ */
+PayoutMethodDetailsZARBank.prototype['branch_code'] = undefined;
 
 /**
  * @member {String} bank_account

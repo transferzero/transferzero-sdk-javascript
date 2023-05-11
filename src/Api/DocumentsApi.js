@@ -20,7 +20,7 @@ import DocumentResponse from '../Model/DocumentResponse';
 /**
 * Documents service.
 * @module Api/DocumentsApi
-* @version 1.27.4
+* @version 1.27.5
 */
 export default class DocumentsApi {
 
