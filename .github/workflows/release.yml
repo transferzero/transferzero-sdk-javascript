@@ -3,7 +3,6 @@ on:
   push:
     branches:
       - master
-      - BTA-11168-ci-cd-action
   workflow_dispatch:
 
 jobs:
