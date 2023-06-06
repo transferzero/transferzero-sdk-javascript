@@ -4,17 +4,29 @@ on:
     branches:
       - master
       - BTA-11168-ci-cd-action
+  workflow_dispatch:
+
 jobs:
-  build:
+  release-transferzero-javascript-sdk:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+
       - uses: actions/setup-node@v3
         with:
           node-version: '16.x'
           registry-url: 'https://registry.npmjs.org'
+
       - run: npm install
+
       - run: npm config set _auth $NODE_AUTH_TOKEN
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GH_RELEASER_NPM_TOKEN }}
+
       - run: npm publish
+
+      - name: Tag the release
+        run: |
+          NEXT_TAG=$(awk -F'"' '/"version": ".+"/{ print $4; exit; }' package.json)
+          git tag $NEXT_TAG
+          git push --tags
