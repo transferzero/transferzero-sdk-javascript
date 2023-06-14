@@ -17,7 +17,7 @@ import StateReasonDetails from './StateReasonDetails';
 /**
  * The RecipientStateReasonDetails model module.
  * @module Model/RecipientStateReasonDetails
- * @version 1.27.5
+ * @version 1.27.6
  */
 class RecipientStateReasonDetails {
     /**

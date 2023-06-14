@@ -17,7 +17,7 @@ import PayoutMethodMobileProviderEnum from './PayoutMethodMobileProviderEnum';
 /**
  * The AccountValidationRequest model module.
  * @module Model/AccountValidationRequest
- * @version 1.27.5
+ * @version 1.27.6
  */
 class AccountValidationRequest {
     /**
@@ -165,7 +165,13 @@ AccountValidationRequest['CountryEnum'] = {
      * value: "CI"
      * @const
      */
-    "CI": "CI"
+    "CI": "CI",
+
+    /**
+     * value: "UG"
+     * @const
+     */
+    "UG": "UG"
 };
 
 
@@ -192,7 +198,13 @@ AccountValidationRequest['CurrencyEnum'] = {
      * value: "XOF"
      * @const
      */
-    "XOF": "XOF"
+    "XOF": "XOF",
+
+    /**
+     * value: "UGX"
+     * @const
+     */
+    "UGX": "UGX"
 };
 
 

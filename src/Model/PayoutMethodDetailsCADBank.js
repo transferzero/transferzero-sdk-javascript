@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The PayoutMethodDetailsCADBank model module.
  * @module Model/PayoutMethodDetailsCADBank
- * @version 1.27.5
+ * @version 1.27.6
  */
 class PayoutMethodDetailsCADBank {
     /**

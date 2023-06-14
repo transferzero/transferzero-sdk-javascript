@@ -25,6 +25,8 @@ Name | Type | Description | Notes
 
 * `CI` (value: `"CI"`)
 
+* `UG` (value: `"UG"`)
+
 
 
 
@@ -37,6 +39,8 @@ Name | Type | Description | Notes
 * `GHS` (value: `"GHS"`)
 
 * `XOF` (value: `"XOF"`)
+
+* `UGX` (value: `"UGX"`)
 
 
 
