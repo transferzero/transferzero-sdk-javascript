@@ -20,7 +20,7 @@ import PayoutMethodTransferReasonEnum from './PayoutMethodTransferReasonEnum';
 /**
  * The PayoutMethodDetailsBRLBank model module.
  * @module Model/PayoutMethodDetailsBRLBank
- * @version 1.27.6
+ * @version 1.27.8
  */
 class PayoutMethodDetailsBRLBank {
     /**
