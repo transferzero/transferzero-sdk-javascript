@@ -20,7 +20,7 @@ import DebitResponse from '../Model/DebitResponse';
 /**
 * AccountDebits service.
 * @module Api/AccountDebitsApi
-* @version 1.27.8
+* @version 1.27.9
 */
 export default class AccountDebitsApi {
 

@@ -17,7 +17,7 @@ import ProofOfPayment from './ProofOfPayment';
 /**
  * The ProofOfPaymentListResponse model module.
  * @module Model/ProofOfPaymentListResponse
- * @version 1.27.8
+ * @version 1.27.9
  */
 class ProofOfPaymentListResponse {
     /**

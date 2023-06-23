@@ -13,6 +13,8 @@
 
 * `airtel` (value: `"airtel"`)
 
+* `airteltigo` (value: `"airteltigo"`)
+
 * `vodafone` (value: `"vodafone"`)
 
 * `mpesa` (value: `"mpesa"`)

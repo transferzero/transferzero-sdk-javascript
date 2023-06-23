@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ErrorStatus model module.
  * @module Model/ErrorStatus
- * @version 1.27.8
+ * @version 1.27.9
  */
 class ErrorStatus {
     /**

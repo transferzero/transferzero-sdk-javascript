@@ -55,6 +55,13 @@ export default class PayoutMethodMobileProviderEnum {
 
     
         /**
+         * value: "airteltigo"
+         * @const
+         */
+        "airteltigo" = "airteltigo";
+
+    
+        /**
          * value: "vodafone"
          * @const
          */

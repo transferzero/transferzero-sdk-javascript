@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The FieldSelectValidation model module.
  * @module Model/FieldSelectValidation
- * @version 1.27.8
+ * @version 1.27.9
  */
 class FieldSelectValidation {
     /**

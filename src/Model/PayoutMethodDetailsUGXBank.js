@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The PayoutMethodDetailsUGXBank model module.
  * @module Model/PayoutMethodDetailsUGXBank
- * @version 1.27.8
+ * @version 1.27.9
  */
 class PayoutMethodDetailsUGXBank {
     /**
