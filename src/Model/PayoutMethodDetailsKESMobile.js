@@ -19,24 +19,25 @@ import PayoutMethodTransferReasonEnum from './PayoutMethodTransferReasonEnum';
 /**
  * The PayoutMethodDetailsKESMobile model module.
  * @module Model/PayoutMethodDetailsKESMobile
- * @version 1.27.9
+ * @version 1.28.0
  */
 class PayoutMethodDetailsKESMobile {
     /**
      * Constructs a new <code>PayoutMethodDetailsKESMobile</code>.
-     * &#x60;&#x60;&#x60;JSON   \&quot;details\&quot;: {     \&quot;first_name\&quot;: \&quot;First\&quot;,     \&quot;last_name\&quot;: \&quot;Last\&quot;,     \&quot;street\&quot;: \&quot;Main Street\&quot;,     \&quot;phone_number\&quot;: \&quot;+254997853134\&quot;, // E.164 international format     \&quot;mobile_provider\&quot;: \&quot;mpesa\&quot;,     \&quot;transfer_reason\&quot;: \&quot;personal_account\&quot;, // New transfer reason field     \&quot;identity_card_type\&quot;: \&quot;ID\&quot;,     \&quot;identity_card_id\&quot;: \&quot;AB12345678\&quot;   } &#x60;&#x60;&#x60;  See [KES Mobile](https://docs.transferzero.com/docs/payout-details/#kesmobile) documentation for transfer_reason lists
+     * &#x60;&#x60;&#x60;JSON   \&quot;details\&quot;: {     \&quot;first_name\&quot;: \&quot;First\&quot;,     \&quot;last_name\&quot;: \&quot;Last\&quot;,     \&quot;street\&quot;: \&quot;1 Linford Street\&quot;,     \&quot;phone_number\&quot;: \&quot;+254123456789\&quot;, // E.164 international format     \&quot;identity_card_type\&quot;: \&quot;ID\&quot;, // refers to the recipient&#39;s ID details; Values: \&quot;PP\&quot;: Passport, \&quot;ID\&quot;: National ID or \&quot;O\&quot;: Other     \&quot;identity_card_id\&quot;: &#39;AB12345678&#39;, // refers to the recipient&#39;s ID details     \&quot;transfer_reason\&quot;: \&quot;personal_account\&quot;,     \&quot;mobile_provider\&quot;: \&quot;mpesa\&quot;,     \&quot;relationship_to_sender\&quot;: \&quot;Aunt\&quot; // Optional   } &#x60;&#x60;&#x60;  See [KES Mobile](https://docs.transferzero.com/docs/payout-details/#kesmobile) documentation for transfer_reason lists
      * @alias module:Model/PayoutMethodDetailsKESMobile
      * @param firstName {String} 
      * @param lastName {String} 
      * @param street {String} 
      * @param phoneNumber {String} 
      * @param mobileProvider {module:Model/PayoutMethodMobileProviderEnum} 
+     * @param transferReason {module:Model/PayoutMethodTransferReasonEnum} 
      * @param identityCardType {module:Model/PayoutMethodIdentityCardTypeEnum} 
      * @param identityCardId {String} 
      */
-    constructor(firstName, lastName, street, phoneNumber, mobileProvider, identityCardType, identityCardId) { 
+    constructor(firstName, lastName, street, phoneNumber, mobileProvider, transferReason, identityCardType, identityCardId) { 
         
-        PayoutMethodDetailsKESMobile.initialize(this, firstName, lastName, street, phoneNumber, mobileProvider, identityCardType, identityCardId);
+        PayoutMethodDetailsKESMobile.initialize(this, firstName, lastName, street, phoneNumber, mobileProvider, transferReason, identityCardType, identityCardId);
     }
 
     /**
@@ -44,12 +45,13 @@ class PayoutMethodDetailsKESMobile {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, firstName, lastName, street, phoneNumber, mobileProvider, identityCardType, identityCardId) { 
+    static initialize(obj, firstName, lastName, street, phoneNumber, mobileProvider, transferReason, identityCardType, identityCardId) { 
         obj['first_name'] = firstName;
         obj['last_name'] = lastName;
         obj['street'] = street;
         obj['phone_number'] = phoneNumber;
         obj['mobile_provider'] = mobileProvider;
+        obj['transfer_reason'] = transferReason;
         obj['identity_card_type'] = identityCardType;
         obj['identity_card_id'] = identityCardId;
     }
@@ -91,6 +93,9 @@ class PayoutMethodDetailsKESMobile {
             }
             if (data.hasOwnProperty('identity_card_id')) {
                 obj['identity_card_id'] = ApiClient.convertToType(data['identity_card_id'], 'String');
+            }
+            if (data.hasOwnProperty('relationship_to_sender')) {
+                obj['relationship_to_sender'] = ApiClient.convertToType(data['relationship_to_sender'], 'String');
             }
         }
         return obj;
@@ -143,6 +148,11 @@ PayoutMethodDetailsKESMobile.prototype['identity_card_type'] = undefined;
  * @member {String} identity_card_id
  */
 PayoutMethodDetailsKESMobile.prototype['identity_card_id'] = undefined;
+
+/**
+ * @member {String} relationship_to_sender
+ */
+PayoutMethodDetailsKESMobile.prototype['relationship_to_sender'] = undefined;
 
 
 

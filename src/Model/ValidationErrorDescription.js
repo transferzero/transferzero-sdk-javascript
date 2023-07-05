@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ValidationErrorDescription model module.
  * @module Model/ValidationErrorDescription
- * @version 1.27.9
+ * @version 1.28.0
  */
 class ValidationErrorDescription {
     /**

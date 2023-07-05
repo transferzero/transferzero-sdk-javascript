@@ -17,7 +17,7 @@ import WebhookLogMetadata from './WebhookLogMetadata';
 /**
  * The WebhookLog model module.
  * @module Model/WebhookLog
- * @version 1.27.9
+ * @version 1.28.0
  */
 class WebhookLog {
     /**

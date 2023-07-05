@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The PayoutMethodDetailsBTC model module.
  * @module Model/PayoutMethodDetailsBTC
- * @version 1.27.9
+ * @version 1.28.0
  */
 class PayoutMethodDetailsBTC {
     /**
