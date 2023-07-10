@@ -52,7 +52,7 @@ import PayoutMethodPixKeyTypeEnum from './PayoutMethodPixKeyTypeEnum';
 /**
  * The PayoutMethodDetails model module.
  * @module Model/PayoutMethodDetails
- * @version 1.28.0
+ * @version 1.28.1
  */
 class PayoutMethodDetails {
     /**
@@ -571,6 +571,10 @@ PayoutMethodDetailsKESMobile.prototype['last_name'] = undefined;
  * @member {String} street
  */
 PayoutMethodDetailsKESMobile.prototype['street'] = undefined;
+/**
+ * @member {String} city
+ */
+PayoutMethodDetailsKESMobile.prototype['city'] = undefined;
 /**
  * @member {String} phone_number
  */

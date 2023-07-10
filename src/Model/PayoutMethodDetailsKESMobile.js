@@ -19,12 +19,12 @@ import PayoutMethodTransferReasonEnum from './PayoutMethodTransferReasonEnum';
 /**
  * The PayoutMethodDetailsKESMobile model module.
  * @module Model/PayoutMethodDetailsKESMobile
- * @version 1.28.0
+ * @version 1.28.1
  */
 class PayoutMethodDetailsKESMobile {
     /**
      * Constructs a new <code>PayoutMethodDetailsKESMobile</code>.
-     * &#x60;&#x60;&#x60;JSON   \&quot;details\&quot;: {     \&quot;first_name\&quot;: \&quot;First\&quot;,     \&quot;last_name\&quot;: \&quot;Last\&quot;,     \&quot;street\&quot;: \&quot;1 Linford Street\&quot;,     \&quot;phone_number\&quot;: \&quot;+254123456789\&quot;, // E.164 international format     \&quot;identity_card_type\&quot;: \&quot;ID\&quot;, // refers to the recipient&#39;s ID details; Values: \&quot;PP\&quot;: Passport, \&quot;ID\&quot;: National ID or \&quot;O\&quot;: Other     \&quot;identity_card_id\&quot;: &#39;AB12345678&#39;, // refers to the recipient&#39;s ID details     \&quot;transfer_reason\&quot;: \&quot;personal_account\&quot;,     \&quot;mobile_provider\&quot;: \&quot;mpesa\&quot;,     \&quot;relationship_to_sender\&quot;: \&quot;Aunt\&quot; // Optional   } &#x60;&#x60;&#x60;  See [KES Mobile](https://docs.transferzero.com/docs/payout-details/#kesmobile) documentation for transfer_reason lists
+     * &#x60;&#x60;&#x60;JSON   \&quot;details\&quot;: {     \&quot;first_name\&quot;: \&quot;First\&quot;,     \&quot;last_name\&quot;: \&quot;Last\&quot;,     \&quot;street\&quot;: \&quot;1 Linford Street\&quot;,     \&quot;city\&quot;: \&quot;Nairobi\&quot;,     \&quot;phone_number\&quot;: \&quot;+254123456789\&quot;, // E.164 international format     \&quot;identity_card_type\&quot;: \&quot;ID\&quot;, // refers to the recipient&#39;s ID details; Values: \&quot;PP\&quot;: Passport, \&quot;ID\&quot;: National ID or \&quot;O\&quot;: Other     \&quot;identity_card_id\&quot;: &#39;AB12345678&#39;, // refers to the recipient&#39;s ID details     \&quot;transfer_reason\&quot;: \&quot;personal_account\&quot;,     \&quot;mobile_provider\&quot;: \&quot;mpesa\&quot;,     \&quot;relationship_to_sender\&quot;: \&quot;Aunt\&quot; // Optional   } &#x60;&#x60;&#x60;  See [KES Mobile](https://docs.transferzero.com/docs/payout-details/#kesmobile) documentation for transfer_reason lists
      * @alias module:Model/PayoutMethodDetailsKESMobile
      * @param firstName {String} 
      * @param lastName {String} 
@@ -76,6 +76,9 @@ class PayoutMethodDetailsKESMobile {
             if (data.hasOwnProperty('street')) {
                 obj['street'] = ApiClient.convertToType(data['street'], 'String');
             }
+            if (data.hasOwnProperty('city')) {
+                obj['city'] = ApiClient.convertToType(data['city'], 'String');
+            }
             if (data.hasOwnProperty('phone_number')) {
                 obj['phone_number'] = ApiClient.convertToType(data['phone_number'], 'String');
             }
@@ -118,6 +121,11 @@ PayoutMethodDetailsKESMobile.prototype['last_name'] = undefined;
  * @member {String} street
  */
 PayoutMethodDetailsKESMobile.prototype['street'] = undefined;
+
+/**
+ * @member {String} city
+ */
+PayoutMethodDetailsKESMobile.prototype['city'] = undefined;
 
 /**
  * @member {String} phone_number

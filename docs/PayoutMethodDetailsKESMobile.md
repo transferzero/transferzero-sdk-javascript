@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 **firstName** | **String** |  | 
 **lastName** | **String** |  | 
 **street** | **String** |  | 
+**city** | **String** |  | [optional] 
 **phoneNumber** | **String** |  | 
 **mobileProvider** | [**PayoutMethodMobileProviderEnum**](PayoutMethodMobileProviderEnum.md) |  | 
 **transferReasonCode** | **String** |  | [optional] 
