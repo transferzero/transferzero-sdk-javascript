@@ -13,31 +13,29 @@
 
 import ApiClient from '../ApiClient';
 import PayoutMethodBankAccountTypeEnum from './PayoutMethodBankAccountTypeEnum';
-import PayoutMethodIdentityCardTypeEnum from './PayoutMethodIdentityCardTypeEnum';
 import PayoutMethodPixKeyTypeEnum from './PayoutMethodPixKeyTypeEnum';
 import PayoutMethodTransferReasonEnum from './PayoutMethodTransferReasonEnum';
 
 /**
  * The PayoutMethodDetailsBRLBank model module.
  * @module Model/PayoutMethodDetailsBRLBank
- * @version 1.28.1
+ * @version 1.28.2
  */
 class PayoutMethodDetailsBRLBank {
     /**
      * Constructs a new <code>PayoutMethodDetailsBRLBank</code>.
-     * PIX Payment: &#x60;&#x60;&#x60;JSON   \&quot;details\&quot;: {     \&quot;first_name\&quot;: \&quot;First\&quot;,     \&quot;last_name\&quot;: \&quot;Last\&quot;,     \&quot;city\&quot;: \&quot;Brasilia\&quot;,     \&quot;postal_code\&quot;: \&quot;70070\&quot;,     \&quot;phone_number\&quot;: \&quot;+552112345678\&quot;, // E.164 international format     \&quot;pix_key_type\&quot;: \&quot;email\&quot;,     \&quot;pix_key_value\&quot;: \&quot;person@example.com\&quot;,     \&quot;identity_card_type\&quot;: \&quot;ID\&quot;,     \&quot;identity_card_id\&quot;: \&quot;01234567890\&quot;,     \&quot;transfer_reason\&quot;: \&quot;personal_account\&quot;   } &#x60;&#x60;&#x60;  TED Payment: &#x60;&#x60;&#x60;JSON   \&quot;details\&quot;: {     \&quot;first_name\&quot;: \&quot;First\&quot;,     \&quot;last_name\&quot;: \&quot;Last\&quot;,     \&quot;city\&quot;: \&quot;Brasilia\&quot;,     \&quot;postal_code\&quot;: \&quot;70070\&quot;,     \&quot;phone_number\&quot;: \&quot;+552112345678\&quot;, // E.164 international format     \&quot;bank_code\&quot;: \&quot;104\&quot;,     \&quot;branch_code\&quot;: \&quot;00001\&quot;,     \&quot;bank_account\&quot;: \&quot;0009795493\&quot;,     \&quot;bank_account_type\&quot;: \&quot;10\&quot;,     \&quot;identity_card_type\&quot;: \&quot;ID\&quot;,     \&quot;identity_card_id\&quot;: \&quot;01234567890\&quot;,     \&quot;transfer_reason\&quot;: \&quot;personal_account\&quot;   } &#x60;&#x60;&#x60;  See [BRL Bank](https://docs.transferzero.com/docs/payout-details/#brlbank) documentation for the bank_code and transfer_reason lists
+     * PIX Payment: &#x60;&#x60;&#x60;JSON   \&quot;details\&quot;: {     \&quot;first_name\&quot;: \&quot;First\&quot;,     \&quot;last_name\&quot;: \&quot;Last\&quot;,     \&quot;city\&quot;: \&quot;Brasilia\&quot;,     \&quot;postal_code\&quot;: \&quot;70070\&quot;,     \&quot;phone_number\&quot;: \&quot;+552112345678\&quot;, // E.164 international format     \&quot;pix_key_type\&quot;: \&quot;email\&quot;,     \&quot;pix_key_value\&quot;: \&quot;person@example.com\&quot;,     \&quot;identity_card_id\&quot;: \&quot;01234567890\&quot;, // CPF or CNPJ     \&quot;transfer_reason\&quot;: \&quot;personal_account\&quot;   } &#x60;&#x60;&#x60;  TED Payment: &#x60;&#x60;&#x60;JSON   \&quot;details\&quot;: {     \&quot;first_name\&quot;: \&quot;First\&quot;,     \&quot;last_name\&quot;: \&quot;Last\&quot;,     \&quot;city\&quot;: \&quot;Brasilia\&quot;,     \&quot;postal_code\&quot;: \&quot;70070\&quot;,     \&quot;phone_number\&quot;: \&quot;+552112345678\&quot;, // E.164 international format     \&quot;bank_code\&quot;: \&quot;104\&quot;,     \&quot;branch_code\&quot;: \&quot;00001\&quot;,     \&quot;bank_account\&quot;: \&quot;0009795493\&quot;,     \&quot;bank_account_type\&quot;: \&quot;10\&quot;,     \&quot;identity_card_id\&quot;: \&quot;01234567890\&quot;, // CPF or CNPJ     \&quot;transfer_reason\&quot;: \&quot;personal_account\&quot;   } &#x60;&#x60;&#x60;  See [BRL Bank](https://docs.transferzero.com/docs/payout-details/#brlbank) documentation for the bank_code and transfer_reason lists
      * @alias module:Model/PayoutMethodDetailsBRLBank
      * @param firstName {String} 
      * @param lastName {String} 
      * @param city {String} 
      * @param postalCode {String} 
-     * @param identityCardType {module:Model/PayoutMethodIdentityCardTypeEnum} 
      * @param identityCardId {String} 
      * @param transferReason {module:Model/PayoutMethodTransferReasonEnum} 
      */
-    constructor(firstName, lastName, city, postalCode, identityCardType, identityCardId, transferReason) { 
+    constructor(firstName, lastName, city, postalCode, identityCardId, transferReason) { 
         
-        PayoutMethodDetailsBRLBank.initialize(this, firstName, lastName, city, postalCode, identityCardType, identityCardId, transferReason);
+        PayoutMethodDetailsBRLBank.initialize(this, firstName, lastName, city, postalCode, identityCardId, transferReason);
     }
 
     /**
@@ -45,12 +43,11 @@ class PayoutMethodDetailsBRLBank {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, firstName, lastName, city, postalCode, identityCardType, identityCardId, transferReason) { 
+    static initialize(obj, firstName, lastName, city, postalCode, identityCardId, transferReason) { 
         obj['first_name'] = firstName;
         obj['last_name'] = lastName;
         obj['city'] = city;
         obj['postal_code'] = postalCode;
-        obj['identity_card_type'] = identityCardType;
         obj['identity_card_id'] = identityCardId;
         obj['transfer_reason'] = transferReason;
     }
@@ -98,9 +95,6 @@ class PayoutMethodDetailsBRLBank {
             }
             if (data.hasOwnProperty('pix_key_value')) {
                 obj['pix_key_value'] = ApiClient.convertToType(data['pix_key_value'], 'String');
-            }
-            if (data.hasOwnProperty('identity_card_type')) {
-                obj['identity_card_type'] = PayoutMethodIdentityCardTypeEnum.constructFromObject(data['identity_card_type']);
             }
             if (data.hasOwnProperty('identity_card_id')) {
                 obj['identity_card_id'] = ApiClient.convertToType(data['identity_card_id'], 'String');
@@ -169,11 +163,6 @@ PayoutMethodDetailsBRLBank.prototype['pix_key_type'] = undefined;
  * @member {String} pix_key_value
  */
 PayoutMethodDetailsBRLBank.prototype['pix_key_value'] = undefined;
-
-/**
- * @member {module:Model/PayoutMethodIdentityCardTypeEnum} identity_card_type
- */
-PayoutMethodDetailsBRLBank.prototype['identity_card_type'] = undefined;
 
 /**
  * @member {String} identity_card_id

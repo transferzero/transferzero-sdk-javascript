@@ -17,7 +17,7 @@ import FieldSelectValidation from './FieldSelectValidation';
 /**
  * The FieldValidation model module.
  * @module Model/FieldValidation
- * @version 1.28.1
+ * @version 1.28.2
  */
 class FieldValidation {
     /**
