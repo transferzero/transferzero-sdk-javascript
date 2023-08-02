@@ -21,7 +21,7 @@ import ValidationErrorDescription from './ValidationErrorDescription';
 /**
  * The PayinMethod model module.
  * @module Model/PayinMethod
- * @version 1.28.2
+ * @version 1.29.0
  */
 class PayinMethod {
     /**

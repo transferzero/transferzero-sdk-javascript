@@ -18,7 +18,7 @@ import PayoutMethodIdentityCardTypeEnum from './PayoutMethodIdentityCardTypeEnum
 /**
  * The PayoutMethodDetailsMADCash model module.
  * @module Model/PayoutMethodDetailsMADCash
- * @version 1.28.2
+ * @version 1.29.0
  */
 class PayoutMethodDetailsMADCash {
     /**

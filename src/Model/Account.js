@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The Account model module.
  * @module Model/Account
- * @version 1.28.2
+ * @version 1.29.0
  */
 class Account {
     /**
@@ -53,6 +53,9 @@ class Account {
             if (data.hasOwnProperty('currency')) {
                 obj['currency'] = ApiClient.convertToType(data['currency'], 'String');
             }
+            if (data.hasOwnProperty('amount_after_pending')) {
+                obj['amount_after_pending'] = ApiClient.convertToType(data['amount_after_pending'], 'Number');
+            }
         }
         return obj;
     }
@@ -71,6 +74,12 @@ Account.prototype['amount'] = undefined;
  * @member {String} currency
  */
 Account.prototype['currency'] = undefined;
+
+/**
+ * Represents the account balance after deducting pending transactions from the last 7 days. It provides a more accurate depiction of available funds.
+ * @member {Number} amount_after_pending
+ */
+Account.prototype['amount_after_pending'] = undefined;
 
 
 

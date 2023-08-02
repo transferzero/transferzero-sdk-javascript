@@ -19,7 +19,7 @@ import AccountValidationResponse from '../Model/AccountValidationResponse';
 /**
 * AccountValidation service.
 * @module Api/AccountValidationApi
-* @version 1.28.2
+* @version 1.29.0
 */
 export default class AccountValidationApi {
 

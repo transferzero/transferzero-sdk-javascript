@@ -21,7 +21,7 @@ import PayoutMethodResponse from '../Model/PayoutMethodResponse';
 /**
 * PayoutMethods service.
 * @module Api/PayoutMethodsApi
-* @version 1.28.2
+* @version 1.29.0
 */
 export default class PayoutMethodsApi {
 

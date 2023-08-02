@@ -18,7 +18,7 @@ import PayoutMethodMobileProviderEnum from './PayoutMethodMobileProviderEnum';
 /**
  * The PayoutMethodDetailsXAFMobile model module.
  * @module Model/PayoutMethodDetailsXAFMobile
- * @version 1.28.2
+ * @version 1.29.0
  */
 class PayoutMethodDetailsXAFMobile {
     /**

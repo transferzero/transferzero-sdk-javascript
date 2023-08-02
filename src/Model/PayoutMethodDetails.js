@@ -52,7 +52,7 @@ import PayoutMethodPixKeyTypeEnum from './PayoutMethodPixKeyTypeEnum';
 /**
  * The PayoutMethodDetails model module.
  * @module Model/PayoutMethodDetails
- * @version 1.28.2
+ * @version 1.29.0
  */
 class PayoutMethodDetails {
     /**
