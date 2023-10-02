@@ -17,7 +17,7 @@ import Currency from './Currency';
 /**
  * The CurrencyOpposite model module.
  * @module Model/CurrencyOpposite
- * @version 1.29.1
+ * @version 1.30.0
  */
 class CurrencyOpposite {
     /**

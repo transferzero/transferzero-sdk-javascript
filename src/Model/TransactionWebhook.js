@@ -18,7 +18,7 @@ import Webhook from './Webhook';
 /**
  * The TransactionWebhook model module.
  * @module Model/TransactionWebhook
- * @version 1.29.1
+ * @version 1.30.0
  */
 class TransactionWebhook {
     /**

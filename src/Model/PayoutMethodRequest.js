@@ -17,7 +17,7 @@ import PayoutMethod from './PayoutMethod';
 /**
  * The PayoutMethodRequest model module.
  * @module Model/PayoutMethodRequest
- * @version 1.29.1
+ * @version 1.30.0
  */
 class PayoutMethodRequest {
     /**

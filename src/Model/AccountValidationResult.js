@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The AccountValidationResult model module.
  * @module Model/AccountValidationResult
- * @version 1.29.1
+ * @version 1.30.0
  */
 class AccountValidationResult {
     /**
