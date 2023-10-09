@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The PayoutMethodDetailsEGPBank model module.
  * @module Model/PayoutMethodDetailsEGPBank
- * @version 1.30.0
+ * @version 1.30.1
  */
 class PayoutMethodDetailsEGPBank {
     /**

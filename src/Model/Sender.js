@@ -20,7 +20,7 @@ import ValidationErrorDescription from './ValidationErrorDescription';
 /**
  * The Sender model module.
  * @module Model/Sender
- * @version 1.30.0
+ * @version 1.30.1
  */
 class Sender {
     /**
@@ -98,6 +98,9 @@ class Sender {
             }
             if (data.hasOwnProperty('ip')) {
                 obj['ip'] = ApiClient.convertToType(data['ip'], 'String');
+            }
+            if (data.hasOwnProperty('fingerprint')) {
+                obj['fingerprint'] = ApiClient.convertToType(data['fingerprint'], 'String');
             }
             if (data.hasOwnProperty('address_description')) {
                 obj['address_description'] = ApiClient.convertToType(data['address_description'], 'String');
@@ -319,6 +322,12 @@ Sender.prototype['email'] = undefined;
  * @member {String} ip
  */
 Sender.prototype['ip'] = undefined;
+
+/**
+ * Fingerprint of sender
+ * @member {String} fingerprint
+ */
+Sender.prototype['fingerprint'] = undefined;
 
 /**
  * Description of address

@@ -14,6 +14,7 @@ Name | Type | Description | Notes
 **phoneNumber** | **String** | Phone number of sender (without country callcode) | [optional] 
 **email** | **String** | Email of sender | 
 **ip** | **String** | IP of sender | 
+**fingerprint** | **String** | Fingerprint of sender | [optional] 
 **addressDescription** | **String** | Description of address | [optional] 
 **identificationNumber** | **String** | Identification number of document used | [optional] 
 **identificationType** | **String** | Document to be identified. The identification type can be one of the following:  - &#x60;DL&#x60;: Driving License - &#x60;PP&#x60;: International Passport - &#x60;ID&#x60;: National ID - &#x60;OT&#x60;: Other  Please note for Wizall &#x60;XOF::Cash&#x60; transactions the valid options are: - &#x60;ID&#x60;: National ID - &#x60;PP&#x60;: Passport | [optional] 

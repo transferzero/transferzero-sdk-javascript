@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The PayoutMethodDetailsNZDBank model module.
  * @module Model/PayoutMethodDetailsNZDBank
- * @version 1.30.0
+ * @version 1.30.1
  */
 class PayoutMethodDetailsNZDBank {
     /**
