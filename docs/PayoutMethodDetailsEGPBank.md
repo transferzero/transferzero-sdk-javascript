@@ -9,6 +9,6 @@ Name | Type | Description | Notes
 **phoneNumber** | **String** |  | 
 **bankAccount** | **String** |  | 
 **bankCode** | **String** |  | 
-**transferReason** | **String** |  | 
+**transferReason** | [**PayoutMethodTransferReasonEnum**](PayoutMethodTransferReasonEnum.md) |  | 
 
 

@@ -18,7 +18,7 @@ import Transaction from './Transaction';
 /**
  * The TransactionResponseExisting model module.
  * @module Model/TransactionResponseExisting
- * @version 1.30.1
+ * @version 1.30.2
  */
 class TransactionResponseExisting {
     /**

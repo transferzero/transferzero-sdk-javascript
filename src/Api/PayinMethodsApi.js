@@ -19,7 +19,7 @@ import PayinMethodResponse from '../Model/PayinMethodResponse';
 /**
 * PayinMethods service.
 * @module Api/PayinMethodsApi
-* @version 1.30.1
+* @version 1.30.2
 */
 export default class PayinMethodsApi {
 

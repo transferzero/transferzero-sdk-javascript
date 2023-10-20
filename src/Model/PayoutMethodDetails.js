@@ -49,11 +49,12 @@ import PayoutMethodLegalEntityTypeEnum from './PayoutMethodLegalEntityTypeEnum';
 import PayoutMethodMobileProviderEnum from './PayoutMethodMobileProviderEnum';
 import PayoutMethodNatureOfBusinessEnum from './PayoutMethodNatureOfBusinessEnum';
 import PayoutMethodPixKeyTypeEnum from './PayoutMethodPixKeyTypeEnum';
+import PayoutMethodTransferReasonEnum from './PayoutMethodTransferReasonEnum';
 
 /**
  * The PayoutMethodDetails model module.
  * @module Model/PayoutMethodDetails
- * @version 1.30.1
+ * @version 1.30.2
  */
 class PayoutMethodDetails {
     /**
@@ -922,7 +923,7 @@ PayoutMethodDetailsUGXBank.prototype['bank_account'] = undefined;
  */
 PayoutMethodDetailsUGXBank.prototype['branch_code'] = undefined;
 /**
- * @member {String} transfer_reason
+ * @member {module:Model/PayoutMethodTransferReasonEnum} transfer_reason
  */
 PayoutMethodDetailsUGXBank.prototype['transfer_reason'] = undefined;
 // Implement PayoutMethodDetailsEGPBank interface:
@@ -951,7 +952,7 @@ PayoutMethodDetailsEGPBank.prototype['bank_account'] = undefined;
  */
 PayoutMethodDetailsEGPBank.prototype['bank_code'] = undefined;
 /**
- * @member {String} transfer_reason
+ * @member {module:Model/PayoutMethodTransferReasonEnum} transfer_reason
  */
 PayoutMethodDetailsEGPBank.prototype['transfer_reason'] = undefined;
 

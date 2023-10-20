@@ -12,11 +12,12 @@
  */
 
 import ApiClient from '../ApiClient';
+import PayoutMethodTransferReasonEnum from './PayoutMethodTransferReasonEnum';
 
 /**
  * The PayoutMethodDetailsUGXBank model module.
  * @module Model/PayoutMethodDetailsUGXBank
- * @version 1.30.1
+ * @version 1.30.2
  */
 class PayoutMethodDetailsUGXBank {
     /**
@@ -31,7 +32,7 @@ class PayoutMethodDetailsUGXBank {
      * @param identityCardId {String} 
      * @param bankAccount {String} 
      * @param branchCode {String} 
-     * @param transferReason {String} 
+     * @param transferReason {module:Model/PayoutMethodTransferReasonEnum} 
      */
     constructor(firstName, lastName, street, city, postalCode, identityCardId, bankAccount, branchCode, transferReason) { 
         
@@ -91,7 +92,7 @@ class PayoutMethodDetailsUGXBank {
                 obj['branch_code'] = ApiClient.convertToType(data['branch_code'], 'String');
             }
             if (data.hasOwnProperty('transfer_reason')) {
-                obj['transfer_reason'] = ApiClient.convertToType(data['transfer_reason'], 'String');
+                obj['transfer_reason'] = PayoutMethodTransferReasonEnum.constructFromObject(data['transfer_reason']);
             }
         }
         return obj;
@@ -141,7 +142,7 @@ PayoutMethodDetailsUGXBank.prototype['bank_account'] = undefined;
 PayoutMethodDetailsUGXBank.prototype['branch_code'] = undefined;
 
 /**
- * @member {String} transfer_reason
+ * @member {module:Model/PayoutMethodTransferReasonEnum} transfer_reason
  */
 PayoutMethodDetailsUGXBank.prototype['transfer_reason'] = undefined;
 

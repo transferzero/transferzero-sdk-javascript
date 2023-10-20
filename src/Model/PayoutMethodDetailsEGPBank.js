@@ -12,11 +12,12 @@
  */
 
 import ApiClient from '../ApiClient';
+import PayoutMethodTransferReasonEnum from './PayoutMethodTransferReasonEnum';
 
 /**
  * The PayoutMethodDetailsEGPBank model module.
  * @module Model/PayoutMethodDetailsEGPBank
- * @version 1.30.1
+ * @version 1.30.2
  */
 class PayoutMethodDetailsEGPBank {
     /**
@@ -29,7 +30,7 @@ class PayoutMethodDetailsEGPBank {
      * @param phoneNumber {String} 
      * @param bankAccount {String} 
      * @param bankCode {String} 
-     * @param transferReason {String} 
+     * @param transferReason {module:Model/PayoutMethodTransferReasonEnum} 
      */
     constructor(firstName, lastName, street, phoneNumber, bankAccount, bankCode, transferReason) { 
         
@@ -81,7 +82,7 @@ class PayoutMethodDetailsEGPBank {
                 obj['bank_code'] = ApiClient.convertToType(data['bank_code'], 'String');
             }
             if (data.hasOwnProperty('transfer_reason')) {
-                obj['transfer_reason'] = ApiClient.convertToType(data['transfer_reason'], 'String');
+                obj['transfer_reason'] = PayoutMethodTransferReasonEnum.constructFromObject(data['transfer_reason']);
             }
         }
         return obj;
@@ -121,7 +122,7 @@ PayoutMethodDetailsEGPBank.prototype['bank_account'] = undefined;
 PayoutMethodDetailsEGPBank.prototype['bank_code'] = undefined;
 
 /**
- * @member {String} transfer_reason
+ * @member {module:Model/PayoutMethodTransferReasonEnum} transfer_reason
  */
 PayoutMethodDetailsEGPBank.prototype['transfer_reason'] = undefined;
 
