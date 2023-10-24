@@ -90,8 +90,6 @@ Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *TransferzeroSdk.APILogsApi* | [**getApiLog**](docs/APILogsApi.md#getApiLog) | **GET** /api_logs/{API Log ID} | Fetch an individual API log
 *TransferzeroSdk.APILogsApi* | [**getApiLogs**](docs/APILogsApi.md#getApiLogs) | **GET** /api_logs | Fetch a list of API logs
-*TransferzeroSdk.AccountDebitsApi* | [**getAccountsDebit**](docs/AccountDebitsApi.md#getAccountsDebit) | **GET** /accounts/debits/{Account Debit ID} | Fetching an account debit
-*TransferzeroSdk.AccountDebitsApi* | [**getAccountsDebits**](docs/AccountDebitsApi.md#getAccountsDebits) | **GET** /accounts/debits | Listing Accounts debits
 *TransferzeroSdk.AccountDebitsApi* | [**postAccountsDebits**](docs/AccountDebitsApi.md#postAccountsDebits) | **POST** /accounts/debits | Creating an account debit
 *TransferzeroSdk.AccountValidationApi* | [**postAccountValidations**](docs/AccountValidationApi.md#postAccountValidations) | **POST** /account_validations | Validates the existence of a bank account or a mobile phone number
 *TransferzeroSdk.AccountsApi* | [**getAccount**](docs/AccountsApi.md#getAccount) | **GET** /accounts/{Currency} | Fetches account balance for specified currrency
@@ -162,7 +160,6 @@ Class | Method | HTTP request | Description
  - [TransferzeroSdk.DebitListResponse](docs/DebitListResponse.md)
  - [TransferzeroSdk.DebitRequest](docs/DebitRequest.md)
  - [TransferzeroSdk.DebitRequestWrapper](docs/DebitRequestWrapper.md)
- - [TransferzeroSdk.DebitResponse](docs/DebitResponse.md)
  - [TransferzeroSdk.Document](docs/Document.md)
  - [TransferzeroSdk.DocumentListResponse](docs/DocumentListResponse.md)
  - [TransferzeroSdk.DocumentRequest](docs/DocumentRequest.md)
@@ -300,5 +297,5 @@ apiClient.basePath = 'https://api-sandbox.transferzero.com/v1';
 
 
 - API version: 1.0
-- Package version: 1.30.3
+- Package version: 1.31.0
 - Build package: org.openapitools.codegen.languages.JavascriptClientCodegen

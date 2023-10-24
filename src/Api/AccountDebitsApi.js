@@ -15,12 +15,11 @@
 import ApiClient from "../ApiClient";
 import DebitListResponse from '../Model/DebitListResponse';
 import DebitRequestWrapper from '../Model/DebitRequestWrapper';
-import DebitResponse from '../Model/DebitResponse';
 
 /**
 * AccountDebits service.
 * @module Api/AccountDebitsApi
-* @version 1.30.3
+* @version 1.31.0
 */
 export default class AccountDebitsApi {
 
@@ -35,109 +34,6 @@ export default class AccountDebitsApi {
         this.apiClient = apiClient || ApiClient.instance;
     }
 
-
-
-    /**
-     * Fetching an account debit
-     * Returns a single account debit by the account debit ID
-     * @param {String} accountDebitID ID of the account debit to get.  Example: &#x60;/v1/accounts/debits/9170c890-1a45-46bd-9b79-3deeb8b4ff3d&#x60;
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:Model/DebitResponse} and HTTP response
-     */
-    getAccountsDebitWithHttpInfo(accountDebitID) {
-      let postBody = null;
-
-      // verify the required parameter 'accountDebitID' is set
-      if (accountDebitID === undefined || accountDebitID === null) {
-        throw new Error("Missing the required parameter 'accountDebitID' when calling getAccountsDebit");
-      }
-
-
-      let pathParams = {
-        'Account Debit ID': accountDebitID
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = ['AuthorizationKey', 'AuthorizationNonce', 'AuthorizationSecret', 'AuthorizationSignature'];
-      let contentTypes = [];
-      let accepts = ['application/json'];
-      let returnType = DebitResponse;
-
-      return this.apiClient.callApi(
-        '/accounts/debits/{Account Debit ID}', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType
-      );
-    }
-
-    /**
-     * Fetching an account debit
-     * Returns a single account debit by the account debit ID
-     * @param {String} accountDebitID ID of the account debit to get.  Example: &#x60;/v1/accounts/debits/9170c890-1a45-46bd-9b79-3deeb8b4ff3d&#x60;
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:Model/DebitResponse}
-     */
-    getAccountsDebit(accountDebitID) {
-      return this.getAccountsDebitWithHttpInfo(accountDebitID)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
-
-    /**
-     * Listing Accounts debits
-     * Get a list of accounts debits
-     * @param {Object} opts Optional parameters
-     * @param {Number} opts.page The page number to request (defaults to 1)
-     * @param {Number} opts.per The number of results to load per page (defaults to 10)
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:Model/DebitListResponse} and HTTP response
-     */
-    getAccountsDebitsWithHttpInfo(opts) {
-      opts = opts || {};
-      let postBody = null;
-
-
-      let pathParams = {
-      };
-      let queryParams = {
-        'page': opts['page'],
-        'per': opts['per']
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = ['AuthorizationKey', 'AuthorizationNonce', 'AuthorizationSecret', 'AuthorizationSignature'];
-      let contentTypes = [];
-      let accepts = ['application/json'];
-      let returnType = DebitListResponse;
-
-      return this.apiClient.callApi(
-        '/accounts/debits', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType
-      );
-    }
-
-    /**
-     * Listing Accounts debits
-     * Get a list of accounts debits
-     * @param {Object} opts Optional parameters
-     * @param {Number} opts.page The page number to request (defaults to 1)
-     * @param {Number} opts.per The number of results to load per page (defaults to 10)
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:Model/DebitListResponse}
-     */
-    getAccountsDebits(opts) {
-      return this.getAccountsDebitsWithHttpInfo(opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
 
 
     /**

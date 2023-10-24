@@ -19,7 +19,7 @@ import AccountResponse from '../Model/AccountResponse';
 /**
 * Accounts service.
 * @module Api/AccountsApi
-* @version 1.30.3
+* @version 1.31.0
 */
 export default class AccountsApi {
 

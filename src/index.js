@@ -34,7 +34,6 @@ import DebitListRequest from './Model/DebitListRequest';
 import DebitListResponse from './Model/DebitListResponse';
 import DebitRequest from './Model/DebitRequest';
 import DebitRequestWrapper from './Model/DebitRequestWrapper';
-import DebitResponse from './Model/DebitResponse';
 import Document from './Model/Document';
 import DocumentListResponse from './Model/DocumentListResponse';
 import DocumentRequest from './Model/DocumentRequest';
@@ -188,7 +187,7 @@ import WebhooksApi from './Api/WebhooksApi';
 * </pre>
 * </p>
 * @module index
-* @version 1.30.3
+* @version 1.31.0
 */
 export default {
     /**
@@ -322,12 +321,6 @@ export default {
      * @property {module:Model/DebitRequestWrapper}
      */
     DebitRequestWrapper,
-
-    /**
-     * The DebitResponse model constructor.
-     * @property {module:Model/DebitResponse}
-     */
-    DebitResponse,
 
     /**
      * The Document model constructor.
@@ -1085,7 +1078,6 @@ export {
     DebitListResponse,
     DebitRequest,
     DebitRequestWrapper,
-    DebitResponse,
     Document,
     DocumentListResponse,
     DocumentRequest,

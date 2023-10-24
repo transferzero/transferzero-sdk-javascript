@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The PayoutMethodDetailsIBAN model module.
  * @module Model/PayoutMethodDetailsIBAN
- * @version 1.30.3
+ * @version 1.31.0
  */
 class PayoutMethodDetailsIBAN {
     /**
