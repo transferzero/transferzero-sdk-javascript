@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The PayoutMethodDetailsBalance model module.
  * @module Model/PayoutMethodDetailsBalance
- * @version 1.30.2
+ * @version 1.30.3
  */
 class PayoutMethodDetailsBalance {
     /**

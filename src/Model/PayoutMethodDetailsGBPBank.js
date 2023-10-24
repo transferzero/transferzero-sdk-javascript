@@ -16,12 +16,12 @@ import ApiClient from '../ApiClient';
 /**
  * The PayoutMethodDetailsGBPBank model module.
  * @module Model/PayoutMethodDetailsGBPBank
- * @version 1.30.2
+ * @version 1.30.3
  */
 class PayoutMethodDetailsGBPBank {
     /**
      * Constructs a new <code>PayoutMethodDetailsGBPBank</code>.
-     * &#x60;&#x60;&#x60;JSON \&quot;details\&quot;: {   \&quot;first_name\&quot;: \&quot;First\&quot;,   \&quot;last_name\&quot;: \&quot;Last\&quot;,   \&quot;bank_name\&quot;: \&quot;Deutsche Bank\&quot;,   \&quot;bank_account\&quot;: \&quot;12345678\&quot;, // Required if IBAN is not present   \&quot;sort_code\&quot;: \&quot;123456\&quot;, // Required if bank_account is present   \&quot;iban\&quot;: \&quot;DE89370400440532013000\&quot;, // Required if no bank_account &amp; sort_code   \&quot;bic\&quot;: \&quot;DEUTDEBBXXX\&quot; // Optional } &#x60;&#x60;&#x60;
+     * &#x60;&#x60;&#x60;JSON \&quot;details\&quot;: {   \&quot;first_name\&quot;: \&quot;First\&quot;,   \&quot;last_name\&quot;: \&quot;Last\&quot;,   \&quot;iban\&quot;: \&quot;GB45LOYD60161331926819\&quot;, // Required if no &#x60;bank_account&#x60; and &#x60;sort_code&#x60;   \&quot;bank_account\&quot;: \&quot;12345678\&quot;, // Required if &#x60;iban&#x60; is not present   \&quot;sort_code\&quot;: \&quot;123456\&quot;, // Required if &#x60;bank_account&#x60; is present   \&quot;bic\&quot;: \&quot;CHASUS33XXX\&quot; // Optional   \&quot;bank_name\&quot;: \&quot;JPMorgan Chase Bank\&quot;, // Optional   \&quot;narration\&quot;: \&quot;Birthday Gift\&quot; // Optional } &#x60;&#x60;&#x60;
      * @alias module:Model/PayoutMethodDetailsGBPBank
      * @param firstName {String} 
      * @param lastName {String} 
@@ -58,8 +58,8 @@ class PayoutMethodDetailsGBPBank {
             if (data.hasOwnProperty('last_name')) {
                 obj['last_name'] = ApiClient.convertToType(data['last_name'], 'String');
             }
-            if (data.hasOwnProperty('bank_name')) {
-                obj['bank_name'] = ApiClient.convertToType(data['bank_name'], 'String');
+            if (data.hasOwnProperty('iban')) {
+                obj['iban'] = ApiClient.convertToType(data['iban'], 'String');
             }
             if (data.hasOwnProperty('bank_account')) {
                 obj['bank_account'] = ApiClient.convertToType(data['bank_account'], 'String');
@@ -67,11 +67,14 @@ class PayoutMethodDetailsGBPBank {
             if (data.hasOwnProperty('sort_code')) {
                 obj['sort_code'] = ApiClient.convertToType(data['sort_code'], 'String');
             }
-            if (data.hasOwnProperty('iban')) {
-                obj['iban'] = ApiClient.convertToType(data['iban'], 'String');
-            }
             if (data.hasOwnProperty('bic')) {
                 obj['bic'] = ApiClient.convertToType(data['bic'], 'String');
+            }
+            if (data.hasOwnProperty('bank_name')) {
+                obj['bank_name'] = ApiClient.convertToType(data['bank_name'], 'String');
+            }
+            if (data.hasOwnProperty('narration')) {
+                obj['narration'] = ApiClient.convertToType(data['narration'], 'String');
             }
         }
         return obj;
@@ -91,9 +94,9 @@ PayoutMethodDetailsGBPBank.prototype['first_name'] = undefined;
 PayoutMethodDetailsGBPBank.prototype['last_name'] = undefined;
 
 /**
- * @member {String} bank_name
+ * @member {String} iban
  */
-PayoutMethodDetailsGBPBank.prototype['bank_name'] = undefined;
+PayoutMethodDetailsGBPBank.prototype['iban'] = undefined;
 
 /**
  * @member {String} bank_account
@@ -106,14 +109,19 @@ PayoutMethodDetailsGBPBank.prototype['bank_account'] = undefined;
 PayoutMethodDetailsGBPBank.prototype['sort_code'] = undefined;
 
 /**
- * @member {String} iban
- */
-PayoutMethodDetailsGBPBank.prototype['iban'] = undefined;
-
-/**
  * @member {String} bic
  */
 PayoutMethodDetailsGBPBank.prototype['bic'] = undefined;
+
+/**
+ * @member {String} bank_name
+ */
+PayoutMethodDetailsGBPBank.prototype['bank_name'] = undefined;
+
+/**
+ * @member {String} narration
+ */
+PayoutMethodDetailsGBPBank.prototype['narration'] = undefined;
 
 
 

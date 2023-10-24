@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The Currency model module.
  * @module Model/Currency
- * @version 1.30.2
+ * @version 1.30.3
  */
 class Currency {
     /**

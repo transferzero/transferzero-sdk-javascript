@@ -16,12 +16,12 @@ import ApiClient from '../ApiClient';
 /**
  * The PayoutMethodDetailsIBAN model module.
  * @module Model/PayoutMethodDetailsIBAN
- * @version 1.30.2
+ * @version 1.30.3
  */
 class PayoutMethodDetailsIBAN {
     /**
      * Constructs a new <code>PayoutMethodDetailsIBAN</code>.
-     * &#x60;&#x60;&#x60;JSON \&quot;details\&quot;: {   \&quot;first_name\&quot;: \&quot;First\&quot;,   \&quot;last_name\&quot;: \&quot;Last\&quot;,   \&quot;bank_name\&quot;: \&quot;Deutsche Bank\&quot;,   \&quot;iban\&quot;: \&quot;DE89370400440532013000\&quot;,   \&quot;bic\&quot;: \&quot;DEUTDEBBXXX\&quot; // Optional } &#x60;&#x60;&#x60;
+     * &#x60;&#x60;&#x60;JSON \&quot;details\&quot;: {   \&quot;first_name\&quot;: \&quot;First\&quot;,   \&quot;last_name\&quot;: \&quot;Last\&quot;,   \&quot;iban\&quot;: \&quot;DE89370400440532013000\&quot;,   \&quot;bic\&quot;: \&quot;DEUTDEBBXXX\&quot;, // Optional   \&quot;bank_name\&quot;: \&quot;Deutsche Bank\&quot;, // Optional   \&quot;narration\&quot;: \&quot;Birthday Gift\&quot; // Optional } &#x60;&#x60;&#x60;
      * @alias module:Model/PayoutMethodDetailsIBAN
      * @param firstName {String} 
      * @param lastName {String} 
@@ -60,14 +60,17 @@ class PayoutMethodDetailsIBAN {
             if (data.hasOwnProperty('last_name')) {
                 obj['last_name'] = ApiClient.convertToType(data['last_name'], 'String');
             }
-            if (data.hasOwnProperty('bank_name')) {
-                obj['bank_name'] = ApiClient.convertToType(data['bank_name'], 'String');
-            }
             if (data.hasOwnProperty('iban')) {
                 obj['iban'] = ApiClient.convertToType(data['iban'], 'String');
             }
             if (data.hasOwnProperty('bic')) {
                 obj['bic'] = ApiClient.convertToType(data['bic'], 'String');
+            }
+            if (data.hasOwnProperty('bank_name')) {
+                obj['bank_name'] = ApiClient.convertToType(data['bank_name'], 'String');
+            }
+            if (data.hasOwnProperty('narration')) {
+                obj['narration'] = ApiClient.convertToType(data['narration'], 'String');
             }
         }
         return obj;
@@ -87,11 +90,6 @@ PayoutMethodDetailsIBAN.prototype['first_name'] = undefined;
 PayoutMethodDetailsIBAN.prototype['last_name'] = undefined;
 
 /**
- * @member {String} bank_name
- */
-PayoutMethodDetailsIBAN.prototype['bank_name'] = undefined;
-
-/**
  * @member {String} iban
  */
 PayoutMethodDetailsIBAN.prototype['iban'] = undefined;
@@ -100,6 +98,16 @@ PayoutMethodDetailsIBAN.prototype['iban'] = undefined;
  * @member {String} bic
  */
 PayoutMethodDetailsIBAN.prototype['bic'] = undefined;
+
+/**
+ * @member {String} bank_name
+ */
+PayoutMethodDetailsIBAN.prototype['bank_name'] = undefined;
+
+/**
+ * @member {String} narration
+ */
+PayoutMethodDetailsIBAN.prototype['narration'] = undefined;
 
 
 

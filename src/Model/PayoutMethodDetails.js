@@ -54,7 +54,7 @@ import PayoutMethodTransferReasonEnum from './PayoutMethodTransferReasonEnum';
 /**
  * The PayoutMethodDetails model module.
  * @module Model/PayoutMethodDetails
- * @version 1.30.2
+ * @version 1.30.3
  */
 class PayoutMethodDetails {
     /**
@@ -324,9 +324,9 @@ PayoutMethodDetailsGBPBank.prototype['first_name'] = undefined;
  */
 PayoutMethodDetailsGBPBank.prototype['last_name'] = undefined;
 /**
- * @member {String} bank_name
+ * @member {String} iban
  */
-PayoutMethodDetailsGBPBank.prototype['bank_name'] = undefined;
+PayoutMethodDetailsGBPBank.prototype['iban'] = undefined;
 /**
  * @member {String} bank_account
  */
@@ -336,13 +336,17 @@ PayoutMethodDetailsGBPBank.prototype['bank_account'] = undefined;
  */
 PayoutMethodDetailsGBPBank.prototype['sort_code'] = undefined;
 /**
- * @member {String} iban
- */
-PayoutMethodDetailsGBPBank.prototype['iban'] = undefined;
-/**
  * @member {String} bic
  */
 PayoutMethodDetailsGBPBank.prototype['bic'] = undefined;
+/**
+ * @member {String} bank_name
+ */
+PayoutMethodDetailsGBPBank.prototype['bank_name'] = undefined;
+/**
+ * @member {String} narration
+ */
+PayoutMethodDetailsGBPBank.prototype['narration'] = undefined;
 // Implement PayoutMethodDetailsIBAN interface:
 /**
  * @member {String} first_name
@@ -353,10 +357,6 @@ PayoutMethodDetailsIBAN.prototype['first_name'] = undefined;
  */
 PayoutMethodDetailsIBAN.prototype['last_name'] = undefined;
 /**
- * @member {String} bank_name
- */
-PayoutMethodDetailsIBAN.prototype['bank_name'] = undefined;
-/**
  * @member {String} iban
  */
 PayoutMethodDetailsIBAN.prototype['iban'] = undefined;
@@ -364,6 +364,14 @@ PayoutMethodDetailsIBAN.prototype['iban'] = undefined;
  * @member {String} bic
  */
 PayoutMethodDetailsIBAN.prototype['bic'] = undefined;
+/**
+ * @member {String} bank_name
+ */
+PayoutMethodDetailsIBAN.prototype['bank_name'] = undefined;
+/**
+ * @member {String} narration
+ */
+PayoutMethodDetailsIBAN.prototype['narration'] = undefined;
 // Implement PayoutMethodDetailsMADCash interface:
 /**
  * @member {String} first_name
