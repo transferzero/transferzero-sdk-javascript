@@ -54,7 +54,7 @@ import PayoutMethodTransferReasonEnum from './PayoutMethodTransferReasonEnum';
 /**
  * The PayoutMethodDetails model module.
  * @module Model/PayoutMethodDetails
- * @version 1.32.0
+ * @version 1.32.1
  */
 class PayoutMethodDetails {
     /**
@@ -939,6 +939,10 @@ PayoutMethodDetailsUGXBank.prototype['transfer_reason'] = undefined;
  * @member {String} first_name
  */
 PayoutMethodDetailsEGPBank.prototype['first_name'] = undefined;
+/**
+ * @member {String} middle_name
+ */
+PayoutMethodDetailsEGPBank.prototype['middle_name'] = undefined;
 /**
  * @member {String} last_name
  */

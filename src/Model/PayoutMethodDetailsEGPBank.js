@@ -17,12 +17,12 @@ import PayoutMethodTransferReasonEnum from './PayoutMethodTransferReasonEnum';
 /**
  * The PayoutMethodDetailsEGPBank model module.
  * @module Model/PayoutMethodDetailsEGPBank
- * @version 1.32.0
+ * @version 1.32.1
  */
 class PayoutMethodDetailsEGPBank {
     /**
      * Constructs a new <code>PayoutMethodDetailsEGPBank</code>.
-     * &#x60;&#x60;&#x60;JSON \&quot;details\&quot;: {   \&quot;first_name\&quot;: \&quot;First\&quot;,   \&quot;last_name\&quot;: \&quot;Last\&quot;,   \&quot;street\&quot;: \&quot;1 Main Street\&quot;,   \&quot;phone_number\&quot;: \&quot;+201023456789\&quot;,   \&quot;bank_account\&quot;: \&quot;1234567890\&quot;,   \&quot;bank_code\&quot;: \&quot;0030\&quot;,   \&quot;transfer_reason\&quot;: \&quot;personal_account\&quot; } &#x60;&#x60;&#x60; See [EGP Bank](https://docs.transferzero.com/docs/payout-details/#egpbank) documentation for the bank_code list
+     * &#x60;&#x60;&#x60;JSON \&quot;details\&quot;: {   \&quot;first_name\&quot;: \&quot;First\&quot;,   \&quot;middle_name\&quot;: \&quot;Middle\&quot;,   \&quot;last_name\&quot;: \&quot;Last\&quot;,   \&quot;street\&quot;: \&quot;1 Main Street\&quot;,   \&quot;phone_number\&quot;: \&quot;+201023456789\&quot;,   \&quot;bank_account\&quot;: \&quot;1234567890\&quot;,   \&quot;bank_code\&quot;: \&quot;0030\&quot;,   \&quot;transfer_reason\&quot;: \&quot;personal_account\&quot; } &#x60;&#x60;&#x60; See [EGP Bank](https://docs.transferzero.com/docs/payout-details/#egpbank) documentation for the bank_code list
      * @alias module:Model/PayoutMethodDetailsEGPBank
      * @param firstName {String} 
      * @param lastName {String} 
@@ -66,6 +66,9 @@ class PayoutMethodDetailsEGPBank {
             if (data.hasOwnProperty('first_name')) {
                 obj['first_name'] = ApiClient.convertToType(data['first_name'], 'String');
             }
+            if (data.hasOwnProperty('middle_name')) {
+                obj['middle_name'] = ApiClient.convertToType(data['middle_name'], 'String');
+            }
             if (data.hasOwnProperty('last_name')) {
                 obj['last_name'] = ApiClient.convertToType(data['last_name'], 'String');
             }
@@ -95,6 +98,11 @@ class PayoutMethodDetailsEGPBank {
  * @member {String} first_name
  */
 PayoutMethodDetailsEGPBank.prototype['first_name'] = undefined;
+
+/**
+ * @member {String} middle_name
+ */
+PayoutMethodDetailsEGPBank.prototype['middle_name'] = undefined;
 
 /**
  * @member {String} last_name
