@@ -54,7 +54,7 @@ import PayoutMethodTransferReasonEnum from './PayoutMethodTransferReasonEnum';
 /**
  * The PayoutMethodDetails model module.
  * @module Model/PayoutMethodDetails
- * @version 1.33.0
+ * @version 1.33.1
  */
 class PayoutMethodDetails {
     /**
@@ -488,6 +488,10 @@ PayoutMethodDetailsZARBank.prototype['transfer_reason_code'] = undefined;
  * @member {module:Model/PayoutMethodTransferReasonEnum} transfer_reason
  */
 PayoutMethodDetailsZARBank.prototype['transfer_reason'] = undefined;
+/**
+ * @member {String} narration
+ */
+PayoutMethodDetailsZARBank.prototype['narration'] = undefined;
 /**
  * @member {String} name
  */

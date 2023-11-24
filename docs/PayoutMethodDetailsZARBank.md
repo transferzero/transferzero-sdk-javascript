@@ -15,6 +15,7 @@ Name | Type | Description | Notes
 **phoneNumber** | **String** |  | 
 **transferReasonCode** | **String** |  | [optional] 
 **transferReason** | [**PayoutMethodTransferReasonEnum**](PayoutMethodTransferReasonEnum.md) |  | [optional] 
+**narration** | **String** |  | [optional] 
 **name** | **String** |  | [optional] 
 **contactFirstName** | **String** |  | [optional] 
 **contactLastName** | **String** |  | [optional] 
