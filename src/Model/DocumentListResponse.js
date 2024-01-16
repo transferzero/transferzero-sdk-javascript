@@ -18,7 +18,7 @@ import PaginationMeta from './PaginationMeta';
 /**
  * The DocumentListResponse model module.
  * @module Model/DocumentListResponse
- * @version 1.33.1
+ * @version 1.33.2
  */
 class DocumentListResponse {
     /**

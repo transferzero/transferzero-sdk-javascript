@@ -1,6 +1,6 @@
 {
   "name": "transferzero-sdk",
-  "version": "1.33.1",
+  "version": "1.33.2",
   "description": "Client library for TransferZero API.",
   "license": "MIT",
   "author": {

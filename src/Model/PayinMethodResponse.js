@@ -17,7 +17,7 @@ import PayinMethod from './PayinMethod';
 /**
  * The PayinMethodResponse model module.
  * @module Model/PayinMethodResponse
- * @version 1.33.1
+ * @version 1.33.2
  */
 class PayinMethodResponse {
     /**
