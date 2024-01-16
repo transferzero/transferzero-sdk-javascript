@@ -111,13 +111,6 @@ export default class PayoutMethodMobileProviderEnum {
 
     
         /**
-         * value: "wave"
-         * @const
-         */
-        "wave" = "wave";
-
-    
-        /**
          * value: "expresso"
          * @const
          */
