@@ -51,6 +51,9 @@ class AccountValidationResult {
             if (data.hasOwnProperty('account_name')) {
                 obj['account_name'] = ApiClient.convertToType(data['account_name'], 'String');
             }
+            if (data.hasOwnProperty('mapped_mobile_provider')) {
+                obj['mapped_mobile_provider'] = ApiClient.convertToType(data['mapped_mobile_provider'], 'String');
+            }
         }
         return obj;
     }
@@ -62,6 +65,11 @@ class AccountValidationResult {
  * @member {String} account_name
  */
 AccountValidationResult.prototype['account_name'] = undefined;
+
+/**
+ * @member {String} mapped_mobile_provider
+ */
+AccountValidationResult.prototype['mapped_mobile_provider'] = undefined;
 
 
 

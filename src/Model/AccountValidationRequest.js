@@ -144,6 +144,18 @@ AccountValidationRequest.prototype['method'] = undefined;
 AccountValidationRequest['CountryEnum'] = {
 
     /**
+     * value: "BJ"
+     * @const
+     */
+    "BJ": "BJ",
+
+    /**
+     * value: "BF"
+     * @const
+     */
+    "BF": "BF",
+
+    /**
      * value: "NG"
      * @const
      */
@@ -168,10 +180,22 @@ AccountValidationRequest['CountryEnum'] = {
     "CI": "CI",
 
     /**
+     * value: "CM"
+     * @const
+     */
+    "CM": "CM",
+
+    /**
      * value: "UG"
      * @const
      */
-    "UG": "UG"
+    "UG": "UG",
+
+    /**
+     * value: "TG"
+     * @const
+     */
+    "TG": "TG"
 };
 
 
@@ -204,7 +228,13 @@ AccountValidationRequest['CurrencyEnum'] = {
      * value: "UGX"
      * @const
      */
-    "UGX": "UGX"
+    "UGX": "UGX",
+
+    /**
+     * value: "XAF"
+     * @const
+     */
+    "XAF": "XAF"
 };
 
 

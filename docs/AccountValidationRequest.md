@@ -17,6 +17,10 @@ Name | Type | Description | Notes
 ## Enum: CountryEnum
 
 
+* `BJ` (value: `"BJ"`)
+
+* `BF` (value: `"BF"`)
+
 * `NG` (value: `"NG"`)
 
 * `GH` (value: `"GH"`)
@@ -25,7 +29,11 @@ Name | Type | Description | Notes
 
 * `CI` (value: `"CI"`)
 
+* `CM` (value: `"CM"`)
+
 * `UG` (value: `"UG"`)
+
+* `TG` (value: `"TG"`)
 
 
 
@@ -41,6 +49,8 @@ Name | Type | Description | Notes
 * `XOF` (value: `"XOF"`)
 
 * `UGX` (value: `"UGX"`)
+
+* `XAF` (value: `"XAF"`)
 
 
 
