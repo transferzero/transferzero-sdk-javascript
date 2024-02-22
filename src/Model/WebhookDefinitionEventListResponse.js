@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The WebhookDefinitionEventListResponse model module.
  * @module Model/WebhookDefinitionEventListResponse
- * @version 1.34.1
+ * @version 1.34.2
  */
 class WebhookDefinitionEventListResponse {
     /**

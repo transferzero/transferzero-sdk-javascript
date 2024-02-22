@@ -17,7 +17,7 @@ import PayoutMethodTransferReasonEnum from './PayoutMethodTransferReasonEnum';
 /**
  * The PayoutMethodDetailsEGPBank model module.
  * @module Model/PayoutMethodDetailsEGPBank
- * @version 1.34.1
+ * @version 1.34.2
  */
 class PayoutMethodDetailsEGPBank {
     /**
@@ -27,14 +27,13 @@ class PayoutMethodDetailsEGPBank {
      * @param firstName {String} 
      * @param lastName {String} 
      * @param street {String} 
-     * @param phoneNumber {String} 
      * @param bankAccount {String} 
      * @param bankCode {String} 
      * @param transferReason {module:Model/PayoutMethodTransferReasonEnum} 
      */
-    constructor(firstName, lastName, street, phoneNumber, bankAccount, bankCode, transferReason) { 
+    constructor(firstName, lastName, street, bankAccount, bankCode, transferReason) { 
         
-        PayoutMethodDetailsEGPBank.initialize(this, firstName, lastName, street, phoneNumber, bankAccount, bankCode, transferReason);
+        PayoutMethodDetailsEGPBank.initialize(this, firstName, lastName, street, bankAccount, bankCode, transferReason);
     }
 
     /**
@@ -42,11 +41,10 @@ class PayoutMethodDetailsEGPBank {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, firstName, lastName, street, phoneNumber, bankAccount, bankCode, transferReason) { 
+    static initialize(obj, firstName, lastName, street, bankAccount, bankCode, transferReason) { 
         obj['first_name'] = firstName;
         obj['last_name'] = lastName;
         obj['street'] = street;
-        obj['phone_number'] = phoneNumber;
         obj['bank_account'] = bankAccount;
         obj['bank_code'] = bankCode;
         obj['transfer_reason'] = transferReason;
