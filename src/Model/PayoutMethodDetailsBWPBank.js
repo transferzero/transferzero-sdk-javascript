@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The PayoutMethodDetailsBWPBank model module.
  * @module Model/PayoutMethodDetailsBWPBank
- * @version 1.34.2
+ * @version 1.34.3
  */
 class PayoutMethodDetailsBWPBank {
     /**
@@ -73,6 +73,9 @@ class PayoutMethodDetailsBWPBank {
             if (data.hasOwnProperty('branch_code')) {
                 obj['branch_code'] = ApiClient.convertToType(data['branch_code'], 'String');
             }
+            if (data.hasOwnProperty('birth_date')) {
+                obj['birth_date'] = ApiClient.convertToType(data['birth_date'], 'Date');
+            }
         }
         return obj;
     }
@@ -104,6 +107,12 @@ PayoutMethodDetailsBWPBank.prototype['bank_account'] = undefined;
  * @member {String} branch_code
  */
 PayoutMethodDetailsBWPBank.prototype['branch_code'] = undefined;
+
+/**
+ * Date of birth of recipient
+ * @member {Date} birth_date
+ */
+PayoutMethodDetailsBWPBank.prototype['birth_date'] = undefined;
 
 
 

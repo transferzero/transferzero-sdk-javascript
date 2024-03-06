@@ -19,7 +19,7 @@ import PayoutMethodTransferReasonEnum from './PayoutMethodTransferReasonEnum';
 /**
  * The PayoutMethodDetailsZARBank model module.
  * @module Model/PayoutMethodDetailsZARBank
- * @version 1.34.2
+ * @version 1.34.3
  */
 class PayoutMethodDetailsZARBank {
     /**
@@ -115,6 +115,9 @@ class PayoutMethodDetailsZARBank {
             }
             if (data.hasOwnProperty('legal_entity_type')) {
                 obj['legal_entity_type'] = PayoutMethodLegalEntityTypeEnum.constructFromObject(data['legal_entity_type']);
+            }
+            if (data.hasOwnProperty('birth_date')) {
+                obj['birth_date'] = ApiClient.convertToType(data['birth_date'], 'Date');
             }
         }
         return obj;
@@ -217,6 +220,12 @@ PayoutMethodDetailsZARBank.prototype['nature_of_business'] = undefined;
  * @member {module:Model/PayoutMethodLegalEntityTypeEnum} legal_entity_type
  */
 PayoutMethodDetailsZARBank.prototype['legal_entity_type'] = undefined;
+
+/**
+ * Date of birth of recipient
+ * @member {Date} birth_date
+ */
+PayoutMethodDetailsZARBank.prototype['birth_date'] = undefined;
 
 
 

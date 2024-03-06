@@ -10,5 +10,6 @@ Name | Type | Description | Notes
 **bankCountry** | **String** |  | [optional] 
 **bankCode** | **String** |  | [optional] 
 **transferReason** | [**PayoutMethodTransferReasonEnum**](PayoutMethodTransferReasonEnum.md) |  | [optional] 
+**birthDate** | **Date** | Date of birth of recipient | [optional] 
 
 

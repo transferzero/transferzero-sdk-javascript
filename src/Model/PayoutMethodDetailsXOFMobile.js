@@ -19,7 +19,7 @@ import PayoutMethodTransferReasonEnum from './PayoutMethodTransferReasonEnum';
 /**
  * The PayoutMethodDetailsXOFMobile model module.
  * @module Model/PayoutMethodDetailsXOFMobile
- * @version 1.34.2
+ * @version 1.34.3
  */
 class PayoutMethodDetailsXOFMobile {
     /**
@@ -77,6 +77,9 @@ class PayoutMethodDetailsXOFMobile {
             if (data.hasOwnProperty('transfer_reason')) {
                 obj['transfer_reason'] = PayoutMethodTransferReasonEnum.constructFromObject(data['transfer_reason']);
             }
+            if (data.hasOwnProperty('birth_date')) {
+                obj['birth_date'] = ApiClient.convertToType(data['birth_date'], 'Date');
+            }
         }
         return obj;
     }
@@ -113,6 +116,12 @@ PayoutMethodDetailsXOFMobile.prototype['country'] = undefined;
  * @member {module:Model/PayoutMethodTransferReasonEnum} transfer_reason
  */
 PayoutMethodDetailsXOFMobile.prototype['transfer_reason'] = undefined;
+
+/**
+ * Date of birth of recipient
+ * @member {Date} birth_date
+ */
+PayoutMethodDetailsXOFMobile.prototype['birth_date'] = undefined;
 
 
 

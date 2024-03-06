@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The PayoutMethodDetailsCADBank model module.
  * @module Model/PayoutMethodDetailsCADBank
- * @version 1.34.2
+ * @version 1.34.3
  */
 class PayoutMethodDetailsCADBank {
     /**
@@ -73,6 +73,9 @@ class PayoutMethodDetailsCADBank {
             if (data.hasOwnProperty('branch_code')) {
                 obj['branch_code'] = ApiClient.convertToType(data['branch_code'], 'String');
             }
+            if (data.hasOwnProperty('birth_date')) {
+                obj['birth_date'] = ApiClient.convertToType(data['birth_date'], 'Date');
+            }
         }
         return obj;
     }
@@ -104,6 +107,12 @@ PayoutMethodDetailsCADBank.prototype['bank_code'] = undefined;
  * @member {String} branch_code
  */
 PayoutMethodDetailsCADBank.prototype['branch_code'] = undefined;
+
+/**
+ * Date of birth of recipient
+ * @member {Date} birth_date
+ */
+PayoutMethodDetailsCADBank.prototype['birth_date'] = undefined;
 
 
 

@@ -17,7 +17,7 @@ import FieldDescription from './FieldDescription';
 /**
  * The PaymentMethod model module.
  * @module Model/PaymentMethod
- * @version 1.34.2
+ * @version 1.34.3
  */
 class PaymentMethod {
     /**

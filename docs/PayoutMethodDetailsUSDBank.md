@@ -17,5 +17,6 @@ Name | Type | Description | Notes
 **street** | **String** |  | [optional] 
 **transferReason** | [**PayoutMethodTransferReasonEnum**](PayoutMethodTransferReasonEnum.md) |  | [optional] 
 **country** | [**PayoutMethodCountryEnum**](PayoutMethodCountryEnum.md) |  | 
+**birthDate** | **Date** | Date of birth of recipient | [optional] 
 
 

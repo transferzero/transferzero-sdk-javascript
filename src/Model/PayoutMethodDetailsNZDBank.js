@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The PayoutMethodDetailsNZDBank model module.
  * @module Model/PayoutMethodDetailsNZDBank
- * @version 1.34.2
+ * @version 1.34.3
  */
 class PayoutMethodDetailsNZDBank {
     /**
@@ -68,6 +68,9 @@ class PayoutMethodDetailsNZDBank {
             if (data.hasOwnProperty('bank_name')) {
                 obj['bank_name'] = ApiClient.convertToType(data['bank_name'], 'String');
             }
+            if (data.hasOwnProperty('birth_date')) {
+                obj['birth_date'] = ApiClient.convertToType(data['birth_date'], 'Date');
+            }
         }
         return obj;
     }
@@ -94,6 +97,12 @@ PayoutMethodDetailsNZDBank.prototype['bank_account'] = undefined;
  * @member {String} bank_name
  */
 PayoutMethodDetailsNZDBank.prototype['bank_name'] = undefined;
+
+/**
+ * Date of birth of recipient
+ * @member {Date} birth_date
+ */
+PayoutMethodDetailsNZDBank.prototype['birth_date'] = undefined;
 
 
 

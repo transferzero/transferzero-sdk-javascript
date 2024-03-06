@@ -17,7 +17,7 @@ import PayoutMethodTransferReasonEnum from './PayoutMethodTransferReasonEnum';
 /**
  * The PayoutMethodDetailsEGPBank model module.
  * @module Model/PayoutMethodDetailsEGPBank
- * @version 1.34.2
+ * @version 1.34.3
  */
 class PayoutMethodDetailsEGPBank {
     /**
@@ -85,6 +85,9 @@ class PayoutMethodDetailsEGPBank {
             if (data.hasOwnProperty('transfer_reason')) {
                 obj['transfer_reason'] = PayoutMethodTransferReasonEnum.constructFromObject(data['transfer_reason']);
             }
+            if (data.hasOwnProperty('birth_date')) {
+                obj['birth_date'] = ApiClient.convertToType(data['birth_date'], 'Date');
+            }
         }
         return obj;
     }
@@ -131,6 +134,12 @@ PayoutMethodDetailsEGPBank.prototype['bank_code'] = undefined;
  * @member {module:Model/PayoutMethodTransferReasonEnum} transfer_reason
  */
 PayoutMethodDetailsEGPBank.prototype['transfer_reason'] = undefined;
+
+/**
+ * Date of birth of recipient
+ * @member {Date} birth_date
+ */
+PayoutMethodDetailsEGPBank.prototype['birth_date'] = undefined;
 
 
 

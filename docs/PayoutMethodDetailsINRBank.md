@@ -12,5 +12,6 @@ Name | Type | Description | Notes
 **bankName** | **String** |  | 
 **bankAccount** | **String** |  | 
 **ifscCode** | **String** |  | 
+**birthDate** | **Date** | Date of birth of recipient | [optional] 
 
 

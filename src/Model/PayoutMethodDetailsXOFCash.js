@@ -18,7 +18,7 @@ import PayoutMethodCountryEnum from './PayoutMethodCountryEnum';
 /**
  * The PayoutMethodDetailsXOFCash model module.
  * @module Model/PayoutMethodDetailsXOFCash
- * @version 1.34.2
+ * @version 1.34.3
  */
 class PayoutMethodDetailsXOFCash {
     /**
@@ -73,6 +73,9 @@ class PayoutMethodDetailsXOFCash {
             if (data.hasOwnProperty('country')) {
                 obj['country'] = PayoutMethodCountryEnum.constructFromObject(data['country']);
             }
+            if (data.hasOwnProperty('birth_date')) {
+                obj['birth_date'] = ApiClient.convertToType(data['birth_date'], 'Date');
+            }
         }
         return obj;
     }
@@ -104,6 +107,12 @@ PayoutMethodDetailsXOFCash.prototype['cash_provider'] = undefined;
  * @member {module:Model/PayoutMethodCountryEnum} country
  */
 PayoutMethodDetailsXOFCash.prototype['country'] = undefined;
+
+/**
+ * Date of birth of recipient
+ * @member {Date} birth_date
+ */
+PayoutMethodDetailsXOFCash.prototype['birth_date'] = undefined;
 
 
 

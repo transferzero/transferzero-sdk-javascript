@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The PayoutMethodDetailsGHSCash model module.
  * @module Model/PayoutMethodDetailsGHSCash
- * @version 1.34.2
+ * @version 1.34.3
  */
 class PayoutMethodDetailsGHSCash {
     /**
@@ -63,6 +63,9 @@ class PayoutMethodDetailsGHSCash {
             if (data.hasOwnProperty('phone_number')) {
                 obj['phone_number'] = ApiClient.convertToType(data['phone_number'], 'String');
             }
+            if (data.hasOwnProperty('birth_date')) {
+                obj['birth_date'] = ApiClient.convertToType(data['birth_date'], 'Date');
+            }
         }
         return obj;
     }
@@ -84,6 +87,12 @@ PayoutMethodDetailsGHSCash.prototype['last_name'] = undefined;
  * @member {String} phone_number
  */
 PayoutMethodDetailsGHSCash.prototype['phone_number'] = undefined;
+
+/**
+ * Date of birth of recipient
+ * @member {Date} birth_date
+ */
+PayoutMethodDetailsGHSCash.prototype['birth_date'] = undefined;
 
 
 

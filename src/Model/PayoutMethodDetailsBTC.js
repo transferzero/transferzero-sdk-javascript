@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The PayoutMethodDetailsBTC model module.
  * @module Model/PayoutMethodDetailsBTC
- * @version 1.34.2
+ * @version 1.34.3
  */
 class PayoutMethodDetailsBTC {
     /**
@@ -68,6 +68,9 @@ class PayoutMethodDetailsBTC {
             if (data.hasOwnProperty('address')) {
                 obj['address'] = ApiClient.convertToType(data['address'], 'String');
             }
+            if (data.hasOwnProperty('birth_date')) {
+                obj['birth_date'] = ApiClient.convertToType(data['birth_date'], 'Date');
+            }
         }
         return obj;
     }
@@ -94,6 +97,12 @@ PayoutMethodDetailsBTC.prototype['name'] = undefined;
  * @member {String} address
  */
 PayoutMethodDetailsBTC.prototype['address'] = undefined;
+
+/**
+ * Date of birth of recipient
+ * @member {Date} birth_date
+ */
+PayoutMethodDetailsBTC.prototype['birth_date'] = undefined;
 
 
 

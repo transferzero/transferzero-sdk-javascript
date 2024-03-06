@@ -17,7 +17,7 @@ import PayoutMethodTransferReasonEnum from './PayoutMethodTransferReasonEnum';
 /**
  * The PayoutMethodDetailsXAFBank model module.
  * @module Model/PayoutMethodDetailsXAFBank
- * @version 1.34.2
+ * @version 1.34.3
  */
 class PayoutMethodDetailsXAFBank {
     /**
@@ -82,6 +82,9 @@ class PayoutMethodDetailsXAFBank {
             if (data.hasOwnProperty('transfer_reason')) {
                 obj['transfer_reason'] = PayoutMethodTransferReasonEnum.constructFromObject(data['transfer_reason']);
             }
+            if (data.hasOwnProperty('birth_date')) {
+                obj['birth_date'] = ApiClient.convertToType(data['birth_date'], 'Date');
+            }
         }
         return obj;
     }
@@ -133,6 +136,12 @@ PayoutMethodDetailsXAFBank.prototype['sort_code'] = undefined;
  * @member {module:Model/PayoutMethodTransferReasonEnum} transfer_reason
  */
 PayoutMethodDetailsXAFBank.prototype['transfer_reason'] = undefined;
+
+/**
+ * Date of birth of recipient
+ * @member {Date} birth_date
+ */
+PayoutMethodDetailsXAFBank.prototype['birth_date'] = undefined;
 
 
 

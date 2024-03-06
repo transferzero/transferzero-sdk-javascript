@@ -7,5 +7,6 @@ Name | Type | Description | Notes
 **lastName** | **String** |  | 
 **bankAccount** | **String** |  | 
 **branchCode** | **String** |  | 
+**birthDate** | **Date** | Date of birth of recipient | [optional] 
 
 

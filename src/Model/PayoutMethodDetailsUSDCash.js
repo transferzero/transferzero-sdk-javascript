@@ -17,7 +17,7 @@ import PayoutMethodCountryEnum from './PayoutMethodCountryEnum';
 /**
  * The PayoutMethodDetailsUSDCash model module.
  * @module Model/PayoutMethodDetailsUSDCash
- * @version 1.34.2
+ * @version 1.34.3
  */
 class PayoutMethodDetailsUSDCash {
     /**
@@ -69,6 +69,9 @@ class PayoutMethodDetailsUSDCash {
             if (data.hasOwnProperty('country')) {
                 obj['country'] = PayoutMethodCountryEnum.constructFromObject(data['country']);
             }
+            if (data.hasOwnProperty('birth_date')) {
+                obj['birth_date'] = ApiClient.convertToType(data['birth_date'], 'Date');
+            }
         }
         return obj;
     }
@@ -95,6 +98,12 @@ PayoutMethodDetailsUSDCash.prototype['phone_number'] = undefined;
  * @member {module:Model/PayoutMethodCountryEnum} country
  */
 PayoutMethodDetailsUSDCash.prototype['country'] = undefined;
+
+/**
+ * Date of birth of recipient
+ * @member {Date} birth_date
+ */
+PayoutMethodDetailsUSDCash.prototype['birth_date'] = undefined;
 
 
 

@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The PayoutMethodDetailsIBAN model module.
  * @module Model/PayoutMethodDetailsIBAN
- * @version 1.34.2
+ * @version 1.34.3
  */
 class PayoutMethodDetailsIBAN {
     /**
@@ -72,6 +72,9 @@ class PayoutMethodDetailsIBAN {
             if (data.hasOwnProperty('narration')) {
                 obj['narration'] = ApiClient.convertToType(data['narration'], 'String');
             }
+            if (data.hasOwnProperty('birth_date')) {
+                obj['birth_date'] = ApiClient.convertToType(data['birth_date'], 'Date');
+            }
         }
         return obj;
     }
@@ -108,6 +111,12 @@ PayoutMethodDetailsIBAN.prototype['bank_name'] = undefined;
  * @member {String} narration
  */
 PayoutMethodDetailsIBAN.prototype['narration'] = undefined;
+
+/**
+ * Date of birth of recipient
+ * @member {Date} birth_date
+ */
+PayoutMethodDetailsIBAN.prototype['birth_date'] = undefined;
 
 
 

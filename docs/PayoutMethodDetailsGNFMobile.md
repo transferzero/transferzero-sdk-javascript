@@ -7,5 +7,6 @@ Name | Type | Description | Notes
 **lastName** | **String** |  | 
 **phoneNumber** | **String** |  | 
 **mobileProvider** | [**PayoutMethodMobileProviderEnum**](PayoutMethodMobileProviderEnum.md) |  | 
+**birthDate** | **Date** | Date of birth of recipient | [optional] 
 
 

@@ -18,7 +18,7 @@ import PayoutMethodTransferReasonEnum from './PayoutMethodTransferReasonEnum';
 /**
  * The PayoutMethodDetailsKESBank model module.
  * @module Model/PayoutMethodDetailsKESBank
- * @version 1.34.2
+ * @version 1.34.3
  */
 class PayoutMethodDetailsKESBank {
     /**
@@ -96,6 +96,9 @@ class PayoutMethodDetailsKESBank {
             if (data.hasOwnProperty('relationship_to_sender')) {
                 obj['relationship_to_sender'] = ApiClient.convertToType(data['relationship_to_sender'], 'String');
             }
+            if (data.hasOwnProperty('birth_date')) {
+                obj['birth_date'] = ApiClient.convertToType(data['birth_date'], 'Date');
+            }
         }
         return obj;
     }
@@ -152,6 +155,12 @@ PayoutMethodDetailsKESBank.prototype['identity_card_id'] = undefined;
  * @member {String} relationship_to_sender
  */
 PayoutMethodDetailsKESBank.prototype['relationship_to_sender'] = undefined;
+
+/**
+ * Date of birth of recipient
+ * @member {Date} birth_date
+ */
+PayoutMethodDetailsKESBank.prototype['birth_date'] = undefined;
 
 
 

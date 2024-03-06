@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The PayoutMethodDetailsGBPBank model module.
  * @module Model/PayoutMethodDetailsGBPBank
- * @version 1.34.2
+ * @version 1.34.3
  */
 class PayoutMethodDetailsGBPBank {
     /**
@@ -76,6 +76,9 @@ class PayoutMethodDetailsGBPBank {
             if (data.hasOwnProperty('narration')) {
                 obj['narration'] = ApiClient.convertToType(data['narration'], 'String');
             }
+            if (data.hasOwnProperty('birth_date')) {
+                obj['birth_date'] = ApiClient.convertToType(data['birth_date'], 'Date');
+            }
         }
         return obj;
     }
@@ -122,6 +125,12 @@ PayoutMethodDetailsGBPBank.prototype['bank_name'] = undefined;
  * @member {String} narration
  */
 PayoutMethodDetailsGBPBank.prototype['narration'] = undefined;
+
+/**
+ * Date of birth of recipient
+ * @member {Date} birth_date
+ */
+PayoutMethodDetailsGBPBank.prototype['birth_date'] = undefined;
 
 
 

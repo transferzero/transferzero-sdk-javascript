@@ -11,5 +11,6 @@ Name | Type | Description | Notes
 **bic** | **String** |  | [optional] 
 **bankName** | **String** |  | [optional] 
 **narration** | **String** |  | [optional] 
+**birthDate** | **Date** | Date of birth of recipient | [optional] 
 
 

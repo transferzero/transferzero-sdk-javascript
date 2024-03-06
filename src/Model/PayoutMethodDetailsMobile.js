@@ -17,7 +17,7 @@ import PayoutMethodMobileProviderEnum from './PayoutMethodMobileProviderEnum';
 /**
  * The PayoutMethodDetailsMobile model module.
  * @module Model/PayoutMethodDetailsMobile
- * @version 1.34.2
+ * @version 1.34.3
  */
 class PayoutMethodDetailsMobile {
     /**
@@ -67,6 +67,9 @@ class PayoutMethodDetailsMobile {
             if (data.hasOwnProperty('mobile_provider')) {
                 obj['mobile_provider'] = PayoutMethodMobileProviderEnum.constructFromObject(data['mobile_provider']);
             }
+            if (data.hasOwnProperty('birth_date')) {
+                obj['birth_date'] = ApiClient.convertToType(data['birth_date'], 'Date');
+            }
         }
         return obj;
     }
@@ -93,6 +96,12 @@ PayoutMethodDetailsMobile.prototype['phone_number'] = undefined;
  * @member {module:Model/PayoutMethodMobileProviderEnum} mobile_provider
  */
 PayoutMethodDetailsMobile.prototype['mobile_provider'] = undefined;
+
+/**
+ * Date of birth of recipient
+ * @member {Date} birth_date
+ */
+PayoutMethodDetailsMobile.prototype['birth_date'] = undefined;
 
 
 

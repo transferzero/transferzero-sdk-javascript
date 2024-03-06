@@ -19,7 +19,7 @@ import PayoutMethodTransferReasonEnum from './PayoutMethodTransferReasonEnum';
 /**
  * The PayoutMethodDetailsUSDBank model module.
  * @module Model/PayoutMethodDetailsUSDBank
- * @version 1.34.2
+ * @version 1.34.3
  */
 class PayoutMethodDetailsUSDBank {
     /**
@@ -99,6 +99,9 @@ class PayoutMethodDetailsUSDBank {
             if (data.hasOwnProperty('country')) {
                 obj['country'] = PayoutMethodCountryEnum.constructFromObject(data['country']);
             }
+            if (data.hasOwnProperty('birth_date')) {
+                obj['birth_date'] = ApiClient.convertToType(data['birth_date'], 'Date');
+            }
         }
         return obj;
     }
@@ -175,6 +178,12 @@ PayoutMethodDetailsUSDBank.prototype['transfer_reason'] = undefined;
  * @member {module:Model/PayoutMethodCountryEnum} country
  */
 PayoutMethodDetailsUSDBank.prototype['country'] = undefined;
+
+/**
+ * Date of birth of recipient
+ * @member {Date} birth_date
+ */
+PayoutMethodDetailsUSDBank.prototype['birth_date'] = undefined;
 
 
 

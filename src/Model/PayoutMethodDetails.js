@@ -54,7 +54,7 @@ import PayoutMethodTransferReasonEnum from './PayoutMethodTransferReasonEnum';
 /**
  * The PayoutMethodDetails model module.
  * @module Model/PayoutMethodDetails
- * @version 1.34.2
+ * @version 1.34.3
  */
 class PayoutMethodDetails {
     /**
@@ -192,6 +192,11 @@ PayoutMethodDetailsNGNBank.prototype['bank_account'] = undefined;
  * @member {module:Model/PayoutMethodBankAccountTypeEnum} bank_account_type
  */
 PayoutMethodDetailsNGNBank.prototype['bank_account_type'] = undefined;
+/**
+ * Date of birth of recipient
+ * @member {Date} birth_date
+ */
+PayoutMethodDetailsNGNBank.prototype['birth_date'] = undefined;
 // Implement PayoutMethodDetailsMobile interface:
 /**
  * @member {String} first_name
@@ -209,6 +214,11 @@ PayoutMethodDetailsMobile.prototype['phone_number'] = undefined;
  * @member {module:Model/PayoutMethodMobileProviderEnum} mobile_provider
  */
 PayoutMethodDetailsMobile.prototype['mobile_provider'] = undefined;
+/**
+ * Date of birth of recipient
+ * @member {Date} birth_date
+ */
+PayoutMethodDetailsMobile.prototype['birth_date'] = undefined;
 // Implement PayoutMethodDetailsXOFMobile interface:
 /**
  * @member {String} first_name
@@ -234,6 +244,11 @@ PayoutMethodDetailsXOFMobile.prototype['country'] = undefined;
  * @member {module:Model/PayoutMethodTransferReasonEnum} transfer_reason
  */
 PayoutMethodDetailsXOFMobile.prototype['transfer_reason'] = undefined;
+/**
+ * Date of birth of recipient
+ * @member {Date} birth_date
+ */
+PayoutMethodDetailsXOFMobile.prototype['birth_date'] = undefined;
 // Implement PayoutMethodDetailsXOFBank interface:
 /**
  * @member {String} first_name
@@ -263,6 +278,11 @@ PayoutMethodDetailsXOFBank.prototype['bank_code'] = undefined;
  * @member {module:Model/PayoutMethodTransferReasonEnum} transfer_reason
  */
 PayoutMethodDetailsXOFBank.prototype['transfer_reason'] = undefined;
+/**
+ * Date of birth of recipient
+ * @member {Date} birth_date
+ */
+PayoutMethodDetailsXOFBank.prototype['birth_date'] = undefined;
 // Implement PayoutMethodDetailsXOFCash interface:
 /**
  * @member {String} first_name
@@ -284,6 +304,11 @@ PayoutMethodDetailsXOFCash.prototype['cash_provider'] = undefined;
  * @member {module:Model/PayoutMethodCountryEnum} country
  */
 PayoutMethodDetailsXOFCash.prototype['country'] = undefined;
+/**
+ * Date of birth of recipient
+ * @member {Date} birth_date
+ */
+PayoutMethodDetailsXOFCash.prototype['birth_date'] = undefined;
 // Implement PayoutMethodDetailsGHSBank interface:
 /**
  * @member {String} first_name
@@ -301,6 +326,11 @@ PayoutMethodDetailsGHSBank.prototype['bank_code'] = undefined;
  * @member {String} bank_account
  */
 PayoutMethodDetailsGHSBank.prototype['bank_account'] = undefined;
+/**
+ * Date of birth of recipient
+ * @member {Date} birth_date
+ */
+PayoutMethodDetailsGHSBank.prototype['birth_date'] = undefined;
 // Implement PayoutMethodDetailsGHSCash interface:
 /**
  * @member {String} first_name
@@ -314,6 +344,11 @@ PayoutMethodDetailsGHSCash.prototype['last_name'] = undefined;
  * @member {String} phone_number
  */
 PayoutMethodDetailsGHSCash.prototype['phone_number'] = undefined;
+/**
+ * Date of birth of recipient
+ * @member {Date} birth_date
+ */
+PayoutMethodDetailsGHSCash.prototype['birth_date'] = undefined;
 // Implement PayoutMethodDetailsGBPBank interface:
 /**
  * @member {String} first_name
@@ -347,6 +382,11 @@ PayoutMethodDetailsGBPBank.prototype['bank_name'] = undefined;
  * @member {String} narration
  */
 PayoutMethodDetailsGBPBank.prototype['narration'] = undefined;
+/**
+ * Date of birth of recipient
+ * @member {Date} birth_date
+ */
+PayoutMethodDetailsGBPBank.prototype['birth_date'] = undefined;
 // Implement PayoutMethodDetailsIBAN interface:
 /**
  * @member {String} first_name
@@ -372,6 +412,11 @@ PayoutMethodDetailsIBAN.prototype['bank_name'] = undefined;
  * @member {String} narration
  */
 PayoutMethodDetailsIBAN.prototype['narration'] = undefined;
+/**
+ * Date of birth of recipient
+ * @member {Date} birth_date
+ */
+PayoutMethodDetailsIBAN.prototype['birth_date'] = undefined;
 // Implement PayoutMethodDetailsMADCash interface:
 /**
  * @member {String} first_name
@@ -417,6 +462,11 @@ PayoutMethodDetailsMADCash.prototype['identity_card_type'] = undefined;
  * @member {String} identity_card_id
  */
 PayoutMethodDetailsMADCash.prototype['identity_card_id'] = undefined;
+/**
+ * Date of birth of recipient
+ * @member {Date} birth_date
+ */
+PayoutMethodDetailsMADCash.prototype['birth_date'] = undefined;
 // Implement PayoutMethodDetailsBalance interface:
 /**
  * @member {String} reference
@@ -439,6 +489,11 @@ PayoutMethodDetailsBTC.prototype['name'] = undefined;
  * @member {String} address
  */
 PayoutMethodDetailsBTC.prototype['address'] = undefined;
+/**
+ * Date of birth of recipient
+ * @member {Date} birth_date
+ */
+PayoutMethodDetailsBTC.prototype['birth_date'] = undefined;
 // Implement PayoutMethodDetailsZARBank interface:
 /**
  * @member {String} first_name
@@ -516,6 +571,11 @@ PayoutMethodDetailsZARBank.prototype['nature_of_business'] = undefined;
  * @member {module:Model/PayoutMethodLegalEntityTypeEnum} legal_entity_type
  */
 PayoutMethodDetailsZARBank.prototype['legal_entity_type'] = undefined;
+/**
+ * Date of birth of recipient
+ * @member {Date} birth_date
+ */
+PayoutMethodDetailsZARBank.prototype['birth_date'] = undefined;
 // Implement PayoutMethodDetailsUSDBank interface:
 /**
  * @member {String} first_name
@@ -573,6 +633,11 @@ PayoutMethodDetailsUSDBank.prototype['transfer_reason'] = undefined;
  * @member {module:Model/PayoutMethodCountryEnum} country
  */
 PayoutMethodDetailsUSDBank.prototype['country'] = undefined;
+/**
+ * Date of birth of recipient
+ * @member {Date} birth_date
+ */
+PayoutMethodDetailsUSDBank.prototype['birth_date'] = undefined;
 // Implement PayoutMethodDetailsUSDCash interface:
 /**
  * @member {String} first_name
@@ -590,6 +655,11 @@ PayoutMethodDetailsUSDCash.prototype['phone_number'] = undefined;
  * @member {module:Model/PayoutMethodCountryEnum} country
  */
 PayoutMethodDetailsUSDCash.prototype['country'] = undefined;
+/**
+ * Date of birth of recipient
+ * @member {Date} birth_date
+ */
+PayoutMethodDetailsUSDCash.prototype['birth_date'] = undefined;
 // Implement PayoutMethodDetailsKESMobile interface:
 /**
  * @member {String} first_name
@@ -635,6 +705,11 @@ PayoutMethodDetailsKESMobile.prototype['identity_card_id'] = undefined;
  * @member {String} relationship_to_sender
  */
 PayoutMethodDetailsKESMobile.prototype['relationship_to_sender'] = undefined;
+/**
+ * Date of birth of recipient
+ * @member {Date} birth_date
+ */
+PayoutMethodDetailsKESMobile.prototype['birth_date'] = undefined;
 // Implement PayoutMethodDetailsKESBank interface:
 /**
  * @member {String} first_name
@@ -676,6 +751,11 @@ PayoutMethodDetailsKESBank.prototype['identity_card_id'] = undefined;
  * @member {String} relationship_to_sender
  */
 PayoutMethodDetailsKESBank.prototype['relationship_to_sender'] = undefined;
+/**
+ * Date of birth of recipient
+ * @member {Date} birth_date
+ */
+PayoutMethodDetailsKESBank.prototype['birth_date'] = undefined;
 // Implement PayoutMethodDetailsXAFMobile interface:
 /**
  * @member {String} first_name
@@ -697,6 +777,11 @@ PayoutMethodDetailsXAFMobile.prototype['mobile_provider'] = undefined;
  * @member {module:Model/PayoutMethodCountryEnum} country
  */
 PayoutMethodDetailsXAFMobile.prototype['country'] = undefined;
+/**
+ * Date of birth of recipient
+ * @member {Date} birth_date
+ */
+PayoutMethodDetailsXAFMobile.prototype['birth_date'] = undefined;
 // Implement PayoutMethodDetailsXAFBank interface:
 /**
  * @member {String} first_name
@@ -734,6 +819,11 @@ PayoutMethodDetailsXAFBank.prototype['sort_code'] = undefined;
  * @member {module:Model/PayoutMethodTransferReasonEnum} transfer_reason
  */
 PayoutMethodDetailsXAFBank.prototype['transfer_reason'] = undefined;
+/**
+ * Date of birth of recipient
+ * @member {Date} birth_date
+ */
+PayoutMethodDetailsXAFBank.prototype['birth_date'] = undefined;
 // Implement PayoutMethodDetailsGNFMobile interface:
 /**
  * @member {String} first_name
@@ -751,6 +841,11 @@ PayoutMethodDetailsGNFMobile.prototype['phone_number'] = undefined;
  * @member {module:Model/PayoutMethodMobileProviderEnum} mobile_provider
  */
 PayoutMethodDetailsGNFMobile.prototype['mobile_provider'] = undefined;
+/**
+ * Date of birth of recipient
+ * @member {Date} birth_date
+ */
+PayoutMethodDetailsGNFMobile.prototype['birth_date'] = undefined;
 // Implement PayoutMethodDetailsBRLBank interface:
 /**
  * @member {String} first_name
@@ -804,6 +899,11 @@ PayoutMethodDetailsBRLBank.prototype['identity_card_id'] = undefined;
  * @member {module:Model/PayoutMethodTransferReasonEnum} transfer_reason
  */
 PayoutMethodDetailsBRLBank.prototype['transfer_reason'] = undefined;
+/**
+ * Date of birth of recipient
+ * @member {Date} birth_date
+ */
+PayoutMethodDetailsBRLBank.prototype['birth_date'] = undefined;
 // Implement PayoutMethodDetailsNZDBank interface:
 /**
  * @member {String} first_name
@@ -821,6 +921,11 @@ PayoutMethodDetailsNZDBank.prototype['bank_account'] = undefined;
  * @member {String} bank_name
  */
 PayoutMethodDetailsNZDBank.prototype['bank_name'] = undefined;
+/**
+ * Date of birth of recipient
+ * @member {Date} birth_date
+ */
+PayoutMethodDetailsNZDBank.prototype['birth_date'] = undefined;
 // Implement PayoutMethodDetailsINRBank interface:
 /**
  * @member {String} first_name
@@ -858,6 +963,11 @@ PayoutMethodDetailsINRBank.prototype['bank_account'] = undefined;
  * @member {String} ifsc_code
  */
 PayoutMethodDetailsINRBank.prototype['ifsc_code'] = undefined;
+/**
+ * Date of birth of recipient
+ * @member {Date} birth_date
+ */
+PayoutMethodDetailsINRBank.prototype['birth_date'] = undefined;
 // Implement PayoutMethodDetailsBWPBank interface:
 /**
  * @member {String} first_name
@@ -879,6 +989,11 @@ PayoutMethodDetailsBWPBank.prototype['bank_account'] = undefined;
  * @member {String} branch_code
  */
 PayoutMethodDetailsBWPBank.prototype['branch_code'] = undefined;
+/**
+ * Date of birth of recipient
+ * @member {Date} birth_date
+ */
+PayoutMethodDetailsBWPBank.prototype['birth_date'] = undefined;
 // Implement PayoutMethodDetailsZMWBank interface:
 /**
  * @member {String} first_name
@@ -896,6 +1011,11 @@ PayoutMethodDetailsZMWBank.prototype['bank_account'] = undefined;
  * @member {String} branch_code
  */
 PayoutMethodDetailsZMWBank.prototype['branch_code'] = undefined;
+/**
+ * Date of birth of recipient
+ * @member {Date} birth_date
+ */
+PayoutMethodDetailsZMWBank.prototype['birth_date'] = undefined;
 // Implement PayoutMethodDetailsCADBank interface:
 /**
  * @member {String} first_name
@@ -917,6 +1037,11 @@ PayoutMethodDetailsCADBank.prototype['bank_code'] = undefined;
  * @member {String} branch_code
  */
 PayoutMethodDetailsCADBank.prototype['branch_code'] = undefined;
+/**
+ * Date of birth of recipient
+ * @member {Date} birth_date
+ */
+PayoutMethodDetailsCADBank.prototype['birth_date'] = undefined;
 // Implement PayoutMethodDetailsUGXBank interface:
 /**
  * @member {String} first_name
@@ -954,6 +1079,11 @@ PayoutMethodDetailsUGXBank.prototype['branch_code'] = undefined;
  * @member {module:Model/PayoutMethodTransferReasonEnum} transfer_reason
  */
 PayoutMethodDetailsUGXBank.prototype['transfer_reason'] = undefined;
+/**
+ * Date of birth of recipient
+ * @member {Date} birth_date
+ */
+PayoutMethodDetailsUGXBank.prototype['birth_date'] = undefined;
 // Implement PayoutMethodDetailsEGPBank interface:
 /**
  * @member {String} first_name
@@ -987,6 +1117,11 @@ PayoutMethodDetailsEGPBank.prototype['bank_code'] = undefined;
  * @member {module:Model/PayoutMethodTransferReasonEnum} transfer_reason
  */
 PayoutMethodDetailsEGPBank.prototype['transfer_reason'] = undefined;
+/**
+ * Date of birth of recipient
+ * @member {Date} birth_date
+ */
+PayoutMethodDetailsEGPBank.prototype['birth_date'] = undefined;
 
 
 

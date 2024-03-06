@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The PayoutMethodDetailsINRBank model module.
  * @module Model/PayoutMethodDetailsINRBank
- * @version 1.34.2
+ * @version 1.34.3
  */
 class PayoutMethodDetailsINRBank {
     /**
@@ -93,6 +93,9 @@ class PayoutMethodDetailsINRBank {
             if (data.hasOwnProperty('ifsc_code')) {
                 obj['ifsc_code'] = ApiClient.convertToType(data['ifsc_code'], 'String');
             }
+            if (data.hasOwnProperty('birth_date')) {
+                obj['birth_date'] = ApiClient.convertToType(data['birth_date'], 'Date');
+            }
         }
         return obj;
     }
@@ -144,6 +147,12 @@ PayoutMethodDetailsINRBank.prototype['bank_account'] = undefined;
  * @member {String} ifsc_code
  */
 PayoutMethodDetailsINRBank.prototype['ifsc_code'] = undefined;
+
+/**
+ * Date of birth of recipient
+ * @member {Date} birth_date
+ */
+PayoutMethodDetailsINRBank.prototype['birth_date'] = undefined;
 
 
 

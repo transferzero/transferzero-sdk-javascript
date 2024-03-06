@@ -17,7 +17,7 @@ import PayoutMethodMobileProviderEnum from './PayoutMethodMobileProviderEnum';
 /**
  * The PayoutMethodDetailsGNFMobile model module.
  * @module Model/PayoutMethodDetailsGNFMobile
- * @version 1.34.2
+ * @version 1.34.3
  */
 class PayoutMethodDetailsGNFMobile {
     /**
@@ -69,6 +69,9 @@ class PayoutMethodDetailsGNFMobile {
             if (data.hasOwnProperty('mobile_provider')) {
                 obj['mobile_provider'] = PayoutMethodMobileProviderEnum.constructFromObject(data['mobile_provider']);
             }
+            if (data.hasOwnProperty('birth_date')) {
+                obj['birth_date'] = ApiClient.convertToType(data['birth_date'], 'Date');
+            }
         }
         return obj;
     }
@@ -95,6 +98,12 @@ PayoutMethodDetailsGNFMobile.prototype['phone_number'] = undefined;
  * @member {module:Model/PayoutMethodMobileProviderEnum} mobile_provider
  */
 PayoutMethodDetailsGNFMobile.prototype['mobile_provider'] = undefined;
+
+/**
+ * Date of birth of recipient
+ * @member {Date} birth_date
+ */
+PayoutMethodDetailsGNFMobile.prototype['birth_date'] = undefined;
 
 
 
