@@ -1,9 +1,10 @@
 # TransferzeroSdk.AccountValidationResult
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**accountName** | **String** |  | [optional] 
-**mappedMobileProvider** | **String** |  | [optional] 
+**accountName** | **String** |  | [optional] [readonly] 
+**mappedMobileProvider** | **String** |  | [optional] [readonly] 
 
 

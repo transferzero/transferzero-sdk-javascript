@@ -1,6 +1,7 @@
 # TransferzeroSdk.PayoutMethodDetailsCADBank
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **firstName** | **String** |  | 

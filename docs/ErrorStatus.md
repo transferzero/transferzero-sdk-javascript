@@ -1,9 +1,10 @@
 # TransferzeroSdk.ErrorStatus
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**status** | **Number** |  | [optional] 
-**error** | **String** |  | [optional] 
+**status** | **Number** |  | [optional] [readonly] 
+**error** | **String** |  | [optional] [readonly] 
 
 

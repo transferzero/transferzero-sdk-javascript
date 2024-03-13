@@ -1,6 +1,7 @@
 # TransferzeroSdk.PayoutMethodDetailsINRBank
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **firstName** | **String** |  | 

@@ -1,6 +1,7 @@
 # TransferzeroSdk.Sender
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **String** |  | [optional] 
@@ -45,8 +46,8 @@ Name | Type | Description | Notes
 **numberMonthlyTransactions** | **String** | The estimated number of monthly transactions (used only with a Business sender) | [optional] 
 **amountMonthlyTransactions** | **String** | The estimated amount for all transactions each month in USD (used only with a Business sender) | [optional] 
 **documents** | [**[Document]**](Document.md) | Needed for KYC checks. Required to approve the sender unless KYC is waived for your account. Please send us an empty list of documents: &#x60;\&quot;documents\&quot;: [ ]&#x60; in the request if KYC has been waived.  If the documents already exist, please send the Document ID eg. &#x60;&#x60;&#x60;JSON \&quot;documents\&quot;: [   {     \&quot;id\&quot;: \&quot;b6648ba3-1c7b-4f59-8580-684899c84a07\&quot;   } ] &#x60;&#x60;&#x60; | 
-**metadata** | [**Object**](.md) | Metadata of sender. You can store any detail specific to your integration here (for example the local ID of the sender on your end). When requesting sender details you will receive the sent metadata back. Also when sending sender related webhooks you will receive the details stored here as well. | [optional] 
-**errors** | **{String: [ValidationErrorDescription]}** | The fields that have some problems and don&#39;t pass validation | [optional] 
+**metadata** | **Object** | Metadata of sender. You can store any detail specific to your integration here (for example the local ID of the sender on your end). When requesting sender details you will receive the sent metadata back. Also when sending sender related webhooks you will receive the details stored here as well. | [optional] 
+**errors** | **{String: [ValidationErrorDescription]}** | The fields that have some problems and don&#39;t pass validation | [optional] [readonly] 
 **onboardingStatus** | **String** | The onboarding status of the sender | [optional] 
 **politicallyExposedPeople** | [**[PoliticallyExposedPerson]**](PoliticallyExposedPerson.md) | An optional list of politically exposed people, individuals who are or have been entrusted with prominent public functions by a country, for example heads of state or heads of government, senior politicians, senior government, judicial or military officials, senior executives of state owned corporations, important political party officials.  There is a limit of three (3) politically exposed people per Sender.  Politically exposed person example: &#x60;&#x60;&#x60;json   {     \&quot;politically_exposed_person\&quot;: {       \&quot;name\&quot;: \&quot;Ronald Reagan\&quot;,       \&quot;position\&quot;: \&quot;President of the United States\&quot;,       \&quot;started_date\&quot;: \&quot;1981-01-20T00:00:00.000Z\&quot;,       \&quot;ended_date\&quot;: \&quot;1989-01-20T00:00:00.000Z\&quot;,       \&quot;sender_id\&quot;: \&quot;344fb668-196d-43db-9d94-b34b7e6c7e0b\&quot;     }   } &#x60;&#x60;&#x60; | [optional] 
 **externalId** | **String** | Optional ID that is supplied by partner linking it to the partner&#39;s own Sender ID. Note: if present we will validate whether the sent ID is a duplicate in our system or not. | [optional] 
@@ -54,7 +55,7 @@ Name | Type | Description | Notes
 **countryOfBirth** | **String** | Country of birth of sender in 2-character alpha ISO 3166-2 country format | [optional] 
 **gender** | **String** | The gender of the sender:  - &#x60;M&#x60;: Male - &#x60;F&#x60;: Female - &#x60;O&#x60;: Other | [optional] 
 **salesLeadId** | **String** | Sales Lead ID for tracking (optional) | [optional] 
-**createdAt** | **String** | Date and time of sender was created | [optional] 
+**createdAt** | **String** | Date and time of sender was created | [optional] [readonly] 
 **companyOfficeNumber** | **String** | Phone number of company office (without country callcode, used only with a Business sender) | [optional] 
 **companyOfficeNumberCountry** | **String** | Phone number country of company office in 2-character alpha ISO 3166-2 country format (used only with a Business sender) | [optional] 
 **amlOfficerEmail** | **String** | Email address of AML Officer (used only with a Business sender) | [optional] 
@@ -67,7 +68,7 @@ Name | Type | Description | Notes
 **declaration** | **String** | Declaration that the signatory is authorised (used only with a Business sender) | [optional] 
 
 
-<a name="TypeEnum"></a>
+
 ## Enum: TypeEnum
 
 
@@ -78,7 +79,7 @@ Name | Type | Description | Notes
 
 
 
-<a name="IdentificationTypeEnum"></a>
+
 ## Enum: IdentificationTypeEnum
 
 
@@ -93,7 +94,7 @@ Name | Type | Description | Notes
 
 
 
-<a name="LegalEntityTypeEnum"></a>
+
 ## Enum: LegalEntityTypeEnum
 
 
@@ -124,7 +125,7 @@ Name | Type | Description | Notes
 
 
 
-<a name="NatureOfBusinessEnum"></a>
+
 ## Enum: NatureOfBusinessEnum
 
 
@@ -203,7 +204,7 @@ Name | Type | Description | Notes
 
 
 
-<a name="GenderEnum"></a>
+
 ## Enum: GenderEnum
 
 

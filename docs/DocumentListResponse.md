@@ -1,9 +1,10 @@
 # TransferzeroSdk.DocumentListResponse
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**_object** | [**[Document]**](Document.md) |  | [optional] 
+**object** | [**[Document]**](Document.md) |  | [optional] [readonly] 
 **meta** | [**PaginationMeta**](PaginationMeta.md) |  | [optional] 
 
 

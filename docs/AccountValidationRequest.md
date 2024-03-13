@@ -1,6 +1,7 @@
 # TransferzeroSdk.AccountValidationRequest
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **bankAccount** | **String** | Account Number to query | [optional] 
@@ -13,7 +14,7 @@ Name | Type | Description | Notes
 **method** | **String** | The method of the payment. Currently bank and mobile are supported | 
 
 
-<a name="CountryEnum"></a>
+
 ## Enum: CountryEnum
 
 
@@ -38,7 +39,7 @@ Name | Type | Description | Notes
 
 
 
-<a name="CurrencyEnum"></a>
+
 ## Enum: CurrencyEnum
 
 
@@ -55,7 +56,7 @@ Name | Type | Description | Notes
 
 
 
-<a name="MethodEnum"></a>
+
 ## Enum: MethodEnum
 
 

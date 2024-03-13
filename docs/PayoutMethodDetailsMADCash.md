@@ -1,6 +1,7 @@
 # TransferzeroSdk.PayoutMethodDetailsMADCash
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **firstName** | **String** |  | 

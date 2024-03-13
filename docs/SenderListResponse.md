@@ -1,9 +1,10 @@
 # TransferzeroSdk.SenderListResponse
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**_object** | [**[Sender]**](Sender.md) |  | [optional] 
+**object** | [**[Sender]**](Sender.md) |  | [optional] [readonly] 
 **meta** | [**PaginationMeta**](PaginationMeta.md) |  | [optional] 
 
 

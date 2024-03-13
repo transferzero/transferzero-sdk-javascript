@@ -1,6 +1,7 @@
 # TransferzeroSdk.PayoutMethodDetailsKESBank
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **firstName** | **String** |  | 
