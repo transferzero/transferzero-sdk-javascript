@@ -19,7 +19,7 @@ import Webhook from './Webhook';
 /**
  * The PayoutMethodWebhook model module.
  * @module Model/PayoutMethodWebhook
- * @version 1.34.3
+ * @version 1.34.4
  */
 class PayoutMethodWebhook {
     /**
