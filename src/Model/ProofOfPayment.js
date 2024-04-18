@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ProofOfPayment model module.
  * @module Model/ProofOfPayment
- * @version 1.34.4
+ * @version 1.34.5
  */
 class ProofOfPayment {
     /**

@@ -17,7 +17,7 @@ import Sender from './Sender';
 /**
  * The SenderRequest model module.
  * @module Model/SenderRequest
- * @version 1.34.4
+ * @version 1.34.5
  */
 class SenderRequest {
     /**

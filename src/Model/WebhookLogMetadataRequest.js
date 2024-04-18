@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The WebhookLogMetadataRequest model module.
  * @module Model/WebhookLogMetadataRequest
- * @version 1.34.4
+ * @version 1.34.5
  */
 class WebhookLogMetadataRequest {
     /**

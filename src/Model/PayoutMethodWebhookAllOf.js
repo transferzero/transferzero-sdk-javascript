@@ -17,7 +17,7 @@ import PayoutMethod from './PayoutMethod';
 /**
  * The PayoutMethodWebhookAllOf model module.
  * @module Model/PayoutMethodWebhookAllOf
- * @version 1.34.4
+ * @version 1.34.5
  */
 class PayoutMethodWebhookAllOf {
     /**
