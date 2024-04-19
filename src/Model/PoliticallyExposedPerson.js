@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The PoliticallyExposedPerson model module.
  * @module Model/PoliticallyExposedPerson
- * @version 1.34.6
+ * @version 1.34.7
  */
 class PoliticallyExposedPerson {
     /**
