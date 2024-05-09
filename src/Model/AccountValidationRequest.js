@@ -17,7 +17,7 @@ import PayoutMethodMobileProviderEnum from './PayoutMethodMobileProviderEnum';
 /**
  * The AccountValidationRequest model module.
  * @module Model/AccountValidationRequest
- * @version 1.34.7
+ * @version 1.35.0
  */
 class AccountValidationRequest {
     /**
@@ -144,34 +144,28 @@ AccountValidationRequest.prototype['method'] = undefined;
 AccountValidationRequest['CountryEnum'] = {
 
     /**
-     * value: "BJ"
-     * @const
-     */
-    "BJ": "BJ",
-
-    /**
      * value: "BF"
      * @const
      */
     "BF": "BF",
 
     /**
-     * value: "NG"
+     * value: "BJ"
      * @const
      */
-    "NG": "NG",
+    "BJ": "BJ",
 
     /**
-     * value: "GH"
+     * value: "CF"
      * @const
      */
-    "GH": "GH",
+    "CF": "CF",
 
     /**
-     * value: "SN"
+     * value: "CG"
      * @const
      */
-    "SN": "SN",
+    "CG": "CG",
 
     /**
      * value: "CI"
@@ -186,16 +180,46 @@ AccountValidationRequest['CountryEnum'] = {
     "CM": "CM",
 
     /**
-     * value: "UG"
+     * value: "GA"
      * @const
      */
-    "UG": "UG",
+    "GA": "GA",
+
+    /**
+     * value: "GH"
+     * @const
+     */
+    "GH": "GH",
+
+    /**
+     * value: "NG"
+     * @const
+     */
+    "NG": "NG",
+
+    /**
+     * value: "SN"
+     * @const
+     */
+    "SN": "SN",
+
+    /**
+     * value: "TD"
+     * @const
+     */
+    "TD": "TD",
 
     /**
      * value: "TG"
      * @const
      */
-    "TG": "TG"
+    "TG": "TG",
+
+    /**
+     * value: "UG"
+     * @const
+     */
+    "UG": "UG"
 };
 
 

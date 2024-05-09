@@ -17,7 +17,7 @@ import ValidationErrorDescription from './ValidationErrorDescription';
 /**
  * The Document model module.
  * @module Model/Document
- * @version 1.34.7
+ * @version 1.35.0
  */
 class Document {
     /**

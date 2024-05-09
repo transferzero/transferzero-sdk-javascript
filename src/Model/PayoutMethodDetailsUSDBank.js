@@ -19,7 +19,7 @@ import PayoutMethodTransferReasonEnum from './PayoutMethodTransferReasonEnum';
 /**
  * The PayoutMethodDetailsUSDBank model module.
  * @module Model/PayoutMethodDetailsUSDBank
- * @version 1.34.7
+ * @version 1.35.0
  */
 class PayoutMethodDetailsUSDBank {
     /**

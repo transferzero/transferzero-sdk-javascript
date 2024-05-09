@@ -17,12 +17,12 @@ import PayoutMethodTransferReasonEnum from './PayoutMethodTransferReasonEnum';
 /**
  * The PayoutMethodDetailsXOFBank model module.
  * @module Model/PayoutMethodDetailsXOFBank
- * @version 1.34.7
+ * @version 1.35.0
  */
 class PayoutMethodDetailsXOFBank {
     /**
      * Constructs a new <code>PayoutMethodDetailsXOFBank</code>.
-     * &#x60;&#x60;&#x60;JSON \&quot;details\&quot;: {   \&quot;first_name\&quot;: \&quot;First\&quot;,   \&quot;last_name\&quot;: \&quot;Last\&quot;,   \&quot;iban\&quot;: \&quot;BJ0610100100144390000769\&quot;, # BBAN format   \&quot;bank_name\&quot;: \&quot;Bank Of Africa Bénin\&quot;,   \&quot;bank_country\&quot;: \&quot;BJ\&quot;, # ISO country code for Benin   \&quot;bank_code\&quot;: \&quot;BJ061\&quot;,   \&quot;transfer_reason\&quot;: \&quot;personal_account\&quot; } &#x60;&#x60;&#x60;  See [XOF Bank](https://docs.transferzero.com/docs/payout-details/#xofbank) documentation for the bank_code and transfer_reason lists
+     * &#x60;&#x60;&#x60;JSON \&quot;details\&quot;: {   \&quot;first_name\&quot;: \&quot;First\&quot;,   \&quot;last_name\&quot;: \&quot;Last\&quot;,   \&quot;iban\&quot;: \&quot;BJ0610100100144390000769\&quot;, # BBAN format   \&quot;bank_name\&quot;: \&quot;Bank Of Africa Bénin\&quot;,   \&quot;bank_country\&quot;: \&quot;BJ\&quot;, # ISO country code for Benin   \&quot;bank_code\&quot;: \&quot;BJ061\&quot;,   \&quot;transfer_reason\&quot;: \&quot;personal_account\&quot;,   \&quot;narration\&quot;: \&quot;Birthday Gift\&quot; // Optional } &#x60;&#x60;&#x60;  See [XOF Bank](https://docs.transferzero.com/docs/payout-details/#xofbank) documentation for the bank_code and transfer_reason lists
      * @alias module:Model/PayoutMethodDetailsXOFBank
      * @param firstName {String} 
      * @param lastName {String} 

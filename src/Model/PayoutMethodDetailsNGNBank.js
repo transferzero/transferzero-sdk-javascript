@@ -17,7 +17,7 @@ import PayoutMethodBankAccountTypeEnum from './PayoutMethodBankAccountTypeEnum';
 /**
  * The PayoutMethodDetailsNGNBank model module.
  * @module Model/PayoutMethodDetailsNGNBank
- * @version 1.34.7
+ * @version 1.35.0
  */
 class PayoutMethodDetailsNGNBank {
     /**

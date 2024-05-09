@@ -17,7 +17,7 @@ import FieldValidation from './FieldValidation';
 /**
  * The FieldDescription model module.
  * @module Model/FieldDescription
- * @version 1.34.7
+ * @version 1.35.0
  */
 class FieldDescription {
     /**

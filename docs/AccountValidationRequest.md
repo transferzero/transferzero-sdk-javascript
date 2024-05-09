@@ -18,23 +18,31 @@ Name | Type | Description | Notes
 ## Enum: CountryEnum
 
 
-* `BJ` (value: `"BJ"`)
-
 * `BF` (value: `"BF"`)
 
-* `NG` (value: `"NG"`)
+* `BJ` (value: `"BJ"`)
 
-* `GH` (value: `"GH"`)
+* `CF` (value: `"CF"`)
 
-* `SN` (value: `"SN"`)
+* `CG` (value: `"CG"`)
 
 * `CI` (value: `"CI"`)
 
 * `CM` (value: `"CM"`)
 
-* `UG` (value: `"UG"`)
+* `GA` (value: `"GA"`)
+
+* `GH` (value: `"GH"`)
+
+* `NG` (value: `"NG"`)
+
+* `SN` (value: `"SN"`)
+
+* `TD` (value: `"TD"`)
 
 * `TG` (value: `"TG"`)
+
+* `UG` (value: `"UG"`)
 
 
 

@@ -19,7 +19,7 @@ import CurrencyOpposite from './CurrencyOpposite';
 /**
  * The CurrencyExchange model module.
  * @module Model/CurrencyExchange
- * @version 1.34.7
+ * @version 1.35.0
  */
 class CurrencyExchange {
     /**

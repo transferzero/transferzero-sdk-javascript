@@ -21,7 +21,7 @@ import ValidationErrorDescription from './ValidationErrorDescription';
 /**
  * The Recipient model module.
  * @module Model/Recipient
- * @version 1.34.7
+ * @version 1.35.0
  */
 class Recipient {
     /**
