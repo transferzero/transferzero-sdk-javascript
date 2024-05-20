@@ -22,8 +22,6 @@ Name | Type | Description | Notes
 
 * `BJ` (value: `"BJ"`)
 
-* `CF` (value: `"CF"`)
-
 * `CG` (value: `"CG"`)
 
 * `CI` (value: `"CI"`)

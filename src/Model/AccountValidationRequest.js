@@ -17,7 +17,7 @@ import PayoutMethodMobileProviderEnum from './PayoutMethodMobileProviderEnum';
 /**
  * The AccountValidationRequest model module.
  * @module Model/AccountValidationRequest
- * @version 1.35.0
+ * @version 1.35.1
  */
 class AccountValidationRequest {
     /**
@@ -154,12 +154,6 @@ AccountValidationRequest['CountryEnum'] = {
      * @const
      */
     "BJ": "BJ",
-
-    /**
-     * value: "CF"
-     * @const
-     */
-    "CF": "CF",
 
     /**
      * value: "CG"
