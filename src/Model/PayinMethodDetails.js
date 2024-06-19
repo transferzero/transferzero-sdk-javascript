@@ -21,7 +21,7 @@ import PayoutMethodMobileProviderEnum from './PayoutMethodMobileProviderEnum';
 /**
  * The PayinMethodDetails model module.
  * @module Model/PayinMethodDetails
- * @version 1.35.1
+ * @version 1.36.0
  */
 class PayinMethodDetails {
     /**
@@ -59,12 +59,6 @@ class PayinMethodDetails {
             PayinMethodDetailsMobile.constructFromObject(data, obj);
             PayinMethodDetailsBTC.constructFromObject(data, obj);
 
-            if (data.hasOwnProperty('payment_method')) {
-                obj['payment_method'] = ApiClient.convertToType(data['payment_method'], 'String');
-            }
-            if (data.hasOwnProperty('redirect_url')) {
-                obj['redirect_url'] = ApiClient.convertToType(data['redirect_url'], 'String');
-            }
             if (data.hasOwnProperty('phone_number')) {
                 obj['phone_number'] = ApiClient.convertToType(data['phone_number'], 'String');
             }
@@ -86,18 +80,6 @@ class PayinMethodDetails {
 
 
 }
-
-/**
- * The payment method which the sender will use to make the payments. Options are `bank`, `card` or you can leave empty to support both.
- * @member {String} payment_method
- */
-PayinMethodDetails.prototype['payment_method'] = undefined;
-
-/**
- * This is where the sender should be redirected back when the payment has been finished
- * @member {String} redirect_url
- */
-PayinMethodDetails.prototype['redirect_url'] = undefined;
 
 /**
  * The phone number where the funds should be collected from
@@ -130,15 +112,10 @@ PayinMethodDetails.prototype['refund_address'] = undefined;
 
 // Implement PayinMethodDetailsNGNBank interface:
 /**
- * The payment method which the sender will use to make the payments. Options are `bank`, `card` or you can leave empty to support both.
- * @member {String} payment_method
+ * Sender's phone number
+ * @member {String} phone_number
  */
-PayinMethodDetailsNGNBank.prototype['payment_method'] = undefined;
-/**
- * This is where the sender should be redirected back when the payment has been finished
- * @member {String} redirect_url
- */
-PayinMethodDetailsNGNBank.prototype['redirect_url'] = undefined;
+PayinMethodDetailsNGNBank.prototype['phone_number'] = undefined;
 // Implement PayinMethodDetailsMobile interface:
 /**
  * The phone number where the funds should be collected from

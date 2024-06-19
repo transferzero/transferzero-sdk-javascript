@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The PayoutMethodDetailsBWPBank model module.
  * @module Model/PayoutMethodDetailsBWPBank
- * @version 1.35.1
+ * @version 1.36.0
  */
 class PayoutMethodDetailsBWPBank {
     /**

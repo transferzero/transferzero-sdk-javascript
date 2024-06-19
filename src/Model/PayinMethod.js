@@ -21,7 +21,7 @@ import ValidationErrorDescription from './ValidationErrorDescription';
 /**
  * The PayinMethod model module.
  * @module Model/PayinMethod
- * @version 1.35.1
+ * @version 1.36.0
  */
 class PayinMethod {
     /**
@@ -88,7 +88,7 @@ class PayinMethod {
 }
 
 /**
- * Describes how the payment should be requested from the sender.  Possible values: - `GHS::Mobile`: GHS mobile collections - `UGX::Mobile`: UGX mobile collections - `XOF::Mobile`: XOF mobile collections - `EUR::Bank`: EUR IBAN collections - `GBP::Bank`: GBP IBAN collections 
+ * Describes how the payment should be requested from the sender.  Possible values: - `GHS::Mobile`: GHS mobile collections - `UGX::Mobile`: UGX mobile collections - `XOF::Mobile`: XOF mobile collections - `NGN::Bank`: NGN bank collections - `EUR::Bank`: EUR IBAN collections - `GBP::Bank`: GBP IBAN collections 
  * @member {String} type
  */
 PayinMethod.prototype['type'] = undefined;
