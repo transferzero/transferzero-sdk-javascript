@@ -72,6 +72,7 @@ import PayoutMethodDetailsBWPBank from './Model/PayoutMethodDetailsBWPBank';
 import PayoutMethodDetailsBalance from './Model/PayoutMethodDetailsBalance';
 import PayoutMethodDetailsCADBank from './Model/PayoutMethodDetailsCADBank';
 import PayoutMethodDetailsEGPBank from './Model/PayoutMethodDetailsEGPBank';
+import PayoutMethodDetailsEGPCash from './Model/PayoutMethodDetailsEGPCash';
 import PayoutMethodDetailsGBPBank from './Model/PayoutMethodDetailsGBPBank';
 import PayoutMethodDetailsGHSBank from './Model/PayoutMethodDetailsGHSBank';
 import PayoutMethodDetailsGHSCash from './Model/PayoutMethodDetailsGHSCash';
@@ -195,7 +196,7 @@ import WebhooksApi from './Api/WebhooksApi';
 * </pre>
 * </p>
 * @module index
-* @version 1.36.1
+* @version 1.36.2
 */
 export default {
     /**
@@ -557,6 +558,12 @@ export default {
      * @property {module:Model/PayoutMethodDetailsEGPBank}
      */
     PayoutMethodDetailsEGPBank,
+
+    /**
+     * The PayoutMethodDetailsEGPCash model constructor.
+     * @property {module:Model/PayoutMethodDetailsEGPCash}
+     */
+    PayoutMethodDetailsEGPCash,
 
     /**
      * The PayoutMethodDetailsGBPBank model constructor.
@@ -1172,6 +1179,7 @@ export {
     PayoutMethodDetailsBalance,
     PayoutMethodDetailsCADBank,
     PayoutMethodDetailsEGPBank,
+    PayoutMethodDetailsEGPCash,
     PayoutMethodDetailsGBPBank,
     PayoutMethodDetailsGHSBank,
     PayoutMethodDetailsGHSCash,

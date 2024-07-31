@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The PayoutMethodDetailsINRBank model module.
  * @module Model/PayoutMethodDetailsINRBank
- * @version 1.36.1
+ * @version 1.36.2
  */
 class PayoutMethodDetailsINRBank {
     /**

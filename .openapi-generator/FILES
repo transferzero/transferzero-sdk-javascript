@@ -70,6 +70,7 @@ docs/PayoutMethodDetailsBWPBank.md
 docs/PayoutMethodDetailsBalance.md
 docs/PayoutMethodDetailsCADBank.md
 docs/PayoutMethodDetailsEGPBank.md
+docs/PayoutMethodDetailsEGPCash.md
 docs/PayoutMethodDetailsGBPBank.md
 docs/PayoutMethodDetailsGHSBank.md
 docs/PayoutMethodDetailsGHSCash.md
@@ -230,6 +231,7 @@ src/Model/PayoutMethodDetailsBWPBank.js
 src/Model/PayoutMethodDetailsBalance.js
 src/Model/PayoutMethodDetailsCADBank.js
 src/Model/PayoutMethodDetailsEGPBank.js
+src/Model/PayoutMethodDetailsEGPCash.js
 src/Model/PayoutMethodDetailsGBPBank.js
 src/Model/PayoutMethodDetailsGHSBank.js
 src/Model/PayoutMethodDetailsGHSCash.js
@@ -309,3 +311,4 @@ src/Model/WebhookLogMetadataRequest.js
 src/Model/WebhookLogMetadataResponse.js
 src/Model/WebhookLogResponse.js
 src/index.js
+test/model/PayoutMethodDetailsEGPCash.spec.js

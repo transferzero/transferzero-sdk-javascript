@@ -18,7 +18,7 @@ import PaginationMeta from './PaginationMeta';
 /**
  * The DebitListResponse model module.
  * @module Model/DebitListResponse
- * @version 1.36.1
+ * @version 1.36.2
  */
 class DebitListResponse {
     /**
