@@ -10,5 +10,7 @@ Name | Type | Description | Notes
 **phoneNumber** | **String** |  | 
 **street** | **String** |  | 
 **transferReason** | [**PayoutMethodTransferReasonEnum**](PayoutMethodTransferReasonEnum.md) |  | 
+**email** | **String** |  | [optional] 
+**reference** | **String** |  | [optional] 
 
 

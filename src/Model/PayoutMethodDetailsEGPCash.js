@@ -17,12 +17,12 @@ import PayoutMethodTransferReasonEnum from './PayoutMethodTransferReasonEnum';
 /**
  * The PayoutMethodDetailsEGPCash model module.
  * @module Model/PayoutMethodDetailsEGPCash
- * @version 1.36.2
+ * @version 1.36.3
  */
 class PayoutMethodDetailsEGPCash {
     /**
      * Constructs a new <code>PayoutMethodDetailsEGPCash</code>.
-     * &#x60;&#x60;&#x60;JSON \&quot;details\&quot;: {   \&quot;first_name\&quot;: \&quot;First\&quot;,   \&quot;middle_name\&quot;: \&quot;Middle\&quot;,   \&quot;last_name\&quot;: \&quot;Last\&quot;,   \&quot;phone_number\&quot;: \&quot;+201023456789\&quot;,   \&quot;street\&quot;: \&quot;1 Main Street\&quot;,   \&quot;transfer_reason\&quot;: \&quot;personal_account\&quot; }
+     * &#x60;&#x60;&#x60;JSON \&quot;details\&quot;: {   \&quot;first_name\&quot;: \&quot;First\&quot;,   \&quot;middle_name\&quot;: \&quot;Middle\&quot;,   \&quot;last_name\&quot;: \&quot;Last\&quot;,   \&quot;phone_number\&quot;: \&quot;+201023456789\&quot;,   \&quot;street\&quot;: \&quot;1 Main Street\&quot;,   \&quot;transfer_reason\&quot;: \&quot;personal_account\&quot;,   \&quot;email\&quot;: \&quot;recipient@email.com\&quot;, // Optional   \&quot;reference\&quot;: \&quot;3414006608\&quot; // Optional reference that&#39;ll appear on the recipient pickup notification (if provided must be unique and exactly 10 digits long) }
      * @alias module:Model/PayoutMethodDetailsEGPCash
      * @param firstName {String} 
      * @param lastName {String} 
@@ -77,6 +77,12 @@ class PayoutMethodDetailsEGPCash {
             if (data.hasOwnProperty('transfer_reason')) {
                 obj['transfer_reason'] = PayoutMethodTransferReasonEnum.constructFromObject(data['transfer_reason']);
             }
+            if (data.hasOwnProperty('email')) {
+                obj['email'] = ApiClient.convertToType(data['email'], 'String');
+            }
+            if (data.hasOwnProperty('reference')) {
+                obj['reference'] = ApiClient.convertToType(data['reference'], 'String');
+            }
         }
         return obj;
     }
@@ -113,6 +119,16 @@ PayoutMethodDetailsEGPCash.prototype['street'] = undefined;
  * @member {module:Model/PayoutMethodTransferReasonEnum} transfer_reason
  */
 PayoutMethodDetailsEGPCash.prototype['transfer_reason'] = undefined;
+
+/**
+ * @member {String} email
+ */
+PayoutMethodDetailsEGPCash.prototype['email'] = undefined;
+
+/**
+ * @member {String} reference
+ */
+PayoutMethodDetailsEGPCash.prototype['reference'] = undefined;
 
 
 

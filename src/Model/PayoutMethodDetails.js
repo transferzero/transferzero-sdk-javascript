@@ -55,7 +55,7 @@ import PayoutMethodTransferReasonEnum from './PayoutMethodTransferReasonEnum';
 /**
  * The PayoutMethodDetails model module.
  * @module Model/PayoutMethodDetails
- * @version 1.36.2
+ * @version 1.36.3
  */
 class PayoutMethodDetails {
     /**
@@ -1541,6 +1541,14 @@ PayoutMethodDetailsEGPCash.prototype['street'] = undefined;
  * @member {module:Model/PayoutMethodTransferReasonEnum} transfer_reason
  */
 PayoutMethodDetailsEGPCash.prototype['transfer_reason'] = undefined;
+/**
+ * @member {String} email
+ */
+PayoutMethodDetailsEGPCash.prototype['email'] = undefined;
+/**
+ * @member {String} reference
+ */
+PayoutMethodDetailsEGPCash.prototype['reference'] = undefined;
 
 
 
