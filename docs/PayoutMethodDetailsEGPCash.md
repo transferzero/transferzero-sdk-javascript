@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **firstName** | **String** |  | 
-**middleName** | **String** |  | [optional] 
+**middleName** | **String** |  | 
 **lastName** | **String** |  | 
 **phoneNumber** | **String** |  | 
 **street** | **String** |  | 

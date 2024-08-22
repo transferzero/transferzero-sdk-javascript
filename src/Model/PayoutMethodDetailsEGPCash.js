@@ -17,7 +17,7 @@ import PayoutMethodTransferReasonEnum from './PayoutMethodTransferReasonEnum';
 /**
  * The PayoutMethodDetailsEGPCash model module.
  * @module Model/PayoutMethodDetailsEGPCash
- * @version 1.36.3
+ * @version 1.36.4
  */
 class PayoutMethodDetailsEGPCash {
     /**
@@ -25,14 +25,15 @@ class PayoutMethodDetailsEGPCash {
      * &#x60;&#x60;&#x60;JSON \&quot;details\&quot;: {   \&quot;first_name\&quot;: \&quot;First\&quot;,   \&quot;middle_name\&quot;: \&quot;Middle\&quot;,   \&quot;last_name\&quot;: \&quot;Last\&quot;,   \&quot;phone_number\&quot;: \&quot;+201023456789\&quot;,   \&quot;street\&quot;: \&quot;1 Main Street\&quot;,   \&quot;transfer_reason\&quot;: \&quot;personal_account\&quot;,   \&quot;email\&quot;: \&quot;recipient@email.com\&quot;, // Optional   \&quot;reference\&quot;: \&quot;3414006608\&quot; // Optional reference that&#39;ll appear on the recipient pickup notification (if provided must be unique and exactly 10 digits long) }
      * @alias module:Model/PayoutMethodDetailsEGPCash
      * @param firstName {String} 
+     * @param middleName {String} 
      * @param lastName {String} 
      * @param phoneNumber {String} 
      * @param street {String} 
      * @param transferReason {module:Model/PayoutMethodTransferReasonEnum} 
      */
-    constructor(firstName, lastName, phoneNumber, street, transferReason) { 
+    constructor(firstName, middleName, lastName, phoneNumber, street, transferReason) { 
         
-        PayoutMethodDetailsEGPCash.initialize(this, firstName, lastName, phoneNumber, street, transferReason);
+        PayoutMethodDetailsEGPCash.initialize(this, firstName, middleName, lastName, phoneNumber, street, transferReason);
     }
 
     /**
@@ -40,8 +41,9 @@ class PayoutMethodDetailsEGPCash {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, firstName, lastName, phoneNumber, street, transferReason) { 
+    static initialize(obj, firstName, middleName, lastName, phoneNumber, street, transferReason) { 
         obj['first_name'] = firstName;
+        obj['middle_name'] = middleName;
         obj['last_name'] = lastName;
         obj['phone_number'] = phoneNumber;
         obj['street'] = street;

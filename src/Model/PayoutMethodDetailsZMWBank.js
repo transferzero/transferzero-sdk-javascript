@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The PayoutMethodDetailsZMWBank model module.
  * @module Model/PayoutMethodDetailsZMWBank
- * @version 1.36.3
+ * @version 1.36.4
  */
 class PayoutMethodDetailsZMWBank {
     /**
