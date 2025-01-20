@@ -76,6 +76,7 @@ import PayoutMethodDetailsEGPCash from './Model/PayoutMethodDetailsEGPCash';
 import PayoutMethodDetailsGBPBank from './Model/PayoutMethodDetailsGBPBank';
 import PayoutMethodDetailsGHSBank from './Model/PayoutMethodDetailsGHSBank';
 import PayoutMethodDetailsGHSCash from './Model/PayoutMethodDetailsGHSCash';
+import PayoutMethodDetailsGHSMobile from './Model/PayoutMethodDetailsGHSMobile';
 import PayoutMethodDetailsGNFMobile from './Model/PayoutMethodDetailsGNFMobile';
 import PayoutMethodDetailsIBAN from './Model/PayoutMethodDetailsIBAN';
 import PayoutMethodDetailsINRBank from './Model/PayoutMethodDetailsINRBank';
@@ -196,7 +197,7 @@ import WebhooksApi from './Api/WebhooksApi';
 * </pre>
 * </p>
 * @module index
-* @version 1.36.4
+* @version 1.36.5
 */
 export default {
     /**
@@ -582,6 +583,12 @@ export default {
      * @property {module:Model/PayoutMethodDetailsGHSCash}
      */
     PayoutMethodDetailsGHSCash,
+
+    /**
+     * The PayoutMethodDetailsGHSMobile model constructor.
+     * @property {module:Model/PayoutMethodDetailsGHSMobile}
+     */
+    PayoutMethodDetailsGHSMobile,
 
     /**
      * The PayoutMethodDetailsGNFMobile model constructor.
@@ -1183,6 +1190,7 @@ export {
     PayoutMethodDetailsGBPBank,
     PayoutMethodDetailsGHSBank,
     PayoutMethodDetailsGHSCash,
+    PayoutMethodDetailsGHSMobile,
     PayoutMethodDetailsGNFMobile,
     PayoutMethodDetailsIBAN,
     PayoutMethodDetailsINRBank,

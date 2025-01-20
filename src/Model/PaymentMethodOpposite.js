@@ -19,7 +19,7 @@ import PaymentMethodOppositeAllOf from './PaymentMethodOppositeAllOf';
 /**
  * The PaymentMethodOpposite model module.
  * @module Model/PaymentMethodOpposite
- * @version 1.36.4
+ * @version 1.36.5
  */
 class PaymentMethodOpposite {
     /**

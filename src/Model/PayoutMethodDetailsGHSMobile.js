@@ -13,24 +13,25 @@
 
 import ApiClient from '../ApiClient';
 import PayoutMethodMobileProviderEnum from './PayoutMethodMobileProviderEnum';
+import PayoutMethodTransferReasonEnum from './PayoutMethodTransferReasonEnum';
 
 /**
- * The PayoutMethodDetailsMobile model module.
- * @module Model/PayoutMethodDetailsMobile
+ * The PayoutMethodDetailsGHSMobile model module.
+ * @module Model/PayoutMethodDetailsGHSMobile
  * @version 1.36.5
  */
-class PayoutMethodDetailsMobile {
+class PayoutMethodDetailsGHSMobile {
     /**
-     * Constructs a new <code>PayoutMethodDetailsMobile</code>.
-     * &#x60;&#x60;&#x60;JSON \&quot;details\&quot;: {   \&quot;first_name\&quot;: \&quot;First\&quot;,   \&quot;last_name\&quot;: \&quot;Last\&quot;,   \&quot;phone_number\&quot;: \&quot;+221708766123\&quot; // E.164 international format } &#x60;&#x60;&#x60;  Please note when sending XOF::Cash payments you should subscribe to the recipient.pending webhook, as that will broadcast the payment reference ID the customer need to use to obtain the funds. Example webhook response excerpt -  &#x60;&#x60;&#x60;JSON {   (...)   \&quot;state\&quot;:\&quot;pending\&quot;,   \&quot;metadata\&quot;: {     \&quot;payment_reference\&quot;:\&quot;9M5GJRJUBCY\&quot;   },   (...) } &#x60;&#x60;&#x60;
-     * @alias module:Model/PayoutMethodDetailsMobile
+     * Constructs a new <code>PayoutMethodDetailsGHSMobile</code>.
+     * &#x60;&#x60;&#x60;JSON \&quot;details\&quot;: {   \&quot;first_name\&quot;: \&quot;First\&quot;,   \&quot;last_name\&quot;: \&quot;Last\&quot;,   \&quot;phone_number\&quot;: \&quot;+233302123456\&quot;, // E.164 international format   \&quot;mobile_provider\&quot;: \&quot;vodafone\&quot;,   \&quot;transfer_reason\&quot;: \&quot;third_party_person_account\&quot; } &#x60;&#x60;&#x60;
+     * @alias module:Model/PayoutMethodDetailsGHSMobile
      * @param firstName {String} 
      * @param lastName {String} 
      * @param phoneNumber {String} 
      */
     constructor(firstName, lastName, phoneNumber) { 
         
-        PayoutMethodDetailsMobile.initialize(this, firstName, lastName, phoneNumber);
+        PayoutMethodDetailsGHSMobile.initialize(this, firstName, lastName, phoneNumber);
     }
 
     /**
@@ -45,15 +46,15 @@ class PayoutMethodDetailsMobile {
     }
 
     /**
-     * Constructs a <code>PayoutMethodDetailsMobile</code> from a plain JavaScript object, optionally creating a new instance.
+     * Constructs a <code>PayoutMethodDetailsGHSMobile</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @param {module:Model/PayoutMethodDetailsMobile} obj Optional instance to populate.
-     * @return {module:Model/PayoutMethodDetailsMobile} The populated <code>PayoutMethodDetailsMobile</code> instance.
+     * @param {module:Model/PayoutMethodDetailsGHSMobile} obj Optional instance to populate.
+     * @return {module:Model/PayoutMethodDetailsGHSMobile} The populated <code>PayoutMethodDetailsGHSMobile</code> instance.
      */
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new PayoutMethodDetailsMobile();
+            obj = obj || new PayoutMethodDetailsGHSMobile();
 
             if (data.hasOwnProperty('first_name')) {
                 obj['first_name'] = ApiClient.convertToType(data['first_name'], 'String');
@@ -67,8 +68,8 @@ class PayoutMethodDetailsMobile {
             if (data.hasOwnProperty('mobile_provider')) {
                 obj['mobile_provider'] = PayoutMethodMobileProviderEnum.constructFromObject(data['mobile_provider']);
             }
-            if (data.hasOwnProperty('birth_date')) {
-                obj['birth_date'] = ApiClient.convertToType(data['birth_date'], 'Date');
+            if (data.hasOwnProperty('transfer_reason')) {
+                obj['transfer_reason'] = PayoutMethodTransferReasonEnum.constructFromObject(data['transfer_reason']);
             }
         }
         return obj;
@@ -80,33 +81,32 @@ class PayoutMethodDetailsMobile {
 /**
  * @member {String} first_name
  */
-PayoutMethodDetailsMobile.prototype['first_name'] = undefined;
+PayoutMethodDetailsGHSMobile.prototype['first_name'] = undefined;
 
 /**
  * @member {String} last_name
  */
-PayoutMethodDetailsMobile.prototype['last_name'] = undefined;
+PayoutMethodDetailsGHSMobile.prototype['last_name'] = undefined;
 
 /**
  * @member {String} phone_number
  */
-PayoutMethodDetailsMobile.prototype['phone_number'] = undefined;
+PayoutMethodDetailsGHSMobile.prototype['phone_number'] = undefined;
 
 /**
  * @member {module:Model/PayoutMethodMobileProviderEnum} mobile_provider
  */
-PayoutMethodDetailsMobile.prototype['mobile_provider'] = undefined;
+PayoutMethodDetailsGHSMobile.prototype['mobile_provider'] = undefined;
 
 /**
- * Date of birth of recipient
- * @member {Date} birth_date
+ * @member {module:Model/PayoutMethodTransferReasonEnum} transfer_reason
  */
-PayoutMethodDetailsMobile.prototype['birth_date'] = undefined;
+PayoutMethodDetailsGHSMobile.prototype['transfer_reason'] = undefined;
 
 
 
 
 
 
-export default PayoutMethodDetailsMobile;
+export default PayoutMethodDetailsGHSMobile;
 

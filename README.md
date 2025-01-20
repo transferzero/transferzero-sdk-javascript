@@ -202,6 +202,7 @@ Class | Method | HTTP request | Description
  - [TransferzeroSdk.PayoutMethodDetailsGBPBank](docs/PayoutMethodDetailsGBPBank.md)
  - [TransferzeroSdk.PayoutMethodDetailsGHSBank](docs/PayoutMethodDetailsGHSBank.md)
  - [TransferzeroSdk.PayoutMethodDetailsGHSCash](docs/PayoutMethodDetailsGHSCash.md)
+ - [TransferzeroSdk.PayoutMethodDetailsGHSMobile](docs/PayoutMethodDetailsGHSMobile.md)
  - [TransferzeroSdk.PayoutMethodDetailsGNFMobile](docs/PayoutMethodDetailsGNFMobile.md)
  - [TransferzeroSdk.PayoutMethodDetailsIBAN](docs/PayoutMethodDetailsIBAN.md)
  - [TransferzeroSdk.PayoutMethodDetailsINRBank](docs/PayoutMethodDetailsINRBank.md)
@@ -319,5 +320,5 @@ apiClient.basePath = 'https://api-sandbox.transferzero.com/v1';
 
 
 - API version: 1.0
-- Package version: 1.36.4
+- Package version: 1.36.5
 - Build package: org.openapitools.codegen.languages.JavascriptClientCodegen

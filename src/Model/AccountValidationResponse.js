@@ -18,7 +18,7 @@ import AccountValidationResult from './AccountValidationResult';
 /**
  * The AccountValidationResponse model module.
  * @module Model/AccountValidationResponse
- * @version 1.36.4
+ * @version 1.36.5
  */
 class AccountValidationResponse {
     /**
