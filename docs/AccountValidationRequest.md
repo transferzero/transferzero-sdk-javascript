@@ -32,6 +32,8 @@ Name | Type | Description | Notes
 
 * `GH` (value: `"GH"`)
 
+* `KE` (value: `"KE"`)
+
 * `NG` (value: `"NG"`)
 
 * `SN` (value: `"SN"`)
@@ -52,6 +54,8 @@ Name | Type | Description | Notes
 * `NGN` (value: `"NGN"`)
 
 * `GHS` (value: `"GHS"`)
+
+* `KES` (value: `"KES"`)
 
 * `XOF` (value: `"XOF"`)
 

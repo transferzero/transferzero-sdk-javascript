@@ -313,4 +313,3 @@ src/Model/WebhookLogMetadataRequest.js
 src/Model/WebhookLogMetadataResponse.js
 src/Model/WebhookLogResponse.js
 src/index.js
-test/model/PayoutMethodDetailsGHSMobile.spec.js

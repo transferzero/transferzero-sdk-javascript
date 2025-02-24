@@ -20,7 +20,7 @@ import SenderResponse from '../Model/SenderResponse';
 /**
 * Senders service.
 * @module Api/SendersApi
-* @version 1.36.5
+* @version 1.36.6
 */
 export default class SendersApi {
 

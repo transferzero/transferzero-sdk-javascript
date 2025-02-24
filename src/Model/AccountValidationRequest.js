@@ -17,7 +17,7 @@ import PayoutMethodMobileProviderEnum from './PayoutMethodMobileProviderEnum';
 /**
  * The AccountValidationRequest model module.
  * @module Model/AccountValidationRequest
- * @version 1.36.5
+ * @version 1.36.6
  */
 class AccountValidationRequest {
     /**
@@ -186,6 +186,12 @@ AccountValidationRequest['CountryEnum'] = {
     "GH": "GH",
 
     /**
+     * value: "KE"
+     * @const
+     */
+    "KE": "KE",
+
+    /**
      * value: "NG"
      * @const
      */
@@ -235,6 +241,12 @@ AccountValidationRequest['CurrencyEnum'] = {
      * @const
      */
     "GHS": "GHS",
+
+    /**
+     * value: "KES"
+     * @const
+     */
+    "KES": "KES",
 
     /**
      * value: "XOF"
