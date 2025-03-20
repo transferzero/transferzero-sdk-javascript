@@ -19,7 +19,7 @@ import Webhook from './Webhook';
 /**
  * The RecipientWebhook model module.
  * @module Model/RecipientWebhook
- * @version 1.36.6
+ * @version 1.36.7
  */
 class RecipientWebhook {
     /**

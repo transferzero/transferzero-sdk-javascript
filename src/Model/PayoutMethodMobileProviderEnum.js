@@ -20,31 +20,10 @@ import ApiClient from '../ApiClient';
 export default class PayoutMethodMobileProviderEnum {
     
         /**
-         * value: "orange"
+         * value: "africell"
          * @const
          */
-        "orange" = "orange";
-
-    
-        /**
-         * value: "tigo"
-         * @const
-         */
-        "tigo" = "tigo";
-
-    
-        /**
-         * value: "moov"
-         * @const
-         */
-        "moov" = "moov";
-
-    
-        /**
-         * value: "mtn"
-         * @const
-         */
-        "mtn" = "mtn";
+        "africell" = "africell";
 
     
         /**
@@ -62,52 +41,10 @@ export default class PayoutMethodMobileProviderEnum {
 
     
         /**
-         * value: "vodafone"
-         * @const
-         */
-        "vodafone" = "vodafone";
-
-    
-        /**
-         * value: "mpesa"
-         * @const
-         */
-        "mpesa" = "mpesa";
-
-    
-        /**
-         * value: "africell"
-         * @const
-         */
-        "africell" = "africell";
-
-    
-        /**
-         * value: "telecom"
-         * @const
-         */
-        "telecom" = "telecom";
-
-    
-        /**
-         * value: "mobicash"
-         * @const
-         */
-        "mobicash" = "mobicash";
-
-    
-        /**
          * value: "emoney"
          * @const
          */
         "emoney" = "emoney";
-
-    
-        /**
-         * value: "free"
-         * @const
-         */
-        "free" = "free";
 
     
         /**
@@ -118,10 +55,80 @@ export default class PayoutMethodMobileProviderEnum {
 
     
         /**
+         * value: "free"
+         * @const
+         */
+        "free" = "free";
+
+    
+        /**
+         * value: "mobicash"
+         * @const
+         */
+        "mobicash" = "mobicash";
+
+    
+        /**
+         * value: "moov"
+         * @const
+         */
+        "moov" = "moov";
+
+    
+        /**
+         * value: "mpesa"
+         * @const
+         */
+        "mpesa" = "mpesa";
+
+    
+        /**
+         * value: "mtn"
+         * @const
+         */
+        "mtn" = "mtn";
+
+    
+        /**
+         * value: "orange"
+         * @const
+         */
+        "orange" = "orange";
+
+    
+        /**
+         * value: "telecom"
+         * @const
+         */
+        "telecom" = "telecom";
+
+    
+        /**
+         * value: "tigo"
+         * @const
+         */
+        "tigo" = "tigo";
+
+    
+        /**
          * value: "tmoney"
          * @const
          */
         "tmoney" = "tmoney";
+
+    
+        /**
+         * value: "vodafone"
+         * @const
+         */
+        "vodafone" = "vodafone";
+
+    
+        /**
+         * value: "wave"
+         * @const
+         */
+        "wave" = "wave";
 
     
 
