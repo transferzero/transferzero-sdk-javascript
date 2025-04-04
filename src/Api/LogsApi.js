@@ -19,7 +19,7 @@ import WebhookLogResponse from '../Model/WebhookLogResponse';
 /**
 * Logs service.
 * @module Api/LogsApi
-* @version 1.36.7
+* @version 1.36.8
 */
 export default class LogsApi {
 

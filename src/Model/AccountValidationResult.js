@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The AccountValidationResult model module.
  * @module Model/AccountValidationResult
- * @version 1.36.7
+ * @version 1.36.8
  */
 class AccountValidationResult {
     /**
@@ -54,6 +54,9 @@ class AccountValidationResult {
             if (data.hasOwnProperty('mapped_mobile_provider')) {
                 obj['mapped_mobile_provider'] = ApiClient.convertToType(data['mapped_mobile_provider'], 'String');
             }
+            if (data.hasOwnProperty('account_status')) {
+                obj['account_status'] = ApiClient.convertToType(data['account_status'], 'String');
+            }
         }
         return obj;
     }
@@ -70,6 +73,11 @@ AccountValidationResult.prototype['account_name'] = undefined;
  * @member {String} mapped_mobile_provider
  */
 AccountValidationResult.prototype['mapped_mobile_provider'] = undefined;
+
+/**
+ * @member {String} account_status
+ */
+AccountValidationResult.prototype['account_status'] = undefined;
 
 
 

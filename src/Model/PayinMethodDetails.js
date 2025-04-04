@@ -21,7 +21,7 @@ import PayoutMethodMobileProviderEnum from './PayoutMethodMobileProviderEnum';
 /**
  * The PayinMethodDetails model module.
  * @module Model/PayinMethodDetails
- * @version 1.36.7
+ * @version 1.36.8
  */
 class PayinMethodDetails {
     /**

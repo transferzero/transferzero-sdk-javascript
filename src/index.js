@@ -197,7 +197,7 @@ import WebhooksApi from './Api/WebhooksApi';
 * </pre>
 * </p>
 * @module index
-* @version 1.36.7
+* @version 1.36.8
 */
 export default {
     /**
