@@ -1,9 +1,10 @@
 # TransferzeroSdk.PayoutMethodListResponse
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**_object** | [**[PayoutMethod]**](PayoutMethod.md) |  | [optional] 
+**object** | [**[PayoutMethod]**](PayoutMethod.md) |  | [optional] [readonly] 
 **meta** | [**PaginationMeta**](PaginationMeta.md) |  | [optional] 
 
 

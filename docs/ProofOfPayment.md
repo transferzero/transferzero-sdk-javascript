@@ -1,6 +1,7 @@
 # TransferzeroSdk.ProofOfPayment
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **String** | UUID of the uploaded document | [optional] 

@@ -1,9 +1,10 @@
 # TransferzeroSdk.TransactionListResponse
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**_object** | [**[Transaction]**](Transaction.md) |  | [optional] 
+**object** | [**[Transaction]**](Transaction.md) |  | [optional] [readonly] 
 **meta** | [**PaginationMeta**](PaginationMeta.md) |  | [optional] 
 
 

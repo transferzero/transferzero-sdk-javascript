@@ -1,6 +1,7 @@
 # TransferzeroSdk.PayoutMethodDetailsXAFBank
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **firstName** | **String** |  | 
@@ -12,5 +13,6 @@ Name | Type | Description | Notes
 **bankCode** | **String** |  | [optional] 
 **sortCode** | **String** |  | [optional] 
 **transferReason** | [**PayoutMethodTransferReasonEnum**](PayoutMethodTransferReasonEnum.md) |  | [optional] 
+**birthDate** | **Date** | Date of birth of recipient | [optional] 
 
 

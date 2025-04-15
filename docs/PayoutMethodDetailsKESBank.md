@@ -1,19 +1,19 @@
 # TransferzeroSdk.PayoutMethodDetailsKESBank
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **firstName** | **String** |  | 
 **lastName** | **String** |  | 
-**bankCode** | **String** |  | 
 **street** | **String** |  | 
+**city** | **String** |  | [optional] 
+**bankCode** | **String** |  | 
 **bankAccount** | **String** |  | 
-**bankName** | **String** |  | 
-**branchCode** | **String** |  | [optional] 
-**swiftCode** | **String** |  | 
-**transferReasonCode** | **String** |  | [optional] 
-**transferReason** | [**PayoutMethodTransferReasonEnum**](PayoutMethodTransferReasonEnum.md) |  | [optional] 
+**transferReason** | [**PayoutMethodTransferReasonEnum**](PayoutMethodTransferReasonEnum.md) |  | 
 **identityCardType** | [**PayoutMethodIdentityCardTypeEnum**](PayoutMethodIdentityCardTypeEnum.md) |  | 
 **identityCardId** | **String** |  | 
+**relationshipToSender** | **String** |  | [optional] 
+**birthDate** | **Date** | Date of birth of recipient | [optional] 
 
 

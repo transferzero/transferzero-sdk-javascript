@@ -1,6 +1,6 @@
 {
   "name": "transferzero-sdk",
-  "version": "1.27.0",
+  "version": "1.36.8",
   "description": "Client library for TransferZero API.",
   "license": "MIT",
   "author": {
@@ -26,17 +26,16 @@
     "fs": false
   },
   "dependencies": {
-    "babel-cli": "^6.26.0",
-    "superagent": "3.7.0",
+    "superagent": "8.1.2",
     "uuid": "^3.3.2"
   },
   "devDependencies": {
-    "babel-core": "6.26.0",
-    "babel-preset-env": "^1.6.1",
-    "babel-preset-stage-0": "^6.24.1",
+    "@babel/cli": "^7.24.1",
+    "@babel/core": "^7.24.4",
+    "@babel/preset-env": "^7.24.4",
     "expect.js": "~0.3.1",
-    "mocha": "^5.2.0",
-    "sinon": "1.17.3"
+    "mocha": "^10.4.0",
+    "sinon": "17.0.1"
   },
   "files": [
     "dist"

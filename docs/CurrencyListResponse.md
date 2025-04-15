@@ -1,8 +1,9 @@
 # TransferzeroSdk.CurrencyListResponse
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**_object** | [**[Currency]**](Currency.md) |  | [optional] 
+**object** | [**[Currency]**](Currency.md) |  | [optional] [readonly] 
 
 

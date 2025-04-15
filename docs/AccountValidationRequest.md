@@ -1,6 +1,7 @@
 # TransferzeroSdk.AccountValidationRequest
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **bankAccount** | **String** | Account Number to query | [optional] 
@@ -13,22 +14,40 @@ Name | Type | Description | Notes
 **method** | **String** | The method of the payment. Currently bank and mobile are supported | 
 
 
-<a name="CountryEnum"></a>
+
 ## Enum: CountryEnum
 
 
-* `NG` (value: `"NG"`)
+* `BF` (value: `"BF"`)
 
-* `GH` (value: `"GH"`)
+* `BJ` (value: `"BJ"`)
 
-* `SN` (value: `"SN"`)
+* `CG` (value: `"CG"`)
 
 * `CI` (value: `"CI"`)
 
+* `CM` (value: `"CM"`)
+
+* `GA` (value: `"GA"`)
+
+* `GH` (value: `"GH"`)
+
+* `KE` (value: `"KE"`)
+
+* `NG` (value: `"NG"`)
+
+* `SN` (value: `"SN"`)
+
+* `TD` (value: `"TD"`)
+
+* `TG` (value: `"TG"`)
+
+* `UG` (value: `"UG"`)
 
 
 
-<a name="CurrencyEnum"></a>
+
+
 ## Enum: CurrencyEnum
 
 
@@ -36,12 +55,18 @@ Name | Type | Description | Notes
 
 * `GHS` (value: `"GHS"`)
 
+* `KES` (value: `"KES"`)
+
 * `XOF` (value: `"XOF"`)
 
+* `UGX` (value: `"UGX"`)
+
+* `XAF` (value: `"XAF"`)
 
 
 
-<a name="MethodEnum"></a>
+
+
 ## Enum: MethodEnum
 
 
