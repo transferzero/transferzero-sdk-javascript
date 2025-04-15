@@ -1,14 +1,17 @@
 # TransferzeroSdk.PayoutMethodDetailsGBPBank
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **firstName** | **String** |  | 
 **lastName** | **String** |  | 
-**bankName** | **String** |  | [optional] 
+**iban** | **String** |  | [optional] 
 **bankAccount** | **String** |  | [optional] 
 **sortCode** | **String** |  | [optional] 
-**iban** | **String** |  | [optional] 
 **bic** | **String** |  | [optional] 
+**bankName** | **String** |  | [optional] 
+**narration** | **String** |  | [optional] 
+**birthDate** | **Date** | Date of birth of recipient | [optional] 
 
 

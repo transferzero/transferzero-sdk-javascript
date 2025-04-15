@@ -1,8 +1,11 @@
 # TransferzeroSdk.RecipientWebhook
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**_object** | [**Recipient**](Recipient.md) |  | [optional] 
+**webhook** | **String** | The ID of the webhook that was used to send out this callback | [readonly] 
+**event** | **String** | The event that triggered this webhook | [readonly] 
+**object** | [**Recipient**](Recipient.md) |  | 
 
 

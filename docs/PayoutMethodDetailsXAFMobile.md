@@ -1,6 +1,7 @@
 # TransferzeroSdk.PayoutMethodDetailsXAFMobile
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **firstName** | **String** |  | 
@@ -8,5 +9,6 @@ Name | Type | Description | Notes
 **phoneNumber** | **String** |  | 
 **mobileProvider** | [**PayoutMethodMobileProviderEnum**](PayoutMethodMobileProviderEnum.md) |  | 
 **country** | [**PayoutMethodCountryEnum**](PayoutMethodCountryEnum.md) |  | [optional] 
+**birthDate** | **Date** | Date of birth of recipient | [optional] 
 
 

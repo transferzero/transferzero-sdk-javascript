@@ -1,6 +1,7 @@
 # TransferzeroSdk.PayoutMethodDetailsMADCash
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **firstName** | **String** |  | 
@@ -14,5 +15,6 @@ Name | Type | Description | Notes
 **reason** | **String** |  | [optional] 
 **identityCardType** | [**PayoutMethodIdentityCardTypeEnum**](PayoutMethodIdentityCardTypeEnum.md) |  | [optional] 
 **identityCardId** | **String** |  | [optional] 
+**birthDate** | **Date** | Date of birth of recipient | [optional] 
 
 

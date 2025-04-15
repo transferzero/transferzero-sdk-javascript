@@ -1,6 +1,7 @@
 # TransferzeroSdk.PayoutMethodDetailsUGXBank
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **firstName** | **String** |  | 
@@ -11,6 +12,7 @@ Name | Type | Description | Notes
 **identityCardId** | **String** |  | 
 **bankAccount** | **String** |  | 
 **branchCode** | **String** |  | 
-**transferReason** | **String** |  | 
+**transferReason** | [**PayoutMethodTransferReasonEnum**](PayoutMethodTransferReasonEnum.md) |  | 
+**birthDate** | **Date** | Date of birth of recipient | [optional] 
 
 
