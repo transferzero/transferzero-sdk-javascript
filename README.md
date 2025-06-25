@@ -320,5 +320,5 @@ apiClient.basePath = 'https://api-sandbox.transferzero.com/v1';
 
 
 - API version: 1.0
-- Package version: 1.36.9
+- Package version: 1.37.0
 - Build package: org.openapitools.codegen.languages.JavascriptClientCodegen

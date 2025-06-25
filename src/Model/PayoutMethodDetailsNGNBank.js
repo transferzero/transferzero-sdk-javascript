@@ -17,7 +17,7 @@ import PayoutMethodBankAccountTypeEnum from './PayoutMethodBankAccountTypeEnum';
 /**
  * The PayoutMethodDetailsNGNBank model module.
  * @module Model/PayoutMethodDetailsNGNBank
- * @version 1.36.9
+ * @version 1.37.0
  */
 class PayoutMethodDetailsNGNBank {
     /**
@@ -75,8 +75,8 @@ class PayoutMethodDetailsNGNBank {
             if (data.hasOwnProperty('birth_date')) {
                 obj['birth_date'] = ApiClient.convertToType(data['birth_date'], 'Date');
             }
-            if (data.hasOwnProperty('street&quot;')) {
-                obj['street&quot;'] = ApiClient.convertToType(data['street"'], 'String');
+            if (data.hasOwnProperty('street')) {
+                obj['street'] = ApiClient.convertToType(data['street'], 'String');
             }
         }
         return obj;
@@ -117,9 +117,9 @@ PayoutMethodDetailsNGNBank.prototype['bank_account_type'] = undefined;
 PayoutMethodDetailsNGNBank.prototype['birth_date'] = undefined;
 
 /**
- * @member {String} street&quot;
+ * @member {String} street
  */
-PayoutMethodDetailsNGNBank.prototype['street&quot;'] = undefined;
+PayoutMethodDetailsNGNBank.prototype['street'] = undefined;
 
 
 
