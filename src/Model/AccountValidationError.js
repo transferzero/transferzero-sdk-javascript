@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The AccountValidationError model module.
  * @module Model/AccountValidationError
- * @version 1.36.8
+ * @version 1.36.9
  */
 class AccountValidationError {
     /**

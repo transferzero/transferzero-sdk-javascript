@@ -17,12 +17,12 @@ import PayoutMethodBankAccountTypeEnum from './PayoutMethodBankAccountTypeEnum';
 /**
  * The PayoutMethodDetailsNGNBank model module.
  * @module Model/PayoutMethodDetailsNGNBank
- * @version 1.36.8
+ * @version 1.36.9
  */
 class PayoutMethodDetailsNGNBank {
     /**
      * Constructs a new <code>PayoutMethodDetailsNGNBank</code>.
-     * &#x60;&#x60;&#x60;JSON   \&quot;details\&quot;: {     \&quot;first_name\&quot;: \&quot;First\&quot;,     \&quot;last_name\&quot;: \&quot;Last\&quot;,     \&quot;bank_code\&quot;: \&quot;058\&quot;,     \&quot;bank_account\&quot;: \&quot;123456789\&quot;,     \&quot;bank_account_type\&quot;: \&quot;10\&quot;       # 10 for saving       # 20 for current accounts   } &#x60;&#x60;&#x60;  See [NGN Bank](https://docs.azafinance.com/docs/individual-payments/#ngnbank) documentation for the bank_code
+     * &#x60;&#x60;&#x60;JSON   \&quot;details\&quot;: {     \&quot;first_name\&quot;: \&quot;First\&quot;,     \&quot;last_name\&quot;: \&quot;Last\&quot;,     \&quot;bank_code\&quot;: \&quot;058\&quot;,     \&quot;bank_account\&quot;: \&quot;123456789\&quot;,     \&quot;bank_account_type\&quot;: \&quot;10\&quot;, # 10 for saving, 20 for current accounts     \&quot;street\&quot;: \&quot;1 Main Street\&quot;   } &#x60;&#x60;&#x60;  See [NGN Bank](https://docs.azafinance.com/docs/individual-payments/#ngnbank) documentation for the bank_code
      * @alias module:Model/PayoutMethodDetailsNGNBank
      * @param firstName {String} 
      * @param lastName {String} 
@@ -75,6 +75,9 @@ class PayoutMethodDetailsNGNBank {
             if (data.hasOwnProperty('birth_date')) {
                 obj['birth_date'] = ApiClient.convertToType(data['birth_date'], 'Date');
             }
+            if (data.hasOwnProperty('street&quot;')) {
+                obj['street&quot;'] = ApiClient.convertToType(data['street"'], 'String');
+            }
         }
         return obj;
     }
@@ -112,6 +115,11 @@ PayoutMethodDetailsNGNBank.prototype['bank_account_type'] = undefined;
  * @member {Date} birth_date
  */
 PayoutMethodDetailsNGNBank.prototype['birth_date'] = undefined;
+
+/**
+ * @member {String} street&quot;
+ */
+PayoutMethodDetailsNGNBank.prototype['street&quot;'] = undefined;
 
 
 

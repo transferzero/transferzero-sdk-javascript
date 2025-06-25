@@ -17,7 +17,7 @@ import Document from './Document';
 /**
  * The DocumentResponse model module.
  * @module Model/DocumentResponse
- * @version 1.36.8
+ * @version 1.36.9
  */
 class DocumentResponse {
     /**

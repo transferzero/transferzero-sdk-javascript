@@ -18,7 +18,7 @@ import PayoutMethodTransferReasonEnum from './PayoutMethodTransferReasonEnum';
 /**
  * The PayoutMethodDetailsGHSMobile model module.
  * @module Model/PayoutMethodDetailsGHSMobile
- * @version 1.36.8
+ * @version 1.36.9
  */
 class PayoutMethodDetailsGHSMobile {
     /**

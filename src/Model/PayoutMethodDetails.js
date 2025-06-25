@@ -56,7 +56,7 @@ import PayoutMethodTransferReasonEnum from './PayoutMethodTransferReasonEnum';
 /**
  * The PayoutMethodDetails model module.
  * @module Model/PayoutMethodDetails
- * @version 1.36.8
+ * @version 1.36.9
  */
 class PayoutMethodDetails {
     /**
@@ -210,6 +210,9 @@ class PayoutMethodDetails {
             }
             if (data.hasOwnProperty('birth_date')) {
                 obj['birth_date'] = ApiClient.convertToType(data['birth_date'], 'Date');
+            }
+            if (data.hasOwnProperty('street&quot;')) {
+                obj['street&quot;'] = ApiClient.convertToType(data['street"'], 'String');
             }
             if (data.hasOwnProperty('phone_number')) {
                 obj['phone_number'] = ApiClient.convertToType(data['phone_number'], 'String');
@@ -368,6 +371,11 @@ PayoutMethodDetails.prototype['bank_account_type'] = undefined;
  * @member {Date} birth_date
  */
 PayoutMethodDetails.prototype['birth_date'] = undefined;
+
+/**
+ * @member {String} street&quot;
+ */
+PayoutMethodDetails.prototype['street&quot;'] = undefined;
 
 /**
  * @member {String} phone_number
@@ -596,6 +604,10 @@ PayoutMethodDetailsNGNBank.prototype['bank_account_type'] = undefined;
  * @member {Date} birth_date
  */
 PayoutMethodDetailsNGNBank.prototype['birth_date'] = undefined;
+/**
+ * @member {String} street&quot;
+ */
+PayoutMethodDetailsNGNBank.prototype['street&quot;'] = undefined;
 // Implement PayoutMethodDetailsMobile interface:
 /**
  * @member {String} first_name

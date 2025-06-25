@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **bankAccount** | **String** |  | 
 **bankAccountType** | [**PayoutMethodBankAccountTypeEnum**](PayoutMethodBankAccountTypeEnum.md) |  | [optional] 
 **birthDate** | **Date** | Date of birth of recipient | [optional] 
+**street** | **String** |  | [optional] 
 **phoneNumber** | **String** |  | 
 **mobileProvider** | [**PayoutMethodMobileProviderEnum**](PayoutMethodMobileProviderEnum.md) |  | 
 **country** | [**PayoutMethodCountryEnum**](PayoutMethodCountryEnum.md) |  | 
