@@ -299,6 +299,8 @@ const apiClient = new ApiClient();
 apiClient.apiKey = '<key>';
 apiClient.apiSecret = '<secret>';
 apiClient.basePath = 'https://api-sandbox.transferzero.com/v1';
+// Optional
+apiClient.timeout = 30000 // In milliseconds
 ```
 
 ## Author
