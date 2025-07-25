@@ -17,7 +17,7 @@ import PayoutMethodTransferReasonEnum from './PayoutMethodTransferReasonEnum';
 /**
  * The PayoutMethodDetailsUGXBank model module.
  * @module Model/PayoutMethodDetailsUGXBank
- * @version 1.37.0
+ * @version 1.37.1
  */
 class PayoutMethodDetailsUGXBank {
     /**

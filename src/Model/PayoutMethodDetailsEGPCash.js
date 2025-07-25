@@ -17,7 +17,7 @@ import PayoutMethodTransferReasonEnum from './PayoutMethodTransferReasonEnum';
 /**
  * The PayoutMethodDetailsEGPCash model module.
  * @module Model/PayoutMethodDetailsEGPCash
- * @version 1.37.0
+ * @version 1.37.1
  */
 class PayoutMethodDetailsEGPCash {
     /**

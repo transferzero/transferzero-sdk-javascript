@@ -322,5 +322,5 @@ apiClient.timeout = 30000 // In milliseconds
 
 
 - API version: 1.0
-- Package version: 1.37.0
+- Package version: 1.37.1
 - Build package: org.openapitools.codegen.languages.JavascriptClientCodegen

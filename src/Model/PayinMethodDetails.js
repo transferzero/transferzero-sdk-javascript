@@ -21,7 +21,7 @@ import PayoutMethodMobileProviderEnum from './PayoutMethodMobileProviderEnum';
 /**
  * The PayinMethodDetails model module.
  * @module Model/PayinMethodDetails
- * @version 1.37.0
+ * @version 1.37.1
  */
 class PayinMethodDetails {
     /**
@@ -62,6 +62,12 @@ class PayinMethodDetails {
             if (data.hasOwnProperty('phone_number')) {
                 obj['phone_number'] = ApiClient.convertToType(data['phone_number'], 'String');
             }
+            if (data.hasOwnProperty('account_name')) {
+                obj['account_name'] = ApiClient.convertToType(data['account_name'], 'String');
+            }
+            if (data.hasOwnProperty('account_number')) {
+                obj['account_number'] = ApiClient.convertToType(data['account_number'], 'String');
+            }
             if (data.hasOwnProperty('mobile_provider')) {
                 obj['mobile_provider'] = PayoutMethodMobileProviderEnum.constructFromObject(data['mobile_provider']);
             }
@@ -86,6 +92,18 @@ class PayinMethodDetails {
  * @member {String} phone_number
  */
 PayinMethodDetails.prototype['phone_number'] = undefined;
+
+/**
+ * Merchant's virtual account name
+ * @member {String} account_name
+ */
+PayinMethodDetails.prototype['account_name'] = undefined;
+
+/**
+ * Merchant's virtual account number
+ * @member {String} account_number
+ */
+PayinMethodDetails.prototype['account_number'] = undefined;
 
 /**
  * @member {module:Model/PayoutMethodMobileProviderEnum} mobile_provider
@@ -116,6 +134,16 @@ PayinMethodDetails.prototype['refund_address'] = undefined;
  * @member {String} phone_number
  */
 PayinMethodDetailsNGNBank.prototype['phone_number'] = undefined;
+/**
+ * Merchant's virtual account name
+ * @member {String} account_name
+ */
+PayinMethodDetailsNGNBank.prototype['account_name'] = undefined;
+/**
+ * Merchant's virtual account number
+ * @member {String} account_number
+ */
+PayinMethodDetailsNGNBank.prototype['account_number'] = undefined;
 // Implement PayinMethodDetailsMobile interface:
 /**
  * The phone number where the funds should be collected from

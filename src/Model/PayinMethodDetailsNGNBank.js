@@ -16,12 +16,12 @@ import ApiClient from '../ApiClient';
 /**
  * The PayinMethodDetailsNGNBank model module.
  * @module Model/PayinMethodDetailsNGNBank
- * @version 1.37.0
+ * @version 1.37.1
  */
 class PayinMethodDetailsNGNBank {
     /**
      * Constructs a new <code>PayinMethodDetailsNGNBank</code>.
-     * &#x60;&#x60;&#x60;JSON   \&quot;details\&quot;: {     \&quot;phone_number\&quot;: \&quot;+2347087661211\&quot;   } &#x60;&#x60;&#x60;
+     * &#x60;&#x60;&#x60;JSON   \&quot;details\&quot;: {     \&quot;phone_number\&quot;: \&quot;+2348187221236\&quot;,     \&quot;account_name\&quot;: \&quot;Test Merchant\&quot;,     \&quot;account_number\&quot;: \&quot;1234567890\&quot;   } &#x60;&#x60;&#x60;
      * @alias module:Model/PayinMethodDetailsNGNBank
      */
     constructor() { 
@@ -51,6 +51,12 @@ class PayinMethodDetailsNGNBank {
             if (data.hasOwnProperty('phone_number')) {
                 obj['phone_number'] = ApiClient.convertToType(data['phone_number'], 'String');
             }
+            if (data.hasOwnProperty('account_name')) {
+                obj['account_name'] = ApiClient.convertToType(data['account_name'], 'String');
+            }
+            if (data.hasOwnProperty('account_number')) {
+                obj['account_number'] = ApiClient.convertToType(data['account_number'], 'String');
+            }
         }
         return obj;
     }
@@ -63,6 +69,18 @@ class PayinMethodDetailsNGNBank {
  * @member {String} phone_number
  */
 PayinMethodDetailsNGNBank.prototype['phone_number'] = undefined;
+
+/**
+ * Merchant's virtual account name
+ * @member {String} account_name
+ */
+PayinMethodDetailsNGNBank.prototype['account_name'] = undefined;
+
+/**
+ * Merchant's virtual account number
+ * @member {String} account_number
+ */
+PayinMethodDetailsNGNBank.prototype['account_number'] = undefined;
 
 
 

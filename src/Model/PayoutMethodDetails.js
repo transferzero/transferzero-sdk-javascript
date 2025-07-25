@@ -56,7 +56,7 @@ import PayoutMethodTransferReasonEnum from './PayoutMethodTransferReasonEnum';
 /**
  * The PayoutMethodDetails model module.
  * @module Model/PayoutMethodDetails
- * @version 1.37.0
+ * @version 1.37.1
  */
 class PayoutMethodDetails {
     /**
