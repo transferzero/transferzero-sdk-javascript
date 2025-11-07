@@ -49,6 +49,5 @@ Name | Type | Description | Notes
 **relationshipToSender** | **String** |  | [optional] 
 **pixKeyType** | [**PayoutMethodPixKeyTypeEnum**](PayoutMethodPixKeyTypeEnum.md) |  | [optional] 
 **pixKeyValue** | **String** |  | [optional] 
-**ifscCode** | **String** |  | 
 
 

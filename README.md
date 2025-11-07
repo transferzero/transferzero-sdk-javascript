@@ -201,11 +201,9 @@ Class | Method | HTTP request | Description
  - [TransferzeroSdk.PayoutMethodDetailsEGPCash](docs/PayoutMethodDetailsEGPCash.md)
  - [TransferzeroSdk.PayoutMethodDetailsGBPBank](docs/PayoutMethodDetailsGBPBank.md)
  - [TransferzeroSdk.PayoutMethodDetailsGHSBank](docs/PayoutMethodDetailsGHSBank.md)
- - [TransferzeroSdk.PayoutMethodDetailsGHSCash](docs/PayoutMethodDetailsGHSCash.md)
  - [TransferzeroSdk.PayoutMethodDetailsGHSMobile](docs/PayoutMethodDetailsGHSMobile.md)
  - [TransferzeroSdk.PayoutMethodDetailsGNFMobile](docs/PayoutMethodDetailsGNFMobile.md)
  - [TransferzeroSdk.PayoutMethodDetailsIBAN](docs/PayoutMethodDetailsIBAN.md)
- - [TransferzeroSdk.PayoutMethodDetailsINRBank](docs/PayoutMethodDetailsINRBank.md)
  - [TransferzeroSdk.PayoutMethodDetailsKESBank](docs/PayoutMethodDetailsKESBank.md)
  - [TransferzeroSdk.PayoutMethodDetailsKESMobile](docs/PayoutMethodDetailsKESMobile.md)
  - [TransferzeroSdk.PayoutMethodDetailsMADCash](docs/PayoutMethodDetailsMADCash.md)
@@ -322,5 +320,5 @@ apiClient.timeout = 30000 // In milliseconds
 
 
 - API version: 1.0
-- Package version: 1.37.1
+- Package version: 1.37.2
 - Build package: org.openapitools.codegen.languages.JavascriptClientCodegen

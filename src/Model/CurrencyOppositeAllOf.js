@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The CurrencyOppositeAllOf model module.
  * @module Model/CurrencyOppositeAllOf
- * @version 1.37.1
+ * @version 1.37.2
  */
 class CurrencyOppositeAllOf {
     /**

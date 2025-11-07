@@ -73,11 +73,9 @@ docs/PayoutMethodDetailsEGPBank.md
 docs/PayoutMethodDetailsEGPCash.md
 docs/PayoutMethodDetailsGBPBank.md
 docs/PayoutMethodDetailsGHSBank.md
-docs/PayoutMethodDetailsGHSCash.md
 docs/PayoutMethodDetailsGHSMobile.md
 docs/PayoutMethodDetailsGNFMobile.md
 docs/PayoutMethodDetailsIBAN.md
-docs/PayoutMethodDetailsINRBank.md
 docs/PayoutMethodDetailsKESBank.md
 docs/PayoutMethodDetailsKESMobile.md
 docs/PayoutMethodDetailsMADCash.md
@@ -235,11 +233,9 @@ src/Model/PayoutMethodDetailsEGPBank.js
 src/Model/PayoutMethodDetailsEGPCash.js
 src/Model/PayoutMethodDetailsGBPBank.js
 src/Model/PayoutMethodDetailsGHSBank.js
-src/Model/PayoutMethodDetailsGHSCash.js
 src/Model/PayoutMethodDetailsGHSMobile.js
 src/Model/PayoutMethodDetailsGNFMobile.js
 src/Model/PayoutMethodDetailsIBAN.js
-src/Model/PayoutMethodDetailsINRBank.js
 src/Model/PayoutMethodDetailsKESBank.js
 src/Model/PayoutMethodDetailsKESMobile.js
 src/Model/PayoutMethodDetailsMADCash.js

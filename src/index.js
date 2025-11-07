@@ -75,11 +75,9 @@ import PayoutMethodDetailsEGPBank from './Model/PayoutMethodDetailsEGPBank';
 import PayoutMethodDetailsEGPCash from './Model/PayoutMethodDetailsEGPCash';
 import PayoutMethodDetailsGBPBank from './Model/PayoutMethodDetailsGBPBank';
 import PayoutMethodDetailsGHSBank from './Model/PayoutMethodDetailsGHSBank';
-import PayoutMethodDetailsGHSCash from './Model/PayoutMethodDetailsGHSCash';
 import PayoutMethodDetailsGHSMobile from './Model/PayoutMethodDetailsGHSMobile';
 import PayoutMethodDetailsGNFMobile from './Model/PayoutMethodDetailsGNFMobile';
 import PayoutMethodDetailsIBAN from './Model/PayoutMethodDetailsIBAN';
-import PayoutMethodDetailsINRBank from './Model/PayoutMethodDetailsINRBank';
 import PayoutMethodDetailsKESBank from './Model/PayoutMethodDetailsKESBank';
 import PayoutMethodDetailsKESMobile from './Model/PayoutMethodDetailsKESMobile';
 import PayoutMethodDetailsMADCash from './Model/PayoutMethodDetailsMADCash';
@@ -197,7 +195,7 @@ import WebhooksApi from './Api/WebhooksApi';
 * </pre>
 * </p>
 * @module index
-* @version 1.37.1
+* @version 1.37.2
 */
 export default {
     /**
@@ -579,12 +577,6 @@ export default {
     PayoutMethodDetailsGHSBank,
 
     /**
-     * The PayoutMethodDetailsGHSCash model constructor.
-     * @property {module:Model/PayoutMethodDetailsGHSCash}
-     */
-    PayoutMethodDetailsGHSCash,
-
-    /**
      * The PayoutMethodDetailsGHSMobile model constructor.
      * @property {module:Model/PayoutMethodDetailsGHSMobile}
      */
@@ -601,12 +593,6 @@ export default {
      * @property {module:Model/PayoutMethodDetailsIBAN}
      */
     PayoutMethodDetailsIBAN,
-
-    /**
-     * The PayoutMethodDetailsINRBank model constructor.
-     * @property {module:Model/PayoutMethodDetailsINRBank}
-     */
-    PayoutMethodDetailsINRBank,
 
     /**
      * The PayoutMethodDetailsKESBank model constructor.
@@ -1189,11 +1175,9 @@ export {
     PayoutMethodDetailsEGPCash,
     PayoutMethodDetailsGBPBank,
     PayoutMethodDetailsGHSBank,
-    PayoutMethodDetailsGHSCash,
     PayoutMethodDetailsGHSMobile,
     PayoutMethodDetailsGNFMobile,
     PayoutMethodDetailsIBAN,
-    PayoutMethodDetailsINRBank,
     PayoutMethodDetailsKESBank,
     PayoutMethodDetailsKESMobile,
     PayoutMethodDetailsMADCash,
