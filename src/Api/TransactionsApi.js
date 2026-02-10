@@ -22,7 +22,7 @@ import TransactionResponse from '../Model/TransactionResponse';
 /**
 * Transactions service.
 * @module Api/TransactionsApi
-* @version 1.37.2
+* @version 1.37.3
 */
 export default class TransactionsApi {
 

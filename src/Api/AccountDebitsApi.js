@@ -19,7 +19,7 @@ import DebitRequestWrapper from '../Model/DebitRequestWrapper';
 /**
 * AccountDebits service.
 * @module Api/AccountDebitsApi
-* @version 1.37.2
+* @version 1.37.3
 */
 export default class AccountDebitsApi {
 
