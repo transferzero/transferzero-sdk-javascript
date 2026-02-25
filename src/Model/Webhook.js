@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The Webhook model module.
  * @module Model/Webhook
- * @version 1.37.3
+ * @version 1.37.4
  */
 class Webhook {
     /**

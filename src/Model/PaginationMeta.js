@@ -17,7 +17,7 @@ import Pagination from './Pagination';
 /**
  * The PaginationMeta model module.
  * @module Model/PaginationMeta
- * @version 1.37.3
+ * @version 1.37.4
  */
 class PaginationMeta {
     /**

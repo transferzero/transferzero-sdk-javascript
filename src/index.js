@@ -36,6 +36,8 @@ import DebitListRequest from './Model/DebitListRequest';
 import DebitListResponse from './Model/DebitListResponse';
 import DebitRequest from './Model/DebitRequest';
 import DebitRequestWrapper from './Model/DebitRequestWrapper';
+import DlocalBalance from './Model/DlocalBalance';
+import DlocalBalanceResponse from './Model/DlocalBalanceResponse';
 import Document from './Model/Document';
 import DocumentListResponse from './Model/DocumentListResponse';
 import DocumentRequest from './Model/DocumentRequest';
@@ -155,6 +157,7 @@ import AccountDebitsApi from './Api/AccountDebitsApi';
 import AccountValidationApi from './Api/AccountValidationApi';
 import AccountsApi from './Api/AccountsApi';
 import CurrencyInfoApi from './Api/CurrencyInfoApi';
+import DlocalBalanceApi from './Api/DlocalBalanceApi';
 import DocumentsApi from './Api/DocumentsApi';
 import LogsApi from './Api/LogsApi';
 import PayinMethodsApi from './Api/PayinMethodsApi';
@@ -195,7 +198,7 @@ import WebhooksApi from './Api/WebhooksApi';
 * </pre>
 * </p>
 * @module index
-* @version 1.37.3
+* @version 1.37.4
 */
 export default {
     /**
@@ -341,6 +344,18 @@ export default {
      * @property {module:Model/DebitRequestWrapper}
      */
     DebitRequestWrapper,
+
+    /**
+     * The DlocalBalance model constructor.
+     * @property {module:Model/DlocalBalance}
+     */
+    DlocalBalance,
+
+    /**
+     * The DlocalBalanceResponse model constructor.
+     * @property {module:Model/DlocalBalanceResponse}
+     */
+    DlocalBalanceResponse,
 
     /**
      * The Document model constructor.
@@ -1057,6 +1072,12 @@ export default {
     CurrencyInfoApi,
 
     /**
+    * The DlocalBalanceApi service constructor.
+    * @property {module:Api/DlocalBalanceApi}
+    */
+    DlocalBalanceApi,
+
+    /**
     * The DocumentsApi service constructor.
     * @property {module:Api/DocumentsApi}
     */
@@ -1136,6 +1157,8 @@ export {
     DebitListResponse,
     DebitRequest,
     DebitRequestWrapper,
+    DlocalBalance,
+    DlocalBalanceResponse,
     Document,
     DocumentListResponse,
     DocumentRequest,
@@ -1255,6 +1278,7 @@ export {
     AccountValidationApi,
     AccountsApi,
     CurrencyInfoApi,
+    DlocalBalanceApi,
     DocumentsApi,
     LogsApi,
     PayinMethodsApi,

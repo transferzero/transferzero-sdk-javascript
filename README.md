@@ -97,6 +97,7 @@ Class | Method | HTTP request | Description
 *TransferzeroSdk.CurrencyInfoApi* | [**infoCurrencies**](docs/CurrencyInfoApi.md#infoCurrencies) | **GET** /info/currencies | Getting a list of possible requested currencies
 *TransferzeroSdk.CurrencyInfoApi* | [**infoCurrenciesIn**](docs/CurrencyInfoApi.md#infoCurrenciesIn) | **GET** /info/currencies/in | Getting a list of possible input currencies
 *TransferzeroSdk.CurrencyInfoApi* | [**infoCurrenciesOut**](docs/CurrencyInfoApi.md#infoCurrenciesOut) | **GET** /info/currencies/out | Getting a list of possible output currencies
+*TransferzeroSdk.DlocalBalanceApi* | [**getBalance**](docs/DlocalBalanceApi.md#getBalance) | **GET** /dlocal/balance | Get dlocal balances
 *TransferzeroSdk.DocumentsApi* | [**getDocument**](docs/DocumentsApi.md#getDocument) | **GET** /documents/{Document ID} | Fetching a document
 *TransferzeroSdk.DocumentsApi* | [**getDocuments**](docs/DocumentsApi.md#getDocuments) | **GET** /documents | Getting a list of documents
 *TransferzeroSdk.DocumentsApi* | [**postDocuments**](docs/DocumentsApi.md#postDocuments) | **POST** /documents | Creating a document
@@ -162,6 +163,8 @@ Class | Method | HTTP request | Description
  - [TransferzeroSdk.DebitListResponse](docs/DebitListResponse.md)
  - [TransferzeroSdk.DebitRequest](docs/DebitRequest.md)
  - [TransferzeroSdk.DebitRequestWrapper](docs/DebitRequestWrapper.md)
+ - [TransferzeroSdk.DlocalBalance](docs/DlocalBalance.md)
+ - [TransferzeroSdk.DlocalBalanceResponse](docs/DlocalBalanceResponse.md)
  - [TransferzeroSdk.Document](docs/Document.md)
  - [TransferzeroSdk.DocumentListResponse](docs/DocumentListResponse.md)
  - [TransferzeroSdk.DocumentRequest](docs/DocumentRequest.md)
@@ -319,6 +322,7 @@ apiClient.timeout = 30000 // In milliseconds
 
 
 
+
 - API version: 1.0
-- Package version: 1.37.3
+- Package version: 1.37.4
 - Build package: org.openapitools.codegen.languages.JavascriptClientCodegen

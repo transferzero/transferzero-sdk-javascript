@@ -30,6 +30,9 @@ docs/DebitListRequest.md
 docs/DebitListResponse.md
 docs/DebitRequest.md
 docs/DebitRequestWrapper.md
+docs/DlocalBalance.md
+docs/DlocalBalanceApi.md
+docs/DlocalBalanceResponse.md
 docs/Document.md
 docs/DocumentListResponse.md
 docs/DocumentRequest.md
@@ -161,6 +164,7 @@ src/Api/AccountDebitsApi.js
 src/Api/AccountValidationApi.js
 src/Api/AccountsApi.js
 src/Api/CurrencyInfoApi.js
+src/Api/DlocalBalanceApi.js
 src/Api/DocumentsApi.js
 src/Api/LogsApi.js
 src/Api/PayinMethodsApi.js
@@ -194,6 +198,8 @@ src/Model/DebitListRequest.js
 src/Model/DebitListResponse.js
 src/Model/DebitRequest.js
 src/Model/DebitRequestWrapper.js
+src/Model/DlocalBalance.js
+src/Model/DlocalBalanceResponse.js
 src/Model/Document.js
 src/Model/DocumentListResponse.js
 src/Model/DocumentRequest.js
@@ -309,3 +315,6 @@ src/Model/WebhookLogMetadataRequest.js
 src/Model/WebhookLogMetadataResponse.js
 src/Model/WebhookLogResponse.js
 src/index.js
+test/api/DlocalBalanceApi.spec.js
+test/model/DlocalBalance.spec.js
+test/model/DlocalBalanceResponse.spec.js
