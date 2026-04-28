@@ -28,6 +28,7 @@ Name | Type | Description | Notes
 **id** | **String** |  | [optional] [readonly] 
 **type** | **String** | Type of recipient to create - either person or business (defaults to person)  | [optional] 
 **errors** | **{String: [ValidationErrorDescription]}** | The fields that have some problems and don&#39;t pass validation | [optional] [readonly] 
+**mandateId** | **String** | The ID of the mandate that is related to this recipient. This field is present when a ZAR bank mandate signing is required or has been completed. | [optional] [readonly] 
 
 
 

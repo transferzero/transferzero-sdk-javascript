@@ -315,6 +315,3 @@ src/Model/WebhookLogMetadataRequest.js
 src/Model/WebhookLogMetadataResponse.js
 src/Model/WebhookLogResponse.js
 src/index.js
-test/api/DlocalBalanceApi.spec.js
-test/model/DlocalBalance.spec.js
-test/model/DlocalBalanceResponse.spec.js

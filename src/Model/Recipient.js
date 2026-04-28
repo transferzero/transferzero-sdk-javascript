@@ -131,6 +131,9 @@ class Recipient {
             if (data.hasOwnProperty('errors')) {
                 obj['errors'] = ApiClient.convertToType(data['errors'], {'String': [ValidationErrorDescription]});
             }
+            if (data.hasOwnProperty('mandate_id')) {
+                obj['mandate_id'] = ApiClient.convertToType(data['mandate_id'], 'String');
+            }
         }
         return obj;
     }
@@ -276,6 +279,12 @@ Recipient.prototype['type'] = undefined;
  * @member {Object.<String, Array.<module:Model/ValidationErrorDescription>>} errors
  */
 Recipient.prototype['errors'] = undefined;
+
+/**
+ * The ID of the mandate that is related to this recipient. This field is present when a ZAR bank mandate signing is required or has been completed.
+ * @member {String} mandate_id
+ */
+Recipient.prototype['mandate_id'] = undefined;
 
 
 
