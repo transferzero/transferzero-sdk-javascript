@@ -17,7 +17,7 @@ import Sender from './Sender';
 /**
  * The SenderWebhookAllOf model module.
  * @module Model/SenderWebhookAllOf
- * @version 1.37.4
+ * @version 1.37.5
  */
 class SenderWebhookAllOf {
     /**

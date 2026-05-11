@@ -219,4 +219,34 @@
 
 * `government_services` (value: `"government_services"`)
 
+* `own_account` (value: `"own_account"`)
+
+* `donations_gifts` (value: `"donations_gifts"`)
+
+* `family_support` (value: `"family_support"`)
+
+* `mortgage_repayment` (value: `"mortgage_repayment"`)
+
+* `business_travel` (value: `"business_travel"`)
+
+* `personal_travel` (value: `"personal_travel"`)
+
+* `management_consulting` (value: `"management_consulting"`)
+
+* `advertising_market_research` (value: `"advertising_market_research"`)
+
+* `cultural_recreational` (value: `"cultural_recreational"`)
+
+* `salary_resident_abroad` (value: `"salary_resident_abroad"`)
+
+* `salary_non_resident_in_sa` (value: `"salary_non_resident_in_sa"`)
+
+* `salary_foreign_contract_in_sa` (value: `"salary_foreign_contract_in_sa"`)
+
+* `commission_brokerage` (value: `"commission_brokerage"`)
+
+* `investment_income` (value: `"investment_income"`)
+
+* `architectural_engineering` (value: `"architectural_engineering"`)
+
 

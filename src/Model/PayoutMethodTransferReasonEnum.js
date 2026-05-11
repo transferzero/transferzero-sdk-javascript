@@ -775,6 +775,111 @@ export default class PayoutMethodTransferReasonEnum {
         "government_services" = "government_services";
 
     
+        /**
+         * value: "own_account"
+         * @const
+         */
+        "own_account" = "own_account";
+
+    
+        /**
+         * value: "donations_gifts"
+         * @const
+         */
+        "donations_gifts" = "donations_gifts";
+
+    
+        /**
+         * value: "family_support"
+         * @const
+         */
+        "family_support" = "family_support";
+
+    
+        /**
+         * value: "mortgage_repayment"
+         * @const
+         */
+        "mortgage_repayment" = "mortgage_repayment";
+
+    
+        /**
+         * value: "business_travel"
+         * @const
+         */
+        "business_travel" = "business_travel";
+
+    
+        /**
+         * value: "personal_travel"
+         * @const
+         */
+        "personal_travel" = "personal_travel";
+
+    
+        /**
+         * value: "management_consulting"
+         * @const
+         */
+        "management_consulting" = "management_consulting";
+
+    
+        /**
+         * value: "advertising_market_research"
+         * @const
+         */
+        "advertising_market_research" = "advertising_market_research";
+
+    
+        /**
+         * value: "cultural_recreational"
+         * @const
+         */
+        "cultural_recreational" = "cultural_recreational";
+
+    
+        /**
+         * value: "salary_resident_abroad"
+         * @const
+         */
+        "salary_resident_abroad" = "salary_resident_abroad";
+
+    
+        /**
+         * value: "salary_non_resident_in_sa"
+         * @const
+         */
+        "salary_non_resident_in_sa" = "salary_non_resident_in_sa";
+
+    
+        /**
+         * value: "salary_foreign_contract_in_sa"
+         * @const
+         */
+        "salary_foreign_contract_in_sa" = "salary_foreign_contract_in_sa";
+
+    
+        /**
+         * value: "commission_brokerage"
+         * @const
+         */
+        "commission_brokerage" = "commission_brokerage";
+
+    
+        /**
+         * value: "investment_income"
+         * @const
+         */
+        "investment_income" = "investment_income";
+
+    
+        /**
+         * value: "architectural_engineering"
+         * @const
+         */
+        "architectural_engineering" = "architectural_engineering";
+
+    
 
     /**
     * Returns a <code>PayoutMethodTransferReasonEnum</code> enum value from a Javascript object name.
