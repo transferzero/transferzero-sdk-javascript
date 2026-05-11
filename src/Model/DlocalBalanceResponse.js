@@ -17,7 +17,7 @@ import DlocalBalance from './DlocalBalance';
 /**
  * The DlocalBalanceResponse model module.
  * @module Model/DlocalBalanceResponse
- * @version 1.37.5
+ * @version 1.37.6
  */
 class DlocalBalanceResponse {
     /**

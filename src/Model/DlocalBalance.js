@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The DlocalBalance model module.
  * @module Model/DlocalBalance
- * @version 1.37.5
+ * @version 1.37.6
  */
 class DlocalBalance {
     /**

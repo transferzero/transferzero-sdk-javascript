@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The StateReasonDetails model module.
  * @module Model/StateReasonDetails
- * @version 1.37.5
+ * @version 1.37.6
  */
 class StateReasonDetails {
     /**
