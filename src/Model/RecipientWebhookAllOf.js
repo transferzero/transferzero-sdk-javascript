@@ -17,7 +17,7 @@ import Recipient from './Recipient';
 /**
  * The RecipientWebhookAllOf model module.
  * @module Model/RecipientWebhookAllOf
- * @version 1.37.8
+ * @version 1.37.9
  */
 class RecipientWebhookAllOf {
     /**

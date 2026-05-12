@@ -21,7 +21,7 @@ import RecipientResponse from '../Model/RecipientResponse';
 /**
 * Recipients service.
 * @module Api/RecipientsApi
-* @version 1.37.8
+* @version 1.37.9
 */
 export default class RecipientsApi {
 

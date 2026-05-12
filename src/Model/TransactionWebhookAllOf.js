@@ -17,7 +17,7 @@ import Transaction from './Transaction';
 /**
  * The TransactionWebhookAllOf model module.
  * @module Model/TransactionWebhookAllOf
- * @version 1.37.8
+ * @version 1.37.9
  */
 class TransactionWebhookAllOf {
     /**

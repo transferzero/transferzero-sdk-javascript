@@ -18,7 +18,7 @@ import MandateResponse from '../Model/MandateResponse';
 /**
 * Mandates service.
 * @module Api/MandatesApi
-* @version 1.37.8
+* @version 1.37.9
 */
 export default class MandatesApi {
 

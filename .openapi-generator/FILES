@@ -323,7 +323,3 @@ src/Model/WebhookLogMetadataRequest.js
 src/Model/WebhookLogMetadataResponse.js
 src/Model/WebhookLogResponse.js
 src/index.js
-test/api/MandatesApi.spec.js
-test/model/Mandate.spec.js
-test/model/MandateResponse.spec.js
-test/model/MandateStatus.spec.js

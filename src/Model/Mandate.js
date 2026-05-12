@@ -17,14 +17,13 @@ import MandateStatus from './MandateStatus';
 /**
  * The Mandate model module.
  * @module Model/Mandate
- * @version 1.37.8
+ * @version 1.37.9
  */
 class Mandate {
     /**
      * Constructs a new <code>Mandate</code>.
      * A Mandate authorises payouts to a Recipient. Mandates are issued per calendar year and must be in a &#x60;signed&#x60; (or &#x60;bypassed&#x60;) state before the linked Recipient can receive a payout.
      * @alias module:Model/Mandate
-     * @extends Object
      */
     constructor() { 
         
@@ -49,9 +48,6 @@ class Mandate {
     static constructFromObject(data, obj) {
         if (data) {
             obj = obj || new Mandate();
-
-            ApiClient.constructFromObject(data, obj, 'Object');
-            
 
             if (data.hasOwnProperty('id')) {
                 obj['id'] = ApiClient.convertToType(data['id'], 'String');
