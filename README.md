@@ -103,6 +103,7 @@ Class | Method | HTTP request | Description
 *TransferzeroSdk.DocumentsApi* | [**postDocuments**](docs/DocumentsApi.md#postDocuments) | **POST** /documents | Creating a document
 *TransferzeroSdk.LogsApi* | [**getWebhookLog**](docs/LogsApi.md#getWebhookLog) | **GET** /logs/{Webhook Log ID} | Fetch an individual webhook log
 *TransferzeroSdk.LogsApi* | [**getWebhookLogs**](docs/LogsApi.md#getWebhookLogs) | **GET** /logs/webhooks | Fetch a list of webhook logs
+*TransferzeroSdk.MandatesApi* | [**getMandate**](docs/MandatesApi.md#getMandate) | **GET** /mandates/{Mandate ID} | Fetch a single mandate
 *TransferzeroSdk.PayinMethodsApi* | [**deletePayinMethod**](docs/PayinMethodsApi.md#deletePayinMethod) | **DELETE** /payin_methods/{PayinMethod ID} | Deleting a payin method
 *TransferzeroSdk.PayinMethodsApi* | [**getPayinMethod**](docs/PayinMethodsApi.md#getPayinMethod) | **GET** /payin_methods/{PayinMethod ID} | Fetching a payin method
 *TransferzeroSdk.PayinMethodsApi* | [**patchPayinMethod**](docs/PayinMethodsApi.md#patchPayinMethod) | **PATCH** /payin_methods/{PayinMethod ID} | Updating a payin method
@@ -175,6 +176,9 @@ Class | Method | HTTP request | Description
  - [TransferzeroSdk.FieldDescription](docs/FieldDescription.md)
  - [TransferzeroSdk.FieldSelectValidation](docs/FieldSelectValidation.md)
  - [TransferzeroSdk.FieldValidation](docs/FieldValidation.md)
+ - [TransferzeroSdk.Mandate](docs/Mandate.md)
+ - [TransferzeroSdk.MandateResponse](docs/MandateResponse.md)
+ - [TransferzeroSdk.MandateStatus](docs/MandateStatus.md)
  - [TransferzeroSdk.Pagination](docs/Pagination.md)
  - [TransferzeroSdk.PaginationMeta](docs/PaginationMeta.md)
  - [TransferzeroSdk.PayinMethod](docs/PayinMethod.md)
@@ -323,6 +327,7 @@ apiClient.timeout = 30000 // In milliseconds
 
 
 
+
 - API version: 1.0
-- Package version: 1.37.6
+- Package version: 1.37.8
 - Build package: org.openapitools.codegen.languages.JavascriptClientCodegen

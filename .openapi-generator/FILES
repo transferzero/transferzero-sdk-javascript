@@ -45,6 +45,10 @@ docs/FieldDescription.md
 docs/FieldSelectValidation.md
 docs/FieldValidation.md
 docs/LogsApi.md
+docs/Mandate.md
+docs/MandateResponse.md
+docs/MandateStatus.md
+docs/MandatesApi.md
 docs/Pagination.md
 docs/PaginationMeta.md
 docs/PayinMethod.md
@@ -167,6 +171,7 @@ src/Api/CurrencyInfoApi.js
 src/Api/DlocalBalanceApi.js
 src/Api/DocumentsApi.js
 src/Api/LogsApi.js
+src/Api/MandatesApi.js
 src/Api/PayinMethodsApi.js
 src/Api/PaymentMethodsApi.js
 src/Api/PayoutMethodsApi.js
@@ -210,6 +215,9 @@ src/Model/ErrorStatus.js
 src/Model/FieldDescription.js
 src/Model/FieldSelectValidation.js
 src/Model/FieldValidation.js
+src/Model/Mandate.js
+src/Model/MandateResponse.js
+src/Model/MandateStatus.js
 src/Model/Pagination.js
 src/Model/PaginationMeta.js
 src/Model/PayinMethod.js
@@ -315,3 +323,7 @@ src/Model/WebhookLogMetadataRequest.js
 src/Model/WebhookLogMetadataResponse.js
 src/Model/WebhookLogResponse.js
 src/index.js
+test/api/MandatesApi.spec.js
+test/model/Mandate.spec.js
+test/model/MandateResponse.spec.js
+test/model/MandateStatus.spec.js

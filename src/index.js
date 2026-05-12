@@ -48,6 +48,9 @@ import ErrorStatus from './Model/ErrorStatus';
 import FieldDescription from './Model/FieldDescription';
 import FieldSelectValidation from './Model/FieldSelectValidation';
 import FieldValidation from './Model/FieldValidation';
+import Mandate from './Model/Mandate';
+import MandateResponse from './Model/MandateResponse';
+import MandateStatus from './Model/MandateStatus';
 import Pagination from './Model/Pagination';
 import PaginationMeta from './Model/PaginationMeta';
 import PayinMethod from './Model/PayinMethod';
@@ -160,6 +163,7 @@ import CurrencyInfoApi from './Api/CurrencyInfoApi';
 import DlocalBalanceApi from './Api/DlocalBalanceApi';
 import DocumentsApi from './Api/DocumentsApi';
 import LogsApi from './Api/LogsApi';
+import MandatesApi from './Api/MandatesApi';
 import PayinMethodsApi from './Api/PayinMethodsApi';
 import PaymentMethodsApi from './Api/PaymentMethodsApi';
 import PayoutMethodsApi from './Api/PayoutMethodsApi';
@@ -198,7 +202,7 @@ import WebhooksApi from './Api/WebhooksApi';
 * </pre>
 * </p>
 * @module index
-* @version 1.37.6
+* @version 1.37.8
 */
 export default {
     /**
@@ -416,6 +420,24 @@ export default {
      * @property {module:Model/FieldValidation}
      */
     FieldValidation,
+
+    /**
+     * The Mandate model constructor.
+     * @property {module:Model/Mandate}
+     */
+    Mandate,
+
+    /**
+     * The MandateResponse model constructor.
+     * @property {module:Model/MandateResponse}
+     */
+    MandateResponse,
+
+    /**
+     * The MandateStatus model constructor.
+     * @property {module:Model/MandateStatus}
+     */
+    MandateStatus,
 
     /**
      * The Pagination model constructor.
@@ -1090,6 +1112,12 @@ export default {
     LogsApi,
 
     /**
+    * The MandatesApi service constructor.
+    * @property {module:Api/MandatesApi}
+    */
+    MandatesApi,
+
+    /**
     * The PayinMethodsApi service constructor.
     * @property {module:Api/PayinMethodsApi}
     */
@@ -1169,6 +1197,9 @@ export {
     FieldDescription,
     FieldSelectValidation,
     FieldValidation,
+    Mandate,
+    MandateResponse,
+    MandateStatus,
     Pagination,
     PaginationMeta,
     PayinMethod,
@@ -1281,6 +1312,7 @@ export {
     DlocalBalanceApi,
     DocumentsApi,
     LogsApi,
+    MandatesApi,
     PayinMethodsApi,
     PaymentMethodsApi,
     PayoutMethodsApi,
