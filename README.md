@@ -204,22 +204,28 @@ Class | Method | HTTP request | Description
  - [TransferzeroSdk.PayoutMethodDetailsBWPBank](docs/PayoutMethodDetailsBWPBank.md)
  - [TransferzeroSdk.PayoutMethodDetailsBalance](docs/PayoutMethodDetailsBalance.md)
  - [TransferzeroSdk.PayoutMethodDetailsCADBank](docs/PayoutMethodDetailsCADBank.md)
+ - [TransferzeroSdk.PayoutMethodDetailsCRCBank](docs/PayoutMethodDetailsCRCBank.md)
  - [TransferzeroSdk.PayoutMethodDetailsEGPBank](docs/PayoutMethodDetailsEGPBank.md)
  - [TransferzeroSdk.PayoutMethodDetailsEGPCash](docs/PayoutMethodDetailsEGPCash.md)
  - [TransferzeroSdk.PayoutMethodDetailsGBPBank](docs/PayoutMethodDetailsGBPBank.md)
  - [TransferzeroSdk.PayoutMethodDetailsGHSBank](docs/PayoutMethodDetailsGHSBank.md)
  - [TransferzeroSdk.PayoutMethodDetailsGHSMobile](docs/PayoutMethodDetailsGHSMobile.md)
  - [TransferzeroSdk.PayoutMethodDetailsGNFMobile](docs/PayoutMethodDetailsGNFMobile.md)
+ - [TransferzeroSdk.PayoutMethodDetailsGTQBank](docs/PayoutMethodDetailsGTQBank.md)
  - [TransferzeroSdk.PayoutMethodDetailsIBAN](docs/PayoutMethodDetailsIBAN.md)
  - [TransferzeroSdk.PayoutMethodDetailsKESBank](docs/PayoutMethodDetailsKESBank.md)
  - [TransferzeroSdk.PayoutMethodDetailsKESMobile](docs/PayoutMethodDetailsKESMobile.md)
+ - [TransferzeroSdk.PayoutMethodDetailsMADBank](docs/PayoutMethodDetailsMADBank.md)
  - [TransferzeroSdk.PayoutMethodDetailsMADCash](docs/PayoutMethodDetailsMADCash.md)
  - [TransferzeroSdk.PayoutMethodDetailsMobile](docs/PayoutMethodDetailsMobile.md)
  - [TransferzeroSdk.PayoutMethodDetailsNGNBank](docs/PayoutMethodDetailsNGNBank.md)
  - [TransferzeroSdk.PayoutMethodDetailsNZDBank](docs/PayoutMethodDetailsNZDBank.md)
+ - [TransferzeroSdk.PayoutMethodDetailsPENBank](docs/PayoutMethodDetailsPENBank.md)
  - [TransferzeroSdk.PayoutMethodDetailsUGXBank](docs/PayoutMethodDetailsUGXBank.md)
  - [TransferzeroSdk.PayoutMethodDetailsUSDBank](docs/PayoutMethodDetailsUSDBank.md)
  - [TransferzeroSdk.PayoutMethodDetailsUSDCash](docs/PayoutMethodDetailsUSDCash.md)
+ - [TransferzeroSdk.PayoutMethodDetailsVNDBank](docs/PayoutMethodDetailsVNDBank.md)
+ - [TransferzeroSdk.PayoutMethodDetailsVNDMobile](docs/PayoutMethodDetailsVNDMobile.md)
  - [TransferzeroSdk.PayoutMethodDetailsXAFBank](docs/PayoutMethodDetailsXAFBank.md)
  - [TransferzeroSdk.PayoutMethodDetailsXAFMobile](docs/PayoutMethodDetailsXAFMobile.md)
  - [TransferzeroSdk.PayoutMethodDetailsXOFBank](docs/PayoutMethodDetailsXOFBank.md)
@@ -329,5 +335,5 @@ apiClient.timeout = 30000 // In milliseconds
 
 
 - API version: 1.0
-- Package version: 1.37.9
+- Package version: 1.37.10
 - Build package: org.openapitools.codegen.languages.JavascriptClientCodegen

@@ -18,7 +18,7 @@ import DlocalBalanceResponse from '../Model/DlocalBalanceResponse';
 /**
 * DlocalBalance service.
 * @module Api/DlocalBalanceApi
-* @version 1.37.9
+* @version 1.37.10
 */
 export default class DlocalBalanceApi {
 

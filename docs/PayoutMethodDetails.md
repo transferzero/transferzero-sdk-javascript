@@ -8,11 +8,11 @@ Name | Type | Description | Notes
 **lastName** | **String** |  | 
 **bankCode** | **String** |  | 
 **bankAccount** | **String** |  | 
-**bankAccountType** | [**PayoutMethodBankAccountTypeEnum**](PayoutMethodBankAccountTypeEnum.md) |  | [optional] 
+**bankAccountType** | [**PayoutMethodBankAccountTypeEnum**](PayoutMethodBankAccountTypeEnum.md) |  | 
 **birthDate** | **Date** | Date of birth of recipient | [optional] 
 **street** | **String** |  | 
 **phoneNumber** | **String** |  | 
-**mobileProvider** | [**PayoutMethodMobileProviderEnum**](PayoutMethodMobileProviderEnum.md) |  | 
+**mobileProvider** | **String** |  | 
 **country** | [**PayoutMethodCountryEnum**](PayoutMethodCountryEnum.md) |  | 
 **transferReason** | [**PayoutMethodTransferReasonEnum**](PayoutMethodTransferReasonEnum.md) |  | 
 **iban** | **String** |  | 

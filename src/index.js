@@ -76,22 +76,28 @@ import PayoutMethodDetailsBTC from './Model/PayoutMethodDetailsBTC';
 import PayoutMethodDetailsBWPBank from './Model/PayoutMethodDetailsBWPBank';
 import PayoutMethodDetailsBalance from './Model/PayoutMethodDetailsBalance';
 import PayoutMethodDetailsCADBank from './Model/PayoutMethodDetailsCADBank';
+import PayoutMethodDetailsCRCBank from './Model/PayoutMethodDetailsCRCBank';
 import PayoutMethodDetailsEGPBank from './Model/PayoutMethodDetailsEGPBank';
 import PayoutMethodDetailsEGPCash from './Model/PayoutMethodDetailsEGPCash';
 import PayoutMethodDetailsGBPBank from './Model/PayoutMethodDetailsGBPBank';
 import PayoutMethodDetailsGHSBank from './Model/PayoutMethodDetailsGHSBank';
 import PayoutMethodDetailsGHSMobile from './Model/PayoutMethodDetailsGHSMobile';
 import PayoutMethodDetailsGNFMobile from './Model/PayoutMethodDetailsGNFMobile';
+import PayoutMethodDetailsGTQBank from './Model/PayoutMethodDetailsGTQBank';
 import PayoutMethodDetailsIBAN from './Model/PayoutMethodDetailsIBAN';
 import PayoutMethodDetailsKESBank from './Model/PayoutMethodDetailsKESBank';
 import PayoutMethodDetailsKESMobile from './Model/PayoutMethodDetailsKESMobile';
+import PayoutMethodDetailsMADBank from './Model/PayoutMethodDetailsMADBank';
 import PayoutMethodDetailsMADCash from './Model/PayoutMethodDetailsMADCash';
 import PayoutMethodDetailsMobile from './Model/PayoutMethodDetailsMobile';
 import PayoutMethodDetailsNGNBank from './Model/PayoutMethodDetailsNGNBank';
 import PayoutMethodDetailsNZDBank from './Model/PayoutMethodDetailsNZDBank';
+import PayoutMethodDetailsPENBank from './Model/PayoutMethodDetailsPENBank';
 import PayoutMethodDetailsUGXBank from './Model/PayoutMethodDetailsUGXBank';
 import PayoutMethodDetailsUSDBank from './Model/PayoutMethodDetailsUSDBank';
 import PayoutMethodDetailsUSDCash from './Model/PayoutMethodDetailsUSDCash';
+import PayoutMethodDetailsVNDBank from './Model/PayoutMethodDetailsVNDBank';
+import PayoutMethodDetailsVNDMobile from './Model/PayoutMethodDetailsVNDMobile';
 import PayoutMethodDetailsXAFBank from './Model/PayoutMethodDetailsXAFBank';
 import PayoutMethodDetailsXAFMobile from './Model/PayoutMethodDetailsXAFMobile';
 import PayoutMethodDetailsXOFBank from './Model/PayoutMethodDetailsXOFBank';
@@ -202,7 +208,7 @@ import WebhooksApi from './Api/WebhooksApi';
 * </pre>
 * </p>
 * @module index
-* @version 1.37.9
+* @version 1.37.10
 */
 export default {
     /**
@@ -590,6 +596,12 @@ export default {
     PayoutMethodDetailsCADBank,
 
     /**
+     * The PayoutMethodDetailsCRCBank model constructor.
+     * @property {module:Model/PayoutMethodDetailsCRCBank}
+     */
+    PayoutMethodDetailsCRCBank,
+
+    /**
      * The PayoutMethodDetailsEGPBank model constructor.
      * @property {module:Model/PayoutMethodDetailsEGPBank}
      */
@@ -626,6 +638,12 @@ export default {
     PayoutMethodDetailsGNFMobile,
 
     /**
+     * The PayoutMethodDetailsGTQBank model constructor.
+     * @property {module:Model/PayoutMethodDetailsGTQBank}
+     */
+    PayoutMethodDetailsGTQBank,
+
+    /**
      * The PayoutMethodDetailsIBAN model constructor.
      * @property {module:Model/PayoutMethodDetailsIBAN}
      */
@@ -642,6 +660,12 @@ export default {
      * @property {module:Model/PayoutMethodDetailsKESMobile}
      */
     PayoutMethodDetailsKESMobile,
+
+    /**
+     * The PayoutMethodDetailsMADBank model constructor.
+     * @property {module:Model/PayoutMethodDetailsMADBank}
+     */
+    PayoutMethodDetailsMADBank,
 
     /**
      * The PayoutMethodDetailsMADCash model constructor.
@@ -668,6 +692,12 @@ export default {
     PayoutMethodDetailsNZDBank,
 
     /**
+     * The PayoutMethodDetailsPENBank model constructor.
+     * @property {module:Model/PayoutMethodDetailsPENBank}
+     */
+    PayoutMethodDetailsPENBank,
+
+    /**
      * The PayoutMethodDetailsUGXBank model constructor.
      * @property {module:Model/PayoutMethodDetailsUGXBank}
      */
@@ -684,6 +714,18 @@ export default {
      * @property {module:Model/PayoutMethodDetailsUSDCash}
      */
     PayoutMethodDetailsUSDCash,
+
+    /**
+     * The PayoutMethodDetailsVNDBank model constructor.
+     * @property {module:Model/PayoutMethodDetailsVNDBank}
+     */
+    PayoutMethodDetailsVNDBank,
+
+    /**
+     * The PayoutMethodDetailsVNDMobile model constructor.
+     * @property {module:Model/PayoutMethodDetailsVNDMobile}
+     */
+    PayoutMethodDetailsVNDMobile,
 
     /**
      * The PayoutMethodDetailsXAFBank model constructor.
@@ -1225,22 +1267,28 @@ export {
     PayoutMethodDetailsBWPBank,
     PayoutMethodDetailsBalance,
     PayoutMethodDetailsCADBank,
+    PayoutMethodDetailsCRCBank,
     PayoutMethodDetailsEGPBank,
     PayoutMethodDetailsEGPCash,
     PayoutMethodDetailsGBPBank,
     PayoutMethodDetailsGHSBank,
     PayoutMethodDetailsGHSMobile,
     PayoutMethodDetailsGNFMobile,
+    PayoutMethodDetailsGTQBank,
     PayoutMethodDetailsIBAN,
     PayoutMethodDetailsKESBank,
     PayoutMethodDetailsKESMobile,
+    PayoutMethodDetailsMADBank,
     PayoutMethodDetailsMADCash,
     PayoutMethodDetailsMobile,
     PayoutMethodDetailsNGNBank,
     PayoutMethodDetailsNZDBank,
+    PayoutMethodDetailsPENBank,
     PayoutMethodDetailsUGXBank,
     PayoutMethodDetailsUSDBank,
     PayoutMethodDetailsUSDCash,
+    PayoutMethodDetailsVNDBank,
+    PayoutMethodDetailsVNDMobile,
     PayoutMethodDetailsXAFBank,
     PayoutMethodDetailsXAFMobile,
     PayoutMethodDetailsXOFBank,

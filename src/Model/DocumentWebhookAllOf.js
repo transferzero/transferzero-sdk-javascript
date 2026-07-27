@@ -17,7 +17,7 @@ import Document from './Document';
 /**
  * The DocumentWebhookAllOf model module.
  * @module Model/DocumentWebhookAllOf
- * @version 1.37.9
+ * @version 1.37.10
  */
 class DocumentWebhookAllOf {
     /**

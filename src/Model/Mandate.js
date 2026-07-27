@@ -17,7 +17,7 @@ import MandateStatus from './MandateStatus';
 /**
  * The Mandate model module.
  * @module Model/Mandate
- * @version 1.37.9
+ * @version 1.37.10
  */
 class Mandate {
     /**

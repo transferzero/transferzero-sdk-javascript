@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The TransactionTraits model module.
  * @module Model/TransactionTraits
- * @version 1.37.9
+ * @version 1.37.10
  */
 class TransactionTraits {
     /**
